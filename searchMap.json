@@ -1,1 +1,1 @@
-{"website":{"name":"website","title":"The Website","description":"\n**This** is markdown.\n","url":"index.html"},"community":{"name":"community","url":"community.html"}}
+{"website":{"name":"website","title":"The Website","description":"\n**This** is the bit-docs website. See also the <a href=\"about.html\">About page</a>.\n","url":"index.html"},"about":{"name":"about","url":"about.html"}}

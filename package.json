@@ -24,7 +24,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "bit-docs": "0.0.7",
+    "bit-docs": "^0.0.7",
+    "bit-docs-glob-finder": "^0.0.5",
+    "bit-docs-dev": "^0.0.3",
+    "bit-docs-js": "^0.0.6",
+    "bit-docs-process-mustache": "^0.0.1",
+    "bit-docs-generate-html": "^0.4.3",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
@@ -32,14 +37,16 @@
       "bit-docs-glob-finder": "^0.0.5",
       "bit-docs-dev": "^0.0.3",
       "bit-docs-js": "^0.0.6",
-      "bit-docs-process-mustache": "^0.0.1",
-      "bit-docs-generate-html": "^0.4.1",
-      "bit-docs-website-theme": "^0.0.1"
+      "bit-docs-generate-html": "^0.4.3"
     },
     "glob": {
-      "pattern": "docs/**/*.{js,md,mustache}"
+      "pattern": "{node_modules,docs}/bit-docs*/**/*.{js,md}",
+      "ignore": [
+          "node_modules/bit-docs/lib/configure/**/*",
+          "node_modules/bit-docs*/node_modules/**/*"
+        ]
     },
-    "parent": "website",
+    "parent": "BitDocs",
     "minifyBuild": false,
     "dest": "./gh-pages"
   }

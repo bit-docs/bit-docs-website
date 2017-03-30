@@ -1,4 +1,4 @@
-# website
+# bit-docs-website
 
 Website that documents bit-docs.
 
@@ -30,4 +30,4 @@ Now visit <http://127.0.0.1:8080/>
 npm run gh-pages
 ```
 
-Now visit <https://bit-docs.github.io/website/>
+Now visit <https://bit-docs.github.io/bit-docs-website>

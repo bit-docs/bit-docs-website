@@ -19,6 +19,9 @@
     "url": "git+https://github.com/bit-docs/website.git"
   },
   "scripts": {
+    "gen": "npm run bit-docs",
+    "see": "http-server gh-pages",
+    "pub": "npm run gh-pages",
     "bit-docs": "bit-docs -d",
     "gh-pages": "gh-pages -d gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"

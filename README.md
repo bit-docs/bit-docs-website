@@ -4,19 +4,19 @@ Website that documents bit-docs.
 
 ## Commands
 
-### Install
+### Install Dependencies
 
 ```
 npm install
 ```
 
-### Document
+### Generate Website
 
 ```
 npm run bit-docs
 ```
 
-### Preview
+### Preview Generated Website
 
 ```
 http-server gh-pages
@@ -24,7 +24,7 @@ http-server gh-pages
 
 Now visit <http://127.0.0.1:8080/>
 
-### Publish
+### Publish Generated Website to GitHub
 
 ```
 npm run gh-pages

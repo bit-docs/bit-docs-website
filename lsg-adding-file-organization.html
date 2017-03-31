@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@page lsg-adding-file-organization
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - File Organization</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+	<ul>
+		
+			
+				
+					<li>
+						<span>How-to Guides</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-quickstart.html"
+							title="This guide will:">
+							Standalone Live Style Guide
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="page"
+							href="lsg-adding.html"
+							title="This guide will:">
+							Adding to Existing JS Docs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li>
+						<span>Intro</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-disclaimer.html"
+							title="The Standalone Guide is likely more precise when it comes to step-by-step instructions. Unfortunately, since we don&#x27;t know exactly how your project looks we&#x27;ll be making a number of assumptions for this guide:">
+							A Brief Disclaimer
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-designers.html"
+							title="If you&#x27;re working on a project that is already using DocumentJS, it is being used to generate JavaScript API docs. Since it&#x27;s already being used, with only a little configuration you should be able to:">
+							DocumentJS for Designers
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>Setup</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-installation.html"
+							title="Installation">
+							Installation
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-configuration.html"
+							title="Configuration">
+							Configuration
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="page"
+							href="lsg-adding-file-organization.html"
+							title="You&#x27;ll write most of your documentation inline in your css or less files. You should add one file, styleguide.md, to your styles folder to write your landing page (and set up navigation).">
+							File Organization
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>Next Steps</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-next-steps.html"
+							title="Now that you&#x27;ve finished with installation and configuration, the rest of the the process (creating pages, documenting, and customizing your site) will follow the same steps as the Standalone Style Guide:">
+							Writing and Customizing
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="publishing.html"
+							title="Once you&#x27;ve created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.">
+							Publishing Your Style Guide
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>File Organization</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>You'll write most of your documentation inline in your <code>css</code> or <code>less</code> files. You should add one file, <code>styleguide.md</code>, to your <code>styles</code> folder to write your landing page (and set up navigation).</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <p>For demos and examples, you may want to create a separate folder to make it easy to link to them later. Make sure not to put anything into the <code>styleguide</code> directory as it is automatically generated.</p>
+<p>Depending on your project and team, this is likely a good time to ask a developer for help (or just to double-check the changes you're making). For large applications, file organization becomes extremely important. Choices that seem insignificant (and may actually be insignificant) can still incur the wrath of (over-)opinionated engineers.</p>
+<p>Your project's directory will probably look something like this:</p>
+<pre><code>project/
+    &lt;!-- the project's already-existing file structure --&gt;
+    folder1/
+    folder2/
+    folder3/
+    &lt;!-- the directory containing the project's stylesheets --&gt;
+    styles/
+        base.less
+        buttons.less
+        variables.less
+        styleguide.md
+    &lt;!-- live demos that we'll get to later --&gt;
+    demos/
+        base/
+            forms/
+                demo.html
+            tables/
+                demo.html
+            buttons/
+                demo.html
+        variables/
+            color-palette/
+                demo.html
+    styleguide/
+        &lt;!-- Automatically generated directory --&gt;
+</code></pre>
+<p><a href="/docs/lsg-adding-next-steps.html">Next Page</a></p>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs/docs/livestyleguide/guides/adding/fileorganization.md"},"description":"\nYou'll write most of your documentation inline in your `css` or `less` files. You should add one file, `styleguide.md`, to your `styles` folder to write your landing page (and set up navigation).\n","name":"lsg-adding-file-organization","title":"File Organization","type":"page","parent":"lsg-adding-group-setup","order":2,"pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

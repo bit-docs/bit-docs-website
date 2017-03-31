@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@function DocumentJS.apis.generate.grunt
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - grunt</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>grunt</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Run the DocumentJS Grunt task.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Examples</h2>
+<p>Given a <code>Gruntfile.js</code> like:</p>
+<pre><code>module.exports = function(grunt){
+  grunt.loadNpmTasks('documentjs');
+  grunt.initConfig({
+    documentjs: {
+      versions: {
+        &quot;1.0&quot; : &quot;...&quot;,
+        &quot;1.1&quot; : &quot;...&quot;,
+        &quot;2.0&quot; : &quot;...&quot;
+      },
+      sites: {
+        &quot;pages&quot; : { ... }  
+      },
+      ...
+    }
+  });
+};
+</code></pre>
+<p>Generate all versions and sites like:</p>
+<pre><code>&gt; grunt documentjs
+</code></pre>
+<p>Generate the &quot;pages&quot; site like:</p>
+<pre><code>&gt; grunt documentjs:pages
+</code></pre>
+<p>Generate the 1.0 docs like:</p>
+<pre><code>&gt; grunt documentjs:1.0
+</code></pre>
+<p>Generate the 1.0 docs from a local project like:</p>
+<pre><code>&gt; grunt documentjs:1.0@../local
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"line":5,"codeLine":68,"path":"node_modules/bit-docs/tasks/documentjs.js"},"type":"function","description":"\nRun the DocumentJS Grunt task.\n","title":"grunt","name":"DocumentJS.apis.generate.grunt","parent":"DocumentJS.apis.command-line","signatures":[{"code":"grunt documentjs[:NAME[@PATH]]","description":"\n\nCalls the configured grunt task.  \n\nIf no name or path is given, all\nversions and sites will be generated. \n\nIf no `documentjs` task is configured, the grunt task will read from \na local _documentjs.json_.\n","params":[{"types":[{"type":"String"}],"optional":true,"name":"NAME","description":"The name of a version or site that this generation will\nbe limited too.\n"},{"types":[{"type":"String"}],"optional":true,"name":"PATH","description":"The path to the location of a local repository to stand-in for the\nversion specified by `name`.\n"}]}],"_curParam":{"types":[{"type":"String"}],"optional":true,"name":"PATH","description":"The path to the location of a local repository to stand-in for the\nversion specified by `name`.\n"},"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

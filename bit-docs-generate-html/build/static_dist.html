@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@module bit-docs-generate-html/build/static_dist
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - bit-docs-generate-html/build/static_dist</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs.html"
+							title="Find files, process them, and produce some sort of output.">
+							bit-docs
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="../../bit-docs-generate-html.html"
+							title="Generates HTML for a docMap.  Supports plugins.">
+							bit-docs-generate-html
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="renderer.html"
+							title="Creates a renderer function used to generate
+the documentation.">
+							./build/renderer
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="module"
+							href="static_dist.html"
+							title="Builds a static distributable which will eventually be copied
+to the static folder of the generated output.">
+							./build/static_dist
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>bit-docs-generate-html/build/static_dist</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Builds a static distributable which will eventually be copied
+to the <code>static</code> folder of the generated output.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"module","name":"bit-docs-generate-html/build/static_dist","parent":"bit-docs-generate-html/modules","src":{"line":13,"codeLine":51,"path":"node_modules/bit-docs-generate-html/build/static_dist.js"},"description":"\nBuilds a static distributable which will eventually be copied\nto the `static` folder of the generated output.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":".build.staticDist(options)","description":"\n\nBuilds the static distributable with the following steps:\n\n1. Copies everything from _documentjs/site/default/static_ to\n   _documentjs/site/static/build_.\n2. Copies the path in `options.dest` to _documentjs/site/static/build_.\n3. `require`s the module at _documentjs/site/static/build/build.js_.\n4. Calls that \"build\" module function with the options and returns the result.\n\nThe \"build\" module is expected to build a minified distributable\nand copy the necessary contents to _documentjs/site/static/dist_ and\nreturn a promise that resolves when complete.\n","params":[{"types":[{"type":"Object","options":[{"name":"forceBuild","description":"If set to `true`, rebuilds the\nstatic bundle even if it has already been built.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"dest","description":"The final destination ouput of the static\ndistributable.\n","types":[{"type":"String"}]},{"name":"static","description":"The location of static content used to overwrite or\nadd to the default static content.\n","types":[{"type":"String"}]},{"name":"minifyBuild","description":"If set to `false` the build will not\nbe minified. This behavior should be implemented by the \"build\" module.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"true"}]}],"name":"options","description":"\n"}],"returns":{"types":[{"type":"Promise"}],"description":"A promise that resolves if the static dist was successfully created.\n\n"}}],"_curParam":{"types":[{"type":"Object","options":[{"name":"forceBuild","description":"If set to `true`, rebuilds the\nstatic bundle even if it has already been built.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"dest","description":"The final destination ouput of the static\ndistributable.\n","types":[{"type":"String"}]},{"name":"static","description":"The location of static content used to overwrite or\nadd to the default static content.\n","types":[{"type":"String"}]},{"name":"minifyBuild","description":"If set to `false` the build will not\nbe minified. This behavior should be implemented by the \"build\" module.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"true"}]}],"name":"options","description":"\n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A promise that resolves if the static dist was successfully created.\n\n"},"pathToRoot":"../../.."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="../../static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

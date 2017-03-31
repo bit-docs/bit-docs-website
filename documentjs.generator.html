@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@typedef documentjs.generator
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - generator</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>generator</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>A generator module should produce a function that takes the following shape. Generator
+modules are used to produce some form of documentation output.  <a href="documentjs.generators.html.html" title="">generators.html</a>
+is the default and currently only generator packaged with DocumentJS.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Use</h2>
+<p>The following exports a generator function that builds a JSON output of the docObject:</p>
+<pre><code>var Q = require('q'),
+    fs = require('fs'),
+    writeFile = Q.denodify(fs.writeFile),
+    path = require('path');
+    
+module.exports = function(docMapPromise, options){
+   return docMapPromise.then(function(docMap){
+     return writeFile(
+         path.join(options.dest,'docMap.json'), 
+         JSON.stringify(docMap) );
+   });
+};
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs/lib/generate/generator.md"},"description":"\nA generator module should produce a function that takes the following shape. Generator\nmodules are used to produce some form of documentation output.  [documentjs.generators.html]\nis the default and currently only generator packaged with DocumentJS.\n","type":"typedef","title":"generator","types":[{"type":"function","returns":{"types":[{"type":"Promise"}],"description":"A module that resolves when the output has been built.\n"},"params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"documentjs.process.docMap"}]}]}],"name":"docMapPromise","description":"A promise that will resolve\nwith a map of all [documentjs.process.docObject docObjects] keyed by their name.\n"},{"types":[{"type":"options"}],"name":"The","description":"options object passed to [documentjs.generate]. "}]}],"name":"documentjs.generator","parent":"DocumentJS.apis.internal","_curParam":{"types":[{"type":"options"}],"name":"The","description":"options object passed to [documentjs.generate]. "},"_curReturn":{"types":[{"type":"Promise"}],"description":"A module that resolves when the output has been built.\n"},"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

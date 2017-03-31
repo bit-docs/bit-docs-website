@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@constructor documentjs.tags._default
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - @_default</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>@_default</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>The default tag behavior when <code>@TAG</code> begins a line, but no
+tag is defined for <code>TAG</code>.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <p>This will make the docObject look like:</p>
+<pre><code>{memberof: &quot;_&quot;}
+</code></pre>
+<p>If <code>NAME</code> values are seperated by comma-space (<code>,</code>), the values will be set as an array. Example:</p>
+<pre><code class="language-javascript">/**
+ * @memberOf _, lodash
+ */
+ findById: function( id, success ) {
+</code></pre>
+<p>This will make the docObject look like:</p>
+<pre><code>{memberof: [&quot;_&quot;, &quot;lodash&quot;]}
+</code></pre>
+<p>If multiple <code>@TAG NAME</code>s are found with the same <code>TAG</code>, an array with each
+<code>&quot;NAME&quot;</code> will be created. Example:</p>
+<pre><code class="language-javascript">/**
+ * @memberOf _
+ * @memberOf lodash
+ */
+ findById: function( id, success ) {
+</code></pre>
+<p>This will make the docObject look like:</p>
+<pre><code>{memberof: [&quot;_&quot;, &quot;lodash&quot;]}
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"name":"documentjs.tags._default","type":"constructor","parent":"documentjs.tags","src":{"line":8,"codeLine":78,"path":"node_modules/bit-docs-process-tags/tags/_default.js"},"description":"\nThe default tag behavior when `@TAG` begins a line, but no\ntag is defined for `TAG`.\n","title":"@_default","tag":"documentation","hide":true,"signatures":[{"code":"@TAG NAME[, ...]","description":"\n\nSets a `TAG` property on the docObject to `\"NAME\"`.\n\nExample:\n```javascript\n/**\n * @memberOf _\n */\n findById: function( id, success ) {\n```","params":[]},{"code":"@TAG","description":"\n\nSets a `TAG` property on the docObject to `true`.\n","params":[]}],"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

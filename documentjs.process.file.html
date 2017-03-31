@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@function documentjs.process.file
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - documentjs.process.file</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>documentjs.process.file</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Processes a file's source.  Adds created [documentjs.process.docObject docObjects] to docMap.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Use</h2>
+<pre><code>var docMap = {};
+documentjs.process.file(&quot;import $ from 'jquery' ... &quot;,
+     docMap,
+     &quot;myproject.js&quot;);
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"documentjs.process.file","parent":"documentjs.process.methods","src":{"line":6,"codeLine":41,"path":"node_modules/bit-docs/lib/process/file.js"},"description":"\nProcesses a file's source.  Adds created [documentjs.process.docObject docObjects] to docMap.\n","title":"","signatures":[{"code":"documentjs.process.file(source, docMap, [filename])","description":"\n\nProcesses a file's source and calls [documentjs.process.codeAndComment] accordingly. If\nthe file ends with `.js`, each comment will be processed individually.  Otherwise,\nit treats the entire source as one big comment.\n\n","params":[{"types":[{"type":"String"}],"name":"source","description":"A files source"},{"types":[{"type":"documentjs.process.docMap"}],"name":"docMap","description":"A map of the name of each DocObject to the DocObject\n"},{"types":[{"type":"String"}],"optional":true,"name":"filename","description":"The filename.  If a filename is not provided,\nthe entire file is treated as one big comment block.  If a filename is provided\nand is not a .md or .markdown file, it is assumed to be a source file.\n"},{"types":[{"type":"Object","options":[],"description":"tags A collection of tags.  If `siteConfig` or `siteConfig.tags` is not\nprovided, the default tags will be used.\n"}],"optional":true,"name":"siteConfig","description":"An siteConfig object. Currently only the `tags` option is used.\n"}]}],"_curParam":{"types":[{"type":"Object","options":[],"description":"tags A collection of tags.  If `siteConfig` or `siteConfig.tags` is not\nprovided, the default tags will be used.\n"}],"optional":true,"name":"siteConfig","description":"An siteConfig object. Currently only the `tags` option is used.\n"},"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

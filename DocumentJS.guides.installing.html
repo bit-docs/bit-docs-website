@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@page DocumentJS.guides.installing
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - installing</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>installing</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Learn how to install DocumentJS.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <p>There are two primary ways to install DocumentJS so it can be used for a project:</p>
+<ol>
+<li>Install DocumentJS as a npm package dependency.</li>
+<li>Install DocumentJS globally.</li>
+</ol>
+<p>Installing globally allows you to use <a href="DocumentJS.apis.generate.documentjs.html" title="Generates documentation on the command line.">documentjs</a> command
+from anywhere. However, it will not be installed
+automatically for <code>npm</code> projects. For this reason, we encourage people to install it as
+an <code>npm</code> dependency.</p>
+<h2>Prerequisites</h2>
+<p>Install <a href="http://nodejs.org/">Node.js</a> on your computer.</p>
+<h2>Installing as an npm package dependency</h2>
+<p>In your node project's parent folder, run:</p>
+<pre><code>&gt; npm install documentjs --save-dev
+</code></pre>
+<p>Node will copy documentjs's executable to <code>./node_modules/.bin/documentjs</code>. On linux/mac, you
+can run the <a href="DocumentJS.apis.generate.documentjs.html" title="Generates documentation on the command line.">documentjs command</a> with:</p>
+<pre><code>&gt; ./node_modules/.bin/documentjs
+</code></pre>
+<h2>Installing globally</h2>
+<p>Run:</p>
+<pre><code>&gt; npm install documentjs
+</code></pre>
+<h2>Installing for Grunt</h2>
+<p>DocumentJS comes with a Grunt task. Simply import it in your <code>Gruntfile.js</code> and
+configure the <code>documentjs</code> task with the <a href="DocumentJS.docConfig.html" title="Configures the behavior of DocumentJS.  The following are values found within
+a documentjs.json or the DocumentJS.apis.generate.grunt configuration.">docConfig</a>:</p>
+<pre><code>// Gruntfile.js
+module.exports = function(grunt){
+  grunt.loadNpmTasks('documentjs');
+  grunt.initConfig({
+    documentjs: {
+      versions: { ... },
+      sites: { ... }
+    }
+  });
+};
+</code></pre>
+<h2>Installing for Gulp</h2>
+<p>coming soon</p>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs/docs/guides/installing.md"},"description":"\nLearn how to install DocumentJS.\n","name":"DocumentJS.guides.installing","title":"installing","type":"page","parent":"DocumentJS.guides","order":0,"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

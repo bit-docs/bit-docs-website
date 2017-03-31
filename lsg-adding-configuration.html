@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@page lsg-adding-configuration
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - Configuration</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+	<ul>
+		
+			
+				
+					<li>
+						<span>How-to Guides</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-quickstart.html"
+							title="This guide will:">
+							Standalone Live Style Guide
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="page"
+							href="lsg-adding.html"
+							title="This guide will:">
+							Adding to Existing JS Docs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li>
+						<span>Intro</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-disclaimer.html"
+							title="The Standalone Guide is likely more precise when it comes to step-by-step instructions. Unfortunately, since we don&#x27;t know exactly how your project looks we&#x27;ll be making a number of assumptions for this guide:">
+							A Brief Disclaimer
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-designers.html"
+							title="If you&#x27;re working on a project that is already using DocumentJS, it is being used to generate JavaScript API docs. Since it&#x27;s already being used, with only a little configuration you should be able to:">
+							DocumentJS for Designers
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>Setup</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-installation.html"
+							title="Installation">
+							Installation
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="page"
+							href="lsg-adding-configuration.html"
+							title="Configuration">
+							Configuration
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-file-organization.html"
+							title="You&#x27;ll write most of your documentation inline in your css or less files. You should add one file, styleguide.md, to your styles folder to write your landing page (and set up navigation).">
+							File Organization
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>Next Steps</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="lsg-adding-next-steps.html"
+							title="Now that you&#x27;ve finished with installation and configuration, the rest of the the process (creating pages, documenting, and customizing your site) will follow the same steps as the Standalone Style Guide:">
+							Writing and Customizing
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="publishing.html"
+							title="Once you&#x27;ve created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.">
+							Publishing Your Style Guide
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>Configuration</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <h2>Configuration</h2>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <p>To generate a Live Style Guide, <strong>you only need to configure two things</strong>.</p>
+<ol>
+<li>What stylesheet files are being documented</li>
+<li>Where the Live Style Guide should be generated</li>
+</ol>
+<h2>Current Configuration</h2>
+<p>Your project should already have a <code>documentjs.json</code> file.
+Inside it, you'll probably see something like this:</p>
+<pre><code class="language-json">{
+    &quot;sites&quot;: {
+        &quot;docs&quot;: {
+            &quot;glob&quot;: &quot;project/**/*.{js,md}&quot;
+            &quot;dest&quot;: &quot;api&quot;
+        }
+    }
+}
+</code></pre>
+<h2>Your Configuration</h2>
+<p>Add configuration for your Live Style Guide to the
+current configuration.</p>
+<pre><code class="language-json">{
+    &quot;sites&quot;: {
+        &quot;docs&quot;: {
+            &quot;glob&quot;: &quot;project/**/*.{js,md}&quot;
+            &quot;dest&quot;: &quot;api&quot;
+        },
+        &quot;styles&quot;: {
+            &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
+            &quot;dest&quot;: &quot;styleguide&quot;
+        }
+    }
+}
+</code></pre>
+<h3>Site Name</h3>
+<p>From <code>documentjs.json</code>:</p>
+<pre><code class="language-json">        &quot;styles&quot; : {
+</code></pre>
+<p>This name is important because you're setting up a second documentation site alongside existing docs.</p>
+<h3>Source Files</h3>
+<p>This is how DocumentJS knows where to look for comments and markdown files that it will use to generate the site. <code>glob</code> specifies a pattern for this.</p>
+<p>From <code>documentjs.json</code>:</p>
+<pre><code class="language-json">            &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
+</code></pre>
+<p>This string uses a few different patterns to make sure everything important is included:</p>
+<table>
+<thead>
+<tr>
+  <th>Context</th>
+  <th>Pattern</th>
+  <th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>styles/**/</code></td>
+  <td><code>/**/</code></td>
+  <td>All folders and subfolders of <code>styles</code> should be included</td>
+</tr>
+<tr>
+  <td><code>*.{...}</code></td>
+  <td><code>*</code></td>
+  <td>All filenames are included</td>
+</tr>
+<tr>
+  <td><code>*.{...}</code></td>
+  <td><code>{css,less,md}</code></td>
+  <td>Since {} takes a list, this is shorthand to match all of  <code>*.css</code>, <code>*.less</code>, <code>*.md</code></td>
+</tr>
+</tbody></table>
+<p>Altogether, <code>styles/**/*.{css,less,md}</code> means &quot;look in all folders and subfolders of <code>styles</code> for any css, less, or markdown file&quot;. If you have additional directories or want to use different file types, this can be adapted accordingly like so:</p>
+<pre><code class="language-json">            &quot;glob&quot;: &quot;{styles,static/themes/css}/**/*.{css,scss,md}&quot;
+</code></pre>
+<h3>Destination Directory</h3>
+<p>From <code>documentjs.json</code>:</p>
+<pre><code class="language-json">            &quot;dest&quot;: &quot;styleguide&quot;
+</code></pre>
+<p>This is just the name of the folder where your site will be generated. Where you want this to be located will depend on the structure of your project.</p>
+<p><a href="/docs/lsg-adding-file-organization.html">Next Page</a></p>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs/docs/livestyleguide/guides/adding/configuration.md"},"description":"\n## Configuration\n","name":"lsg-adding-configuration","title":"Configuration","type":"page","parent":"lsg-adding-group-setup","order":1,"pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

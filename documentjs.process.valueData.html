@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@typedef documentjs.process.valueData
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - valueData</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>valueData</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Data related to a value in a <a href="documentjs.typeExpression.html" title="">type expression</a>.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs-type-annotate/lib/value_data.md"},"description":"\nData related to a value in a [documentjs.typeExpression type expression].\n","type":"typedef","title":"valueData","types":[{"type":"Object","options":[{"name":"types","description":"The allowed types of the value. Multiple types can be \nspecified like:\n\n    {Boolean|Array}\n","types":[{"type":"Array","template":[{"types":[{"type":"documentjs.process.typeData"}]}]}]},{"name":"name","description":"Set if the value is given a name. This property is set by \nrecord type expressions like:\n\n    {{PROPERTY_NAME: TYPE, PROPERTY_NAME: TYPE}}\n\nOr by [documentjs.nameExpression name expressions] like:\n\n    method(arg1, arg2)\n","types":[{"type":"String"}],"optional":true},{"name":"description","description":"A description associated with the value.  This is\ncommonly provided by the [documentjs.tags.option @option] or [documentjs.tags.param @param] tag.\n","types":[{"type":"String"}],"optional":true},{"name":"optional","description":"If the type does not need to exist.  This can be specified in the type like:\n\n    {String=}\n\nOr more commonly in a [documentjs.nameExpression name expressions] like:\n\n    [NAME]\n","types":[{"type":"Boolean"}],"optional":true},{"name":"nullable","description":"If the type can be null.  It is specified with `?` like:\n\n    {?TYPE}\n    ","types":[{"type":"Boolean"}],"optional":true},{"name":"nonnull","description":"If the type can not be null. It is specified with `!` like:\n\n    {!TYPE}\n","types":[{"type":"Boolean"}],"optional":true},{"name":"variable","description":"If multiple values of the type can be provided.  This can be specified \nin the type with `...` like:\n\n    {function(...Number)}\n\nor:\n\n    {function(Number...)}\n\n","types":[{"type":"Boolean"}],"optional":true},{"name":"defaultValue","description":"The default value of the object if it is not \nprovided. This is commonly specified by a [documentjs.nameExpression name expression] like:\n\n    [foo=\"bar\"]\n\n","types":[{"type":"documentjs.process.typeData"}],"optional":true}]}],"name":"documentjs.process.valueData","parent":"documentjs.process.types","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

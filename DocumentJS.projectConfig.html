@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@typedef DocumentJS.projectConfig
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - projectConfig</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>projectConfig</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>The configuration options for a project to retrieve and document.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Use</h2>
+<p>A projectConfig object is used to configure the behavior of a project.  These objects are found
+within a <a href="DocumentJS.docConfig.html" title="Configures the behavior of DocumentJS.  The following are values found within
+a documentjs.json or the DocumentJS.apis.generate.grunt configuration.">docConfig</a>'s <code>versions</code> property.  For example:</p>
+<pre><code>{
+  versions: {
+    &quot;1.1&quot;: 
+    // projectConfig start
+    {
+      &quot;source&quot;: &quot;git://github.com/bitovi/canjs#1.1-legacy&quot;,
+      &quot;sites&quot;: {
+        &quot;docs&quot;: {
+          &quot;parent&quot; : &quot;canjs&quot;
+        }
+      },
+      &quot;path&quot;: &quot;./old/1.1/can&quot;,
+      &quot;npmInstall&quot;: false
+    }
+    // projectConfig end
+  },
+  ...
+}
+</code></pre>
+<p>A projectConfig specifies where and how to retrieve a project, where to install it, and sometimes includes
+a &quot;sites&quot; object if the project being retrieved does not contain its own <code>documentjs.json</code>.</p>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs/docs/api/config/projectConfig.md"},"description":"\nThe configuration options for a project to retrieve and document.\n","type":"typedef","title":"projectConfig","types":[{"type":"Object","options":[{"name":"source","description":"The source location of the project.\n","types":[{"type":"String"}]},{"name":"version","description":"The version name of the project. The default value is\nthis project config's `versions` key.\n","types":[{"type":"String"}],"optional":true},{"name":"path","description":"The location of where the project should be \ninstalled. The default is to use [DocumentJS.docConfig]'s `versionDest`.\n","types":[{"type":"String"}],"optional":true},{"name":"npmInstall","description":"Use npm to install the resource.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"sites","description":"The sites that should be created for the\nproject if the project does not contain its own _documentjs.json_.\n","types":[{"type":"Object","template":[{"types":[{"type":"String"}]},{"types":[{"type":"DocumentJS.siteConfig"}]}]}],"optional":true}]}],"name":"DocumentJS.projectConfig","parent":"DocumentJS.apis.config","comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@constructor documentjs.tags.description
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - @description</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>@description</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Markdown content placed before all signature and API content.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Use</h2>
+<p>The description of a [documentjs.process.docObject] is displayed at the top
+of an html page generated with
+the <a href="documentjs.generators.html.html" title="">default html generator</a>.</p>
+<p>In the following example, <code>@description</code> stops content from being added to <a href="documentjs.tags.param.html" title="Adds parameter information to a @function or
+@signature.">@param</a>,
+and instead makes content be added to the description property.</p>
+<pre><code class="language-javascript">/**
+ * @param {String} name The name of the
+ * component.
+ * 
+ * @description
+ * A component for lib.
+ */
+lib.Component = function(name){}
+</code></pre>
+<p>By default
+the first paragraph of content that is not after a multi-line tag like <a href="documentjs.tags.signature.html" title="Specifies a signature for a @function
+but can work with any other tag.">@signature</a>,
+<a href="documentjs.tags.param.html" title="Adds parameter information to a @function or
+@signature.">@param</a>, etc, is set as the <a href="documentjs.tags.description.html" title="Markdown content placed before all signature and API content.">@description</a>.  All content
+after the first paragraph is set as the body content.</p>
+<p>You can see what is treated as description and body by default in the following example:</p>
+<pre><code class="language-javascript">/**
+ * @function 
+ * 
+ * DESCRIPTION DESCRIPTION
+ * DESCRIPTION DESCRIPTION
+ * 
+ * BODY BODY
+ * BODY BODY
+ * 
+ * BODY BODY
+ * 
+ * @signature `.cols(cols)` SIGNATURE_DESCRIPTION
+ * SIGNATURE_DESCRIPTION SIGNATURE_DESCRIPTION
+ *
+ * @body
+ * BODY BODY
+ */
+Graph.prototype.cols = function(cols){ ... }
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"name":"documentjs.tags.description","type":"constructor","parent":"documentjs.tags","src":{"line":0,"codeLine":69,"path":"node_modules/bit-docs-process-tags/tags/description.js"},"description":" \nMarkdown content placed before all signature and API content.\n\n","title":"@description","signatures":[{"code":"@description","description":"\n\nContent after the `@description` tag appears after \nthe title, but before signature and API content.\n\n`@description` tag content is treated as markdown and set as \nthe [documentjs.process.docObject]'s `description` property.\n","params":[]}],"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

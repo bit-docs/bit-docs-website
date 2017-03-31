@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@function documentjs.tags.group
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - @group</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>@group</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Declares that other tags belong to a group within
+the current <code>docObject</code>.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Use</h2>
+<p>For example, in <code>myapp.md</code>, the following will create a &quot;Guides&quot; grouping:</p>
+<pre><code class="language-js">@page MyApp
+@group MyApp.guides 0 Guides
+</code></pre>
+<p>And in <code>guides/installing.md</code>, the following will add an Installing page to the &quot;Guides&quot; grouping:</p>
+<pre><code class="language-js">@page Installing
+@parent MyApp.guides
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"name":"documentjs.tags.group","type":"function","parent":"documentjs.tags","src":{"line":2,"codeLine":37,"path":"node_modules/bit-docs-dev/tags/group.js"},"description":"\nDeclares that other tags belong to a group within\nthe current `docObject`.\n","title":"@group","signatures":[{"code":"@group name [ORDER] title","description":"\n\n","params":[{"types":[{"type":"String"}],"name":"name","description":"The unique name of the group."},{"types":[{"type":"Number"}],"optional":true,"name":"order","description":"The placement of this group in the parent's list of children."},{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"},"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

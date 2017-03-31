@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@typedef documentjs.nameExpression
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - NAME-EXPRESSION</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>NAME-EXPRESSION</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Adds the <code>name</code> and other properties to <a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a> in
+using the <a href="documentjs.tags.param.html" title="Adds parameter information to a @function or
+@signature.">@param</a> or
+<a href="documentjs.tags.param.html" title="Adds parameter information to a @function or
+@signature.">@option</a> tags.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Examples</h2>
+<ul>
+<li><code>eventType</code> The param is named &quot;eventType&quot;.</li>
+<li><code>[eventType]</code> The param is optional.</li>
+<li><code>[eventType=&quot;change&quot;]</code> The param is optional and has a default value of &quot;change&quot;.</li>
+<li><code>handler(foo,bar)</code> The param is named &quot;handler&quot; and takes a foo and bar argument.</li>
+</ul>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"typedef","name":"documentjs.nameExpression","parent":"documentjs.tags","src":{"line":4,"codeLine":54,"path":"node_modules/bit-docs-type-annotate/lib/namer.js"},"description":"\nAdds the `name` and other properties to [documentjs.process.valueData valueData] in\nusing the [documentjs.tags.param @param] or\n[documentjs.tags.param @option] tags.\n","title":"NAME-EXPRESSION","types":[{"type":"STRING"}],"signatures":[{"code":"[name(args...)=default]","description":"\n\nExample:\n\n    [success(item)=updater]\n","params":[{"types":[{"type":"String"}],"name":"name","description":"\n\nProvides the name of the type.\n"},{"types":[{"type":"String"}],"name":"[]","description":"\n\nIndicates that the option or param is optional.\n"},{"types":[{"type":"String"}],"name":"(args...)","description":"\nIf `name` is a function,\n`()` provides the names of each argument.\n\n"},{"types":[{"type":"String"}],"name":"'...'","description":"An argument is variable. The argument can\nbe given 0 or more times.\n"},{"types":[{"type":"String"}],"name":"=default","description":"`=default` provides\nthe default value for the type. For example:\n\n```javascript\n/**\n * @param {Number} [age=0]\n */\n```"}]}],"_curParam":{"types":[{"type":"String"}],"name":"=default","description":"`=default` provides\nthe default value for the type. For example:\n\n```javascript\n/**\n * @param {Number} [age=0]\n */\n```"},"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

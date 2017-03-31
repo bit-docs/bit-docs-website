@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@page DocumentJS.guides.generating
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - generating</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>generating</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <p>Learn how to generate your documentation.</p>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <h2>Generating With Command Line</h2>
+<p>To generate your docs, if you installed DocumentJS globally, run:</p>
+<pre><code> &gt; documentjs
+</code></pre>
+<p>Otherwise, you run:</p>
+<pre><code> &gt; ./node_modules/.bin/documentjs
+</code></pre>
+<p>You can specify a version or site to run with:</p>
+<pre><code> &gt; ./node_modules/.bin/documentjs 1.0.0
+</code></pre>
+<p>You can also specify a local repository to find a version with:</p>
+<pre><code> &gt; ./node_modules/.bin/documentjs 1.0.0@../documentjs
+</code></pre>
+<h3>Command Line Options</h3>
+<p>The command line supports the following options that map to various properties
+in <a href="DocumentJS.docConfig.html" title="Configures the behavior of DocumentJS.  The following are values found within
+a documentjs.json or the DocumentJS.apis.generate.grunt configuration.">docConfig</a>, <a href="DocumentJS.projectConfig.html" title="The configuration options for a project to retrieve and document.">projectConfig</a>, or <a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">siteConfig</a>:</p>
+<ul>
+<li><strong>watch</strong> - regenerate on changes</li>
+<li><strong>forceBuild</strong> - rebuild templates and static distributable</li>
+<li><strong>debug</strong> - turn on debug messages</li>
+<li><strong>help</strong> - command line information</li>
+</ul>
+<p>You can turn on these options with:</p>
+<pre><code>&gt; ./node_modules/.bin/documentjs --watch
+</code></pre>
+<p>They are aliased to single characters and groupable so you can turn on watch, forceBuild and
+debug like:</p>
+<pre><code>&gt; ./node_modules/.bin/documentjs --wfd
+</code></pre>
+<h2>Generating With Grunt</h2>
+<p>To generate with grunt run:</p>
+<pre><code>&gt; grunt documentjs
+</code></pre>
+<p>This will generate all configured versions and sites. To run a specific site or version
+add a <code>:NAME</code> where <em>NAME</em> is the version or site name like:</p>
+<pre><code>&gt; grunt documentjs:2.0
+</code></pre>
+<p>You can point a version to a local copy with:</p>
+<pre><code>&gt; grunt documentjs:2.0@../myproject
+</code></pre>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"node_modules/bit-docs/docs/guides/generating.md"},"description":"\nLearn how to generate your documentation. \n","name":"DocumentJS.guides.generating","title":"generating","type":"page","parent":"DocumentJS.guides","order":3,"comment":" ","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

@@ -43,10 +43,11 @@
       "bit-docs-generate-html": "^0.4.3"
     },
     "glob": {
-      "pattern": "{node_modules,docs}/bit-docs*/**/*.{js,md}",
+      "pattern": "{node_modules,docs}/{bit-docs,bit-docs-generate-html,bit-docs-process-tags}/**/*.{js,md}",
       "ignore": [
           "node_modules/bit-docs/lib/configure/**/*",
-          "node_modules/bit-docs*/node_modules/**/*"
+          "node_modules/bit-docs*/node_modules/**/*",
+          "node_modules/bit-docs-generate-html/site/**/*"
         ]
     },
     "parent": "BitDocs",

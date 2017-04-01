@@ -19,20 +19,21 @@
     "url": "git+https://github.com/bit-docs/website.git"
   },
   "scripts": {
-    "gen": "npm run bit-docs",
-    "see": "http-server gh-pages",
-    "pub": "npm run gh-pages",
     "bit-docs": "bit-docs -d",
+    "gen": "npm run bit-docs",
     "gh-pages": "gh-pages -d gh-pages",
+    "pub": "npm run gh-pages",
+    "see": "http-server gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "bit-docs": "^0.0.7",
-    "bit-docs-glob-finder": "^0.0.5",
     "bit-docs-dev": "^0.0.3",
+    "bit-docs-generate-html": "^0.4.3",
+    "bit-docs-generate-readme": "0.0.10",
+    "bit-docs-glob-finder": "^0.0.5",
     "bit-docs-js": "^0.0.6",
     "bit-docs-process-mustache": "^0.0.1",
-    "bit-docs-generate-html": "^0.4.3",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
@@ -43,12 +44,12 @@
       "bit-docs-generate-html": "^0.4.3"
     },
     "glob": {
-      "pattern": "{node_modules,docs}/{bit-docs,bit-docs-generate-html,bit-docs-process-tags}/**/*.{js,md}",
+      "pattern": "{node_modules,docs}/{bit-docs,bit-docs-generate-html,bit-docs-generate-readme,bit-docs-process-tags}/**/*.{js,md}",
       "ignore": [
-          "node_modules/bit-docs/lib/configure/**/*",
-          "node_modules/bit-docs*/node_modules/**/*",
-          "node_modules/bit-docs-generate-html/site/**/*"
-        ]
+        "node_modules/bit-docs/lib/configure/**/*",
+        "node_modules/bit-docs*/node_modules/**/*",
+        "node_modules/bit-docs-generate-html/site/**/*"
+      ]
     },
     "parent": "BitDocs",
     "minifyBuild": false,

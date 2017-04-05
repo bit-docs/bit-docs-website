@@ -19,8 +19,10 @@
     "url": "git+https://github.com/bit-docs/website.git"
   },
   "scripts": {
-    "bit-docs": "bit-docs -d",
-    "gen": "npm run bit-docs",
+    "bit-docs": "bit-docs",
+    "gen": "bit-docs -d",
+    "genc": "bit-docs -dc",
+    "genf": "bit-docs -df",
     "gh-pages": "gh-pages -d gh-pages",
     "pub": "npm run gh-pages",
     "see": "http-server gh-pages",
@@ -31,23 +33,32 @@
     "bit-docs-dev": "^0.0.3",
     "bit-docs-generate-html": "^0.4.3",
     "bit-docs-generate-readme": "0.0.10",
-    "bit-docs-glob-finder": "^0.0.5",
+    "bit-docs-glob-finder": "^0.0.6",
     "bit-docs-js": "^0.0.6",
     "bit-docs-process-mustache": "^0.0.1",
+    "bit-docs-process-tags": "^0.0.5",
+    "bit-docs-tag-sourceref": "0.0.3",
+    "bit-docs-type-annotate": "0.0.1",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
     "dependencies": {
-      "bit-docs-glob-finder": "^0.0.5",
-      "bit-docs-dev": "^0.0.3",
-      "bit-docs-js": "^0.0.6",
-      "bit-docs-generate-html": "^0.4.3"
+      "bit-docs-dev": "*",
+      "bit-docs-generate-html": "*",
+      "bit-docs-glob-finder": "*",
+      "bit-docs-js": "*"
     },
     "glob": {
-      "pattern": "{node_modules,docs}/{bit-docs,bit-docs-generate-html,bit-docs-generate-readme,bit-docs-process-tags}/**/*.{js,md}",
+      "pattern": "{node_modules,docs}/{bit-docs,bit-docs-dev,bit-docs-generate-html,bit-docs-generate-readme,bit-docs-glob-finder,bit-docs-js,bit-docs-process-mustache,bit-docs-process-tags,bit-docs-tag-sourceref,bit-docs-type-annotate}/**/*.{js,md}",
       "ignore": [
+        "node_modules/bit-docs/README.md",
+        "node_modules/bit-docs/license.md",
         "node_modules/bit-docs/lib/configure/**/*",
         "node_modules/bit-docs*/node_modules/**/*",
+        "node_modules/bit-docs*/**/test/**/*",
+        "node_modules/bit-docs*/**/*_test.js",
+        "node_modules/bit-docs*/**/test_*.js",
+        "node_modules/bit-docs*/**/test.js",
         "node_modules/bit-docs-generate-html/site/**/*"
       ]
     },

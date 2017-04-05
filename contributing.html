@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@page contributing
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - Contributing</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="plugins.html"
+							title="Here you will find plugins maintained by the bit-docs organization.">
+							Plugins
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="page"
+							href="guides.html"
+							title="These guides are here to help you:">
+							Guides
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="high-level-overview.html"
+							title="bit-docs">
+							High Level Overview
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="page"
+							href="contributing.html"
+							title="Contributing">
+							Contributing
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>Contributing</h1>
+</section>
+
+	
+
+	
+		
+			<section class="description">
+    <h1>Contributing</h1>
+
+</section>
+
+		
+	
+
+	
+		
+			<section class="body">
+    <p>For general contributing guidelines, see the <a href="https://donejs.com/contributing.html">Contributing Guide on DoneJS.com</a>.</p>
+<h2>Code Organization</h2>
+<pre><code>bit-docs
+└── package.json
+</code></pre>
+<h2>Program Flow</h2>
+<p>When bit-docs gets run, the following flow happens:</p>
+<ul>
+<li><code>bit-docs/bin/bit-docs</code> is triggered, and passed command flags are parsed as options.
+<ul>
+<li>Next, the module export in <code>main.js</code> is called with the <code>package.json</code> path and options.</li>
+</ul></li>
+<li><code>main.js</code> uses <code>lib/configure/configure.js</code> to get a <code>siteConfig</code> which is passed to <code>lib/generate/generate.js</code>.
+<ul>
+<li><code>configure.js</code> will install plugin packages defined in the <code>bit-docs</code> section of <code>package.json</code>.</li>
+<li>Next, <code>configure.js</code> will allow each installed plugin to register itself to whatever handlers.</li>
+</ul></li>
+<li><code>generate.js</code> takes that configuration and passes it to those plugins registered as &quot;generator&quot; plugins.</li>
+</ul>
+<h2>Developing Locally</h2>
+<h3>Setup</h3>
+<p>Fork and clone this repository. See <a href="https://help.github.com/articles/fork-a-repo">Fork A Repo</a> and <a href="https://help.github.com/articles/cloning-a-repository">Cloning a repository</a> for help.</p>
+<p>Install the packages defined in <a href="package.json"><code>package.json</code></a>:</p>
+<pre><code class="language-shell">npm install
+</code></pre>
+<h3>Build</h3>
+<p>There is no build step for this repo.</p>
+<h3>Test</h3>
+<p>Tests are located in <a href="test.js"><code>test.js</code></a>, at the root of this repo.</p>
+<h2>Getting Help</h2>
+<p><a href="http://forums.donejs.com">Our forums</a> and <a href="https://gitter.im/donejs/donejs">Gitter chat</a> are the best places to ask questions.</p>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"docs/bit-docs/contributing.md"},"description":"\n# Contributing\n","name":"contributing","title":"Contributing","type":"page","parent":"guides","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

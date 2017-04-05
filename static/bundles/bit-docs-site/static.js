@@ -844,7 +844,8 @@ define('package.json!npm', [
             }
         });
         setupLiveReload();
-    }(loader, [{
+    }(loader, [
+        {
             'name': 'bit-docs-site',
             'version': '0.0.1',
             'fileUrl': './package.json',
@@ -852,8 +853,41 @@ define('package.json!npm', [
             'system': { 'npmAlgorithm': 'flat' },
             'globalBrowser': {},
             'browser': {},
+            'resolutions': {
+                'bit-docs-site': '0.0.1',
+                'bit-docs-js': '0.0.6'
+            }
+        },
+        {
+            'name': 'bit-docs-js',
+            'version': '0.0.6',
+            'fileUrl': './node_modules/bit-docs-js/package.json',
+            'main': 'index.js',
+            'globalBrowser': {},
+            'browser': {},
             'resolutions': {}
-        }], {}));
+        }
+    ], { 'npmParentMap': { 'bit-docs-js@0.0.6#index': 'bit-docs-js@0.0.6#index/index' } }));
+});
+/*bit-docs-js@0.0.6#index*/
+define('bit-docs-js@0.0.6#index', [
+    'module',
+    '@loader'
+], function (module, loader) {
+    loader.get('@@global-helpers').prepareGlobal(module.id, []);
+    var define = loader.global.define;
+    var require = loader.global.require;
+    var source = '';
+    loader.global.define = undefined;
+    loader.global.module = undefined;
+    loader.global.exports = undefined;
+    loader.__exec({
+        'source': source,
+        'address': module.uri
+    });
+    loader.global.require = require;
+    loader.global.define = define;
+    return loader.get('@@global-helpers').retrieveGlobal(module.id, undefined);
 });
 /*bit-docs-site@0.0.1#packages*/
 define('bit-docs-site@0.0.1#packages', function (require, exports, module) {
@@ -863,7 +897,7 @@ define('bit-docs-site@0.0.1#packages', function (require, exports, module) {
         }
         return value;
     }
-    module.exports = {};
+    module.exports = { 'bit-docs-js': callIfFunction(require('bit-docs-js')) };
 });
 /*$css*/
 define('$css', function (require, exports, module) {
@@ -936,4 +970,12 @@ define('bit-docs-site@0.0.1#static', function (require, exports, module) {
     var packages = require('./packages');
     require('./styles/styles.less!');
     window.PACKAGES = packages;
+    function setSidebarHeightOnResize() {
+        var windowHeight = window.innerHeight;
+        document.getElementsByClassName('sidebar')[0].style.height = windowHeight + 'px';
+    }
+    setSidebarHeightOnResize();
+    window.onresize = function () {
+        setSidebarHeightOnResize();
+    };
 });

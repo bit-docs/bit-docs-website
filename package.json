@@ -59,7 +59,8 @@
         "node_modules/bit-docs*/**/*_test.js",
         "node_modules/bit-docs*/**/test_*.js",
         "node_modules/bit-docs*/**/test.js",
-        "node_modules/bit-docs-generate-html/site/**/*"
+        "node_modules/bit-docs-generate-html/site/**/*",
+        "node_modules/bit-docs-js/tags/module.md"
       ]
     },
     "parent": "BitDocs",

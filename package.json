@@ -29,7 +29,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "bit-docs": "^0.0.7",
+    "bit-docs": "bit-docs/bit-docs#master",
     "bit-docs-dev": "^0.0.3",
     "bit-docs-generate-html": "^0.4.3",
     "bit-docs-generate-readme": "0.0.10",
@@ -46,7 +46,7 @@
       "bit-docs-dev": "*",
       "bit-docs-generate-html": "*",
       "bit-docs-glob-finder": "*",
-      "bit-docs-js": "*"
+      "bit-docs-js": "bit-docs/bit-docs-js#remove-depend"
     },
     "glob": {
       "pattern": "{node_modules,docs}/{bit-docs,bit-docs-dev,bit-docs-generate-html,bit-docs-generate-readme,bit-docs-glob-finder,bit-docs-js,bit-docs-process-mustache,bit-docs-process-tags,bit-docs-tag-sourceref,bit-docs-type-annotate}/**/*.{js,md}",
@@ -59,8 +59,7 @@
         "node_modules/bit-docs*/**/*_test.js",
         "node_modules/bit-docs*/**/test_*.js",
         "node_modules/bit-docs*/**/test.js",
-        "node_modules/bit-docs-generate-html/site/**/*",
-        "node_modules/bit-docs-js/tags/module.md"
+        "node_modules/bit-docs-generate-html/site/**/*"
       ]
     },
     "parent": "BitDocs",

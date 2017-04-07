@@ -1,6 +1,8 @@
 @page high-level-overview High Level Overview
 @parent guides 0
 
+<div class="on-this-page-container"></div>
+
 Loosely based on ideas and lessons learned from [DocumentJS](http://documentjs.com), bit-docs is an evolving set of tools that allow you to:
 
  - Write documentation inline, or in markdown files.
@@ -29,13 +31,13 @@ This paradigm of creating a repository dedicated to generating documentation wit
 
 To use bit-docs, add it to the `package.json` of the project you want to use it in:
 
-```
+```shell
 npm install bit-docs --save-dev
 ```
 
 Next, in your project's `package.json`, add a section called `bit-docs`, like:
 
-```
+```json
   "bit-docs": {
     "dependencies": {
       "bit-docs-glob-finder": "*",
@@ -53,7 +55,7 @@ Next, in your project's `package.json`, add a section called `bit-docs`, like:
 
 If you created a new repo specifically to hold this bit-docs stuff, you may wish to add the codebases you will be documenting as normal `package.json` devDependencies at this time. You will need to update the `bit-docs` glob pattern to be similar to what the StealJS website repo does (to tell the glob finder to look in `node_modules` for files to process):
 
-```
+```json
     "glob": {
       "pattern": "{node_modules,doc}/{steal,grunt-steal,steal-*}/**/*.{js,md}",
       "ignore": [

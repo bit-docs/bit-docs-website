@@ -1,0 +1,42 @@
+[submodule "docs/modules/bit-docs"]
+	path = docs/modules/bit-docs
+	url = https://github.com/bit-docs/bit-docs.git
+[submodule "docs/modules/bit-docs-dev"]
+	path = docs/modules/bit-docs-dev
+	url = https://github.com/bit-docs/bit-docs-dev.git
+[submodule "docs/modules/bit-docs-generate-html"]
+	path = docs/modules/bit-docs-generate-html
+	url = https://github.com/bit-docs/bit-docs-generate-html.git
+[submodule "docs/modules/bit-docs-generate-readme"]
+	path = docs/modules/bit-docs-generate-readme
+	url = https://github.com/bit-docs/bit-docs-generate-readme.git
+[submodule "docs/modules/bit-docs-glob-finder"]
+	path = docs/modules/bit-docs-glob-finder
+	url = https://github.com/bit-docs/bit-docs-glob-finder.git
+[submodule "docs/modules/bit-docs-js"]
+	path = docs/modules/bit-docs-js
+	url = https://github.com/bit-docs/bit-docs-js.git
+[submodule "docs/modules/bit-docs-process-mustache"]
+	path = docs/modules/bit-docs-process-mustache
+	url = https://github.com/bit-docs/bit-docs-process-mustache.git
+[submodule "docs/modules/bit-docs-process-tags"]
+	path = docs/modules/bit-docs-process-tags
+	url = https://github.com/bit-docs/bit-docs-process-tags.git
+[submodule "docs/modules/bit-docs-tag-sourceref"]
+	path = docs/modules/bit-docs-tag-sourceref
+	url = https://github.com/bit-docs/bit-docs-tag-sourceref.git
+[submodule "docs/modules/bit-docs-type-annotate"]
+	path = docs/modules/bit-docs-type-annotate
+	url = https://github.com/bit-docs/bit-docs-type-annotate.git
+[submodule "docs/modules/bit-docs-html-toc"]
+	path = docs/modules/bit-docs-html-toc
+	url = https://github.com/bit-docs/bit-docs-html-toc.git
+[submodule "docs/modules/bit-docs-tag-package"]
+	path = docs/modules/bit-docs-tag-package
+	url = https://github.com/bit-docs/bit-docs-tag-package.git
+[submodule "docs/modules/bit-docs-html-highlight-line"]
+	path = docs/modules/bit-docs-html-highlight-line
+	url = https://github.com/bit-docs/bit-docs-html-highlight-line.git
+[submodule "docs/modules/bit-docs-tag-demo"]
+	path = docs/modules/bit-docs-tag-demo
+	url = https://github.com/bit-docs/bit-docs-tag-demo.git

@@ -19,6 +19,7 @@
     "url": "git+https://github.com/bit-docs/website.git"
   },
   "scripts": {
+    "cache-bust": "rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static ./node_modules/bit-docs/lib/configure/node_modules ./gh-pages",
     "bit-docs": "bit-docs",
     "gen": "bit-docs -d",
     "genc": "bit-docs -dc",
@@ -30,15 +31,6 @@
   },
   "devDependencies": {
     "bit-docs": "bit-docs/bit-docs",
-    "bit-docs-dev": "bit-docs/bit-docs-dev",
-    "bit-docs-generate-html": "bit-docs/bit-docs-generate-html",
-    "bit-docs-generate-readme": "bit-docs/bit-docs-generate-readme",
-    "bit-docs-glob-finder": "bit-docs/bit-docs-glob-finder",
-    "bit-docs-js": "bit-docs/bit-docs-js",
-    "bit-docs-process-mustache": "bit-docs/bit-docs-process-mustache",
-    "bit-docs-process-tags": "bit-docs/bit-docs-process-tags",
-    "bit-docs-tag-sourceref": "bit-docs/bit-docs-tag-sourceref",
-    "bit-docs-type-annotate": "bit-docs/bit-docs-type-annotate",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
@@ -46,20 +38,25 @@
       "bit-docs-dev": "bit-docs/bit-docs-dev",
       "bit-docs-generate-html": "bit-docs/bit-docs-generate-html",
       "bit-docs-glob-finder": "bit-docs/bit-docs-glob-finder",
-      "bit-docs-js": "bit-docs/bit-docs-js#remove-depend"
+      "bit-docs-html-highlight-line": "bit-docs/bit-docs-html-highlight-line",
+      "bit-docs-html-toc": "bit-docs/bit-docs-html-toc",
+      "bit-docs-js": "bit-docs/bit-docs-js#remove-depend",
+      "bit-docs-prettify": "bit-docs/bit-docs-prettify",
+      "bit-docs-process-mustache": "bit-docs/bit-docs-process-mustache",
+      "bit-docs-tag-demo": "bit-docs/bit-docs-tag-demo",
+      "bit-docs-tag-sourceref": "bit-docs/bit-docs-tag-sourceref"
     },
     "glob": {
-      "pattern": "{node_modules,docs}/{bit-docs,bit-docs-dev,bit-docs-generate-html,bit-docs-generate-readme,bit-docs-glob-finder,bit-docs-js,bit-docs-process-mustache,bit-docs-process-tags,bit-docs-tag-sourceref,bit-docs-type-annotate}/**/*.{js,md}",
+      "pattern": "docs/**/*.{js,md,mustache}",
       "ignore": [
-        "node_modules/bit-docs/README.md",
-        "node_modules/bit-docs/license.md",
-        "node_modules/bit-docs/lib/configure/**/*",
-        "node_modules/bit-docs*/node_modules/**/*",
-        "node_modules/bit-docs*/**/test/**/*",
-        "node_modules/bit-docs*/**/*_test.js",
-        "node_modules/bit-docs*/**/test_*.js",
-        "node_modules/bit-docs*/**/test.js",
-        "node_modules/bit-docs-generate-html/site/**/*"
+        "**/README.md",
+        "**/LICENSE.md",
+        "**/CONTRIBUTING.md",
+        "**/test/**/*",
+        "**/*_test.js",
+        "**/test_*.js",
+        "**/test-*.md",
+        "**/test.js"
       ]
     },
     "parent": "BitDocs",

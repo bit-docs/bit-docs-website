@@ -19,7 +19,7 @@
     "url": "git+https://github.com/bit-docs/website.git"
   },
   "scripts": {
-    "cache-bust": "rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static ./node_modules/bit-docs/lib/configure/node_modules ./gh-pages",
+    "cache-bust": "rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static ./gh-pages",
     "bit-docs": "bit-docs",
     "gen": "bit-docs -d",
     "genc": "bit-docs -dc",
@@ -39,10 +39,10 @@
       "bit-docs-dev": "bit-docs/bit-docs-dev",
       "bit-docs-generate-html": "bit-docs/bit-docs-generate-html",
       "bit-docs-glob-finder": "bit-docs/bit-docs-glob-finder",
-      "bit-docs-html-highlight-line": "bit-docs/bit-docs-html-highlight-line",
       "bit-docs-html-toc": "bit-docs/bit-docs-html-toc",
       "bit-docs-js": "bit-docs/bit-docs-js#remove-depend",
       "bit-docs-prettify": "bit-docs/bit-docs-prettify",
+      "bit-docs-html-highlight-line": "bit-docs/bit-docs-html-highlight-line",
       "bit-docs-process-mustache": "bit-docs/bit-docs-process-mustache",
       "bit-docs-tag-demo": "bit-docs/bit-docs-tag-demo",
       "bit-docs-tag-sourceref": "bit-docs/bit-docs-tag-sourceref"

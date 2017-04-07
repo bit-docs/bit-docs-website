@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: undefined
+	@template content
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - content</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>content</h1>
+</section>
+
+	
+
+	
+		
+	
+
+	
+		
+			<section class="body">
+    <p>{{#unless hideSidebar}}
+{{&gt; sidebar.mustache}}
+{{/unless}}</p>
+<article>
+    {{#unless hideTitle}}
+        {{> title.mustache}}
+    {{/unless}}
+<pre><code>{{#unless hideDescription}}
+    {{#if description}}
+        {{&gt; description.mustache}}
+    {{/if}}
+{{/unless}}
+
+{{#unless hideBody}}
+    {{#if body}}
+        {{&gt; body.mustache}}
+    {{/if}}
+{{/unless}}
+</code></pre>
+</article>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"template","name":"content","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

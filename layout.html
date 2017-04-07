@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: undefined
+	@template layout
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - layout</title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	
+	<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+
+<article>
+	
+		<section class="title">
+	<h1>layout</h1>
+</section>
+
+	
+
+	
+		
+	
+
+	
+		
+			<section class="body">
+    <!DOCTYPE html>
+{{{generatedWarning}}}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{getTitle}}</title>
+    {{^devBuild}}
+    <link rel="stylesheet" type="text/css" href="{{pathToDest}}/static/bundles/bit-docs-site/static.css">
+    {{/devBuild}}
+</head>
+<body>
+    <header>{{> header.mustache}}</header>
+    {{{content}}}
+    <footer>{{> footer.mustache}}</footer>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var docObject = {{{docObjectString}}};
+&lt;/script&gt;
+
+{{#if devBuild}}
+    &lt;script type='text/javascript'
+        data-main=&quot;bit-docs-site/static&quot;
+        src=&quot;./static/node_modules/steal/steal.js&quot;&gt;&lt;/script&gt;
+{{else}}
+    &lt;script&gt;
+      steal = {
+        instantiated: {
+          &quot;bundles/bit-docs-site/static.css!$css&quot; : null
+        }
+      }
+    &lt;/script&gt;
+    &lt;script type='text/javascript'
+            data-main=&quot;bit-docs-site/static&quot;
+            src=&quot;{{pathToDest}}/static/node_modules/steal/steal.production.js&quot;&gt;&lt;/script&gt;
+{{/if}}
+</code></pre>
+</body>
+<p></html></p>
+
+</section>
+
+		
+	
+</article>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"template","name":"layout","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/node_modules/steal/steal.production.js"></script>
+	
+</body>
+
+</html>

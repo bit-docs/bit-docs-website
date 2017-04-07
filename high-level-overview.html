@@ -59,7 +59,7 @@
            						expanded">
 						<a class="page"
 							href="high-level-overview.html"
-							title="Loosely based on ideas and lessons learned from DocumentJS, bit-docs is an evolving set of tools that allow you to:">
+							title="">
 							High Level Overview
 						</a>
 						
@@ -111,7 +111,7 @@
 	
 		
 			<section class="description">
-    <p>Loosely based on ideas and lessons learned from <a href="http://documentjs.com">DocumentJS</a>, bit-docs is an evolving set of tools that allow you to:</p>
+    <div class="on-this-page-container"></div>
 
 </section>
 
@@ -121,7 +121,8 @@
 	
 		
 			<section class="body">
-    <ul>
+    <p>Loosely based on ideas and lessons learned from <a href="http://documentjs.com">DocumentJS</a>, bit-docs is an evolving set of tools that allow you to:</p>
+<ul>
 <li>Write documentation inline, or in markdown files.</li>
 <li>Specify your code's behavior precisely with JSDoc
 and <a href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Google Closure Compiler</a>
@@ -141,10 +142,10 @@ annotations.</li>
 <p>It is possible to add the bit-docs package as a dependency to the actual project you wish to document, but we have found creating an entirely new dedicated repository that will pull in the codebase(s) that you wish to document is a better paradigm. So, for <code>your-project</code> you might create a new repository called <code>your-project-site</code>.</p>
 <p>This paradigm of creating a repository dedicated to generating documentation with bit-docs is especially useful when pulling in multiple codebases and wishing to generate a unified website. This is the strategy used by StealJS and DoneJS to document their core functionality and the functionality of their various modules that are broken out into separate repos and packages!</p>
 <p>To use bit-docs, add it to the <code>package.json</code> of the project you want to use it in:</p>
-<pre><code>npm install bit-docs --save-dev
+<pre><code class="language-shell">npm install bit-docs --save-dev
 </code></pre>
 <p>Next, in your project's <code>package.json</code>, add a section called <code>bit-docs</code>, like:</p>
-<pre><code>  &quot;bit-docs&quot;: {
+<pre><code class="language-json">  &quot;bit-docs&quot;: {
     &quot;dependencies&quot;: {
       &quot;bit-docs-glob-finder&quot;: &quot;*&quot;,
       &quot;bit-docs-dev&quot;: &quot;*&quot;,
@@ -159,7 +160,7 @@ annotations.</li>
   }
 </code></pre>
 <p>If you created a new repo specifically to hold this bit-docs stuff, you may wish to add the codebases you will be documenting as normal <code>package.json</code> devDependencies at this time. You will need to update the <code>bit-docs</code> glob pattern to be similar to what the StealJS website repo does (to tell the glob finder to look in <code>node_modules</code> for files to process):</p>
-<pre><code>    &quot;glob&quot;: {
+<pre><code class="language-json">    &quot;glob&quot;: {
       &quot;pattern&quot;: &quot;{node_modules,doc}/{steal,grunt-steal,steal-*}/**/*.{js,md}&quot;,
       &quot;ignore&quot;: [
         &quot;node_modules/steal/test/**/*&quot;,
@@ -243,7 +244,7 @@ annotations.</li>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/bit-docs/high-level-overview.md"},"description":"\nLoosely based on ideas and lessons learned from [DocumentJS](http://documentjs.com), bit-docs is an evolving set of tools that allow you to:\n","name":"high-level-overview","title":"High Level Overview","type":"page","parent":"guides","order":0,"pathToRoot":".."};
+		var docObject = {"src":{"path":"docs/bit-docs/high-level-overview.md"},"description":"\n<div class=\"on-this-page-container\"></div>\n","name":"high-level-overview","title":"High Level Overview","type":"page","parent":"guides","order":0,"pathToRoot":".."};
 	</script>
 
 	

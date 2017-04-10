@@ -25,7 +25,7 @@
     "genc": "bit-docs -dc",
     "genf": "bit-docs -df",
     "gh-pages": "gh-pages -d gh-pages",
-    "postinstall": "git submodule update --init",
+    "preinstall": "[ -f docs/modules/bit-docs/package.json ] || git submodule update --init",
     "pub": "npm run gh-pages",
     "see": "http-server gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,4 +1,4 @@
-@page plugins Plugins
+@page plugins API
 @parent BitDocs 0
 
 Here you will find plugins maintained by the bit-docs organization.

@@ -31,21 +31,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "bit-docs": "bit-docs/bit-docs",
+    "bit-docs": "bit-docs/bit-docs#file-pathed-deps",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
     "dependencies": {
-      "bit-docs-dev": "bit-docs/bit-docs-dev",
-      "bit-docs-generate-html": "bit-docs/bit-docs-generate-html",
-      "bit-docs-glob-finder": "bit-docs/bit-docs-glob-finder",
-      "bit-docs-html-toc": "bit-docs/bit-docs-html-toc",
+      "bit-docs-dev": "file:docs/modules/bit-docs-dev",
+      "bit-docs-generate-html": "bit-docs/bit-docs-generate-html#file-pathed-deps",
+      "bit-docs-glob-finder": "file:docs/modules/bit-docs-glob-finder",
+      "bit-docs-html-toc": "file:docs/modules/bit-docs-html-toc",
       "bit-docs-js": "bit-docs/bit-docs-js#remove-depend",
-      "bit-docs-prettify": "bit-docs/bit-docs-prettify",
-      "bit-docs-html-highlight-line": "bit-docs/bit-docs-html-highlight-line",
-      "bit-docs-process-mustache": "bit-docs/bit-docs-process-mustache",
-      "bit-docs-tag-demo": "bit-docs/bit-docs-tag-demo",
-      "bit-docs-tag-sourceref": "bit-docs/bit-docs-tag-sourceref"
+      "bit-docs-prettify": "file:docs/modules/bit-docs-prettify",
+      "bit-docs-html-highlight-line": "file:docs/modules/bit-docs-html-highlight-line",
+      "bit-docs-process-mustache": "file:docs/modules/bit-docs-process-mustache",
+      "bit-docs-tag-demo": "file:docs/modules/bit-docs-tag-demo",
+      "bit-docs-tag-sourceref": "file:docs/modules/bit-docs-tag-sourceref"
     },
     "glob": {
       "pattern": "docs/**/*.{js,md,mustache}",

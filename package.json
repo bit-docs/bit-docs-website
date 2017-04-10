@@ -57,7 +57,8 @@
         "**/*_test.js",
         "**/test_*.js",
         "**/test-*.md",
-        "**/test.js"
+        "**/test.js",
+        "**/node_modules/**/*"
       ]
     },
     "parent": "BitDocs",

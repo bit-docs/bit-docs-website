@@ -6,12 +6,12 @@
 
 The `bit-docs` plugin system provides hooks that allow you to modify your generated website.
 
-A number of plugins are maintained by the bit-docs organization. Some of these plugins provide core functionality, and will need to be included with every project, unless they are replaced; typically you will need a "finder" plugin to pull in files, a "processor" plugin to processes pulled in data, and then a "generator" plugin to generate the output.
+A number of plugins are maintained by the bit-docs organization. Some of these plugins provide core functionality, and will need to be included with every project, unless they are replaced; typically you will need a "finder" plugin to pull in files, a "processor" plugin to process pulled in data, and then a "generator" plugin to generate the output.
 
 So, a typical `bit-docs` enabled project will probably include:
 
 - [bit-docs-glob-finder] — Finder
-- [bit-docs-dev] — Processor
+- [bit-docs-dev] — Commonly used tags
 - [bit-docs-js] — Processor
 - [bit-docs-generate-html] — Generator
 

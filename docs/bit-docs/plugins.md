@@ -184,7 +184,7 @@ The composite file is loaded on the front-end of the generated website using lik
 
 To recap on loading front-end depencies:
 
-All you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` for the `html` hook, making sure `main` in `package.json` points to a file contianing a `module.exports` with the code you want to run on the front-end!
+All you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the `html` hook with the `name` and `version` values of your plugin's `package.json`, making sure `main` in `package.json` points to a file contianing a `module.exports` with the code you want to run on the front-end!
 
 #### Adding Less
 

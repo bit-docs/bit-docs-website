@@ -122,7 +122,7 @@ module.exports = function(bitDocs){
     // ...
     bitDocs.handle("html", function(siteConfig, htmlConfig) {
         // ...
-	});
+    });
 };
 ```
 

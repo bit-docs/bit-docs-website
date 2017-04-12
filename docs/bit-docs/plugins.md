@@ -4,16 +4,18 @@
 
 @body
 
-The `bit-docs` plugin system provides hooks that allow you to modify your generated website, without the need to modify `bit-docs` itself.
+The `bit-docs` plugin system provides hooks that allow you to modify your generated website.
 
-A number of plugins are maintained by the bit-docs organization. Some of these plugins provide core functionality, and will need to be included with every project, unless they are replaced. Typically you will need a "finder" plugin to pull in files, a "processor" plugin to processes pulled in data, and then a "generator" plugin to generate the output. So, a typical `bit-docs` enabled project will include:
+A number of plugins are maintained by the bit-docs organization. Some of these plugins provide core functionality, and will need to be included with every project, unless they are replaced; typically you will need a "finder" plugin to pull in files, a "processor" plugin to processes pulled in data, and then a "generator" plugin to generate the output.
 
-- [bit-docs-glob-finder] - Finder
+So, a typical `bit-docs` enabled project will probably include:
+
+- [bit-docs-glob-finder] — Finder
 - [bit-docs-dev] — Processor
 - [bit-docs-js] — Processor
 - [bit-docs-generate-html] — Generator
 
-Continue reading, and we'll explore the architecture of a typical `bit-docs` plugin.
+Here we'll explore the architecture of a typical `bit-docs` plugin.
 
 ## Essentials of a Plugin
 
@@ -79,7 +81,7 @@ module.exports = function(bitDocs){
 
 This might look intimidating if you're not familiar with the `bit-docs` plugin API, but it's straightforward.
 
-#### Registering front-end dependencies
+### Registering front-end dependencies
 
 You will see this pattern in most `bit-docs` plugins that need to register front-end dependencies: 
 
@@ -178,9 +180,9 @@ Note: It's our other tool, [StealJS](http://stealjs.com), enabling the use of "m
 
 The composite file is subsequently loaded on the front-end of the generated website using a normal script tag, and so in the case the alert message would appear on initial page load!
 
-To recap on loading front-end depencies, all you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` as shown for the `html` hook, making sure to point `main` to a file contianing a `module.exports` with the code you want to run on the front end!
+To recap on loading front-end depencies, all you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` for the `html` hook, making sure to point `main` to a file contianing a `module.exports` with the code you want to run on the front-end!
 
-##### Adding Less
+#### Adding Less
 
 If your plugin needs to add some styling to the front-end of the generated website, you can do so by requiring a Less file in the `main` file mentioned above.
 
@@ -206,16 +208,16 @@ body {
 
 Now when you generate the website, it should have a red background!
 
-[StealJS](http://stealjs.com) compiles and loads those styles to the front-end of the generated website.
+Note: Again, [StealJS](http://stealjs.com) compiles and loads those styles to the front-end of the generated website.
 
-#### Registering back-end dependencies
-
-TBD
-
-### Loading a plugin
+### Registering back-end dependencies
 
 TBD
 
-### Writing a plugin
+## Loading a plugin
+
+TBD
+
+## Writing a plugin
 
 TBD

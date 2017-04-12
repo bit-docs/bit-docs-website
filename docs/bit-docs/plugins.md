@@ -33,7 +33,7 @@ Depending on the the plugin, you might also have files like:
 
 Where `tags.js` or `theplugin.js` might contain various functionalities of the plugin.
 
-## Registering a Plugin
+## Using a Plugin
 
 To use a plugin within a `bit-docs` enabled project, you must tell the project about the plugin.
 
@@ -57,6 +57,8 @@ In the case of a plugin named `the-plugin`, you would add it to a website projec
   }
 }
 ```
+
+## Registering a Plugin
 
 When `bit-docs` attempts to load any plugin, it looks to require `bit-docs.js` from the plugin root.
 
@@ -211,13 +213,5 @@ Now when you generate the website, it should have a red background!
 Note: Again, [StealJS](http://stealjs.com) compiles and loads those styles to the front-end of the generated website.
 
 ### Registering back-end dependencies
-
-TBD
-
-## Loading a plugin
-
-TBD
-
-## Writing a plugin
 
 TBD

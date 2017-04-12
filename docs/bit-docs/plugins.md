@@ -128,7 +128,7 @@ module.exports = function(bitDocs){
 
 Handling custom hooks like this will be covered later, but just know that's how `bit-docs-generate-html` informs `bit-docs` that it wants to handle any `html` hook (such the one registered in `the-plugin`).
 
-The `bit-docs-generate-html` plugin will use npm to download any `dependencies` set on those option objects passed as arguments to the `html` hook, and the code that `bit-docs-generate-html` will load into the front-end is determined by looking at the `main` value of the `package.json` of the downloaded dependencies (such as `the-plugin/package.json`).
+The `bit-docs-generate-html` plugin will use npm to download any `dependencies` set on the option objects passed as arguments to the `html` hook. The code that `bit-docs-generate-html` will load into the front-end is determined by looking at `package.json`'s `main` for the fetched dependency (such as `the-plugin/package.json`).
 
 In the case of `the-plugin`, `main` in `package.json` would be set to `theplugin.js`:
 
@@ -141,9 +141,9 @@ In the case of `the-plugin`, `main` in `package.json` would be set to `theplugin
   ...
 ```
 
-This `main` file should have a `module.export` with the code intended to run on the front-end of the generated website.
+`main` should have a `module.export` with code intended to run on the front-end of the generated website.
 
-So, `theplugin.js` might contain something like:
+So, `theplugin.js` might look something like:
 
 ```js
 module.exports = function(){
@@ -151,7 +151,7 @@ module.exports = function(){
 };
 ```
 
-To "extract" that code from the `main` file of the plugin, and get it into the front-end of the generated website, `bit-docs-generate-html` composites all the front-end code from each registered "dependency" plugin package, generating something like the following:
+To "extract" that code from the `main` file of the plugin, and get it into the front-end of the generated website, `bit-docs-generate-html` composites all front-end code from each registered dependency:
 
 ```js
 /*the-plugin@0.0.1#theplugin*/
@@ -174,15 +174,17 @@ define('bit-docs-site@0.0.1#packages', function (require, exports, module) {
 });
 ```
 
-Notice the alert code has been extracted into this file, as would any other front-end code registered by any other plugins.
+The alert code has been extracted into this file, as would any other front-end code registered by any other plugins.
 
-You do not necessarily need to concern yourself with the details of this generated code (that's `bit-docs` job after all, to abstract away such implementation details); just know that `bit-docs-generate-html` places this generated code within the generated site, in that file: `static/bundles/bit-docs-site/static.js`, and that's how a `main` file specified in a plugin `package.json` that registers itelf with the `html` hook gets loaded to the front-end website!
+You do not necessarily need to concern yourself with the details of this generated code (that's `bit-docs` job after all, to abstract away such implementation details); just know that `bit-docs-generate-html` places this generated code within the generated site, in the file `static/bundles/bit-docs-site/static.js`, and that's how a `main` file specified in a plugin's `package.json` that registers itelf with the `html` hook gets loaded into the front-end website!
 
 Note: It's our other tool, [StealJS](http://stealjs.com), enabling the use of "modules" and `define` syntax on the front-end.
 
-The composite file is subsequently loaded on the front-end of the generated website using a normal script tag, and so in the case the alert message would appear on initial page load!
+The composite file is loaded on the front-end of the generated website using like a normal script tag by Steal. In this case, that means the alert message would appear on initial page load of the genereted website!
 
-To recap on loading front-end depencies, all you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` for the `html` hook, making sure to point `main` to a file contianing a `module.exports` with the code you want to run on the front-end!
+To recap on loading front-end depencies:
+
+All you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` for the `html` hook, making sure `main` in `package.json` points to a file contianing a `module.exports` with the code you want to run on the front-end!
 
 #### Adding Less
 

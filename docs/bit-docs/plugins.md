@@ -4,9 +4,14 @@
 
 @body
 
-The `bit-docs` plugin system provides hooks that allow you to create custom-generated content specific to your site, without the need to modify the `bit-docs` source itself.
+The `bit-docs` plugin system provides hooks that allow you to modify your generated website, without the need to modify `bit-docs` itself.
 
-A number of plugins are maintained by the bit-docs organization; some of these plugins provide core functionality, though all can be replaced if they do not suit your needs.
+A number of plugins are maintained by the bit-docs organization. Some of these plugins provide core functionality, and will need to be included with every project, unless they are replaced. Typically you will need a "finder" plugin to pull in files, a "processor" plugin to processes pulled in data, and then a "generator" plugin to generate the output. So, a typical `bit-docs` enabled project will include:
+
+- [bit-docs-glob-finder] - Finder
+- [bit-docs-dev] — Processor
+- [bit-docs-js] — Processor
+- [bit-docs-generate-html] — Generator
 
 Continue reading, and we'll explore the architecture of a typical `bit-docs` plugin.
 
@@ -17,20 +22,20 @@ Every `bit-docs` plugin contains at least these two files:
 - `bit-docs.js`
 - `package.json`
 
-Where `bit-docs.js` and `package.json` are for registering hooks and specifying dependencies, or other configuration, respectively.
+Where `bit-docs.js` and `package.json` are for registering hooks and specifying dependencies.
 
 Depending on the the plugin, you might also have files like:
 
 - `tags.js`
 - `theplugin.js`
 
-Where `tags.js` or `theplugin.js` contain various functionalities of the plugin.
+Where `tags.js` or `theplugin.js` might contain various functionalities of the plugin.
 
 ## Registering a Plugin
 
 To use a plugin within a `bit-docs` enabled project, you must tell the project about the plugin.
 
-In the case of a plugin named `the-plugin`, you would add it to a project's `package.json` like so:
+In the case of a plugin named `the-plugin`, you would add it to a website project's `package.json` like so:
 
 ```json
 {
@@ -51,7 +56,9 @@ In the case of a plugin named `the-plugin`, you would add it to a project's `pac
 }
 ```
 
-When `bit-docs` attempts to load any plugin, it looks to require `bit-docs.js` from the plugin root. The `bit-docs.js` file is what bootstraps the plugin within the `bit-docs` system.
+When `bit-docs` attempts to load any plugin, it looks to require `bit-docs.js` from the plugin root.
+
+The `bit-docs.js` file is what bootstraps the plugin within the `bit-docs` system.
 
 A typical `bit-docs.js` will register some hooks, for example:
 
@@ -72,8 +79,6 @@ module.exports = function(bitDocs){
 
 This might look intimidating if you're not familiar with the `bit-docs` plugin API, but it's straightforward.
 
-Let's break it down, starting with that first call to `bitDocs.register`.
-
 #### Registering front-end dependencies
 
 You will see this pattern in most `bit-docs` plugins that need to register front-end dependencies: 
@@ -84,7 +89,7 @@ You will see this pattern in most `bit-docs` plugins that need to register front
     dependencies[pkg.name] = pkg.version;
 ```
 
-This simply gets the plugin name and version from `package.json`, and sets that as a key/value pair on an empty object, resulting in that familiar npm dependency format:
+This simply gets the plugin name and version from `package.json`, setting them as a key/value pair on an empty object, resulting in that familiar npm dependency format:
 
 ```json
 {
@@ -92,9 +97,9 @@ This simply gets the plugin name and version from `package.json`, and sets that 
 }
 ```
 
-Indeed, this object will be passed as an argument to a hook function and used to install this plugin on the front-end (more on this later).
+Indeed, this object will be passed as an argument to a hook function, and used to install this plugin on the front-end.
 
-Next, the `register` function of `bitDocs` is called (where `bitDocs` is an argument passed in by the `bit-docs` system at runtime):
+Next, the `register` function of `bitDocs` is called (`bitDocs` is an argument passed in by `bit-docs` at runtime):
 
 ```js
     bitDocs.register("html", {
@@ -104,7 +109,7 @@ Next, the `register` function of `bitDocs` is called (where `bitDocs` is an argu
 
 In this example, `the-plugin` is registering itself with the `html` hook.
 
-As stated earlier, the `html` hook is not handled by `bit-docs` itself ([look here](https://github.com/bit-docs/bit-docs/blob/master/lib/configure/configure.js#L43-L62) for the hooks `bit-docs` does handle internally). When `bit-docs` encounters a hook that it doesn't handle, it takes the arguments and passes them on to any plugin that might wish to handle that hook, such as [`bit-docs-generate-html`](https://github.com/bit-docs/bit-docs-generate-html).
+As stated earlier, the `html` hook is not handled by `bit-docs` itself ([look here](https://github.com/bit-docs/bit-docs/blob/master/lib/configure/configure.js#L43-L62) for the hooks `bit-docs` does handle). When `bit-docs` encounters a hook that it doesn't handle, it takes the arguments and passes them along to any plugin that might wish to handle that hook, such as [`bit-docs-generate-html`](https://github.com/bit-docs/bit-docs-generate-html).
 
 The way `bit-docs-generate-html` handles the `html` hook is by calling `bitDocs.handle` in its own `bit-docs.js` file:
 
@@ -117,11 +122,11 @@ module.exports = function(bitDocs){
 };
 ```
 
-Handling custom hooks like this will be covered later, but for now just know that's how the generator plugin `bit-docs-generate-html` informs `bit-docs` that it wants to handle any `html` hook, such as the one specified in `the-plugin`.
+Handling custom hooks like this will be covered later, but just know that's how `bit-docs-generate-html` informs `bit-docs` that it wants to handle any `html` hook (such the one registered in `the-plugin`).
 
-The `bit-docs-generate-html` plugin will download all those `dependencies` on the options objects hooked into `html` by plugins needing to load some dependencies on the front-end, such as `the-plugin`. It will then extract the specified front-end code into the generated website. The JavaScript or styles that `bit-docs-generate-html` loads into the front-end is determined by looking at the `main` value of the `package.json` of the dependency plugins that got downloaded (such as `the-plugin`'s `package.json`).
+The `bit-docs-generate-html` plugin will use npm to download any `dependencies` set on those option objects passed as arguments to the `html` hook, and the code that `bit-docs-generate-html` will load into the front-end is determined by looking at the `main` value of the `package.json` of the downloaded dependencies (such as `the-plugin/package.json`).
 
-In the case of the example plugin, `the-plugin`, its `package.json` might look like:
+In the case of `the-plugin`, `main` in `package.json` would be set to `theplugin.js`:
 
 ```json
 {
@@ -132,9 +137,9 @@ In the case of the example plugin, `the-plugin`, its `package.json` might look l
   ...
 ```
 
-In this case, the `main` file is set to `theplugin.js`. This `main` file should contain a `module.export` with the code that is intended to run on the front-end of the generated website.
+This `main` file should have a `module.export` with the code intended to run on the front-end of the generated website.
 
-For instance, `theplugin.js` might look like:
+So, `theplugin.js` might contain something like:
 
 ```js
 module.exports = function(){
@@ -142,9 +147,7 @@ module.exports = function(){
 };
 ```
 
-Here are some low-level details about how `bit-docs-generate-html` does the extraction:
-
-To "extract" that code from the `main` file of the plugin, and get it into the front-end of the generated website, `bit-docs-generate-html` composites all such front-end code from each registered "dependencies" plugin package, generating something like the following:
+To "extract" that code from the `main` file of the plugin, and get it into the front-end of the generated website, `bit-docs-generate-html` composites all the front-end code from each registered "dependency" plugin package, generating something like the following:
 
 ```js
 /*the-plugin@0.0.1#theplugin*/
@@ -167,15 +170,15 @@ define('bit-docs-site@0.0.1#packages', function (require, exports, module) {
 });
 ```
 
-Notice the alert code has been extracted into this file.
+Notice the alert code has been extracted into this file, as would any other front-end code registered by any other plugins.
 
-You do not necessarily need to concern yourself with the details of such generated code (that's `bit-docs` job after all, to abstract such implementation details away from you); just know that `bit-docs-generate-html` places such code within the generated site, in that file: `static/bundles/bit-docs-site/static.js`, and that's how a `main` specified in a plugin `package.json` gets loaded to the front-end website!
+You do not necessarily need to concern yourself with the details of this generated code (that's `bit-docs` job after all, to abstract away such implementation details); just know that `bit-docs-generate-html` places this generated code within the generated site, in that file: `static/bundles/bit-docs-site/static.js`, and that's how a `main` file specified in a plugin `package.json` that registers itelf with the `html` hook gets loaded to the front-end website!
 
-We should point out that it's our other tool, [StealJS](http://stealjs.com), enabling the use of "modules" and `define` syntax on the front-end in this case.
+Note: It's our other tool, [StealJS](http://stealjs.com), enabling the use of "modules" and `define` syntax on the front-end.
 
-This generated file is subsequently loaded on the front-end of the generated website using a normal script tag, and so in the case of the `the-plugin` example (with its `theplugin.js` code extracted), the alert message would appear on initial page load!
+The composite file is subsequently loaded on the front-end of the generated website using a normal script tag, and so in the case the alert message would appear on initial page load!
 
-So, to recap on loading front-end depencies, all you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` as shown for the `html` hook, making sure to point `main` to a file contianing the code you want to run on the front end!
+To recap on loading front-end depencies, all you need to do is include the `bit-docs-generate-html` plugin for your website project (almost every `bit-docs` enabled website will want to include this plugin, unless you create your own primary generator plugin), and then simply register the values of your plugin's `package.json` as shown for the `html` hook, making sure to point `main` to a file contianing a `module.exports` with the code you want to run on the front end!
 
 ##### Adding Less
 

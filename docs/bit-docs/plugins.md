@@ -6,7 +6,7 @@
 
 The `bit-docs` plugin system provides hooks that allow you to create custom-generated content specific to your site, without the need to modify the `bit-docs` source itself.
 
-In this section, you will find plugins maintained by the bit-docs organization; some of these plugins provide core functionality, though all can be replaced if they do not suit your needs. Please [let us know]() if you write your own plugins!
+A number of plugins are maintained by the bit-docs organization; some of these plugins provide core functionality, though all can be replaced if they do not suit your needs.
 
 Continue reading, and we'll explore the architecture of a typical `bit-docs` plugin.
 

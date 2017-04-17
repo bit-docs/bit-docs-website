@@ -43,3 +43,6 @@
 [submodule "docs/modules/bit-docs-prettify"]
 	path = docs/modules/bit-docs-prettify
 	url = https://github.com/bit-docs/bit-docs-prettify.git
+[submodule "docs/modules/bit-docs-docjs-theme"]
+	path = docs/modules/bit-docs-docjs-theme
+	url = https://github.com/bit-docs/bit-docs-docjs-theme.git

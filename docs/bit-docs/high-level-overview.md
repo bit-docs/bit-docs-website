@@ -1,12 +1,17 @@
 @page high-level-overview High Level Overview
 @parent guides 0
+@outline 2
+
+@description A high-level overview of bit-docs.
+
+@body
 
 <div class="on-this-page-container"></div>
 
-Loosely based on ideas and lessons learned from [DocumentJS](http://documentjs.com), bit-docs is an evolving set of tools that allow you to:
+bit-docs is an evolving set of tools that allow you to:
 
- - Write documentation inline, or in markdown files.
- - Specify your code's behavior precisely with JSDoc
+- Write documentation inline, or in markdown files.
+- Specify your code's behavior precisely with JSDoc
    and [Google Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler)
    annotations.
 - Generate a ready-to-publish website from that documentation.
@@ -17,13 +22,13 @@ Depending on the plugins used, input may be in the form of inline code comments,
 
 You could write "finder" and "generator" plugins for the `bit-docs` tool geared towards static site generation for a blog or generic website, but `bit-docs` is particularly useful for generating documention websites from and for code projects.
 
-### Projects currently using bit-docs
+## Projects currently using bit-docs
 
  - [CanJS](https://github.com/canjs/canjs) — [Generated website](http://canjs.com)
  - [StealJS](https://github.com/stealjs/stealjs) — [Generated website](http://stealjs.com)
  - [DoneJS](https://github.com/donejs/donejs-next) — [Generated website](https://donejs.github.io/donejs-next)
 
-### Usage 
+## Usage 
 
 It is possible to add the bit-docs package as a dependency to the actual project you wish to document, but we have found creating an entirely new dedicated repository that will pull in the codebase(s) that you wish to document is a better paradigm. So, for `your-project` you might create a new repository called `your-project-site`.
 
@@ -80,11 +85,11 @@ Utilization of npm under the hood means things like the `file://` syntax for `de
 
 For more information on developing locally, see [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-### Plugins
+## Plugins
 
 There are four handlers that any given bit-docs plugin can hook into using a standardized `bit-docs.js` file in the root of the plugin's directory. A plugin could hook into all four of these actions at once but, following the unix philosophy, bit-docs plugins should strive to do one thing only, and do it well. Therefore, most plugins will only hook into one (or two) of these handlers to accomplish their intended task, but probably never all four.
 
-#### Finder
+### Finder
 
 Plugins that hook into the `finder` handler affect how bit-docs searches for source-files.
 
@@ -94,7 +99,7 @@ The default finder supports glob syntax, and should be sufficient for most use-c
 
 You might need to create a plugin that hooks into the `finder` handler if you're pulling source from a database, or some other location that's not the current working filesystem.
 
-#### Processor
+### Processor
 
 Plugins that hook into the `processor` handler may augment how found files are processed.
 
@@ -102,17 +107,15 @@ The following plugin is always included by default in the core of bit-docs:
 
 - <https://github.com/bit-docs/bit-docs-process-tags>
 
-This is because that plugin provides the extremely common task of processing "tags". A tag is an identifier, usually embedded in source code comments, that provides documentation or information about some functionality, inline in the source code itself. Some of the many default tags are `@@function @@parent @@description @@body`, used in a source-file like:
+This is because that plugin provides the extremely common task of processing "tags". A tag is an identifier, usually embedded in source code comments, that provides documentation or information about some functionality, inline in the source code itself. Some of the many default tags are `@function @parent @description @body`, used in a source-file like:
 
 ```js
 /**
- * @@function yourproject.hellofunc hellofunc
- * @@parent YourProject.apis
- * @@description
-
- * This documents something in a sub-page of YourProject.
+ * @function yourproject.hellofunc hellofunc
+ * @parent YourProject.apis
+ * @description This documents something in a sub-page of YourProject.
  *
- * @@body
+ * @body
  *
  * ## Usage
  *
@@ -124,7 +127,7 @@ For an example of a processor plugin that's not included by default, see:
 
 - <https://github.com/bit-docs/bit-docs-process-mustache>
 
-#### Generator
+### Generator
 
 Plugins that hook into the `generator` handler output something from the processed data.
 
@@ -133,16 +136,16 @@ For example, see these bit-docs plugins that output HTML files:
 - <https://github.com/bit-docs/bit-docs-generate-html>
 - <https://github.com/bit-docs/bit-docs-generate-readme>
 
-#### Tag
+### Tag
 
-Plugins that hook into the `tag` handler add new tags like `@@yourtag` to the default processing that bit-docs already does to source-file comments.
+Plugins that hook into the `tag` handler add new tags like `@yourtag` to the default processing that bit-docs already does to source-file comments.
 
 For example, see these bit-docs plugins for prettifying source-code snippets:
 
 - <https://github.com/bit-docs/bit-docs-prettify>
 - <https://github.com/bit-docs/bit-docs-html-highlight-line>
 
-### Plugins that Hook into Other Plugins
+## Plugins that Hook into Other Plugins
 
 The previously mentioned `bit-docs-generate-html` is a "generator" plugin but also accepts hooks into itself, which allows the following plugin to add functionality to that plugin:
 

@@ -28,7 +28,7 @@
     "gsl": "git log --graph --oneline -U0 --submodule | grep -E '^[*| /\\]+([0-9a-f]{7} |Submodule |> |$)'",
     "gsu": "git submodule update --remote --merge",
     "preinstall": "[ -f docs/modules/bit-docs/package.json ] || git submodule update --init",
-    "pub": "npm run gh-pages",
+    "pub": "npm run gh-pages && echo '↳ <https://bit-docs.github.io/bit-docs-website>'",
     "see": "http-server -a localhost -p 8080 -c-1 gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

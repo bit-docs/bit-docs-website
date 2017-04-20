@@ -22,7 +22,6 @@
     "cache-bust": "rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static ./gh-pages",
     "bit-docs": "bit-docs",
     "gen": "bit-docs -d",
-    "genc": "bit-docs -dc",
     "genf": "bit-docs -df",
     "gh-pages": "gh-pages -d gh-pages",
     "gsl": "git log --graph --oneline -U0 --submodule | grep -E '^[*| /\\]+([0-9a-f]{7} |Submodule |> |$)'",

@@ -24,6 +24,7 @@
     "gen": "bit-docs -d",
     "genf": "bit-docs -df",
     "gh-pages": "gh-pages -d gh-pages",
+    "gsd": "git diff --submodule",
     "gsl": "git log --graph --oneline -U0 --submodule | grep -E '^[*| /\\]+([0-9a-f]{7} |Submodule |> |$)'",
     "gsu": "git submodule update --remote --merge",
     "preinstall": "[ -f docs/modules/bit-docs/package.json ] || git submodule update --init",

@@ -48,6 +48,8 @@ available via `npm run-script`:
     bit-docs -df
   gh-pages   # Publishes the website to GitHub Pages.
     gh-pages -d gh-pages
+  gsd        # Shows submodule differences in git diff.
+    git diff --submodule
   gsl        # Prints a log graph highlighting submodule changes.
     git log --graph --oneline -U0 --submodule | grep -E '^[*| /\]+([0-9a-f]{7} |Submodule |> |$)'
   gsu        # Fetch latest remote changes for submodules and merge them in.

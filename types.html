@@ -17,44 +17,41 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>types</h1>
 </section>
 
-	
-
-	
 		
-	
 
-	
 		
-			<section class="body">
-    <p>{{makeHeading}} {{titleOrName}} {{#if types}}<code>{{{makeTypesString types false}}}</code>{{/if}}</p>
-<p>{{{makeLinks description}}}</p>
-<p>{{#types}}
-{{#if description}}
-{{&gt; signature.mustache}}
-{{/if}}
-{{/types}}</p>
+			
+		
+
+		
+			
+				<section class="body">
+    <p>{{#types}}</p>
+<p>{{&gt; signature.mustache}}</p>
+<p>{{/types}}</p>
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">

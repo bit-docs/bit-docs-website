@@ -17,42 +17,42 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>@description</h1>
 </section>
 
-	
-
-	
 		
-			<section class="description">
+
+		
+			
+				<section class="description">
     <p>Markdown content placed before all signature and API content.</p>
 
 </section>
 
+			
 		
-	
 
-	
 		
-			<section class="body">
+			
+				<section class="body">
     <h2>Use</h2>
 <p>The description of a [documentjs.process.docObject] is displayed at the top
 of an html page generated with
 the <a href="documentjs.generators.html.html" title="">default html generator</a>.</p>
-<p>In the following example, <code>@description</code> stops content from being added to <a href="documentjs.tags.param.html" title="Adds parameter information to a @function or
-@signature.">@param</a>,
+<p>In the following example, <code>@description</code> stops content from being added to [documentjs.tags.param],
 and instead makes content be added to the description property.</p>
 <pre><code class="language-javascript">/**
  * @param {String} name The name of the
@@ -64,10 +64,8 @@ and instead makes content be added to the description property.</p>
 lib.Component = function(name){}
 </code></pre>
 <p>By default
-the first paragraph of content that is not after a multi-line tag like <a href="documentjs.tags.signature.html" title="Specifies a signature for a @function
-but can work with any other tag.">@signature</a>,
-<a href="documentjs.tags.param.html" title="Adds parameter information to a @function or
-@signature.">@param</a>, etc, is set as the <a href="documentjs.tags.description.html" title="Markdown content placed before all signature and API content.">@description</a>.  All content
+the first paragraph of content that is not after a multi-line tag like [documentjs.tags.signature],
+[documentjs.tags.param], etc, is set as the <a href="documentjs.tags.description.html" title="Markdown content placed before all signature and API content.">@description</a>.  All content
 after the first paragraph is set as the body content.</p>
 <p>You can see what is treated as description and body by default in the following example:</p>
 <pre><code class="language-javascript">/**
@@ -92,10 +90,10 @@ Graph.prototype.cols = function(cols){ ... }
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">

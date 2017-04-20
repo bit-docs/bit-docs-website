@@ -17,8 +17,9 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 	<ul>
@@ -401,29 +402,29 @@ in the sidebar and the page header.">
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>builder</h1>
 </section>
 
-	
-
-	
 		
-			<section class="description">
+
+		
+			
+				<section class="description">
     <p>A function that builds the static resources and copies the ones
 needed for the html site to a distributable location.</p>
 
 </section>
 
+			
 		
-	
 
-	
 		
-			<section class="body">
+			
+				<section class="body">
     <h2>Use</h2>
 <p>A builder that simply copies all static content over:</p>
 <pre><code>var Q = require('q'),
@@ -436,10 +437,10 @@ module.exports = function(options, folders){
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">

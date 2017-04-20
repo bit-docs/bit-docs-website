@@ -17,11 +17,27 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="guides.html"
+							title="These guides are here to help you:">
+							Guides
+						</a>
+						
+					</li>
+				
+			
 		
 			
 				
@@ -31,7 +47,7 @@
 						<a class="page"
 							href="plugins.html"
 							title="Here you will find plugins maintained by the bit-docs organization.">
-							Plugins
+							Plugin APIs
 						</a>
 						
 							
@@ -61,6 +77,21 @@
 							href="bit-docs-dev.html"
 							title="General development tags.">
 							bit-docs-dev
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-docjs-theme.html"
+							title="The old DocumentJS theme.">
+							bit-docs-docjs-theme
 						</a>
 						
 					</li>
@@ -149,11 +180,76 @@
            						expanded">
 						<a class="module"
 							href="bit-docs-js.html"
-							title="A collection of tags, templates, and basic styles for JavaScript applications.">
+							title="Tags, templates, and basic styles for JavaScript.">
 							bit-docs-js
 						</a>
 						
 							
+	<ul>
+		
+			
+				
+					<li>
+						<span>tags</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-js/tags/function.html"
+							title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">
+							./function
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-js/tags/param.html"
+							title="Adds parameter information to a @function or
+@signature.">
+							./param
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-js/tags/signature.html"
+							title="Specifies a signature for a @function
+but can work with any other tag.">
+							./signature
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
 
 						
 					</li>
@@ -273,61 +369,68 @@
 				
 			
 		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="page"
-							href="guides.html"
-							title="These guides are here to help you:">
-							Guides
-						</a>
-						
-					</li>
-				
-			
-		
 	</ul>
 
 
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>bit-docs-js</h1>
 </section>
 
-	
-
-	
 		
-			<section class="description">
-    <p>A collection of tags, templates, and basic styles for JavaScript applications.</p>
+
+		
+			
+				<section class="description">
+    <p>Tags, templates, and basic styles for JavaScript.</p>
 
 </section>
 
+			
 		
-	
 
-	
 		
-			<section class="body">
-    <p>TBD</p>
+			
+				<section class="body">
+    <p>This plugin registers onto these hooks:</p>
+<ul>
+<li><code>tags</code></li>
+<li><code>processor</code></li>
+<li><code>html</code></li>
+</ul>
+<p>Registering the <code>tag</code> hook adds JavaScript-related tags:</p>
+<ul>
+<li><a href="bit-docs-js/tags/function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a></li>
+<li><a href="bit-docs-js/tags/param.html" title="Adds parameter information to a @function or
+@signature.">@param</a></li>
+<li><a href="bit-docs-js/tags/signature.html" title="Specifies a signature for a @function
+but can work with any other tag.">@signature</a></li>
+<li>...</li>
+</ul>
+<p>Registering the <code>processor</code> hook adds a processor for <code>*.js</code> files that gets
+code comments in JavaScript, and processes tags like <code>@function</code> and
+<code>@param</code> into docObjects that are subsequently added to the docMap.</p>
+<p>The processor is also smart enough process regular comments above functions
+that have not explicitly been documented with closure type annotations, and
+extracts basic signature information such as parameters or return type.</p>
+<p>Registering the <code>html</code> hook adds a mustache template used to generate the
+HTML for the tags added by this plugin.</p>
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-js","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":14,"path":"docs/modules/bit-docs-js/bit-docs.js"},"description":"A collection of tags, templates, and basic styles for JavaScript applications. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-js","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":38,"path":"docs/modules/bit-docs-js/bit-docs.js"},"description":"Tags, templates, and basic styles for JavaScript. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"}]}],"_curParam":{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"},"comment":" ","pathToRoot":".."};
 	</script>
 
 	

@@ -17,36 +17,37 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>documenting</h1>
 </section>
 
-	
-
-	
 		
-			<section class="description">
+
+		
+			
+				<section class="description">
     <p>Learn how to document your code.</p>
 
 </section>
 
+			
 		
-	
 
-	
 		
-			<section class="body">
+			
+				<section class="body">
     <p>This guide walks you through adding the right [documentjs.tags tags] to your source
 or markdown files to create documentation useful to your users.</p>
 <p>Every markdown file or comment block like <code>/** */</code> gets turned into
@@ -65,7 +66,7 @@ be used in TYPE declarations.">@typedef</a> - Defines a custom type.</li>
 <li><a href="documentjs.tags.page.html" title="Declares this comment as a page. Use pages to
 represent content that doesn't belong to part of the
 application structure.">@page</a> - A page of information.</li>
-<li><a href="documentjs.tags.function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a> - A JavaScript function.</li>
+<li>[documentjs.tags.function @function] - A JavaScript function.</li>
 <li><a href="documentjs.tags.static.html" title="Declares that @property and
 @function tags belong
 to the preceeding @constructor.">@static</a> - Creates a placeholder for static properties on a constructor.</li>
@@ -115,7 +116,7 @@ function like:</p>
 For example <code>[project.math.add add numbers]</code> creates a link like:</p>
 <pre><code>&lt;a href=&quot;project.math.add.html&quot;&gt;add numbers&lt;/a&gt;
 </code></pre>
-<p>A title can be provided for all types.  For example, you can include a <a href="documentjs.tags.function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a> title
+<p>A title can be provided for all types.  For example, you can include a [documentjs.tags.function] title
 like:</p>
 <pre><code>@function project.math.add add
 </code></pre>
@@ -133,10 +134,10 @@ that specifies which [documentjs.tags] will be used to process files.</p>
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">

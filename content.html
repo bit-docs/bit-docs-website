@@ -17,57 +17,60 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>content</h1>
 </section>
 
-	
-
-	
 		
-	
 
-	
 		
-			<section class="body">
-    <p>{{#unless hideSidebar}}
-{{&gt; sidebar.mustache}}
-{{/unless}}</p>
-<article>
-    {{#unless hideTitle}}
-        {{> title.mustache}}
+			
+		
+
+		
+			
+				<section class="body">
+    <div class="content">
+    {{#unless hideSidebar}}
+        {{> sidebar.mustache}}
     {{/unless}}
-<pre><code>{{#unless hideDescription}}
-    {{#if description}}
-        {{&gt; description.mustache}}
-    {{/if}}
-{{/unless}}
+    <article class="main">
+        {{#unless hideTitle}}
+            {{> title.mustache}}
+        {{/unless}}
+<pre><code>    {{#unless hideDescription}}
+        {{#if description}}
+            {{&gt; description.mustache}}
+        {{/if}}
+    {{/unless}}
 
-{{#unless hideBody}}
-    {{#if body}}
-        {{&gt; body.mustache}}
-    {{/if}}
-{{/unless}}
+    {{#unless hideBody}}
+        {{#if body}}
+            {{&gt; body.mustache}}
+        {{/if}}
+    {{/unless}}
+&lt;/article&gt;
 </code></pre>
-</article>
+</div>
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">

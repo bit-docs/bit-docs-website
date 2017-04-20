@@ -17,26 +17,12 @@
 
 <body>
 	<header></header>
+	<div class="content">
 	
-	<nav class="sidebar">
+		<nav class="sidebar">
 	
 		
 	<ul>
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="page"
-							href="plugins.html"
-							title="Here you will find plugins maintained by the bit-docs organization.">
-							Plugins
-						</a>
-						
-					</li>
-				
-			
 		
 			
 				
@@ -59,7 +45,7 @@
            						expanded">
 						<a class="page"
 							href="high-level-overview.html"
-							title="">
+							title="A high-level overview of bit-docs.">
 							High Level Overview
 						</a>
 						
@@ -93,35 +79,51 @@
 				
 			
 		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="plugins.html"
+							title="Here you will find plugins maintained by the bit-docs organization.">
+							Plugin APIs
+						</a>
+						
+					</li>
+				
+			
+		
 	</ul>
 
 
 	
 </nav>
 
-
-<article>
 	
-		<section class="title">
+	<article class="main">
+		
+			<section class="title">
 	<h1>High Level Overview</h1>
 </section>
 
-	
-
-	
 		
-			<section class="description">
-    <div class="on-this-page-container"></div>
+
+		
+			
+				<section class="description">
+    <p>A high-level overview of bit-docs.</p>
 
 </section>
 
+			
 		
-	
 
-	
 		
-			<section class="body">
-    <p>Loosely based on ideas and lessons learned from <a href="http://documentjs.com">DocumentJS</a>, bit-docs is an evolving set of tools that allow you to:</p>
+			
+				<section class="body">
+    <div class="on-this-page-container"></div>
+<p>bit-docs is an evolving set of tools that allow you to:</p>
 <ul>
 <li>Write documentation inline, or in markdown files.</li>
 <li>Specify your code's behavior precisely with JSDoc
@@ -132,13 +134,13 @@ annotations.</li>
 <p>The <code>bit-docs</code> tool (this repo) orchestrates &quot;finder&quot; plugins that slurp in raw data with &quot;processor&quot; and &quot;generator&quot; plugins that spit out structured documents from that data. The <code>bit-docs</code> tool sits happily between such plugins, automating their install and cooperation.</p>
 <p>Depending on the plugins used, input may be in the form of inline code comments, markdown files, or anything else you could imagine; output may be in the form of HTML, or any other format.</p>
 <p>You could write &quot;finder&quot; and &quot;generator&quot; plugins for the <code>bit-docs</code> tool geared towards static site generation for a blog or generic website, but <code>bit-docs</code> is particularly useful for generating documention websites from and for code projects.</p>
-<h3>Projects currently using bit-docs</h3>
+<h2>Projects currently using bit-docs</h2>
 <ul>
 <li><a href="https://github.com/canjs/canjs">CanJS</a> — <a href="http://canjs.com">Generated website</a></li>
 <li><a href="https://github.com/stealjs/stealjs">StealJS</a> — <a href="http://stealjs.com">Generated website</a></li>
 <li><a href="https://github.com/donejs/donejs-next">DoneJS</a> — <a href="https://donejs.github.io/donejs-next">Generated website</a></li>
 </ul>
-<h3>Usage</h3>
+<h2>Usage</h2>
 <p>It is possible to add the bit-docs package as a dependency to the actual project you wish to document, but we have found creating an entirely new dedicated repository that will pull in the codebase(s) that you wish to document is a better paradigm. So, for <code>your-project</code> you might create a new repository called <code>your-project-site</code>.</p>
 <p>This paradigm of creating a repository dedicated to generating documentation with bit-docs is especially useful when pulling in multiple codebases and wishing to generate a unified website. This is the strategy used by StealJS and DoneJS to document their core functionality and the functionality of their various modules that are broken out into separate repos and packages!</p>
 <p>To use bit-docs, add it to the <code>package.json</code> of the project you want to use it in:</p>
@@ -159,8 +161,7 @@ annotations.</li>
     &quot;minifyBuild&quot;: false
   }
 </code></pre>
-<p><span line-highlight='2,4-6'></span>
-If you created a new repo specifically to hold this bit-docs stuff, you may wish to add the codebases you will be documenting as normal <code>package.json</code> devDependencies at this time. You will need to update the <code>bit-docs</code> glob pattern to be similar to what the StealJS website repo does (to tell the glob finder to look in <code>node_modules</code> for files to process):</p>
+<p>If you created a new repo specifically to hold this bit-docs stuff, you may wish to add the codebases you will be documenting as normal <code>package.json</code> devDependencies at this time. You will need to update the <code>bit-docs</code> glob pattern to be similar to what the StealJS website repo does (to tell the glob finder to look in <code>node_modules</code> for files to process):</p>
 <pre><code class="language-json">    &quot;glob&quot;: {
       &quot;pattern&quot;: &quot;{node_modules,doc}/{steal,grunt-steal,steal-*}/**/*.{js,md}&quot;,
       &quot;ignore&quot;: [
@@ -177,16 +178,16 @@ If you created a new repo specifically to hold this bit-docs stuff, you may wish
 <p>Look at the <code>.gitignore</code> of this repo; you'll notice an entry for <code>lib/configure/node_modules/</code>, and entries for other directories that will be generated on the fly when <code>bit-docs</code> is run.</p>
 <p>Utilization of npm under the hood means things like the <code>file://</code> syntax for <code>dependencies</code> in the <code>bit-docs</code> configuration is fair game, which can be useful for local debugging of bit-docs plugins.</p>
 <p>For more information on developing locally, see <a href="CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a>.</p>
-<h3>Plugins</h3>
+<h2>Plugins</h2>
 <p>There are four handlers that any given bit-docs plugin can hook into using a standardized <code>bit-docs.js</code> file in the root of the plugin's directory. A plugin could hook into all four of these actions at once but, following the unix philosophy, bit-docs plugins should strive to do one thing only, and do it well. Therefore, most plugins will only hook into one (or two) of these handlers to accomplish their intended task, but probably never all four.</p>
-<h4>Finder</h4>
+<h3>Finder</h3>
 <p>Plugins that hook into the <code>finder</code> handler affect how bit-docs searches for source-files.</p>
 <p>The default finder supports glob syntax, and should be sufficient for most use-cases:</p>
 <ul>
 <li><a href="https://github.com/bit-docs/bit-docs-glob-finder">https://github.com/bit-docs/bit-docs-glob-finder</a></li>
 </ul>
 <p>You might need to create a plugin that hooks into the <code>finder</code> handler if you're pulling source from a database, or some other location that's not the current working filesystem.</p>
-<h4>Processor</h4>
+<h3>Processor</h3>
 <p>Plugins that hook into the <code>processor</code> handler may augment how found files are processed.</p>
 <p>The following plugin is always included by default in the core of bit-docs:</p>
 <ul>
@@ -196,7 +197,6 @@ If you created a new repo specifically to hold this bit-docs stuff, you may wish
 <pre><code class="language-js">/**
  * @function yourproject.hellofunc hellofunc
  * @parent YourProject.apis
-
  * @description This documents something in a sub-page of YourProject.
  *
  * @body
@@ -210,21 +210,21 @@ If you created a new repo specifically to hold this bit-docs stuff, you may wish
 <ul>
 <li><a href="https://github.com/bit-docs/bit-docs-process-mustache">https://github.com/bit-docs/bit-docs-process-mustache</a></li>
 </ul>
-<h4>Generator</h4>
+<h3>Generator</h3>
 <p>Plugins that hook into the <code>generator</code> handler output something from the processed data.</p>
 <p>For example, see these bit-docs plugins that output HTML files:</p>
 <ul>
 <li><a href="https://github.com/bit-docs/bit-docs-generate-html">https://github.com/bit-docs/bit-docs-generate-html</a></li>
 <li><a href="https://github.com/bit-docs/bit-docs-generate-readme">https://github.com/bit-docs/bit-docs-generate-readme</a></li>
 </ul>
-<h4>Tag</h4>
+<h3>Tag</h3>
 <p>Plugins that hook into the <code>tag</code> handler add new tags like <code>@yourtag</code> to the default processing that bit-docs already does to source-file comments.</p>
 <p>For example, see these bit-docs plugins for prettifying source-code snippets:</p>
 <ul>
 <li><a href="https://github.com/bit-docs/bit-docs-prettify">https://github.com/bit-docs/bit-docs-prettify</a></li>
 <li><a href="https://github.com/bit-docs/bit-docs-html-highlight-line">https://github.com/bit-docs/bit-docs-html-highlight-line</a></li>
 </ul>
-<h3>Plugins that Hook into Other Plugins</h3>
+<h2>Plugins that Hook into Other Plugins</h2>
 <p>The previously mentioned <code>bit-docs-generate-html</code> is a &quot;generator&quot; plugin but also accepts hooks into itself, which allows the following plugin to add functionality to that plugin:</p>
 <ul>
 <li><a href="https://github.com/bit-docs/bit-docs-html-toc">https://github.com/bit-docs/bit-docs-html-toc</a></li>
@@ -237,14 +237,14 @@ If you created a new repo specifically to hold this bit-docs stuff, you may wish
 
 </section>
 
+			
 		
-	
-</article>
-
+	</article>
+</div>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/bit-docs/high-level-overview.md"},"description":"\n<div class=\"on-this-page-container\"></div>\n","name":"high-level-overview","title":"High Level Overview","type":"page","parent":"guides","order":0,"pathToRoot":".."};
+		var docObject = {"src":{"path":"docs/bit-docs/high-level-overview.md"},"description":"A high-level overview of bit-docs. \n","name":"high-level-overview","title":"High Level Overview","type":"page","parent":"guides","order":0,"outline":{"depth":2},"comment":" ","pathToRoot":".."};
 	</script>
 
 	

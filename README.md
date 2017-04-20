@@ -19,10 +19,12 @@ npm run bit-docs
 ### Preview Generated Website
 
 ```shell
-http-server gh-pages
+http-server -a localhost -p 8080 -c-1 gh-pages
 ```
 
-Now visit <http://127.0.0.1:8080/>
+_Note_: The `-a localhost -p 8080` are needed for the `-c-1` cache control flag to work.
+
+Now visit <http://localhost:8080/>
 
 ### Publish Generated Website to GitHub
 
@@ -57,5 +59,5 @@ available via `npm run-script`:
   pub        # Shortcut to publish the website to GitHub Pages.
     npm run gh-pages
   see        # Preview the generated website using the globally installed http-server.
-    http-server gh-pages
+    http-server -a localhost -p 8080 -c-1 gh-pages
 ```

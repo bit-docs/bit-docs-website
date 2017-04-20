@@ -29,7 +29,7 @@
     "gsu": "git submodule update --remote --merge",
     "preinstall": "[ -f docs/modules/bit-docs/package.json ] || git submodule update --init",
     "pub": "npm run gh-pages",
-    "see": "http-server gh-pages",
+    "see": "http-server -a localhost -p 8080 -c-1 gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

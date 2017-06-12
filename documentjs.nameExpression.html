@@ -49,6 +49,71 @@ using the [documentjs.tags.param @param] or
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>[name(args...)=default]</code>
+  </h2>
+
+  <p>Example:</p>
+<pre><code>[success(item)=updater]
+</code></pre>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>name</b> <code>{String}</code>: <p>Provides the name of the type.</p>
+</li>
+            
+              
+            
+        
+          <li><b>[]</b> <code>{String}</code>: <p>Indicates that the option or param is optional.</p>
+</li>
+            
+              
+            
+        
+          <li><b>(args...)</b> <code>{String}</code>: <p>If <code>name</code> is a function,
+<code>()</code> provides the names of each argument.</p>
+</li>
+            
+              
+            
+        
+          <li><b>'...'</b> <code>{String}</code>: <p>An argument is variable. The argument can
+be given 0 or more times.</p>
+</li>
+            
+              
+            
+        
+          <li><b>=default</b> <code>{String}</code>: <p><code>=default</code> provides
+the default value for the type. For example:</p>
+<pre><code class="language-javascript">/**
+ * @param {Number} [age=0]
+ */
+</code></pre>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Examples</h2>
 <ul>
@@ -64,6 +129,7 @@ using the [documentjs.tags.param @param] or
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -80,7 +146,7 @@ using the [documentjs.tags.param @param] or
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

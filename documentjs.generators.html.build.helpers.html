@@ -424,6 +424,67 @@ registers them with Handlebars.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.build.helpers(buildTemplatesPromise, docMap, options, getCurrent)</code>
+  </h2>
+
+  <p>Registers helpers</p>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>buildTemplatesPromise</b> <code>{Promise&lt;Handlebars&gt;}</code>: <p>The result of calling
+<a href="documentjs.generators.html.build.templates.html" title="Creates a folder with all the templates used to generate
+the documentation.">documentjs.generators.html.build.templates</a>. Building the helpers
+must happen after the templates have been copied over. Passing this
+argument enforces that.</p>
+</li>
+            
+              
+            
+        
+          <li><b>docMap</b> <code>{documentjs.process.docMap}</code>: <p>The docMap which contains all
+docObjects that will be documented.</p>
+</li>
+            
+              
+            
+        
+          <li><b>options</b> <code>{Object}</code>: </li>
+            
+              
+            
+        
+          <li><b>getCurrent</b> <code>{function}</code>: <p>A function that when called, returns the <code>docObject</code> currently being
+generated.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves when helpers have been added to Handlebars.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -432,6 +493,7 @@ registers them with Handlebars.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -448,7 +510,7 @@ registers them with Handlebars.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

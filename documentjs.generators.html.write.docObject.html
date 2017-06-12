@@ -362,6 +362,77 @@ in the sidebar and the page header.">
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.write.docObject(docObject, renderer, siteConfig, setCurrentDocObjectForHelpers)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>docObject</b> <code>{documentjs.process.docObject}</code>: <p>The doc object to be written out.</p>
+</li>
+            
+              
+            
+        
+          <li><b>renderer</b> <code>{<a href="documentjs.generators.html.types.renderer.html" title="A renderer built by documentjs.generators.html.build.renderer that is used to
+render each docObject.">renderer</a>(docObject)}</code>: <p>A function that renders
+the output.</p>
+</li>
+            
+              
+            
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>Configuration siteConfig.</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>dest 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The folder name this file will be written to. The
+filename is determined from the docObject's name.</p>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+          <li><b>setCurrentDocObjectForHelpers</b> <code>{function(documentjs.process.docObject)}</code>: </li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves when the file has been written out.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -370,6 +441,7 @@ in the sidebar and the page header.">
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -386,7 +458,7 @@ in the sidebar and the page header.">
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

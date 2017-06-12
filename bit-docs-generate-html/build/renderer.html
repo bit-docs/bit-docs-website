@@ -385,6 +385,59 @@ the documentation.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.build.renderer(buildTemplatesPromise, options)</code>
+  </h2>
+
+  <p>Registers all <code>.mustache</code> files in the <em>documentjs/site/templates</em> folder as
+partials and creates a <a href="../../documentjs.generators.html.types.renderer.html" title="A renderer built by documentjs.generators.html.build.renderer that is used to
+render each docObject.">renderer</a> function that
+renders the <code>content.mustache</code> template within the <code>layout.mustache</code> template.</p>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>buildTemplatesPromise</b> <code>{Promise&lt;Handlebars&gt;}</code>: <p>The result of calling
+<a href="../../documentjs.generators.html.build.templates.html" title="Creates a folder with all the templates used to generate
+the documentation.">documentjs.generators.html.build.templates</a>. Building the renderer
+must happen after the templates have been copied over. Passing this
+argument enforces that.</p>
+</li>
+            
+              
+            
+        
+          <li><b>options</b> <code>{Object}</code>: <p>Options used to configure the behavior of the renderer.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise&lt;<a href="../../documentjs.generators.html.types.renderer.html" title="A renderer built by documentjs.generators.html.build.renderer that is used to
+render each docObject.">renderer</a>(docObject)&gt;}</code>: <p>A promise that
+resolves with the renderer function.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -393,6 +446,7 @@ the documentation.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -409,7 +463,7 @@ the documentation.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="../../static/node_modules/steal/steal.production.js"></script>
+				src="../../static/steal.production.js"></script>
 	
 </body>
 

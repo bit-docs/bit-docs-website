@@ -46,6 +46,77 @@
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.generate(siteConfig)</code>
+  </h2>
+
+  <p>Generates documenation using specified generators.</p>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>siteConfig that configure the <a href="documentjs.find.files.html" title="">files</a>
+processed, how they are [documentjs.process procssed], and
+how the output is generated.</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>generators 
+                    <code>{moduleName|Array&lt;moduleName&gt;}</code>
+                  </h5>
+                  <div class="description">
+                    <p>Generators specifies a generator module or array of modules used to create an
+output for documentation. The default generator is &quot;html&quot; which maps
+to documentjs's internal <a href="documentjs.generators.html.html" title="">html generator</a>.</p>
+<p>You can specify other modules which will be passed a promise containing
+the [documentjs.process.docMap docMap] and the <code>siteConfig</code> and be expected
+to return a promise that resolves when they are complete.</p>
+
+                  </div>
+                </li>
+                
+                <li class="option">
+                  <h5>watch 
+                    <code>{Boolean}</code>
+                  </h5>
+                  <div class="description">
+                    <p>If true, regenerates all generators when
+a file matched  by <code>siteConfig.glob</code> is changed.</p>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves when the documentation
+has been successfully created.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 
@@ -55,6 +126,7 @@
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -71,7 +143,7 @@
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

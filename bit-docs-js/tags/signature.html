@@ -195,13 +195,15 @@
 	<ul>
 		
 			
+		
+			
 				
 					<li class="
            						
            						">
 						<a class="module"
 							href="function.html"
-							title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">
+							title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">
 							./function
 						</a>
 						
@@ -215,10 +217,73 @@
            						
            						">
 						<a class="module"
+							href="module.html"
+							title="Declares the export value for a module.">
+							./module
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="option.html"
+							title="Describes a property of the object, or an argument of the function, that was
+specified in an param tag.">
+							./option
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
 							href="param.html"
-							title="Adds parameter information to a @function or
-@signature.">
+							title="Specifies parameter information for function or
+signature.">
 							./param
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="property.html"
+							title="Documents a property of a parent object.">
+							./property
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="prototype.html"
+							title="Declares that property and function
+tags belong to the preceeding function&#x27;s prototype
+object.">
+							./prototype
 						</a>
 						
 					</li>
@@ -390,7 +455,7 @@ but can work with any other tag.">
 		
 			
 				<section class="description">
-    <p>Specifies a signature for a <a href="function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a>
+    <p>Specifies a signature for a <a href="function.html" title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">@function</a>
 but can work with any other tag.</p>
 
 </section>
@@ -400,6 +465,56 @@ but can work with any other tag.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>@signature `SIGNATURE` DESCRIPTION</code>
+  </h2>
+
+  <pre><code class="language-javascript">/**
+ * Capitalizes a string.
+ * @signature `can.capitalize(s)` Example:
+ *
+ *     can.capitalize(&quot;foo&quot;) //-&gt; &quot;Bar&quot;
+ * 
+ * @param {String} s the string to be lowercased.
+ * @return {String} a string with the first character capitalized, 
+ * and everything else lowercased
+ */
+capitalize: function( s ) { ... }
+</code></pre>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>SIGNATURE</b> <code>{String}</code>: <p>Code that describes how a method should be called.</p>
+</li>
+            
+              
+            
+        
+          <li><b>DESCRIPTION</b> <code>{String}</code>: <p>Describes the behavior
+of the signature.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -408,6 +523,7 @@ but can work with any other tag.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -424,7 +540,7 @@ but can work with any other tag.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="../../static/node_modules/steal/steal.production.js"></script>
+				src="../../static/steal.production.js"></script>
 	
 </body>
 

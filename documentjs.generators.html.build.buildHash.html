@@ -423,6 +423,91 @@ in the sidebar and the page header.">
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.build.buildHash(options)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>options</b> <code>{Object}</code>: <p>Options that might change the characteristic of the build:</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>minifyBuild 
+                    <code>{Boolean}</code>
+                  </h5>
+                  <div class="description">
+                    <p>If set to <code>false</code> the build will not
+be minified. This behavior should be implemented by the &quot;build&quot; module.</p>
+
+                  </div>
+                </li>
+                
+                <li class="option">
+                  <h5>devBuild 
+                    <code>{Boolean}</code>
+                  </h5>
+                  <div class="description">
+                    <p>If set to <code>true</code> the build will not be built
+and copied in &quot;development&quot; mode.</p>
+
+                  </div>
+                </li>
+                
+                <li class="option">
+                  <h5>static 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The location of static content used to overwrite or
+add to the default static content.</p>
+
+                  </div>
+                </li>
+                
+                <li class="option">
+                  <h5>templates 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The location of templates used to overwrite or
+add to the default templates.</p>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{String}</code>: <p>a hash that represents this build.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -431,6 +516,7 @@ in the sidebar and the page header.">
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -447,7 +533,7 @@ in the sidebar and the page header.">
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

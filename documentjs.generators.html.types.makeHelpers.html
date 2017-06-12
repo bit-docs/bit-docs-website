@@ -422,6 +422,65 @@ in the sidebar and the page header.">
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>function(docMap, options, getCurrent, <a href="documentjs.generators.html.html" title="">helpers</a>)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>docMap</b> <code>{documentjs.process.docMap}</code>: <p>Contains
+every [documentjs.process.docObject docObject] keyed by its name.</p>
+</li>
+            
+              
+            
+        
+          <li><b>options</b> <code>{Object}</code>: <p>The options passed to <a href="documentjs.generate.html" title="">generate</a>.</p>
+</li>
+            
+              
+            
+        
+          <li><b>getCurrent</b> <code>{function}</code>: <p>Returns the
+current [documentjs.process.docObject docObject] being rendered.</p>
+</li>
+            
+              
+            
+        
+          <li><b>helpers</b> <code>{<a href="documentjs.generators.html.html" title="">generators.html</a>}</code>: <p>The default helpers object that
+the return value will be added to.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Object&lt;String,function&gt;}</code>: <p>A map of Handlebars function helpers
+that will be registered.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 <p>To create a helper that loops through every function's name excluding
@@ -446,6 +505,7 @@ the current page's name:</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -462,7 +522,7 @@ the current page's name:</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

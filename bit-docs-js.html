@@ -195,13 +195,15 @@
 	<ul>
 		
 			
+		
+			
 				
 					<li class="
            						
            						">
 						<a class="module"
 							href="bit-docs-js/tags/function.html"
-							title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">
+							title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">
 							./function
 						</a>
 						
@@ -215,10 +217,73 @@
            						
            						">
 						<a class="module"
+							href="bit-docs-js/tags/module.html"
+							title="Declares the export value for a module.">
+							./module
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-js/tags/option.html"
+							title="Describes a property of the object, or an argument of the function, that was
+specified in an param tag.">
+							./option
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
 							href="bit-docs-js/tags/param.html"
-							title="Adds parameter information to a @function or
-@signature.">
+							title="Specifies parameter information for function or
+signature.">
 							./param
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-js/tags/property.html"
+							title="Documents a property of a parent object.">
+							./property
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-js/tags/prototype.html"
+							title="Declares that property and function
+tags belong to the preceeding function&#x27;s prototype
+object.">
+							./prototype
 						</a>
 						
 					</li>
@@ -396,6 +461,43 @@ but can work with any other tag.">
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>function(bitDocs)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>bitDocs</b> <code>{Object}</code>: <p>The configuration object passed by <code>bit-docs</code> at
+runtime.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{undefined}</code>: </p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <p>This plugin registers onto these hooks:</p>
 <ul>
@@ -405,9 +507,9 @@ but can work with any other tag.">
 </ul>
 <p>Registering the <code>tag</code> hook adds JavaScript-related tags:</p>
 <ul>
-<li><a href="bit-docs-js/tags/function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a></li>
-<li><a href="bit-docs-js/tags/param.html" title="Adds parameter information to a @function or
-@signature.">@param</a></li>
+<li><a href="bit-docs-js/tags/function.html" title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">@function</a></li>
+<li><a href="bit-docs-js/tags/param.html" title="Specifies parameter information for function or
+signature.">@param</a></li>
 <li><a href="bit-docs-js/tags/signature.html" title="Specifies a signature for a @function
 but can work with any other tag.">@signature</a></li>
 <li>...</li>
@@ -417,7 +519,7 @@ code comments in JavaScript, and processes tags like <code>@function</code> and
 <code>@param</code> into docObjects that are subsequently added to the docMap.</p>
 <p>The processor is also smart enough process regular comments above functions
 that have not explicitly been documented with closure type annotations, and
-extracts basic signature information such as parameters or return type.</p>
+extracts basic signature information such as parameters and/or return type.</p>
 <p>Registering the <code>html</code> hook adds a mustache template used to generate the
 HTML for the tags added by this plugin.</p>
 
@@ -427,6 +529,7 @@ HTML for the tags added by this plugin.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -443,7 +546,7 @@ HTML for the tags added by this plugin.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

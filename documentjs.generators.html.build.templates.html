@@ -424,6 +424,75 @@ the documentation.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.build.templates(siteConfig)</code>
+  </h2>
+
+  <p>Builds the <em>documentjs/site/templates</em> folder with the following
+steps:</p>
+<ol>
+<li>Copies <em>documentjs/site/default/templates</em> to <em>documentjs/site/templates</em>.</li>
+<li>Copies <code>siteConfig.templates</code> to <em>documentjs/site/templates</em>.</li>
+</ol>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>siteConfig used to configure the behavior of the templates.</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>forceBuild 
+                    <code>{Boolean}</code>
+                  </h5>
+                  <div class="description">
+                    <p>If set to <code>true</code>, rebuilds the
+static bundle even if it has already been built.</p>
+
+                  </div>
+                </li>
+                
+                <li class="option">
+                  <h5>templates 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The location of templates used to overwrite or
+add to the default templates.</p>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves if the static dist was successfully created.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -432,6 +501,7 @@ the documentation.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -448,7 +518,7 @@ the documentation.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

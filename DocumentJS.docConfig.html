@@ -48,6 +48,92 @@ a <em>documentjs.json</em> or the <a href="DocumentJS.apis.generate.grunt.html" 
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>Object</code>
+  </h2>
+
+  
+
+  
+
+  
+
+  
+  <div class="options">
+  <h3 class="options-title">Options</h3>
+    <ul>
+    
+      <li>
+        <b>versions</b> <code>{Object&lt;String,<a href="DocumentJS.projectConfig.html" title="The configuration options for a project to retrieve and document.">projectConfig</a>|String&gt;}</code>:
+        <p>A map of version names
+to their source or to a <a href="DocumentJS.projectConfig.html" title="The configuration options for a project to retrieve and document.">projectConfig</a> that specifies where and how
+to install the release. For example:</p>
+<pre><code>{
+  &quot;versions&quot; : {
+    &quot;1.8.4&quot;: &quot;https://github.com/org/project/tree/v1.8.4&quot;,
+    &quot;2.0.9&quot;: &quot;https://github.com/org/project/tree/v2.0.9&quot;
+    &quot;3.0.0-pre&quot;: {
+      &quot;source&quot;: &quot;https://github.com/org/project#major&quot;,
+      &quot;npmInstall&quot;: true
+    }
+  }
+}
+</code></pre>
+<p>Each versions key is a version name and the value is either a <a href="DocumentJS.projectConfig.html" title="The configuration options for a project to retrieve and document.">projectConfig</a> or
+will be made into a <a href="DocumentJS.projectConfig.html" title="The configuration options for a project to retrieve and document.">projectConfig</a>'s source.</p>
+<p>Each version will be downloaded to a location depending on <code>versionDest</code>, <code>defaultDest</code> and
+<code>defaultVersion</code>.  If the version key equals <code>defaultVersion</code> the project will be installed
+using <code>defaultDest</code>; otherwise, the project will be installed using <code>versionDest</code>.</p>
+
+      </li>
+    
+      <li>
+        <b>defaultVersion</b> <code>{String}</code>:
+        <p>The default version that will be copied
+into the <code>defaultDest</code> location. This is so users can go to <code>http://site.com/api</code>
+to find the latest docs and not <code>http://site.com/2.0.1/api</code>.</p>
+
+      </li>
+    
+      <li>
+        <b>defaultDest</b> <code>{String}</code>:
+        <p>The location of where the default docs should
+be rendered to.</p>
+
+      </li>
+    
+      <li>
+        <b>versionDest</b> <code>{String}</code>:
+        <p>The templated directory name of where each version's download
+and docs should be created.  The default is <code>&quot;&lt;%= version%&gt;&quot;</code>.  This means
+that a <em>2.0.1</em> version name will be downloaded to a <em>2.0.1</em> folder. DocumentJS
+will then look for that version's <code>documentjs.json</code> and run that.</p>
+
+      </li>
+    
+      <li>
+        <b>sites</b> <code>{Object&lt;String,<a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">siteConfig</a>&gt;}</code>:
+        <p>A map of site names and
+options that configure their behavior.</p>
+
+      </li>
+    
+      <li>
+        <b>siteDefaults</b> <code>{<a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">siteConfig</a>}</code>:
+        <p>Default values for any sites configs.</p>
+
+      </li>
+    
+    </ul>
+  </div>
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 <p>A <code>docConfig</code> is most commonly found in <code>documentjs.json</code>. It configures
@@ -92,6 +178,7 @@ generated. Finally, all markdown files in <code>_pages</code> will be generated 
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -108,7 +195,7 @@ generated. Finally, all markdown files in <code>_pages</code> will be generated 
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

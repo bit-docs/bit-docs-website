@@ -424,6 +424,77 @@ needed for the html site to a distributable location.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>function(options, folders)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>options</b> <code>{Object}</code>: <p>The options passed to <a href="documentjs.generate.html" title="">generate</a>.</p>
+</li>
+            
+              
+            
+        
+          <li><b>folders</b> <code>{Object}</code>: <p>Paths to where the
+build should take place and the final static content should be copied to.</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>dist 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The path where the final static
+content should be copied after it has been minfied and prepared.</p>
+
+                  </div>
+                </li>
+                
+                <li class="option">
+                  <h5>build 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The path where the default static and <code>options.static</code>
+content have been copied.</p>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves when the build and copying have
+been successful.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 <p>A builder that simply copies all static content over:</p>
@@ -441,6 +512,7 @@ module.exports = function(options, folders){
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -457,7 +529,7 @@ module.exports = function(options, folders){
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

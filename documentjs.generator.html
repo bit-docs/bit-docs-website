@@ -49,6 +49,50 @@ is the default and currently only generator packaged with DocumentJS.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>function(docMapPromise, The)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>docMapPromise</b> <code>{Promise&lt;documentjs.process.docMap&gt;}</code>: <p>A promise that will resolve
+with a map of all [documentjs.process.docObject docObjects] keyed by their name.</p>
+</li>
+            
+              
+            
+        
+          <li><b>The</b> <code>{options}</code>: <p>options object passed to <a href="documentjs.generate.html" title="">generate</a>.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise}</code>: <p>A module that resolves when the output has been built.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 <p>The following exports a generator function that builds a JSON output of the docObject:</p>
@@ -72,6 +116,7 @@ module.exports = function(docMapPromise, options){
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -88,7 +133,7 @@ module.exports = function(docMapPromise, options){
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

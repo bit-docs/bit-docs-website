@@ -46,6 +46,73 @@
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>.find.files(siteConfig)</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>Options that configure the behavior of the
+files that will be processed.</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>glob 
+                    <code>{String|documentjs.find.globObject}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The glob
+option either specifies a <a href="https://github.com/isaacs/minimatch">minmatch</a>
+pattern like:</p>
+<pre><code>documentjs.find.files({glob: &quot;*.js&quot;})
+</code></pre>
+<p>Or a [documentjs.find.globObject GlobObject] that specifies the
+a <a href="https://github.com/isaacs/minimatch">minmatch</a> pattern and
+other siteConfig like:</p>
+<pre><code>documentjs.find.files({
+  glob: {
+    pattern: &quot;*.js&quot;,
+    cwd: __dirname
+  }
+})
+</code></pre>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{documentjs.process.types.FileEventEmitter}</code>: <p>An event emitter that
+emits events for matched files.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -54,6 +121,7 @@
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -70,7 +138,7 @@
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

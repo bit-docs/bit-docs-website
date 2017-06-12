@@ -195,13 +195,15 @@
 	<ul>
 		
 			
+		
+			
 				
 					<li class="current
            						parent
            						expanded">
 						<a class="module"
 							href="function.html"
-							title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">
+							title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">
 							./function
 						</a>
 						
@@ -218,10 +220,73 @@
            						
            						">
 						<a class="module"
+							href="module.html"
+							title="Declares the export value for a module.">
+							./module
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="option.html"
+							title="Describes a property of the object, or an argument of the function, that was
+specified in an param tag.">
+							./option
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
 							href="param.html"
-							title="Adds parameter information to a @function or
-@signature.">
+							title="Specifies parameter information for function or
+signature.">
 							./param
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="property.html"
+							title="Documents a property of a parent object.">
+							./property
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="prototype.html"
+							title="Declares that property and function
+tags belong to the preceeding function&#x27;s prototype
+object.">
+							./prototype
 						</a>
 						
 					</li>
@@ -390,8 +455,8 @@ but can work with any other tag.">
 		
 			
 				<section class="description">
-    <p>Specifies the comment is for a function. Use <a href="param.html" title="Adds parameter information to a @function or
-@signature.">@param</a> to specify the arguments of a function.</p>
+    <p>Specifies the comment block is for a function. Use  <a href="param.html" title="Specifies parameter information for function or
+signature.">@param</a> to specify the parameters of a function.</p>
 
 </section>
 
@@ -400,17 +465,116 @@ but can work with any other tag.">
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>@function [NAME] [TITLE]</code>
+  </h2>
+
+  <pre><code class="language-javascript">/**
+ * @function lib.Component.prototype.update update
+ * @parent lib.Component
+ */
+C.p.update = function(){
+
+}
+</code></pre>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>NAME</b> <code>{String}</code>: <p>The name of the function. It should be supplied
+if it cannot be determined from the code block following the comment.</p>
+</li>
+            
+              
+            
+        
+          <li><b>TITLE</b> <code>{String}</code>: <p>The title to be used for display purposes.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Code Matching</h2>
-<p>The <code>@function</code> type can be infered from code like the following:</p>
+<p>The <code>@function</code> type can be inferred from code like the following:</p>
 <pre><code class="language-javascript">/**
  * The foo function exists
  */
 foo: function(){}
+
 /**
  * The bar function exists
  */
-bar = function(){}
+bar = function(buz, baz){
+  return 'a string';
+}
+</code></pre>
+<p>The comment block above <code>foo</code> will automatically be associated with the
+function <code>foo</code>. Essentially, as if it had been explicitly written as:</p>
+<pre><code class="language-javascript">/**
+ * @function lib.foo foo
+ * @description The foo function exists
+ */
+foo: function(){}
+</code></pre>
+<p>The same is true for the comment block above <code>bar</code>, which translates to:</p>
+<pre><code class="language-javascript">/**
+ * @function lib.bar bar
+ * @param {*} buz
+ * @param {*} baz
+ * @return {String}
+ * @description The bar function exists
+ */
+bar = function(buz, baz){
+  return 'a string';
+}
+</code></pre>
+<p>Furthermore, the code matching can handle prototypes and methods like:</p>
+<pre><code class="language-javascript">/**
+ * @module {function} foo-bar
+ */
+Foo = function(){};
+Object.assign(Foo.prototype, {
+  bar: function(arg1){}
+});
+module.exports = Foo;
+</code></pre>
+<p>Which translates to:</p>
+<pre><code class="language-javascript">/**
+ * @module {function} foo-bar
+ */
+Foo = function(){};
+
+/**
+ * @prototype
+ */
+Object.assign(Foo.prototype, {
+
+ /**
+  * The bar function exists
+  */
+  bar: function(arg1){}
+
+});
+
+module.exports = Foo;
 </code></pre>
 
 </section>
@@ -419,10 +583,11 @@ bar = function(){}
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/function","type":"module","parent":"bit-docs-js/tags","src":{"line":13,"codeLine":56,"path":"docs/modules/bit-docs-js/tags/function.js"},"description":"Specifies the comment is for a function. Use [bit-docs-js/tags/param @param] to specify the arguments of a function.\n\n\n","title":"@function","types":[{"type":"Object","options":[]}],"signatures":[{"code":"@function [NAME] [TITLE]","description":"\n\n```javascript\n/**\n * @function lib.Component.prototype.update update\n * @parent lib.Component\n */\nC.p.update = function(){\n\n}\n```","params":[{"types":[{"type":"String"}],"optional":true,"name":"NAME","description":"The name of the function. It should\nbe supplied if it can not be determined from the code block\nfollowing the comment.\n"},{"types":[{"type":"String"}],"optional":true,"name":"TITLE","description":"The title to be used for display purposes.\n"}]}],"_curParam":{"types":[{"type":"String"}],"optional":true,"name":"TITLE","description":"The title to be used for display purposes.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/function","type":"module","parent":"bit-docs-js/tags","src":{"line":9,"codeLine":115,"path":"docs/modules/bit-docs-js/tags/function.js"},"description":"Specifies the comment block is for a function. Use  [bit-docs-js/tags/param] to specify the parameters of a function.\n\n\n","title":"@function","types":[{"type":"Object","options":[]}],"signatures":[{"code":"@function [NAME] [TITLE]","description":"\n\n```javascript\n/**\n * @function lib.Component.prototype.update update\n * @parent lib.Component\n */\nC.p.update = function(){\n\n}\n```","params":[{"types":[{"type":"String"}],"optional":true,"name":"NAME","description":"The name of the function. It should be supplied\nif it cannot be determined from the code block following the comment.\n"},{"types":[{"type":"String"}],"optional":true,"name":"TITLE","description":"The title to be used for display purposes.\n"}]}],"_curParam":{"types":[{"type":"String"}],"optional":true,"name":"TITLE","description":"The title to be used for display purposes.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	
@@ -435,7 +600,7 @@ bar = function(){}
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="../../static/node_modules/steal/steal.production.js"></script>
+				src="../../static/steal.production.js"></script>
 	
 </body>
 

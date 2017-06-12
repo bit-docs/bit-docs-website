@@ -47,6 +47,9 @@
 
 		
 			
+				
+			
+			
 				<section class="body">
     <p>This guide walks you through adding the right [documentjs.tags tags] to your source
 or markdown files to create documentation useful to your users.</p>
@@ -60,7 +63,7 @@ the [documentjs.tags tags] behavior is the key to making useful documentation.</
 <p>A [documentjs.process.docObject docObject's] most important tag is the one that determines its
 type.  The following tags are the type tags and what they document:</p>
 <ul>
-<li><a href="documentjs.tags.module.html" title="Declares the export value for a module.">@module</a> - A module's export value.</li>
+<li>[documentjs.tags.module @module] - A module's export value.</li>
 <li><a href="documentjs.tags.typedef.html" title="Declares an alias for a more complex type. That alias can
 be used in TYPE declarations.">@typedef</a> - Defines a custom type.</li>
 <li><a href="documentjs.tags.page.html" title="Declares this comment as a page. Use pages to
@@ -70,11 +73,8 @@ application structure.">@page</a> - A page of information.</li>
 <li><a href="documentjs.tags.static.html" title="Declares that @property and
 @function tags belong
 to the preceeding @constructor.">@static</a> - Creates a placeholder for static properties on a constructor.</li>
-<li><a href="documentjs.tags.prototype.html" title="Declares that documentjs.tags.property and
-documentjs.tags.function tags belong
-to the preceeding documentjs.tags.function's
-prototype object.">@prototype</a> - Creates a placeholder for prototype properties on a constructor.</li>
-<li><a href="documentjs.tags.property.html" title="Documents a property of a parent object.">@property</a> - Creates a property value on an object.</li>
+<li>[documentjs.tags.prototype @prototype] - Creates a placeholder for prototype properties on a constructor.</li>
+<li>[documentjs.tags.property @property] - Creates a property value on an object.</li>
 </ul>
 <p>A <code>module</code> and <code>typedef</code> tag can document other types like a function.  For example,
 use <code>@module</code> when something is both module and a function.</p>
@@ -87,7 +87,7 @@ link to each other. The following describes useful patterns for different types 
 <h3>Multi module projects that use a module loader</h3>
 <p>This section describe how best to document a project or application that
 has many individual modules that you want documented.</p>
-<p>For this scenario, it's common to use the <a href="documentjs.tags.module.html" title="Declares the export value for a module.">@module</a> tag. It can be used
+<p>For this scenario, it's common to use the [documentjs.tags.module @module] tag. It can be used
 to document modules that return:</p>
 <ul>
 <li>A single function. Ex: <code>@module {function} module/name</code></li>
@@ -138,6 +138,7 @@ that specifies which [documentjs.tags] will be used to process files.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -154,7 +155,7 @@ that specifies which [documentjs.tags] will be used to process files.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

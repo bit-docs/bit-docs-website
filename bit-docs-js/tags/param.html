@@ -195,14 +195,47 @@
 	<ul>
 		
 			
+		
+			
 				
 					<li class="
            						
            						">
 						<a class="module"
 							href="function.html"
-							title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">
+							title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">
 							./function
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="module.html"
+							title="Declares the export value for a module.">
+							./module
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="option.html"
+							title="Describes a property of the object, or an argument of the function, that was
+specified in an param tag.">
+							./option
 						</a>
 						
 					</li>
@@ -216,13 +249,45 @@
            						expanded">
 						<a class="module"
 							href="param.html"
-							title="Adds parameter information to a @function or
-@signature.">
+							title="Specifies parameter information for function or
+signature.">
 							./param
 						</a>
 						
 							
 
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="property.html"
+							title="Documents a property of a parent object.">
+							./property
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="prototype.html"
+							title="Declares that property and function
+tags belong to the preceeding function&#x27;s prototype
+object.">
+							./prototype
+						</a>
 						
 					</li>
 				
@@ -390,7 +455,7 @@ but can work with any other tag.">
 		
 			
 				<section class="description">
-    <p>Adds parameter information to a <a href="function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a> or
+    <p>Specifies parameter information for <a href="function.html" title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">@function</a> or
 <a href="signature.html" title="Specifies a signature for a @function
 but can work with any other tag.">@signature</a>.</p>
 
@@ -401,34 +466,82 @@ but can work with any other tag.">@signature</a>.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>@param {TYPE} NAME [DESCRIPTION]</code>
+  </h2>
+
+  <pre><code class="language-javascript">/**
+ * Finds an order by id.
+ * @param {String} [id=0] Order identification number.
+ * @param {function(Order)} [success(order)] Callback function.
+ */
+findById: function( id, success ) {
+</code></pre>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>TYPE</b> <code>{bit-docs-js/typeExpression}</code>: <p>A [bit-docs-js/typeExpression type expression].</p>
+<p>Use <a href="option.html" title="Describes a property of the object, or an argument of the function, that was
+specified in an param tag.">@option</a> to describe a function's arguments,
+or an object's properties.</p>
+</li>
+            
+              
+            
+        
+          <li><b>NAME</b> <code>{bit-docs-js/nameExpression}</code>: <p>A [bit-docs-js/nameExpression name expression].</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
-    <p>Use <code>@param</code> within a <a href="function.html" title="Specifies the comment is for a function. Use @param to specify the arguments of a function.">@function</a> comment block or after
-a <a href="signature.html" title="Specifies a signature for a @function
+    <p>A &quot;parameter&quot; is a method definition variable, like <code>a</code> in <code>function(a)</code>.</p>
+<p>Use <code>@param</code> within a <a href="function.html" title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">@function</a> comment block, or after
+an <a href="signature.html" title="Specifies a signature for a @function
 but can work with any other tag.">@signature</a> tag.</p>
-<h2>@param within a function comment</h2>
-<p>If using a comment preceeds a function like ...</p>
+<h2>Use within a comment block</h2>
+<p>If the comment block precedes a function declaration, like:</p>
 <pre><code class="language-javascript">/**
  * Finds an order by id.
  * @param {String} [id=0] Order identification number.
- * @param {function(Order)} [success(order)] Filter order search by this date.
+ * @param {function(Order)} [success(order)] Filter order search by this.
  */
- findById: function( id, success ) {
+findById: function( id, success ) {
 </code></pre>
-<p>... bit-docs will automatically
-make the comment's [bit-docs-js/DocObject DocObject] type a function
-and create params with just names (in this case <code>id</code> and <code>success</code>).</p>
-<p>The comment's <code>@param</code>s tags should use the same names as the function. Any
-params that specifies a name that isn't present is added at the end of
+<p>Then bit-docs will automatically set the type to function for the
+[bit-docs-js/DocObject] representing that comment, and create params with
+names only (in this case <code>id</code> and <code>success</code>, and no description).</p>
+<p>The comment's <code>@param</code>s tags should use the same names as the function.
+Any param that specifies a name that isn't present is added at the end of
 the arguments.</p>
-<h2>@param within a signature</h2>
-<p>Use <code>@param</code> to specify the params in a signature.</p>
+<h2>Use after @signature</h2>
+<p>Use <code>@param</code> to specify the parameter variables of a signature.</p>
 <pre><code class="language-javascript">/**
  * Finds an order by id.
  *
  * @signature `Order.findById(id=0,[success])`
  *
  * @param {String} [id=0] Order identification number.
- * @param {function(Order)} [success(order)] Filter order search by this date.
+ * @param {function(Order)} [success(order)] Callback function.
  */
 findById: function( id, success ) {
 </code></pre>
@@ -441,10 +554,11 @@ are overwritten.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/param","type":"module","parent":"bit-docs-js/tags","src":{"line":32,"codeLine":104,"path":"docs/modules/bit-docs-js/tags/param.js"},"description":"\nAdds parameter information to a [bit-docs-js/tags/function @function] or\n[bit-docs-js/tags/signature @signature].\n","title":"@param","types":[{"type":"Object","options":[]}],"signatures":[{"code":"@param {TYPE} NAME [DESCRIPTION]","description":"\nExample:\n```javascript\n/**\n * Finds an order by id.\n * @param {String} [id=0] Order identification number.\n * @param {function(Order)} [success(order)] Filter\n * order search by this date.\n */\n findById: function( id, success ) {\n```","params":[{"types":[{"type":"bit-docs-js/typeExpression"}],"name":"TYPE","description":"A [bit-docs-js/typeExpression type expression].\n\nUse [bit-docs-js/tags/option @option] to detail a function's arguments or an\nobject's properties.\n"},{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"}]}],"_curParam":{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/param","type":"module","parent":"bit-docs-js/tags","src":{"line":35,"codeLine":107,"path":"docs/modules/bit-docs-js/tags/param.js"},"description":"\nSpecifies parameter information for [bit-docs-js/tags/function] or\n[bit-docs-js/tags/signature].\n","title":"@param","types":[{"type":"Object","options":[]}],"signatures":[{"code":"@param {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Finds an order by id.\n * @param {String} [id=0] Order identification number.\n * @param {function(Order)} [success(order)] Callback function.\n */\nfindById: function( id, success ) {\n```","params":[{"types":[{"type":"bit-docs-js/typeExpression"}],"name":"TYPE","description":"A [bit-docs-js/typeExpression type expression].\n\nUse [bit-docs-js/tags/option @option] to describe a function's arguments,\nor an object's properties.\n"},{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"}]}],"_curParam":{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	
@@ -457,7 +571,7 @@ are overwritten.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="../../static/node_modules/steal/steal.production.js"></script>
+				src="../../static/steal.production.js"></script>
 	
 </body>
 

@@ -48,10 +48,42 @@ current scope.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>@add NAME</code>
+  </h2>
+
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>NAME</b> <code>{STRING}</code>: <p>The name of [documentjs.process.docObject]
+to set as the scope.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 <p>[documentjs.tags.function]
-or <a href="documentjs.tags.property.html" title="Documents a property of a parent object.">@property</a> tags created
+or [documentjs.tags.property] tags created
 without a name, or with a &quot;short name&quot; will use the current
 scope to guess their full name and parent. <code>@add</code> can set the scope,
 allowing comments to not have to write out a full name and <a href="documentjs.tags.parent.html" title="Specifies the parent
@@ -81,6 +113,7 @@ lib.extend(lib.Component.prototype,{
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -97,7 +130,7 @@ lib.extend(lib.Component.prototype,{
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

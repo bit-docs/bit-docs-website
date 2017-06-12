@@ -48,6 +48,82 @@ by <a href="documentjs.typeExpression.html" title="">type expressions</a>.</p>
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>Object</code>
+  </h2>
+
+  
+
+  
+
+  
+
+  
+  <div class="options">
+  <h3 class="options-title">Options</h3>
+    <ul>
+    
+      <li>
+        <b>type</b> <code>{String}</code>:
+        <p>The type name this dataType represents.</p>
+
+      </li>
+    
+      <li>
+        <b>template</b> <code>{Array&lt;<a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a>&gt;}</code>:
+        <p>An array of valueData representing each
+specified type argument within <code>&lt;&gt;</code>.  They are specified like:</p>
+<pre><code>{PRIMARY_TYPE.&lt;TYPE,TYPE&gt;}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>options</b> <code>{Array&lt;<a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a>&gt;}</code>:
+        <p>An array of valueData representing each
+property name and value type in a record type.  They are specified like:</p>
+<pre><code>{{PROPERTY_NAME: TYPE, PROPERTY_NAME: TYPE}}
+</code></pre>
+<p>The PROPERTY_NAME value sets the <code>name</code> property on the invidual <a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueDatas</a>.</p>
+
+      </li>
+    
+      <li>
+        <b>context</b> <code>{<a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a>}</code>:
+        <p>Represents the valueData a function expression can
+have as <code>this</code>.  It is specified like:</p>
+<pre><code>{function(this:TYPE)}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>constructs</b> <code>{<a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a>}</code>:
+        <p>Represents the return value of a function expression.  It is specified like:</p>
+<pre><code>{function():TYPE}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>params</b> <code>{Array&lt;<a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a>&gt;}</code>:
+        <p>Represents the arguments a function can
+be called with.  They are specified like:</p>
+<pre><code>{function(TYPE,TYPE)}
+</code></pre>
+
+      </li>
+    
+    </ul>
+  </div>
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -56,6 +132,7 @@ by <a href="documentjs.typeExpression.html" title="">type expressions</a>.</p>
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -72,7 +149,7 @@ by <a href="documentjs.typeExpression.html" title="">type expressions</a>.</p>
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

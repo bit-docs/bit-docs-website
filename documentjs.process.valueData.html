@@ -47,6 +47,115 @@
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>Object</code>
+  </h2>
+
+  
+
+  
+
+  
+
+  
+  <div class="options">
+  <h3 class="options-title">Options</h3>
+    <ul>
+    
+      <li>
+        <b>types</b> <code>{Array&lt;<a href="documentjs.process.typeData.html" title="Data related to a specific type value. These objects are created
+by type expressions.">typeData</a>&gt;}</code>:
+        <p>The allowed types of the value. Multiple types can be
+specified like:</p>
+<pre><code>{Boolean|Array}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>name</b> <code>{String}</code>:
+        <p>Set if the value is given a name. This property is set by
+record type expressions like:</p>
+<pre><code>{{PROPERTY_NAME: TYPE, PROPERTY_NAME: TYPE}}
+</code></pre>
+<p>Or by <a href="documentjs.nameExpression.html" title="Adds the name and other properties to valueData in
+using the @param or
+@option tags.">name expressions</a> like:</p>
+<pre><code>method(arg1, arg2)
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>description</b> <code>{String}</code>:
+        <p>A description associated with the value.  This is
+commonly provided by the [documentjs.tags.option @option] or [documentjs.tags.param @param] tag.</p>
+
+      </li>
+    
+      <li>
+        <b>optional</b> <code>{Boolean}</code>:
+        <p>If the type does not need to exist.  This can be specified in the type like:</p>
+<pre><code>{String=}
+</code></pre>
+<p>Or more commonly in a <a href="documentjs.nameExpression.html" title="Adds the name and other properties to valueData in
+using the @param or
+@option tags.">name expressions</a> like:</p>
+<pre><code>[NAME]
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>nullable</b> <code>{Boolean}</code>:
+        <p>If the type can be null.  It is specified with <code>?</code> like:</p>
+<pre><code>{?TYPE}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>nonnull</b> <code>{Boolean}</code>:
+        <p>If the type can not be null. It is specified with <code>!</code> like:</p>
+<pre><code>{!TYPE}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>variable</b> <code>{Boolean}</code>:
+        <p>If multiple values of the type can be provided.  This can be specified
+in the type with <code>...</code> like:</p>
+<pre><code>{function(...Number)}
+</code></pre>
+<p>or:</p>
+<pre><code>{function(Number...)}
+</code></pre>
+
+      </li>
+    
+      <li>
+        <b>defaultValue</b> <code>{<a href="documentjs.process.typeData.html" title="Data related to a specific type value. These objects are created
+by type expressions.">typeData</a>}</code>:
+        <p>The default value of the object if it is not
+provided. This is commonly specified by a <a href="documentjs.nameExpression.html" title="Adds the name and other properties to valueData in
+using the @param or
+@option tags.">name expression</a> like:</p>
+<pre><code>[foo=&quot;bar&quot;]
+</code></pre>
+
+      </li>
+    
+    </ul>
+  </div>
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     
 </section>
@@ -55,6 +164,7 @@
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -71,7 +181,7 @@
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

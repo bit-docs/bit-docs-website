@@ -47,6 +47,60 @@
 
 		
 			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>documentjs.process.file(source, docMap, [filename])</code>
+  </h2>
+
+  <p>Processes a file's source and calls <a href="documentjs.process.codeAndComment.html" title="">documentjs.process.codeAndComment</a> accordingly. If
+the file ends with <code>.js</code>, each comment will be processed individually.  Otherwise,
+it treats the entire source as one big comment.</p>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>source</b> <code>{String}</code>: <p>A files source</p>
+</li>
+            
+              
+            
+        
+          <li><b>docMap</b> <code>{documentjs.process.docMap}</code>: <p>A map of the name of each DocObject to the DocObject</p>
+</li>
+            
+              
+            
+        
+          <li><b>filename</b> <code>{String}</code>: <p>The filename.  If a filename is not provided,
+the entire file is treated as one big comment block.  If a filename is provided
+and is not a .md or .markdown file, it is assumed to be a source file.</p>
+</li>
+            
+              
+            
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>An siteConfig object. Currently only the <code>tags</code> option is used.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
+			
+			
 				<section class="body">
     <h2>Use</h2>
 <pre><code>var docMap = {};
@@ -61,6 +115,7 @@ documentjs.process.file(&quot;import $ from 'jquery' ... &quot;,
 		
 	</article>
 </div>
+
 	<footer></footer>
 
 	<script type="text/javascript">
@@ -77,7 +132,7 @@ documentjs.process.file(&quot;import $ from 'jquery' ... &quot;,
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/node_modules/steal/steal.production.js"></script>
+				src="./static/steal.production.js"></script>
 	
 </body>
 

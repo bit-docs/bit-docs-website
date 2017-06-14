@@ -1030,7 +1030,7 @@ define('package.json!npm', [
             'resolutions': {
                 'bit-docs-html-toc': '0.6.2',
                 'can-control': '3.0.10',
-                'can-stache': '3.0.26'
+                'can-stache': '3.0.27'
             }
         },
         {
@@ -1075,11 +1075,31 @@ define('package.json!npm', [
             'resolutions': {
                 'can-construct': '3.1.1',
                 'can-namespace': '1.0.0',
-                'can-util': '3.8.1',
                 'can-types': '1.0.4',
                 'can-event': '3.4.0',
                 'can-compute': '3.0.10',
-                'can-observation': '3.1.6'
+                'can-observation': '3.1.7',
+                'can-util': '3.8.4'
+            }
+        },
+        {
+            'name': 'can-stache',
+            'version': '3.0.27',
+            'fileUrl': './node_modules/can-stache/package.json',
+            'main': 'can-stache',
+            'resolutions': {
+                'can-stache': '3.0.27',
+                'can-util': '3.8.4',
+                'can-namespace': '1.0.0',
+                'can-view-parser': '3.3.0',
+                'can-view-callbacks': '3.0.6',
+                'can-view-target': '3.0.7',
+                'can-view-nodelist': '3.0.4',
+                'can-observation': '3.1.7',
+                'can-compute': '3.0.10',
+                'can-types': '1.0.4',
+                'can-view-scope': '3.1.4',
+                'can-view-live': '3.0.7'
             }
         },
         {
@@ -1089,7 +1109,7 @@ define('package.json!npm', [
             'main': 'can-construct',
             'steal': {},
             'resolutions': {
-                'can-util': '3.8.1',
+                'can-util': '3.8.4',
                 'can-types': '1.0.4',
                 'can-namespace': '1.0.0'
             }
@@ -1101,17 +1121,6 @@ define('package.json!npm', [
             'main': 'can-namespace',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {}
-        },
-        {
-            'name': 'can-util',
-            'version': '3.8.1',
-            'fileUrl': './node_modules/can-util/package.json',
-            'main': 'can-util',
-            'resolutions': {
-                'can-util': '3.8.1',
-                'can-types': '1.0.4',
-                'can-cid': '1.0.3'
-            }
         },
         {
             'name': 'can-types',
@@ -1127,7 +1136,7 @@ define('package.json!npm', [
             'main': 'can-event',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
-                'can-util': '3.8.1',
+                'can-util': '3.8.4',
                 'can-namespace': '1.0.0',
                 'can-cid': '1.0.3',
                 'can-event': '3.4.0',
@@ -1144,20 +1153,20 @@ define('package.json!npm', [
                 'can-compute': '3.0.10',
                 'can-namespace': '1.0.0',
                 'can-cid': '1.0.3',
-                'can-observation': '3.1.6',
-                'can-util': '3.8.1',
+                'can-observation': '3.1.7',
+                'can-util': '3.8.4',
                 'can-types': '1.0.4'
             }
         },
         {
             'name': 'can-observation',
-            'version': '3.1.6',
+            'version': '3.1.7',
             'fileUrl': './node_modules/can-observation/package.json',
             'main': 'can-observation',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
-                'can-observation': '3.1.6',
-                'can-util': '3.8.1',
+                'can-observation': '3.1.7',
+                'can-util': '3.8.4',
                 'can-types': '1.0.4',
                 'can-event': '3.4.0',
                 'can-cid': '1.0.3',
@@ -1165,23 +1174,56 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-stache',
-            'version': '3.0.26',
-            'fileUrl': './node_modules/can-stache/package.json',
-            'main': 'can-stache',
+            'name': 'can-util',
+            'version': '3.8.4',
+            'fileUrl': './node_modules/can-util/package.json',
+            'main': 'can-util',
             'resolutions': {
-                'can-stache': '3.0.26',
-                'can-util': '3.8.1',
-                'can-namespace': '1.0.0',
-                'can-view-parser': '3.3.0',
-                'can-view-callbacks': '3.0.6',
-                'can-view-target': '3.0.7',
-                'can-view-nodelist': '3.0.4',
-                'can-observation': '3.1.6',
-                'can-compute': '3.0.10',
+                'can-util': '3.8.4',
                 'can-types': '1.0.4',
-                'can-view-live': '3.0.7',
-                'can-view-scope': '3.1.4'
+                'can-cid': '1.0.3'
+            }
+        },
+        {
+            'name': 'can-view-parser',
+            'version': '3.3.0',
+            'fileUrl': './node_modules/can-view-parser/package.json',
+            'main': 'can-view-parser',
+            'resolutions': {
+                'can-namespace': '1.0.0',
+                'can-util': '3.8.4'
+            }
+        },
+        {
+            'name': 'can-view-callbacks',
+            'version': '3.0.6',
+            'fileUrl': './node_modules/can-view-callbacks/package.json',
+            'main': 'can-view-callbacks',
+            'steal': {},
+            'resolutions': {
+                'can-observation': '3.1.7',
+                'can-util': '3.8.4',
+                'can-namespace': '1.0.0'
+            }
+        },
+        {
+            'name': 'can-view-target',
+            'version': '3.0.7',
+            'fileUrl': './node_modules/can-view-target/package.json',
+            'main': 'can-view-target',
+            'resolutions': {
+                'can-util': '3.8.4',
+                'can-namespace': '1.0.0'
+            }
+        },
+        {
+            'name': 'can-view-nodelist',
+            'version': '3.0.4',
+            'fileUrl': './node_modules/can-view-nodelist/package.json',
+            'main': 'can-view-nodelist',
+            'resolutions': {
+                'can-util': '3.8.4',
+                'can-namespace': '1.0.0'
             }
         },
         {
@@ -1192,45 +1234,18 @@ define('package.json!npm', [
             'resolutions': { 'can-namespace': '1.0.0' }
         },
         {
-            'name': 'can-view-parser',
-            'version': '3.3.0',
-            'fileUrl': './node_modules/can-view-parser/package.json',
-            'main': 'can-view-parser',
+            'name': 'can-view-scope',
+            'version': '3.1.4',
+            'fileUrl': './node_modules/can-view-scope/package.json',
+            'main': 'can-view-scope',
             'resolutions': {
+                'can-observation': '3.1.7',
+                'can-view-scope': '3.1.4',
+                'can-util': '3.8.4',
                 'can-namespace': '1.0.0',
-                'can-util': '3.8.1'
-            }
-        },
-        {
-            'name': 'can-view-callbacks',
-            'version': '3.0.6',
-            'fileUrl': './node_modules/can-view-callbacks/package.json',
-            'main': 'can-view-callbacks',
-            'steal': {},
-            'resolutions': {
-                'can-observation': '3.1.6',
-                'can-util': '3.8.1',
-                'can-namespace': '1.0.0'
-            }
-        },
-        {
-            'name': 'can-view-target',
-            'version': '3.0.7',
-            'fileUrl': './node_modules/can-view-target/package.json',
-            'main': 'can-view-target',
-            'resolutions': {
-                'can-util': '3.8.1',
-                'can-namespace': '1.0.0'
-            }
-        },
-        {
-            'name': 'can-view-nodelist',
-            'version': '3.0.4',
-            'fileUrl': './node_modules/can-view-nodelist/package.json',
-            'main': 'can-view-nodelist',
-            'resolutions': {
-                'can-util': '3.8.1',
-                'can-namespace': '1.0.0'
+                'can-types': '1.0.4',
+                'can-compute': '3.0.10',
+                'can-simple-map': '3.1.4'
             }
         },
         {
@@ -1251,27 +1266,12 @@ define('package.json!npm', [
             'resolutions': {
                 'can-view-live': '3.0.7',
                 'can-view-parser': '3.3.0',
-                'can-util': '3.8.1',
+                'can-util': '3.8.4',
                 'can-view-nodelist': '3.0.4',
                 'can-view-callbacks': '3.0.6',
                 'can-types': '1.0.4',
                 'can-compute': '3.0.10',
                 'can-event': '3.4.0'
-            }
-        },
-        {
-            'name': 'can-view-scope',
-            'version': '3.1.4',
-            'fileUrl': './node_modules/can-view-scope/package.json',
-            'main': 'can-view-scope',
-            'resolutions': {
-                'can-observation': '3.1.6',
-                'can-view-scope': '3.1.4',
-                'can-util': '3.8.1',
-                'can-namespace': '1.0.0',
-                'can-types': '1.0.4',
-                'can-compute': '3.0.10',
-                'can-simple-map': '3.1.4'
             }
         },
         {
@@ -1294,8 +1294,8 @@ define('package.json!npm', [
         }
     ], { 'npmParentMap': {} }));
 });
-/*can-util@3.8.1#js/assign/assign*/
-define('can-util@3.8.1#js/assign/assign', function (require, exports, module) {
+/*can-util@3.8.4#js/assign/assign*/
+define('can-util@3.8.4#js/assign/assign', function (require, exports, module) {
     module.exports = function (d, s) {
         for (var prop in s) {
             d[prop] = s[prop];
@@ -1303,15 +1303,15 @@ define('can-util@3.8.1#js/assign/assign', function (require, exports, module) {
         return d;
     };
 });
-/*can-util@3.8.1#js/is-array/is-array*/
-define('can-util@3.8.1#js/is-array/is-array', function (require, exports, module) {
+/*can-util@3.8.4#js/is-array/is-array*/
+define('can-util@3.8.4#js/is-array/is-array', function (require, exports, module) {
     'use strict';
     module.exports = function (arr) {
         return Array.isArray(arr);
     };
 });
-/*can-util@3.8.1#js/is-function/is-function*/
-define('can-util@3.8.1#js/is-function/is-function', function (require, exports, module) {
+/*can-util@3.8.4#js/is-function/is-function*/
+define('can-util@3.8.4#js/is-function/is-function', function (require, exports, module) {
     'use strict';
     var isFunction = function () {
         if (typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function') {
@@ -1325,8 +1325,8 @@ define('can-util@3.8.1#js/is-function/is-function', function (require, exports, 
     }();
     module.exports = isFunction;
 });
-/*can-util@3.8.1#js/is-plain-object/is-plain-object*/
-define('can-util@3.8.1#js/is-plain-object/is-plain-object', function (require, exports, module) {
+/*can-util@3.8.4#js/is-plain-object/is-plain-object*/
+define('can-util@3.8.4#js/is-plain-object/is-plain-object', function (require, exports, module) {
     'use strict';
     var core_hasOwn = Object.prototype.hasOwnProperty;
     function isWindow(obj) {
@@ -1350,8 +1350,8 @@ define('can-util@3.8.1#js/is-plain-object/is-plain-object', function (require, e
     }
     module.exports = isPlainObject;
 });
-/*can-util@3.8.1#js/deep-assign/deep-assign*/
-define('can-util@3.8.1#js/deep-assign/deep-assign', function (require, exports, module) {
+/*can-util@3.8.4#js/deep-assign/deep-assign*/
+define('can-util@3.8.4#js/deep-assign/deep-assign', function (require, exports, module) {
     'use strict';
     var isArray = require('../is-array/is-array');
     var isFunction = require('../is-function/is-function');
@@ -1391,8 +1391,8 @@ define('can-util@3.8.1#js/deep-assign/deep-assign', function (require, exports, 
     }
     module.exports = deepAssign;
 });
-/*can-util@3.8.1#js/log/log*/
-define('can-util@3.8.1#js/log/log', function (require, exports, module) {
+/*can-util@3.8.4#js/log/log*/
+define('can-util@3.8.4#js/log/log', function (require, exports, module) {
     'use strict';
     exports.warnTimeout = 5000;
     exports.logLevel = 0;
@@ -1439,8 +1439,8 @@ define('can-util@3.8.1#js/log/log', function (require, exports, module) {
         }
     };
 });
-/*can-util@3.8.1#js/dev/dev*/
-define('can-util@3.8.1#js/dev/dev', function (require, exports, module) {
+/*can-util@3.8.4#js/dev/dev*/
+define('can-util@3.8.4#js/dev/dev', function (require, exports, module) {
     'use strict';
     var canLog = require('../log/log');
     module.exports = {
@@ -1461,8 +1461,8 @@ define('can-util@3.8.1#js/dev/dev', function (require, exports, module) {
         _logger: canLog._logger
     };
 });
-/*can-util@3.8.1#js/is-array-like/is-array-like*/
-define('can-util@3.8.1#js/is-array-like/is-array-like', function (require, exports, module) {
+/*can-util@3.8.4#js/is-array-like/is-array-like*/
+define('can-util@3.8.4#js/is-array-like/is-array-like', function (require, exports, module) {
     'use strict';
     function isArrayLike(obj) {
         var type = typeof obj;
@@ -1528,16 +1528,16 @@ define('can-types@1.0.4#can-types', function (require, exports, module) {
         module.exports = namespace.types = types;
     }
 });
-/*can-util@3.8.1#js/is-iterable/is-iterable*/
-define('can-util@3.8.1#js/is-iterable/is-iterable', function (require, exports, module) {
+/*can-util@3.8.4#js/is-iterable/is-iterable*/
+define('can-util@3.8.4#js/is-iterable/is-iterable', function (require, exports, module) {
     'use strict';
     var types = require('can-types');
     module.exports = function (obj) {
         return obj && !!obj[types.iterator];
     };
 });
-/*can-util@3.8.1#js/each/each*/
-define('can-util@3.8.1#js/each/each', function (require, exports, module) {
+/*can-util@3.8.4#js/each/each*/
+define('can-util@3.8.4#js/each/each', function (require, exports, module) {
     'use strict';
     var isArrayLike = require('../is-array-like/is-array-like');
     var has = Object.prototype.hasOwnProperty;
@@ -1572,8 +1572,8 @@ define('can-util@3.8.1#js/each/each', function (require, exports, module) {
     }
     module.exports = each;
 });
-/*can-util@3.8.1#js/make-array/make-array*/
-define('can-util@3.8.1#js/make-array/make-array', function (require, exports, module) {
+/*can-util@3.8.4#js/make-array/make-array*/
+define('can-util@3.8.4#js/make-array/make-array', function (require, exports, module) {
     'use strict';
     var each = require('../each/each');
     var isArrayLike = require('../is-array-like/is-array-like');
@@ -1590,15 +1590,15 @@ define('can-util@3.8.1#js/make-array/make-array', function (require, exports, mo
     }
     module.exports = makeArray;
 });
-/*can-util@3.8.1#js/is-container/is-container*/
-define('can-util@3.8.1#js/is-container/is-container', function (require, exports, module) {
+/*can-util@3.8.4#js/is-container/is-container*/
+define('can-util@3.8.4#js/is-container/is-container', function (require, exports, module) {
     'use strict';
     module.exports = function (current) {
         return /^f|^o/.test(typeof current);
     };
 });
-/*can-util@3.8.1#js/get/get*/
-define('can-util@3.8.1#js/get/get', function (require, exports, module) {
+/*can-util@3.8.4#js/get/get*/
+define('can-util@3.8.4#js/get/get', function (require, exports, module) {
     'use strict';
     var isContainer = require('../is-container/is-container');
     function get(obj, name) {
@@ -1615,8 +1615,8 @@ define('can-util@3.8.1#js/get/get', function (require, exports, module) {
     }
     module.exports = get;
 });
-/*can-util@3.8.1#js/string/string*/
-define('can-util@3.8.1#js/string/string', function (require, exports, module) {
+/*can-util@3.8.4#js/string/string*/
+define('can-util@3.8.4#js/string/string', function (require, exports, module) {
     'use strict';
     var get = require('../get/get');
     var isContainer = require('../is-container/is-container');
@@ -1842,8 +1842,8 @@ define('can-construct@3.1.1#can-construct', function (require, exports, module) 
     };
     module.exports = namespace.Construct = Construct;
 });
-/*can-util@3.8.1#js/is-empty-object/is-empty-object*/
-define('can-util@3.8.1#js/is-empty-object/is-empty-object', function (require, exports, module) {
+/*can-util@3.8.4#js/is-empty-object/is-empty-object*/
+define('can-util@3.8.4#js/is-empty-object/is-empty-object', function (require, exports, module) {
     'use strict';
     module.exports = function (obj) {
         for (var prop in obj) {
@@ -1852,8 +1852,8 @@ define('can-util@3.8.1#js/is-empty-object/is-empty-object', function (require, e
         return true;
     };
 });
-/*can-util@3.8.1#dom/data/core*/
-define('can-util@3.8.1#dom/data/core', function (require, exports, module) {
+/*can-util@3.8.4#dom/data/core*/
+define('can-util@3.8.4#dom/data/core', function (require, exports, module) {
     'use strict';
     var isEmptyObject = require('../../js/is-empty-object/is-empty-object');
     var data = {};
@@ -1906,8 +1906,8 @@ define('can-util@3.8.1#dom/data/core', function (require, exports, module) {
         delete: deleteNode
     };
 });
-/*can-util@3.8.1#js/global/global*/
-define('can-util@3.8.1#js/global/global', function (require, exports, module) {
+/*can-util@3.8.4#js/global/global*/
+define('can-util@3.8.4#js/global/global', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL;
@@ -1925,8 +1925,8 @@ define('can-util@3.8.1#js/global/global', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/document/document*/
-define('can-util@3.8.1#dom/document/document', function (require, exports, module) {
+/*can-util@3.8.4#dom/document/document*/
+define('can-util@3.8.4#dom/document/document', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../../js/global/global');
@@ -1941,8 +1941,8 @@ define('can-util@3.8.1#dom/document/document', function (require, exports, modul
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/mutation-observer/mutation-observer*/
-define('can-util@3.8.1#dom/mutation-observer/mutation-observer', function (require, exports, module) {
+/*can-util@3.8.4#dom/mutation-observer/mutation-observer*/
+define('can-util@3.8.4#dom/mutation-observer/mutation-observer', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../../js/global/global')();
@@ -1974,8 +1974,8 @@ define('can-cid@1.0.3#can-cid', function (require, exports, module) {
         module.exports = namespace.cid = cid;
     }
 });
-/*can-util@3.8.1#js/cid/get-cid*/
-define('can-util@3.8.1#js/cid/get-cid', function (require, exports, module) {
+/*can-util@3.8.4#js/cid/get-cid*/
+define('can-util@3.8.4#js/cid/get-cid', function (require, exports, module) {
     'use strict';
     var CID = require('can-cid');
     var domDataCore = require('../../dom/data/core');
@@ -1989,8 +1989,8 @@ define('can-util@3.8.1#js/cid/get-cid', function (require, exports, module) {
         }
     };
 });
-/*can-util@3.8.1#js/cid-set/cid-set*/
-define('can-util@3.8.1#js/cid-set/cid-set', function (require, exports, module) {
+/*can-util@3.8.4#js/cid-set/cid-set*/
+define('can-util@3.8.4#js/cid-set/cid-set', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL = require('../global/global');
@@ -2037,8 +2037,8 @@ define('can-util@3.8.1#js/cid-set/cid-set', function (require, exports, module) 
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/mutation-observer/document/document*/
-define('can-util@3.8.1#dom/mutation-observer/document/document', function (require, exports, module) {
+/*can-util@3.8.4#dom/mutation-observer/document/document*/
+define('can-util@3.8.4#dom/mutation-observer/document/document', function (require, exports, module) {
     (function (global) {
         'use strict';
         var getDocument = require('../../document/document');
@@ -2180,8 +2180,8 @@ define('can-util@3.8.1#dom/mutation-observer/document/document', function (requi
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/data/data*/
-define('can-util@3.8.1#dom/data/data', function (require, exports, module) {
+/*can-util@3.8.4#dom/data/data*/
+define('can-util@3.8.4#dom/data/data', function (require, exports, module) {
     'use strict';
     var domDataCore = require('./core');
     var mutationDocument = require('../mutation-observer/document/document');
@@ -2210,8 +2210,8 @@ define('can-util@3.8.1#dom/data/data', function (require, exports, module) {
         delete: deleteNode
     };
 });
-/*can-util@3.8.1#dom/class-name/class-name*/
-define('can-util@3.8.1#dom/class-name/class-name', function (require, exports, module) {
+/*can-util@3.8.4#dom/class-name/class-name*/
+define('can-util@3.8.4#dom/class-name/class-name', function (require, exports, module) {
     'use strict';
     var has = function (className) {
         if (this.classList) {
@@ -2239,8 +2239,8 @@ define('can-util@3.8.1#dom/class-name/class-name', function (require, exports, m
         }
     };
 });
-/*can-util@3.8.1#js/is-browser-window/is-browser-window*/
-define('can-util@3.8.1#js/is-browser-window/is-browser-window', function (require, exports, module) {
+/*can-util@3.8.4#js/is-browser-window/is-browser-window*/
+define('can-util@3.8.4#js/is-browser-window/is-browser-window', function (require, exports, module) {
     (function (global) {
         'use strict';
         module.exports = function () {
@@ -2250,8 +2250,8 @@ define('can-util@3.8.1#js/is-browser-window/is-browser-window', function (requir
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/events/events*/
-define('can-util@3.8.1#dom/events/events', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/events*/
+define('can-util@3.8.4#dom/events/events', function (require, exports, module) {
     'use strict';
     var _document = require('../document/document');
     var isBrowserWindow = require('../../js/is-browser-window/is-browser-window');
@@ -2320,16 +2320,16 @@ define('can-util@3.8.1#dom/events/events', function (require, exports, module) {
         }
     }());
 });
-/*can-util@3.8.1#dom/dispatch/dispatch*/
-define('can-util@3.8.1#dom/dispatch/dispatch', function (require, exports, module) {
+/*can-util@3.8.4#dom/dispatch/dispatch*/
+define('can-util@3.8.4#dom/dispatch/dispatch', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events/events');
     module.exports = function () {
         return domEvents.dispatch.apply(this, arguments);
     };
 });
-/*can-util@3.8.1#dom/matches/matches*/
-define('can-util@3.8.1#dom/matches/matches', function (require, exports, module) {
+/*can-util@3.8.4#dom/matches/matches*/
+define('can-util@3.8.4#dom/matches/matches', function (require, exports, module) {
     'use strict';
     var matchesMethod = function (element) {
         return element.matches || element.webkitMatchesSelector || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector || element.oMatchesSelector;
@@ -2339,8 +2339,8 @@ define('can-util@3.8.1#dom/matches/matches', function (require, exports, module)
         return method ? method.apply(this, arguments) : false;
     };
 });
-/*can-util@3.8.1#dom/events/delegate/delegate*/
-define('can-util@3.8.1#dom/events/delegate/delegate', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/delegate/delegate*/
+define('can-util@3.8.4#dom/events/delegate/delegate', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events');
     var domData = require('../../data/data');
@@ -2432,8 +2432,8 @@ define('can-util@3.8.1#dom/events/delegate/delegate', function (require, exports
         }
     };
 });
-/*can-util@3.8.1#js/single-reference/single-reference*/
-define('can-util@3.8.1#js/single-reference/single-reference', function (require, exports, module) {
+/*can-util@3.8.4#js/single-reference/single-reference*/
+define('can-util@3.8.4#js/single-reference/single-reference', function (require, exports, module) {
     (function (global) {
         var CID = require('../cid/get-cid');
         var singleReference;
@@ -2454,8 +2454,8 @@ define('can-util@3.8.1#js/single-reference/single-reference', function (require,
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/events/delegate/enter-leave*/
-define('can-util@3.8.1#dom/events/delegate/enter-leave', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/delegate/enter-leave*/
+define('can-util@3.8.4#dom/events/delegate/enter-leave', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events'), singleRef = require('../../../js/single-reference/single-reference'), cid = require('../../../js/cid/get-cid');
     var eventMap = {
@@ -2670,8 +2670,8 @@ define('can-event@3.4.0#can-event', function (require, exports, module) {
     });
     module.exports = namespace.event = canEvent;
 });
-/*can-util@3.8.1#js/last/last*/
-define('can-util@3.8.1#js/last/last', function (require, exports, module) {
+/*can-util@3.8.4#js/last/last*/
+define('can-util@3.8.4#js/last/last', function (require, exports, module) {
     'use strict';
     module.exports = function (arr) {
         return arr && arr[arr.length - 1];
@@ -2842,8 +2842,8 @@ define('can-event@3.4.0#batch/batch', function (require, exports, module) {
         module.exports = namespace.batch = canBatch;
     }
 });
-/*can-observation@3.1.6#can-observation*/
-define('can-observation@3.1.6#can-observation', function (require, exports, module) {
+/*can-observation@3.1.7#can-observation*/
+define('can-observation@3.1.7#can-observation', function (require, exports, module) {
     require('can-event');
     var canEvent = require('can-event');
     var canBatch = require('can-event/batch/batch');
@@ -3181,15 +3181,15 @@ define('can-event@3.4.0#lifecycle/lifecycle', function (require, exports, module
     lifecycle.removeAndTeardown = baseEvents.removeEventListener;
     module.exports = lifecycle;
 });
-/*can-util@3.8.1#js/is-promise-like/is-promise-like*/
-define('can-util@3.8.1#js/is-promise-like/is-promise-like', function (require, exports, module) {
+/*can-util@3.8.4#js/is-promise-like/is-promise-like*/
+define('can-util@3.8.4#js/is-promise-like/is-promise-like', function (require, exports, module) {
     'use strict';
     module.exports = function (obj) {
         return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
     };
 });
-/*can-observation@3.1.6#reader/reader*/
-define('can-observation@3.1.6#reader/reader', function (require, exports, module) {
+/*can-observation@3.1.7#reader/reader*/
+define('can-observation@3.1.7#reader/reader', function (require, exports, module) {
     var Observation = require('can-observation');
     var assign = require('can-util/js/assign/assign');
     var CID = require('can-cid');
@@ -3256,7 +3256,7 @@ define('can-observation@3.1.6#reader/reader', function (require, exports, module
                 cur = readValue(cur, i, reads, options, state, prev);
                 checkForObservableAndNotify(options, state, getObserves, prev, i - 1);
                 type = typeof cur;
-                if (i < reads.length && (cur === null || type !== 'function' && type !== 'object')) {
+                if (i < reads.length && (cur === null || cur === undefined)) {
                     if (options.earlyExit) {
                         options.earlyExit(prev, i - 1, cur);
                     }
@@ -3473,8 +3473,8 @@ define('can-observation@3.1.6#reader/reader', function (require, exports, module
     observeReader.set = observeReader.write;
     module.exports = observeReader;
 });
-/*can-util@3.8.1#js/set-immediate/set-immediate*/
-define('can-util@3.8.1#js/set-immediate/set-immediate', function (require, exports, module) {
+/*can-util@3.8.4#js/set-immediate/set-immediate*/
+define('can-util@3.8.4#js/set-immediate/set-immediate', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../global/global')();
@@ -4475,8 +4475,8 @@ define('can-view-parser@3.3.0#can-view-parser', function (require, exports, modu
     };
     module.exports = namespace.HTMLParser = HTMLParser;
 });
-/*can-util@3.8.1#dom/child-nodes/child-nodes*/
-define('can-util@3.8.1#dom/child-nodes/child-nodes', function (require, exports, module) {
+/*can-util@3.8.4#dom/child-nodes/child-nodes*/
+define('can-util@3.8.4#dom/child-nodes/child-nodes', function (require, exports, module) {
     'use strict';
     function childNodes(node) {
         var childNodes = node.childNodes;
@@ -4494,15 +4494,15 @@ define('can-util@3.8.1#dom/child-nodes/child-nodes', function (require, exports,
     }
     module.exports = childNodes;
 });
-/*can-util@3.8.1#dom/contains/contains*/
-define('can-util@3.8.1#dom/contains/contains', function (require, exports, module) {
+/*can-util@3.8.4#dom/contains/contains*/
+define('can-util@3.8.4#dom/contains/contains', function (require, exports, module) {
     'use strict';
     module.exports = function (child) {
         return this.contains(child);
     };
 });
-/*can-util@3.8.1#dom/mutate/mutate*/
-define('can-util@3.8.1#dom/mutate/mutate', function (require, exports, module) {
+/*can-util@3.8.4#dom/mutate/mutate*/
+define('can-util@3.8.4#dom/mutate/mutate', function (require, exports, module) {
     'use strict';
     var makeArray = require('../../js/make-array/make-array');
     var setImmediate = require('../../js/set-immediate/set-immediate');
@@ -4729,16 +4729,16 @@ define('can-view-callbacks@3.0.6#can-view-callbacks', function (require, exports
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/is-of-global-document/is-of-global-document*/
-define('can-util@3.8.1#dom/is-of-global-document/is-of-global-document', function (require, exports, module) {
+/*can-util@3.8.4#dom/is-of-global-document/is-of-global-document*/
+define('can-util@3.8.4#dom/is-of-global-document/is-of-global-document', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document');
     module.exports = function (el) {
         return (el.ownerDocument || el) === getDocument();
     };
 });
-/*can-util@3.8.1#js/diff/diff*/
-define('can-util@3.8.1#js/diff/diff', function (require, exports, module) {
+/*can-util@3.8.4#js/diff/diff*/
+define('can-util@3.8.4#js/diff/diff', function (require, exports, module) {
     'use strict';
     var slice = [].slice;
     var defaultIdentity = function (a, b) {
@@ -4792,8 +4792,8 @@ define('can-util@3.8.1#js/diff/diff', function (require, exports, module) {
         return patches;
     };
 });
-/*can-util@3.8.1#dom/events/attributes/attributes*/
-define('can-util@3.8.1#dom/events/attributes/attributes', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/attributes/attributes*/
+define('can-util@3.8.4#dom/events/attributes/attributes', function (require, exports, module) {
     (function (global) {
         'use strict';
         var events = require('../events');
@@ -4845,8 +4845,8 @@ define('can-util@3.8.1#dom/events/attributes/attributes', function (require, exp
         return this;
     }()));
 });
-/*can-util@3.8.1#js/cid-map/cid-map*/
-define('can-util@3.8.1#js/cid-map/cid-map', function (require, exports, module) {
+/*can-util@3.8.4#js/cid-map/cid-map*/
+define('can-util@3.8.4#js/cid-map/cid-map', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL = require('../global/global');
@@ -4902,8 +4902,8 @@ define('can-util@3.8.1#js/cid-map/cid-map', function (require, exports, module) 
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/events/make-mutation-event/make-mutation-event*/
-define('can-util@3.8.1#dom/events/make-mutation-event/make-mutation-event', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/make-mutation-event/make-mutation-event*/
+define('can-util@3.8.4#dom/events/make-mutation-event/make-mutation-event', function (require, exports, module) {
     (function (global) {
         'use strict';
         var events = require('../events');
@@ -4963,14 +4963,14 @@ define('can-util@3.8.1#dom/events/make-mutation-event/make-mutation-event', func
         return this;
     }()));
 });
-/*can-util@3.8.1#dom/events/inserted/inserted*/
-define('can-util@3.8.1#dom/events/inserted/inserted', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/inserted/inserted*/
+define('can-util@3.8.4#dom/events/inserted/inserted', function (require, exports, module) {
     'use strict';
     var makeMutationEvent = require('../make-mutation-event/make-mutation-event');
     makeMutationEvent('inserted', 'addedNodes');
 });
-/*can-util@3.8.1#dom/attr/attr*/
-define('can-util@3.8.1#dom/attr/attr', function (require, exports, module) {
+/*can-util@3.8.4#dom/attr/attr*/
+define('can-util@3.8.4#dom/attr/attr', function (require, exports, module) {
     (function (global) {
         'use strict';
         var setImmediate = require('../../js/set-immediate/set-immediate');
@@ -6130,8 +6130,8 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
     namespace.view = namespace.view || {};
     module.exports = namespace.view.Scope = Scope;
 });
-/*can-stache@3.0.26#src/utils*/
-define('can-stache@3.0.26#src/utils', function (require, exports, module) {
+/*can-stache@3.0.27#src/utils*/
+define('can-stache@3.0.27#src/utils', function (require, exports, module) {
     var Scope = require('can-view-scope');
     var Observation = require('can-observation');
     var observationReader = require('can-observation/reader/reader');
@@ -6407,8 +6407,8 @@ define('can-view-nodelist@3.0.4#can-view-nodelist', function (require, exports, 
     };
     module.exports = namespace.nodeLists = nodeLists;
 });
-/*can-util@3.8.1#dom/fragment/fragment*/
-define('can-util@3.8.1#dom/fragment/fragment', function (require, exports, module) {
+/*can-util@3.8.4#dom/fragment/fragment*/
+define('can-util@3.8.4#dom/fragment/fragment', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document'), childNodes = require('../child-nodes/child-nodes');
     var fragmentRE = /^\s*<(\w+)[^>]*>/, toString = {}.toString, fragment = function (html, name, doc) {
@@ -6461,8 +6461,8 @@ define('can-util@3.8.1#dom/fragment/fragment', function (require, exports, modul
     };
     module.exports = buildFragment;
 });
-/*can-util@3.8.1#dom/frag/frag*/
-define('can-util@3.8.1#dom/frag/frag', function (require, exports, module) {
+/*can-util@3.8.4#dom/frag/frag*/
+define('can-util@3.8.4#dom/frag/frag', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document');
     var fragment = require('../fragment/fragment');
@@ -6502,8 +6502,8 @@ define('can-util@3.8.1#dom/frag/frag', function (require, exports, module) {
     };
     module.exports = makeFrag;
 });
-/*can-util@3.8.1#dom/events/removed/removed*/
-define('can-util@3.8.1#dom/events/removed/removed', function (require, exports, module) {
+/*can-util@3.8.4#dom/events/removed/removed*/
+define('can-util@3.8.4#dom/events/removed/removed', function (require, exports, module) {
     'use strict';
     var makeMutationEvent = require('../make-mutation-event/make-mutation-event');
     makeMutationEvent('removed', 'removedNodes');
@@ -6999,8 +6999,8 @@ define('can-view-live@3.0.7#can-view-live', function (require, exports, module) 
     require('./lib/text');
     module.exports = live;
 });
-/*can-util@3.8.1#js/base-url/base-url*/
-define('can-util@3.8.1#js/base-url/base-url', function (require, exports, module) {
+/*can-util@3.8.4#js/base-url/base-url*/
+define('can-util@3.8.4#js/base-url/base-url', function (require, exports, module) {
     (function (global) {
         'use strict';
         var getGlobal = require('../global/global');
@@ -7029,8 +7029,8 @@ define('can-util@3.8.1#js/base-url/base-url', function (require, exports, module
         return this;
     }()));
 });
-/*can-util@3.8.1#js/parse-uri/parse-uri*/
-define('can-util@3.8.1#js/parse-uri/parse-uri', function (require, exports, module) {
+/*can-util@3.8.4#js/parse-uri/parse-uri*/
+define('can-util@3.8.4#js/parse-uri/parse-uri', function (require, exports, module) {
     'use strict';
     module.exports = function (url) {
         var m = String(url).replace(/^\s+|\s+$/g, '').match(/^([^:\/?#]+:)?(\/\/(?:[^:@]*(?::[^:@]*)?@)?(([^:\/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?/);
@@ -7047,8 +7047,8 @@ define('can-util@3.8.1#js/parse-uri/parse-uri', function (require, exports, modu
         } : null;
     };
 });
-/*can-util@3.8.1#js/join-uris/join-uris*/
-define('can-util@3.8.1#js/join-uris/join-uris', function (require, exports, module) {
+/*can-util@3.8.4#js/join-uris/join-uris*/
+define('can-util@3.8.4#js/join-uris/join-uris', function (require, exports, module) {
     'use strict';
     var parseURI = require('../parse-uri/parse-uri');
     module.exports = function (base, href) {
@@ -7068,8 +7068,8 @@ define('can-util@3.8.1#js/join-uris/join-uris', function (require, exports, modu
         return !href || !base ? null : (href.protocol || base.protocol) + (href.protocol || href.authority ? href.authority : base.authority) + removeDotSegments(href.protocol || href.authority || href.pathname.charAt(0) === '/' ? href.pathname : href.pathname ? (base.authority && !base.pathname ? '/' : '') + base.pathname.slice(0, base.pathname.lastIndexOf('/') + 1) + href.pathname : base.pathname) + (href.protocol || href.authority || href.pathname ? href.search : href.search || base.search) + href.hash;
     };
 });
-/*can-stache@3.0.26#helpers/core*/
-define('can-stache@3.0.26#helpers/core', function (require, exports, module) {
+/*can-stache@3.0.27#helpers/core*/
+define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
     var live = require('can-view-live');
     var nodeLists = require('can-view-nodelist');
     var compute = require('can-compute');
@@ -7114,7 +7114,7 @@ define('can-stache@3.0.26#helpers/core', function (require, exports, module) {
                     asVariable = argExprs[argsLen - 1].key;
                 }
             }
-            if (types.isListLike(resolved) && !options.stringOnly) {
+            if ((types.isListLike(resolved) || utils.isArrayLike(resolved) && items.isComputed) && !options.stringOnly) {
                 return function (el) {
                     var nodeList = [el];
                     nodeList.expression = 'live.list';
@@ -7336,8 +7336,8 @@ define('can-stache@3.0.26#helpers/core', function (require, exports, module) {
         looksLikeOptions: looksLikeOptions
     };
 });
-/*can-stache@3.0.26#src/expression*/
-define('can-stache@3.0.26#src/expression', function (require, exports, module) {
+/*can-stache@3.0.27#src/expression*/
+define('can-stache@3.0.27#src/expression', function (require, exports, module) {
     var compute = require('can-compute');
     var observeReader = require('can-observation/reader/reader');
     var utils = require('./utils');
@@ -8073,8 +8073,8 @@ define('can-stache@3.0.26#src/expression', function (require, exports, module) {
     };
     module.exports = expression;
 });
-/*can-stache@3.0.26#src/mustache_core*/
-define('can-stache@3.0.26#src/mustache_core', function (require, exports, module) {
+/*can-stache@3.0.27#src/mustache_core*/
+define('can-stache@3.0.27#src/mustache_core', function (require, exports, module) {
     var live = require('can-view-live');
     var nodeLists = require('can-view-nodelist');
     var compute = require('can-compute');
@@ -8337,8 +8337,8 @@ define('can-stache@3.0.26#src/mustache_core', function (require, exports, module
     var makeEvaluator = core.makeEvaluator, splitModeFromExpression = core.splitModeFromExpression;
     module.exports = core;
 });
-/*can-stache@3.0.26#src/html_section*/
-define('can-stache@3.0.26#src/html_section', function (require, exports, module) {
+/*can-stache@3.0.27#src/html_section*/
+define('can-stache@3.0.27#src/html_section', function (require, exports, module) {
     var target = require('can-view-target');
     var Scope = require('can-view-scope');
     var Observation = require('can-observation');
@@ -8461,8 +8461,8 @@ define('can-stache@3.0.26#src/html_section', function (require, exports, module)
     HTMLSectionBuilder.HTMLSection = HTMLSection;
     module.exports = HTMLSectionBuilder;
 });
-/*can-stache@3.0.26#src/text_section*/
-define('can-stache@3.0.26#src/text_section', function (require, exports, module) {
+/*can-stache@3.0.27#src/text_section*/
+define('can-stache@3.0.27#src/text_section', function (require, exports, module) {
     var compute = require('can-compute');
     var live = require('can-view-live');
     var utils = require('./utils');
@@ -8556,8 +8556,8 @@ define('can-stache@3.0.26#src/text_section', function (require, exports, module)
     });
     module.exports = TextSectionBuilder;
 });
-/*can-stache@3.0.26#helpers/converter*/
-define('can-stache@3.0.26#helpers/converter', function (require, exports, module) {
+/*can-stache@3.0.27#helpers/converter*/
+define('can-stache@3.0.27#helpers/converter', function (require, exports, module) {
     var helpers = require('./core');
     var expression = require('../src/expression');
     var makeArray = require('can-util/js/make-array/make-array');
@@ -8574,8 +8574,8 @@ define('can-stache@3.0.26#helpers/converter', function (require, exports, module
     };
     module.exports = helpers;
 });
-/*can-stache@3.0.26#src/intermediate_and_imports*/
-define('can-stache@3.0.26#src/intermediate_and_imports', function (require, exports, module) {
+/*can-stache@3.0.27#src/intermediate_and_imports*/
+define('can-stache@3.0.27#src/intermediate_and_imports', function (require, exports, module) {
     var mustacheCore = require('./mustache_core');
     var parser = require('can-view-parser');
     module.exports = function (source) {
@@ -8638,8 +8638,8 @@ define('can-stache@3.0.26#src/intermediate_and_imports', function (require, expo
         };
     };
 });
-/*can-util@3.8.1#js/import/import*/
-define('can-util@3.8.1#js/import/import', function (require, exports, module) {
+/*can-util@3.8.4#js/import/import*/
+define('can-util@3.8.4#js/import/import', function (require, exports, module) {
     (function (global) {
         'use strict';
         var isFunction = require('../is-function/is-function');
@@ -8667,8 +8667,8 @@ define('can-util@3.8.1#js/import/import', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-stache@3.0.26#can-stache*/
-define('can-stache@3.0.26#can-stache', function (require, exports, module) {
+/*can-stache@3.0.27#can-stache*/
+define('can-stache@3.0.27#can-stache', function (require, exports, module) {
     var parser = require('can-view-parser');
     var viewCallbacks = require('can-view-callbacks');
     var HTMLSectionBuilder = require('./src/html_section');

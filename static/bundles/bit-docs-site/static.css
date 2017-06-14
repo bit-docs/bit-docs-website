@@ -17,67 +17,19 @@
  * @iframe demos/color-palette.html 630
  */
 /**
-* @stylesheet variables.less Variables
-* @parent bit-docs/theme
-*
-* @description Variables to hold site-wide visual configurations.
 */
-.display-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.flex-row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-box-orient: horizontal;
-  -moz-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-.flex-column {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.flex-initial {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -moz-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-}
-.flex-auto {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -moz-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-.flex-none {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -moz-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
+/**
+ * defaultFontFamily The default font family.
+ */
+/**
+ * smartphones Media query breakpoint for smartphones.
+ */
+/**
+ * desktops Media query breakpoint for desktops.
+ */
+/**
+ * defaultPadding Defualt padding for content containers.
+ */
 /**
  * @stylesheet prettify.less Prettify
  * @parent bit-docs/theme
@@ -276,11 +228,121 @@ ol.linenums {
  * @description Styles for the generated site.
  */
 /**
-* @stylesheet variables.less Variables
-* @parent bit-docs/theme
-*
-* @description Variables to hold site-wide visual configurations.
 */
+/**
+ * defaultFontFamily The default font family.
+ */
+/**
+ * smartphones Media query breakpoint for smartphones.
+ */
+/**
+ * desktops Media query breakpoint for desktops.
+ */
+/**
+ * defaultPadding Defualt padding for content containers.
+ */
+/**
+ * @module {function} mixins
+ * @parent plugins
+ *
+ * @description Mixins for site-wide visual layout.
+ *
+ * @body
+ *
+ * Mixins are useful as reusable rules that can be added into any declaration.
+ */
+#helper {
+  /**
+   * @function bit-docs-generate-html/styles/mixins/helper/padding .padding
+   * @parent bit-docs-generate-html/styles/mixins/helper
+   *
+   * Sets padding for passed sides.
+   *
+   * @signature `#helper.padding(@sides; @amount: @defaultPadding)`
+   *
+   * @param {String} @sides A space-separated list of "sides", like `left right`.
+   *
+   * @param {Number} @amount An amount of padding in pixels, defaults to
+   * [bit-docs-generate-html/styles/variables/@defaultPadding @defaultPadding].
+   * 
+   * @body
+   *
+   * ### Use
+   *
+   * ```less
+   * .container {
+   *   #helper.padding(left right; 50px);
+   * }
+   * ```
+   */
+  /**
+   * @function bit-docs-generate-html/styles/mixins/helper/flex .flex
+   * @parent bit-docs-generate-html/styles/mixins/helper
+   *
+   * Sets flexbox "grow" and "shrink" in most compatible way.
+   *
+   * @signature `#helper.flex(@grow: 0, @shrink: 1)`
+   *
+   * @param {Number} @grow The amount this flex item should grow, defaults to 0.
+   *
+   * @param {Number} @shrink The amount this flex item should shrink, defaults to 1.
+   * 
+   * @body
+   *
+   * ### Use
+   *
+   * ```less
+   * .flex-none {
+   *   #helper.flex(0; 0);
+   * }
+   * ```
+   */
+  /**
+   * @function bit-docs-generate-html/styles/mixins/helper/property-names .property-names
+   * @parent bit-docs-generate-html/styles/mixins/helper
+   * @hide
+   *
+   * Helper for setting multiple dash properties to same value.
+   *
+   * @signature `#helper.property-names(@p; @s; @v)`
+   *
+   * @param {String} @p The property name to prepend before the dash and string.
+   *
+   * @param {String} @s A space-separated list of strings to iterate over.
+   *
+   * @param {Number} @v The value to set each concatenated property to.
+   * 
+   * @body
+   *
+   * ### Use
+   *
+   * ```less
+   * .top-left-margin {
+   *   .property-names(margin; top left; 100px);
+   * }
+   *
+   * .special img {
+   *   .top-left-margin;
+   * }
+   * ```
+   */
+}
+/**
+ * @property .display-flex
+ * @parent bit-docs-generate-html/styles/mixins
+ *
+ * Sets the display to flex using vendor prefixes.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   .display-flex;
+ * }
+ * ```
+ */
 .display-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -288,6 +350,22 @@ ol.linenums {
   display: -ms-flexbox;
   display: flex;
 }
+/**
+ * @property .flex-row
+ * @parent bit-docs-generate-html/styles/mixins
+ *
+ * Sets the display to flex and direction to row using vendor prefixes.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   .flex-row;
+ * }
+ * ```
+ */
 .flex-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -302,6 +380,22 @@ ol.linenums {
   -ms-flex-direction: row;
   flex-direction: row;
 }
+/**
+ * @property .flex-column
+ * @parent bit-docs-generate-html/styles/mixins
+ *
+ * Sets the display to flex and direction to column using vendor prefixes.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   .flex-column;
+ * }
+ * ```
+ */
 .flex-column {
   display: -webkit-box;
   display: -webkit-flex;
@@ -316,6 +410,22 @@ ol.linenums {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+/**
+ * @property .flex-initial
+ * @parent bit-docs-generate-html/styles/mixins
+ *
+ * Emulates `flex: initial;` in a compatible way using vendor prefixes.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   .flex-initial;
+ * }
+ * ```
+ */
 .flex-initial {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
@@ -323,6 +433,22 @@ ol.linenums {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
+/**
+ * @property .flex-auto
+ * @parent bit-docs-generate-html/styles/mixins
+ *
+ * Emulates `flex: auto;` in a compatible way using vendor prefixes.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   .flex-auto;
+ * }
+ * ```
+ */
 .flex-auto {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -330,6 +456,22 @@ ol.linenums {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
+/**
+ * @property .flex-none
+ * @parent bit-docs-generate-html/styles/mixins
+ *
+ * Emulates `flex: none;` in a compatible way using vendor prefixes.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   .flex-none;
+ * }
+ * ```
+ */
 .flex-none {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -387,13 +529,13 @@ footer,
 .content .sidebar ul {
   padding: 0;
 }
-.content .sidebar li {
+.content .sidebar ul li {
   list-style-type: none;
 }
-.content .sidebar li li {
+.content .sidebar ul li li {
   padding-left: 12.5px;
 }
-.content .sidebar li .current > a {
+.content .sidebar ul li .current > a {
   font-weight: bold;
 }
 .content .main {

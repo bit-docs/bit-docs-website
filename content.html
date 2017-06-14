@@ -60,6 +60,15 @@
     {{/unless}}
 
     {{#unless hideBody}}
+        {{#if signatures}}
+            {{#each signatures}}
+                {{&gt; signature.mustache}}
+            {{/each}}
+        {{else}}
+            {{#types}}
+                {{&gt; signature.mustache}}
+            {{/types}}
+        {{/if}}
         {{#if body}}
             {{&gt; body.mustache}}
         {{/if}}

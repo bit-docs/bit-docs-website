@@ -64,15 +64,10 @@ the [documentjs.tags tags] behavior is the key to making useful documentation.</
 type.  The following tags are the type tags and what they document:</p>
 <ul>
 <li>[documentjs.tags.module @module] - A module's export value.</li>
-<li><a href="documentjs.tags.typedef.html" title="Declares an alias for a more complex type. That alias can
-be used in TYPE declarations.">@typedef</a> - Defines a custom type.</li>
-<li><a href="documentjs.tags.page.html" title="Declares this comment as a page. Use pages to
-represent content that doesn't belong to part of the
-application structure.">@page</a> - A page of information.</li>
+<li>[documentjs.tags.typedef @typedef] - Defines a custom type.</li>
+<li>[documentjs.tags.page @page] - A page of information.</li>
 <li>[documentjs.tags.function @function] - A JavaScript function.</li>
-<li><a href="documentjs.tags.static.html" title="Declares that @property and
-@function tags belong
-to the preceeding @constructor.">@static</a> - Creates a placeholder for static properties on a constructor.</li>
+<li>[documentjs.tags.static @static] - Creates a placeholder for static properties on a constructor.</li>
 <li>[documentjs.tags.prototype @prototype] - Creates a placeholder for prototype properties on a constructor.</li>
 <li>[documentjs.tags.property @property] - Creates a property value on an object.</li>
 </ul>
@@ -126,8 +121,7 @@ like:</p>
 </code></pre>
 <h2>Custom Tags</h2>
 <p>You can supply custom tags that modify [documentjs.process.docObject]s.  By default any tag that is not
-matched follows the <a href="documentjs.tags._default.html" title="The default tag behavior when @TAG begins a line, but no
-tag is defined for TAG.">@_default</a> tag rules. This, combined with custom templates and helpers
+matched follows the [documentjs.tags._default] tag rules. This, combined with custom templates and helpers
 is usually enough for adding and showing additional information.</p>
 <p>For richer behavior, <a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">siteConfig</a> supports a <code>tags</code> property that points to a module
 that specifies which [documentjs.tags] will be used to process files.</p>

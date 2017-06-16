@@ -1075,31 +1075,11 @@ define('package.json!npm', [
             'resolutions': {
                 'can-construct': '3.1.1',
                 'can-namespace': '1.0.0',
+                'can-util': '3.8.4',
                 'can-types': '1.0.4',
                 'can-event': '3.4.0',
                 'can-compute': '3.0.10',
-                'can-observation': '3.1.7',
-                'can-util': '3.8.4'
-            }
-        },
-        {
-            'name': 'can-stache',
-            'version': '3.0.27',
-            'fileUrl': './node_modules/can-stache/package.json',
-            'main': 'can-stache',
-            'resolutions': {
-                'can-stache': '3.0.27',
-                'can-util': '3.8.4',
-                'can-namespace': '1.0.0',
-                'can-view-parser': '3.3.0',
-                'can-view-callbacks': '3.0.6',
-                'can-view-target': '3.0.7',
-                'can-view-nodelist': '3.0.4',
-                'can-observation': '3.1.7',
-                'can-compute': '3.0.10',
-                'can-types': '1.0.4',
-                'can-view-scope': '3.1.4',
-                'can-view-live': '3.0.7'
+                'can-observation': '3.1.7'
             }
         },
         {
@@ -1121,6 +1101,17 @@ define('package.json!npm', [
             'main': 'can-namespace',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {}
+        },
+        {
+            'name': 'can-util',
+            'version': '3.8.4',
+            'fileUrl': './node_modules/can-util/package.json',
+            'main': 'can-util',
+            'resolutions': {
+                'can-util': '3.8.4',
+                'can-types': '1.0.4',
+                'can-cid': '1.0.3'
+            }
         },
         {
             'name': 'can-types',
@@ -1174,15 +1165,31 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-util',
-            'version': '3.8.4',
-            'fileUrl': './node_modules/can-util/package.json',
-            'main': 'can-util',
+            'name': 'can-stache',
+            'version': '3.0.27',
+            'fileUrl': './node_modules/can-stache/package.json',
+            'main': 'can-stache',
             'resolutions': {
+                'can-stache': '3.0.27',
                 'can-util': '3.8.4',
+                'can-namespace': '1.0.0',
+                'can-view-parser': '3.3.0',
+                'can-view-callbacks': '3.0.6',
+                'can-view-target': '3.0.7',
+                'can-view-nodelist': '3.0.4',
+                'can-observation': '3.1.7',
+                'can-compute': '3.0.10',
                 'can-types': '1.0.4',
-                'can-cid': '1.0.3'
+                'can-view-scope': '3.1.4',
+                'can-view-live': '3.0.7'
             }
+        },
+        {
+            'name': 'can-cid',
+            'version': '1.0.3',
+            'fileUrl': './node_modules/can-cid/package.json',
+            'main': 'can-cid',
+            'resolutions': { 'can-namespace': '1.0.0' }
         },
         {
             'name': 'can-view-parser',
@@ -1225,13 +1232,6 @@ define('package.json!npm', [
                 'can-util': '3.8.4',
                 'can-namespace': '1.0.0'
             }
-        },
-        {
-            'name': 'can-cid',
-            'version': '1.0.3',
-            'fileUrl': './node_modules/can-cid/package.json',
-            'main': 'can-cid',
-            'resolutions': { 'can-namespace': '1.0.0' }
         },
         {
             'name': 'can-view-scope',

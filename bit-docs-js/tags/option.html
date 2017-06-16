@@ -190,9 +190,42 @@
 			
 				
 					<li>
+						<span>templates</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../templates/signature.html"
+							title="The function signature template.">
+							signature
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
 						<span>tags</span>
 						
 	<ul>
+		
+			
+		
+			
 		
 			
 		
@@ -299,10 +332,43 @@ object.">
            						
            						">
 						<a class="module"
+							href="return.html"
+							title="Describes a function&#x27;s return value.">
+							./return
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
 							href="signature.html"
-							title="Specifies a signature for a @function
-but can work with any other tag.">
+							title="Specifies a signature for a @function but can
+work with any other tag.">
 							./signature
+						</a>
+						
+					</li>
+				
+			
+		
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="typedef.html"
+							title="Declares an alias for a more complex type. That alias can be used in
+TYPE declarations.">
+							./typedef
 						</a>
 						
 					</li>
@@ -482,7 +548,7 @@ signature.">@param</a> tag.</p>
  * @param {function(Orders.List)} [success(orders)] Callback function.
  * @option orders A list of [Orders] that match `params`.
  */
-find: function( params, success ) {
+find: function( params, success ) { ... }
 </code></pre>
 
 
@@ -547,7 +613,7 @@ in the <code>@option</code>'s corresponding function or object.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/option","type":"module","parent":"bit-docs-js/tags","src":{"line":54,"codeLine":107,"path":"docs/modules/bit-docs-js/tags/option.js"},"description":"\nDescribes a property of the object, or an argument of the function, that was\nspecified in an [bit-docs-js/tags/param] tag.\n","title":"@option","types":[{"type":"bit-docs-process-tags/tag"}],"tag":"documentation","signatures":[{"code":"@option {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Retrieves a list of orders.\n *\n * @param {{}} params A parameter object with the following options:\n * @option {String} type Specifies the type of order.\n * @option {Number} [createdAt] Retrieves orders after this timestamp.\n *\n * @param {function(Orders.List)} [success(orders)] Callback function.\n * @option orders A list of [Orders] that match `params`.\n */\nfind: function( params, success ) {\n```","params":[{"types":[{"type":"bit-docs/typeExpression"}],"optional":true,"name":"TYPE","description":"A [bit-docs/typeExpression type expression]. Examples:\n\n`{String}` - type is a `String`.\n`{function(name)}` - type is a `function` that takes one `name` argument.\n\n`TYPE` does not need to be specified for types that are already described\nin the `@option`'s corresponding function or object.\n\nFor example, notice how there is no need to specify `{String}`:\n\n```js\n/**\n * @param {{type: String}} params An object with the following options:\n * @option type Specifies the type of order.\n * @option label Retrieves only orders with this label.\n */\n```"},{"types":[{"type":"bit-docs/nameExpression"}],"name":"NAME","description":"A [bit-docs/nameExpression name expression]. Examples:\n\n`age` - age is item.\n`[age]` - age is item, age is optional.\n`[age=0]` - age defaults to 0.\n\n"},{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"}]}],"_curParam":{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"},"pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/option","type":"module","parent":"bit-docs-js/tags","src":{"line":54,"codeLine":103,"path":"docs/modules/bit-docs-js/tags/option.js"},"description":"\nDescribes a property of the object, or an argument of the function, that was\nspecified in an [bit-docs-js/tags/param] tag.\n","title":"@option","types":[{"type":"bit-docs-process-tags/tag"}],"signatures":[{"code":"@option {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Retrieves a list of orders.\n *\n * @param {{}} params A parameter object with the following options:\n * @option {String} type Specifies the type of order.\n * @option {Number} [createdAt] Retrieves orders after this timestamp.\n *\n * @param {function(Orders.List)} [success(orders)] Callback function.\n * @option orders A list of [Orders] that match `params`.\n */\nfind: function( params, success ) { ... }\n```","params":[{"types":[{"type":"bit-docs/typeExpression"}],"optional":true,"name":"TYPE","description":"A [bit-docs/typeExpression type expression]. Examples:\n\n`{String}` - type is a `String`.\n`{function(name)}` - type is a `function` that takes one `name` argument.\n\n`TYPE` does not need to be specified for types that are already described\nin the `@option`'s corresponding function or object.\n\nFor example, notice how there is no need to specify `{String}`:\n\n```js\n/**\n * @param {{type: String}} params An object with the following options:\n * @option type Specifies the type of order.\n * @option label Retrieves only orders with this label.\n */\n```"},{"types":[{"type":"bit-docs/nameExpression"}],"name":"NAME","description":"A [bit-docs/nameExpression name expression]. Examples:\n\n`age` - age is item.\n`[age]` - age is item, age is optional.\n`[age=0]` - age defaults to 0.\n"},{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"}]}],"_curParam":{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"},"pathToRoot":"../../.."};
 	</script>
 
 	

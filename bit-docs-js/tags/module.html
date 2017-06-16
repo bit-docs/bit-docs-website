@@ -190,9 +190,42 @@
 			
 				
 					<li>
+						<span>templates</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../templates/signature.html"
+							title="The function signature template.">
+							signature
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
 						<span>tags</span>
 						
 	<ul>
+		
+			
+		
+			
 		
 			
 		
@@ -299,10 +332,43 @@ object.">
            						
            						">
 						<a class="module"
+							href="return.html"
+							title="Describes a function&#x27;s return value.">
+							./return
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
 							href="signature.html"
-							title="Specifies a signature for a @function
-but can work with any other tag.">
+							title="Specifies a signature for a @function but can
+work with any other tag.">
 							./signature
+						</a>
+						
+					</li>
+				
+			
+		
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="typedef.html"
+							title="Declares an alias for a more complex type. That alias can be used in
+TYPE declarations.">
+							./typedef
 						</a>
 						
 					</li>
@@ -471,10 +537,47 @@ but can work with any other tag.">
   </h2>
 
   <pre><code class="language-js">/**
- * @module {{}} lib/componentProps props
- * @option {String} name The name of the component.
- * @option {String} title The title of the component.
+ * @module {{}} lib/settings settings
+ * @option {String} environment Production, development, or staging.
+ * @option {Number} requestTimeout How long to wait between requests.
  */
+export default {
+    environment: &quot;production&quot;,
+    requestTimeout: 10000
+}
+</code></pre>
+<pre><code class="language-js">// resulting docObject
+{
+  &quot;type&quot;: &quot;module&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;title&quot;: &quot;settings&quot;,
+  &quot;types&quot;: [
+    {
+      &quot;type&quot;: &quot;Object&quot;,
+      &quot;options&quot;: [
+        {
+          &quot;name&quot;: &quot;environment&quot;,
+          &quot;description&quot;: &quot;Production, development, or staging.&quot;,
+          &quot;types&quot;: [
+            {
+              &quot;type&quot;: &quot;String&quot;
+            }
+          ]
+        },
+        {
+          &quot;name&quot;: &quot;requestTimeout&quot;,
+          &quot;description&quot;: &quot;How long to wait between requests.\n&quot;,
+          &quot;types&quot;: [
+            {
+              &quot;type&quot;: &quot;Number&quot;
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  &quot;name&quot;: &quot;lib/settings&quot;
+}
 </code></pre>
 
 
@@ -520,7 +623,7 @@ object specified like: <code>{{}}</code> or a function like <code>{function}</co
 <p>Use <code>@module</code> to specify what a module exports.  Depending on what the module
 exports you might use as one of the following:</p>
 <h4>A single function export</h4>
-<pre><code>/**
+<pre><code class="language-js">/**
  * @module {function} multi/util/add
  * @parent multi/modules
  * 
@@ -537,7 +640,7 @@ module.exports = function(first, second) {
 };
 </code></pre>
 <h4>Multiple export values</h4>
-<pre><code>/**
+<pre><code class="language-js">/**
  * @module {Module} multi/util/date-helpers
  * @parent multi/modules
  * 
@@ -557,7 +660,7 @@ exports.tomorrow = function() { ... };
 exports.yesterday = function() { ... };
 </code></pre>
 <h4>A single constructor function export</h4>
-<pre><code>/**
+<pre><code class="language-js">/**
  * @module {function(new:multi/lib/graph)} multi/lib/graph
  * @parent multi/modules
  * 
@@ -589,7 +692,7 @@ module.exports = Graph;
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs-js/tags/module.md"},"description":"\nDeclares the export value for a module.\n","type":"module","title":"@module","types":[{"type":"bit-docs-process-tags/tag"}],"name":"bit-docs-js/tags/module","parent":"bit-docs-js/tags","signatures":[{"code":"@module {TYPE} NAME [TITLE]","description":"\n\n```js\n/**\n * @module {{}} lib/componentProps props\n * @option {String} name The name of the component.\n * @option {String} title The title of the component.\n */\n```","params":[{"types":[{"type":"bit-docs-type-annotate/typeExpression"}],"optional":true,"name":"TYPE","description":"A\n[bit-docs-type-annotate/typeExpression type expression]. This is typically an\nobject specified like: `{{}}` or a function like `{function}`.\n"},{"types":[{"type":"String"}],"name":"NAME","description":"The name of the type.\n"},{"types":[{"type":"String"}],"name":"TITLE","description":"The title of the type used for display purposes.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"TITLE","description":"The title of the type used for display purposes.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs-js/tags/module.md"},"description":"\nDeclares the export value for a module.\n","parent":"bit-docs-js/tags","type":"module","title":"@module","types":[{"type":"bit-docs-process-tags/tag"}],"name":"bit-docs-js/tags/module","signatures":[{"code":"@module {TYPE} NAME [TITLE]","description":"\n\n```js\n/**\n * @module {{}} lib/settings settings\n * @option {String} environment Production, development, or staging.\n * @option {Number} requestTimeout How long to wait between requests.\n */\nexport default {\n    environment: \"production\",\n    requestTimeout: 10000\n}\n```\n\n```js\n// resulting docObject\n{\n  \"type\": \"module\",\n  \"description\": \"\",\n  \"title\": \"settings\",\n  \"types\": [\n    {\n      \"type\": \"Object\",\n      \"options\": [\n        {\n          \"name\": \"environment\",\n          \"description\": \"Production, development, or staging.\",\n          \"types\": [\n            {\n              \"type\": \"String\"\n            }\n          ]\n        },\n        {\n          \"name\": \"requestTimeout\",\n          \"description\": \"How long to wait between requests.\\n\",\n          \"types\": [\n            {\n              \"type\": \"Number\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"name\": \"lib/settings\"\n}\n```\n","params":[{"types":[{"type":"bit-docs-type-annotate/typeExpression"}],"optional":true,"name":"TYPE","description":"A\n[bit-docs-type-annotate/typeExpression type expression]. This is typically an\nobject specified like: `{{}}` or a function like `{function}`.\n"},{"types":[{"type":"String"}],"name":"NAME","description":"The name of the type.\n"},{"types":[{"type":"String"}],"name":"TITLE","description":"The title of the type used for display purposes.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"TITLE","description":"The title of the type used for display purposes.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

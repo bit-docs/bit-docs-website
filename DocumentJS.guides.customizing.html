@@ -59,7 +59,7 @@ own generators to build other forms of documentation.</p>
 used to render a [documentjs.process.docObject docObject] and customize
 the JavaScript and CSS used by the HTML pages.  This behavior
 is controlled mostly by the <a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">siteConfig</a>'s
-<code>templates</code> and <code>static</code> options.  However, some tags like <a href="documentjs.tags.hide.html" title="Hides the comment from the navigation.">@hide</a>
+<code>templates</code> and <code>static</code> options.  However, some tags like [documentjs.tags.hide @hide]
 allow you to alter the behavior slightly.</p>
 <h2>Changing the HTML</h2>
 <p>The <a href="documentjs.generators.html.html" title="">html generator</a> uses
@@ -90,8 +90,7 @@ The page's script tags are loaded here.</li>
 <li><em>active-menu.mustache</em> - The part of the sidebar menu that shows the children of the active item.</li>
 <li><em>signature.mustache</em> - Shows a &quot;signature&quot; block.  A signature block for a function has the signature of the function and the params listed within it.</li>
 <li><em>title.mustache</em> - The header of each rendered page.</li>
-<li><em>types.mustache</em> - Given a <a href="documentjs.process.valueData.html" title="Data related to a value in a type expression.">valueData</a>, iterates through each of its <a href="documentjs.process.typeData.html" title="Data related to a specific type value. These objects are created
-by type expressions.">types</a> and creates a signature with it.</li>
+<li><em>types.mustache</em> - Given a [documentjs.process.valueData valueData], iterates through each of its [documentjs.process.typeData types] and creates a signature with it.</li>
 </ul>
 <p>For example, to make a change to the layout, copy <em>documentjs/site/default/templates/layout.mustache</em>
 to <em>theme/templates</em> and make changes in your copy.</p>
@@ -113,8 +112,7 @@ module.exports = function(docMap, options, getCurrent){
 <p>This allows you to write <code>{{hello-world}}</code> and get back:</p>
 <pre><code>Hello World!
 </code></pre>
-<p>This behavior is provided by <a href="documentjs.generators.html.build.helpers.html" title="Gets the default helpers and helpers in the documentjs/site/templates folder and
-registers them with Handlebars.">generators.html.build.helpers</a>.</p>
+<p>This behavior is provided by [documentjs.generators.html.build.helpers generators.html.build.helpers].</p>
 <h2>Changing static resources: Styles, Images, and JavaScript</h2>
 <p>The html generator [documentjs.generators.html.build.staticDist builds a static distributable] that
 includes the CSS, Images, and JavaScript used by the site.  The default content

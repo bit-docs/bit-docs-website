@@ -1,13 +1,12 @@
 /*bit-docs-js@0.0.6#site/static/styles/styles.less!steal-less@1.2.0#less*/
 /**
- * @parent bit-docs-generate-html/theme/styles
- * @page bit-docs-generate-html/theme/styles/variables variables
+ * @parent bit-docs-generate-html/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
  *
  * @description Variables to hold site-wide visual configurations.
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/defaultFontFamily @defaultFontFamily
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} defaultFontFamily @defaultFontFamily
  *
  * The default font family.
  *
@@ -22,8 +21,7 @@
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/defaultPadding @defaultPadding
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} defaultPadding @defaultPadding
  *
  * Defualt padding for content containers.
  *
@@ -38,8 +36,7 @@
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/smartphones @smartphones
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} smartphones @smartphones
  *
  * Media query breakpoint for smartphones.
  *
@@ -56,8 +53,7 @@
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/desktops @desktops
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} desktops @desktops
  *
  * Media query breakpoint for desktops.
  *
@@ -108,14 +104,13 @@
  * @iframe demos/color-palette.html 630
  */
 /**
- * @parent bit-docs-generate-html/theme/styles
- * @page bit-docs-generate-html/theme/styles/variables variables
+ * @parent bit-docs-generate-html/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
  *
  * @description Variables to hold site-wide visual configurations.
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/defaultFontFamily @defaultFontFamily
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} defaultFontFamily @defaultFontFamily
  *
  * The default font family.
  *
@@ -130,8 +125,7 @@
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/defaultPadding @defaultPadding
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} defaultPadding @defaultPadding
  *
  * Defualt padding for content containers.
  *
@@ -146,8 +140,7 @@
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/smartphones @smartphones
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} smartphones @smartphones
  *
  * Media query breakpoint for smartphones.
  *
@@ -164,8 +157,7 @@
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/desktops @desktops
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} desktops @desktops
  *
  * Media query breakpoint for desktops.
  *
@@ -373,7 +365,7 @@ ol.linenums {
 
 /*bit-docs-site@0.0.1#styles/styles.less!steal-less@1.2.0#less*/
 /**
- * @parent bit-docs-generate-html/theme
+ * @parent bit-docs-generate-html/static
  * @module bit-docs-generate-html/site/default/static/styles/styles.less styles.less
  *
  * @description The primary styles for the default theme.
@@ -382,20 +374,19 @@ ol.linenums {
  * 
  * The default `styles.less` is based on flexbox, and relies on two less files:
  *
- * - [bit-docs-generate-html/theme/styles/variables]
- * - [bit-docs-generate-html/theme/styles/mixins]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less]
  *
  * The styles are very basic, and primarily focus on mobile and desktop layout.
  */
 /**
- * @parent bit-docs-generate-html/theme/styles
- * @page bit-docs-generate-html/theme/styles/variables variables
+ * @parent bit-docs-generate-html/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
  *
  * @description Variables to hold site-wide visual configurations.
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/defaultFontFamily @defaultFontFamily
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} defaultFontFamily @defaultFontFamily
  *
  * The default font family.
  *
@@ -410,8 +401,7 @@ ol.linenums {
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/defaultPadding @defaultPadding
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} defaultPadding @defaultPadding
  *
  * Defualt padding for content containers.
  *
@@ -426,8 +416,7 @@ ol.linenums {
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/smartphones @smartphones
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} smartphones @smartphones
  *
  * Media query breakpoint for smartphones.
  *
@@ -444,8 +433,7 @@ ol.linenums {
  * ```
  */
 /**
- * @property bit-docs-generate-html/theme/styles/variables/desktops @desktops
- * @parent bit-docs-generate-html/theme/styles/variables
+ * @property {Variable} desktops @desktops
  *
  * Media query breakpoint for desktops.
  *
@@ -462,27 +450,29 @@ ol.linenums {
  * ```
  */
 /**
- * @parent bit-docs-generate-html/theme
- * @module bit-docs-generate-html/site/default/static/styles/mixins.less mixins.less
+ * @parent bit-docs-generate-html/static
+ * @module bit-docs-generate-html/site/default/styles/mixins.less mixins.less
  *
  * @description Mixins for site-wide visual layout.
  *
  * @body
  *
  * Mixins are useful as reusable rules that can be added into any declaration.
+ *
+ * Read more about mixins [here](http://lesscss.org/features/#mixins-feature).
  */
 #helper {
   /**
-   * @function bit-docs-generate-html/site/default/static/styles/mixins.less/helper.padding #helper.padding
+   * @property {ParametricMixin} helper-padding #helper.padding
    *
    * Sets padding for passed sides.
    *
-   * @signature `#helper.padding(@sides; @amount: @defaultPadding)`
+   * @signature `#helper.padding(@sides; @amount: @defaultPadding);`
    *
    * @param {String} @sides A space-separated list of "sides", like `left right`.
    *
    * @param {Number} @amount An amount of padding in pixels, defaults to
-   * [bit-docs-generate-html/theme/styles/variables/@defaultPadding @defaultPadding].
+   * [bit-docs-generate-html/site/default/static/styles/variables.less.defaultPadding].
    * 
    * @body
    *
@@ -495,11 +485,11 @@ ol.linenums {
    * ```
    */
   /**
-   * @function bit-docs-generate-html/site/default/static/styles/mixins.less/helper.flex #helper.flex
+   * @property {ParametricMixin} helper-flex #helper.flex
    *
    * Sets flexbox "grow" and "shrink" in most compatible way.
    *
-   * @signature `#helper.flex(@grow: 0, @shrink: 1)`
+   * @signature `#helper.flex(@grow: 0, @shrink: 1);`
    *
    * @param {Number} @grow The amount this flex item should grow, defaults to 0.
    *
@@ -516,17 +506,18 @@ ol.linenums {
    * ```
    */
   /**
-   * @function bit-docs-generate-html/site/default/static/styles/mixins.less/helper.property-names #helper.property-names
+   * @property {ParametricMixin} helper-property-names #helper.property-names
+   * @hide
    *
    * Helper for setting multiple dash properties to same value.
    *
-   * @signature `#helper.property-names(@p; @s; @v)`
+   * @signature `#helper.property-names(@p; @s; @v: 0);`
    *
    * @param {String} @p The property name to prepend before the dash and string.
    *
    * @param {String} @s A space-separated list of strings to iterate over.
    *
-   * @param {Number} @v The value to set each concatenated property to.
+   * @param {Number} @v The value to set each concatenated property to, defaults to 0.
    * 
    * @body
    *
@@ -544,8 +535,7 @@ ol.linenums {
    */
 }
 /**
- * @property bit-docs-generate-html/theme/styles/mixins/display-flex .display-flex
- * @parent bit-docs-generate-html/theme/styles/mixins
+ * @property {Mixin} display-flex .display-flex
  *
  * Sets the display to flex using vendor prefixes.
  *
@@ -567,8 +557,7 @@ ol.linenums {
   display: flex;
 }
 /**
- * @property bit-docs-generate-html/theme/styles/mixins/flex-row .flex-row
- * @parent bit-docs-generate-html/theme/styles/mixins
+ * @property {Mixin} flex-row .flex-row
  *
  * Sets the display to flex and direction to row using vendor prefixes.
  *
@@ -597,8 +586,7 @@ ol.linenums {
   flex-direction: row;
 }
 /**
- * @property bit-docs-generate-html/theme/styles/mixins/flex-column .flex-column
- * @parent bit-docs-generate-html/theme/styles/mixins
+ * @property {Mixin} flex-column .flex-column
  *
  * Sets the display to flex and direction to column using vendor prefixes.
  *
@@ -627,8 +615,7 @@ ol.linenums {
   flex-direction: column;
 }
 /**
- * @property bit-docs-generate-html/theme/styles/mixins/flex-initial .flex-initial
- * @parent bit-docs-generate-html/theme/styles/mixins
+ * @property {Mixin} flex-initial .flex-initial
  *
  * Emulates `flex: initial;` in a compatible way using vendor prefixes.
  *
@@ -650,8 +637,7 @@ ol.linenums {
   flex: 0 1 auto;
 }
 /**
- * @property bit-docs-generate-html/theme/styles/mixins/flex-auto .flex-auto
- * @parent bit-docs-generate-html/theme/styles/mixins
+ * @property {Mixin} flex-auto .flex-auto
  *
  * Emulates `flex: auto;` in a compatible way using vendor prefixes.
  *
@@ -673,8 +659,7 @@ ol.linenums {
   flex: 1 1 auto;
 }
 /**
- * @property bit-docs-generate-html/theme/styles/mixins/flex-none .flex-none
- * @parent bit-docs-generate-html/theme/styles/mixins
+ * @property {Mixin} flex-none .flex-none
  *
  * Emulates `flex: none;` in a compatible way using vendor prefixes.
  *

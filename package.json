@@ -37,6 +37,9 @@
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
+    "js": {
+      "extensions": ["js", "less"]
+    },
     "dependencies": {
       "bit-docs-dev": "bit-docs/bit-docs-dev",
       "bit-docs-generate-html": "bit-docs/bit-docs-generate-html",
@@ -50,7 +53,7 @@
       "bit-docs-tag-sourceref": "bit-docs/bit-docs-tag-sourceref"
     },
     "glob": {
-      "pattern": "docs/**/*.{js,md,mustache}",
+      "pattern": "docs/**/*.{js,md,mustache,less}",
       "ignore": [
         "**/README.md",
         "**/LICENSE.md",
@@ -61,7 +64,8 @@
         "**/test-*.md",
         "**/test.js",
         "**/node_modules/**/*"
-      ]
+      ],
+      "follow": true
     },
     "parent": "BitDocs",
     "minifyBuild": false,

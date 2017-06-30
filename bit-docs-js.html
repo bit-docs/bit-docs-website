@@ -619,39 +619,6 @@ runtime.</p>
 </ul>
 <p>Registering the <code>tags</code> hook adds JavaScript-related tags:</p>
 <ul>
-<li><a href="bit-docs-js/tags/codeend.html" title="Stops a code block.
-Example:
-
- /* 
-  * @codestart
-  *  /* @class
-  *   * Person represents a human with a name.  Read about the 
-  *   * animal class | here.
-  *   * @constructor
-  *   * You must pass in a name.
-  *   * @param {String} name A person's name
-  *   */
-  *   Person = function(name){
-  *      this.name = name
-  *      Person.count ++;
-  *   }
-  *  /* @Static */
-  *  steal.Object.extend(Person, {
-  *      /* Number of People */
-  *      count: 0
-  *  })
-  *  /* @Prototype */
-  *  Person.prototype = {
-  *     /* Returns a formal name 
-  *      * @return {String} the name with &quot;Mrs.&quot; added
-  *      */
-  *      fancyName : function(){
-  *         return &quot;Mrs. &quot;+this.name;
-  *      }
-  *  }
-  * @codeend
-  */">@codeend</a></li>
-<li><a href="bit-docs-js/tags/codestart.html" title="Starts a code block.">@codestart</a></li>
 <li><a href="bit-docs-js/tags/function.html" title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">@function</a></li>
 <li><a href="bit-docs-js/tags/module.html" title="Declares the export value for a module.">@module</a></li>
 <li><a href="bit-docs-js/tags/option.html" title="Describes a property of the object, or an argument of the function, that was
@@ -665,9 +632,6 @@ object.">@prototype</a></li>
 <li><a href="bit-docs-js/tags/return.html" title="Describes a function's return value.">@return</a></li>
 <li><a href="bit-docs-js/tags/signature.html" title="Specifies a signature for a @function but can
 work with any other tag.">@signature</a></li>
-<li><a href="bit-docs-js/tags/static.html" title="Declares that @property and
-@function tags belong to the preceeding
-@constructor.">@static</a></li>
 <li><a href="bit-docs-js/tags/typedef.html" title="Declares an alias for a more complex type. That alias can be used in
 TYPE declarations.">@typedef</a></li>
 </ul>
@@ -690,7 +654,7 @@ HTML for the tags added by this plugin.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-js","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":48,"path":"docs/modules/bit-docs-js/bit-docs.js"},"description":"Tags, templates, and basic styles for JavaScript. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"}]}],"_curParam":{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"},"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-js","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":45,"path":"docs/modules/bit-docs-js/bit-docs.js"},"description":"Tags, templates, and basic styles for JavaScript. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"}]}],"_curParam":{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"},"comment":" ","pathToRoot":".."};
 	</script>
 
 	

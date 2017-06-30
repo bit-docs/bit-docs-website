@@ -200,9 +200,9 @@
            						
            						">
 						<a class="page"
-							href="../templates/signature.html"
+							href="../templates/signature.mustache.html"
 							title="The function signature template.">
-							signature
+							signature.mustache
 						</a>
 						
 					</li>
@@ -222,6 +222,8 @@
 						<span>tags</span>
 						
 	<ul>
+		
+			
 		
 			
 		
@@ -382,6 +384,50 @@ TYPE declarations.">
 				
 			
 		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../process/code.html"
+							title="Process a code hint into properties on a docObject.">
+							./process/code
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../process/codeAndComment.html"
+							title="">
+							./process/codeAndComment
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
 	</ul>
 
 
@@ -513,7 +559,7 @@ TYPE declarations.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>@param</h1>
+	<h1>@param <code>module</code></h1>
 </section>
 
 		
@@ -554,8 +600,8 @@ findById: function( id, success ) {
         
           <li><b>TYPE</b> <code>{bit-docs-js/typeExpression}</code>: <p>A [bit-docs-js/typeExpression type expression].</p>
 <p>Use <a href="option.html" title="Describes a property of the object, or an argument of the function, that was
-specified in an param tag.">@option</a> to describe a function's arguments,
-or an object's properties.</p>
+specified in an param tag.">@option</a> to describe a function's arguments, or
+an object's properties.</p>
 </li>
             
               
@@ -624,7 +670,7 @@ are overwritten.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/param","type":"module","parent":"bit-docs-js/tags","src":{"line":35,"codeLine":107,"path":"docs/modules/bit-docs-js/tags/param.js"},"description":"\nSpecifies parameter information for [bit-docs-js/tags/function] or\n[bit-docs-js/tags/signature].\n","title":"@param","types":[{"type":"Object","options":[]}],"signatures":[{"code":"@param {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Finds an order by id.\n * @param {String} [id=0] Order identification number.\n * @param {function(Order)} [success(order)] Callback function.\n */\nfindById: function( id, success ) {\n```","params":[{"types":[{"type":"bit-docs-js/typeExpression"}],"name":"TYPE","description":"A [bit-docs-js/typeExpression type expression].\n\nUse [bit-docs-js/tags/option @option] to describe a function's arguments,\nor an object's properties.\n"},{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"}]}],"_curParam":{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/param","type":"module","parent":"bit-docs-js/tags","src":{"line":35,"codeLine":107,"path":"docs/modules/bit-docs-js/tags/param.js"},"description":"\nSpecifies parameter information for [bit-docs-js/tags/function] or\n[bit-docs-js/tags/signature].\n","title":"@param","types":[{"type":"bit-docs-js/tag"}],"signatures":[{"code":"@param {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Finds an order by id.\n * @param {String} [id=0] Order identification number.\n * @param {function(Order)} [success(order)] Callback function.\n */\nfindById: function( id, success ) {\n```","params":[{"types":[{"type":"bit-docs-js/typeExpression"}],"name":"TYPE","description":"A [bit-docs-js/typeExpression type expression].\n\nUse [bit-docs-js/tags/option @option] to describe a function's arguments, or\nan object's properties.\n"},{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"}]}],"_curParam":{"types":[{"type":"bit-docs-js/nameExpression"}],"name":"NAME","description":"A [bit-docs-js/nameExpression name expression].\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

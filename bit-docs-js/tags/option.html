@@ -200,9 +200,9 @@
            						
            						">
 						<a class="page"
-							href="../templates/signature.html"
+							href="../templates/signature.mustache.html"
 							title="The function signature template.">
-							signature
+							signature.mustache
 						</a>
 						
 					</li>
@@ -222,6 +222,8 @@
 						<span>tags</span>
 						
 	<ul>
+		
+			
 		
 			
 		
@@ -382,6 +384,50 @@ TYPE declarations.">
 				
 			
 		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../process/code.html"
+							title="Process a code hint into properties on a docObject.">
+							./process/code
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../process/codeAndComment.html"
+							title="">
+							./process/codeAndComment
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
 	</ul>
 
 
@@ -513,7 +559,7 @@ TYPE declarations.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>@option</h1>
+	<h1>@option <code>module</code></h1>
 </section>
 
 		
@@ -538,17 +584,23 @@ signature.">@param</a> tag.</p>
     <code>@option {TYPE} NAME [DESCRIPTION]</code>
   </h2>
 
-  <pre><code class="language-javascript">/**
- * Retrieves a list of orders.
- *
- * @param {{}} params A parameter object with the following options:
- * @option {String} type Specifies the type of order.
- * @option {Number} [createdAt] Retrieves orders after this timestamp.
- *
- * @param {function(Orders.List)} [success(orders)] Callback function.
- * @option orders A list of [Orders] that match `params`.
+  <p>Here's an example of some ways you can use the <code>@option</code> tag:</p>
+<pre><code class="language-javascript">/**
+ * @module {{}} ledger Ledger
  */
-find: function( params, success ) { ... }
+module.exports = {
+  /**
+   * Retrieves a list of orders.
+   *
+   * @param {{}} params A parameter object with the following options:
+   *   @option {String} type Specifies the type of order.
+   *   @option {Number} [createdAt] Retrieves orders after this timestamp.
+   *
+   * @param {function(Orders.List)} [success(orders)] Callback function.
+   *   @option orders A list of [Orders] that match `params`.
+   */
+  find: function(params, success) { /*...*/ }
+};
 </code></pre>
 
 
@@ -565,8 +617,8 @@ in the <code>@option</code>'s corresponding function or object.</p>
 <p>For example, notice how there is no need to specify <code>{String}</code>:</p>
 <pre><code class="language-js">/**
  * @param {{type: String}} params An object with the following options:
- * @option type Specifies the type of order.
- * @option label Retrieves only orders with this label.
+ *   @option type Specifies the type of order.
+ *   @option label Retrieves only orders with this label.
  */
 </code></pre>
 </li>
@@ -602,7 +654,89 @@ in the <code>@option</code>'s corresponding function or object.</p>
 			
 			
 				<section class="body">
-    
+    <p>However, omitting TYPE might confuse your team members, so we recommend
+being explicit and always specifying TYPE for <code>@option</code>.</p>
+<h3>Usage Examples</h3>
+<pre><code class="language-javascript">/**
+ * @module {{}} foo Foo
+ */
+module.exports = {
+  /**
+   * A function named bar.
+   *
+   * @param {{}} params A parameter object with options:
+   *   @option {String} aString An arbitrary string.
+   *   @option {Number} [oNumber] An optional number.
+   */
+  bar: function(params) { /*...*/ }
+};
+</code></pre>
+<p>Resulting <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">docObject</a>:</p>
+<pre><code class="language-javascript">{
+  &quot;type&quot;: &quot;function&quot;,
+  &quot;name&quot;: &quot;foo.bar&quot;,
+  &quot;params&quot;: [
+    {
+      &quot;types&quot;: [
+        {
+          &quot;type&quot;: &quot;Object&quot;,
+          &quot;options&quot;: [
+            {
+              &quot;name&quot;: &quot;aString&quot;,
+              &quot;description&quot;: &quot;An arbitrary string.&quot;,
+              &quot;types&quot;: [
+                {
+                  &quot;type&quot;: &quot;String&quot;
+                }
+              ]
+            },
+            {
+              &quot;name&quot;: &quot;oNumber&quot;,
+              &quot;description&quot;: &quot;An optional number.\n&quot;,
+              &quot;types&quot;: [
+                {
+                  &quot;type&quot;: &quot;Number&quot;
+                }
+              ],
+              &quot;optional&quot;: true
+            }
+          ]
+        }
+      ],
+      &quot;name&quot;: &quot;params&quot;,
+      &quot;description&quot;: &quot;A parameter object with options:&quot;
+    }
+  ],
+  &quot;parent&quot;: &quot;foo&quot;,
+  &quot;description&quot;: &quot;A function named bar.\n&quot;
+}
+</code></pre>
+<p>That <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">docObject</a> an be used in a template like this:</p>
+<pre><code class="language-html">{{#if params}}
+  {{#params}}
+    {{#types}}
+      {{#if options.length}}
+        {{#options}}
+          &lt;p&gt;
+            Option Name: {{name}}
+            &lt;br/&gt;
+            Option Description: {{description}}
+          &lt;/p&gt;
+        {{/options}}
+      {{/if}}
+    {{/types}}
+  {{/params}}
+{{/if}}
+</code></pre>
+<p>See [signature.mustache] for a more complex template that uses the
+<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">docObject</a> resulting from <code>@option</code>.</p>
+
 </section>
 
 			
@@ -613,7 +747,7 @@ in the <code>@option</code>'s corresponding function or object.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/option","type":"module","parent":"bit-docs-js/tags","src":{"line":54,"codeLine":103,"path":"docs/modules/bit-docs-js/tags/option.js"},"description":"\nDescribes a property of the object, or an argument of the function, that was\nspecified in an [bit-docs-js/tags/param] tag.\n","title":"@option","types":[{"type":"bit-docs-process-tags/tag"}],"signatures":[{"code":"@option {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Retrieves a list of orders.\n *\n * @param {{}} params A parameter object with the following options:\n * @option {String} type Specifies the type of order.\n * @option {Number} [createdAt] Retrieves orders after this timestamp.\n *\n * @param {function(Orders.List)} [success(orders)] Callback function.\n * @option orders A list of [Orders] that match `params`.\n */\nfind: function( params, success ) { ... }\n```","params":[{"types":[{"type":"bit-docs/typeExpression"}],"optional":true,"name":"TYPE","description":"A [bit-docs/typeExpression type expression]. Examples:\n\n`{String}` - type is a `String`.\n`{function(name)}` - type is a `function` that takes one `name` argument.\n\n`TYPE` does not need to be specified for types that are already described\nin the `@option`'s corresponding function or object.\n\nFor example, notice how there is no need to specify `{String}`:\n\n```js\n/**\n * @param {{type: String}} params An object with the following options:\n * @option type Specifies the type of order.\n * @option label Retrieves only orders with this label.\n */\n```"},{"types":[{"type":"bit-docs/nameExpression"}],"name":"NAME","description":"A [bit-docs/nameExpression name expression]. Examples:\n\n`age` - age is item.\n`[age]` - age is item, age is optional.\n`[age=0]` - age defaults to 0.\n"},{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"}]}],"_curParam":{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"},"pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/option","type":"module","parent":"bit-docs-js/tags","src":{"line":54,"codeLine":199,"path":"docs/modules/bit-docs-js/tags/option.js"},"description":"\nDescribes a property of the object, or an argument of the function, that was\nspecified in an [bit-docs-js/tags/param] tag.\n","title":"@option","types":[{"type":"bit-docs-process-tags/tag"}],"signatures":[{"code":"@option {TYPE} NAME [DESCRIPTION]","description":"\n\nHere's an example of some ways you can use the `@option` tag:\n\n```javascript\n/**\n * @module {{}} ledger Ledger\n */\nmodule.exports = {\n  /**\n   * Retrieves a list of orders.\n   *\n   * @param {{}} params A parameter object with the following options:\n   *   @option {String} type Specifies the type of order.\n   *   @option {Number} [createdAt] Retrieves orders after this timestamp.\n   *\n   * @param {function(Orders.List)} [success(orders)] Callback function.\n   *   @option orders A list of [Orders] that match `params`.\n   */\n  find: function(params, success) { /*...*/ }\n};\n```","params":[{"types":[{"type":"bit-docs/typeExpression"}],"optional":true,"name":"TYPE","description":"A [bit-docs/typeExpression type expression]. Examples:\n\n`{String}` - type is a `String`.\n`{function(name)}` - type is a `function` that takes one `name` argument.\n\n`TYPE` does not need to be specified for types that are already described\nin the `@option`'s corresponding function or object.\n\nFor example, notice how there is no need to specify `{String}`:\n\n```js\n/**\n * @param {{type: String}} params An object with the following options:\n *   @option type Specifies the type of order.\n *   @option label Retrieves only orders with this label.\n */\n```"},{"types":[{"type":"bit-docs/nameExpression"}],"name":"NAME","description":"A [bit-docs/nameExpression name expression]. Examples:\n\n`age` - age is item.\n`[age]` - age is item, age is optional.\n`[age=0]` - age defaults to 0.\n"},{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"}]}],"_curParam":{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

@@ -30,7 +30,7 @@
 	<article class="main">
 		
 			<section class="title">
-	<h1>customizing</h1>
+	<h1>customizing <code>page</code></h1>
 </section>
 
 		
@@ -206,16 +206,12 @@ behavior:</p>
 </code></pre></li>
 </ol>
 <h2>Writing your own generator</h2>
-<p>You can create your own <a href="documentjs.generator.html" title="A generator module should produce a function that takes the following shape. Generator
-modules are used to produce some form of documentation output.  documentjs.generators.html
-is the default and currently only generator packaged with DocumentJS.">generator</a> module which gives you
+<p>You can create your own [documentjs.generator generator] module which gives you
 complete control over how a [documentjs.process.docMap docMap] is converted to
 some output.</p>
 <p>If you do decide to create your own generator, the best place to do that is within
 its own project that is registered on npm.  To do that, create a github project with
-a <code>main.js</code> that exports a <a href="documentjs.generator.html" title="A generator module should produce a function that takes the following shape. Generator
-modules are used to produce some form of documentation output.  documentjs.generators.html
-is the default and currently only generator packaged with DocumentJS.">generator</a> function like:</p>
+a <code>main.js</code> that exports a [documentjs.generator generator] function like:</p>
 <pre><code>var Q = require('q'),
     fs = require('fs'),
     writeFile = Q.denodify(fs.writeFile),

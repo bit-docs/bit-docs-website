@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - bit-docs-generate-html/build/renderer</title>
+	<title>BitDocs - renderer</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -115,7 +115,37 @@
 			
 				
 					<li>
-						<span>theme</span>
+						<span>types</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/renderer.html"
+							title="A renderer built by renderer that is used to
+render each docObject.">
+							renderer
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>templates</span>
 						
 	<ul>
 		
@@ -125,9 +155,9 @@
            						
            						">
 						<a class="page"
-							href="../theme/styles.html"
-							title="The primary styles for the default theme.">
-							styles
+							href="../site/default/templates/body.mustache.html"
+							title="The default body template.">
+							body.mustache
 						</a>
 						
 					</li>
@@ -140,9 +170,173 @@
            						
            						">
 						<a class="page"
-							href="../theme/templates.html"
-							title="Templates that come with the default theme.">
-							templates
+							href="../site/default/templates/content.mustache.html"
+							title="The default content template.">
+							content.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/description.mustache.html"
+							title="The default description template.">
+							description.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/footer.mustache.html"
+							title="The default footer template.">
+							footer.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/header.mustache.html"
+							title="The default header template.">
+							header.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/layout.mustache.html"
+							title="The default layout template.">
+							layout.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/menu.mustache.html"
+							title="The default menu template.">
+							menu.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/sidebar.mustache.html"
+							title="The default sidebar template.">
+							sidebar.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../site/default/templates/title.mustache.html"
+							title="The default title template.">
+							title.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>static</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../site/default/static/styles/styles.less.html"
+							title="The primary styles for the default theme.">
+							./site/default/static/styles/styles.less
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../site/default/static/styles/variables.less.html"
+							title="Variables to hold site-wide visual configurations.">
+							./site/default/static/styles/variables.less
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../site/default/styles/mixins.less.html"
+							title="Mixins for site-wide visual layout.">
+							./site/default/styles/mixins.less
 						</a>
 						
 					</li>
@@ -205,8 +399,8 @@ the documentation.">
            						">
 						<a class="module"
 							href="static_dist.html"
-							title="Builds a static distributable which will eventually be copied
-to the static folder of the generated output.">
+							title="Builds a static distributable which will eventually be copied to the
+static folder of the generated output.">
 							./build/static_dist
 						</a>
 						
@@ -217,6 +411,21 @@ to the static folder of the generated output.">
 	</ul>
 
 
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../about.html"
+							title="Templates and styles come with the default theme.">
+							About
+						</a>
+						
 					</li>
 				
 			
@@ -427,7 +636,7 @@ to the static folder of the generated output.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>bit-docs-generate-html/build/renderer</h1>
+	<h1>renderer <code>module</code></h1>
 </section>
 
 		
@@ -452,8 +661,7 @@ the documentation.</p>
   </h2>
 
   <p>Registers all <code>.mustache</code> files in the <em>documentjs/site/templates</em> folder as
-partials and creates a <a href="../../documentjs.generators.html.types.renderer.html" title="A renderer built by documentjs.generators.html.build.renderer that is used to
-render each docObject.">renderer</a> function that
+partials and creates a [documentjs.generators.html.types.renderer renderer] function that
 renders the <code>content.mustache</code> template within the <code>layout.mustache</code> template.</p>
 
 
@@ -485,8 +693,7 @@ argument enforces that.</p>
   
   <div class="returns">
   	<h3 class="returns-title">Returns</h3>
-  	<p> <code>{Promise&lt;<a href="../../documentjs.generators.html.types.renderer.html" title="A renderer built by documentjs.generators.html.build.renderer that is used to
-render each docObject.">renderer</a>(docObject)&gt;}</code>: <p>A promise that
+  	<p> <code>{Promise&lt;documentjs.generators.html.types.renderer&gt;}</code>: <p>A promise that
 resolves with the renderer function.</p>
 </p>
   </div>
@@ -510,7 +717,7 @@ resolves with the renderer function.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-generate-html/build/renderer","parent":"bit-docs-generate-html/modules","src":{"line":10,"codeLine":36,"path":"docs/modules/bit-docs-generate-html/build/renderer.js"},"description":"\nCreates a renderer function used to generate\nthe documentation.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":".build.renderer(buildTemplatesPromise, options)","description":"\n\nRegisters all `.mustache` files in the _documentjs/site/templates_ folder as\npartials and creates a [documentjs.generators.html.types.renderer renderer] function that\nrenders the `content.mustache` template within the `layout.mustache` template.\n","params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"Handlebars"}]}]}],"name":"buildTemplatesPromise","description":"The result of calling\n[documentjs.generators.html.build.templates]. Building the renderer\nmust happen after the templates have been copied over. Passing this\nargument enforces that.\n"},{"types":[{"type":"Object","options":[]}],"name":"options","description":"\n\nOptions used to configure the behavior of the renderer.\n\n"}],"returns":{"types":[{"type":"Promise","template":[{"types":[{"type":"documentjs.generators.html.types.renderer"}]}]}],"description":"A promise that\nresolves with the renderer function.\n"}}],"_curParam":{"types":[{"type":"Object","options":[]}],"name":"options","description":"\n\nOptions used to configure the behavior of the renderer.\n\n"},"_curReturn":{"types":[{"type":"Promise","template":[{"types":[{"type":"documentjs.generators.html.types.renderer"}]}]}],"description":"A promise that\nresolves with the renderer function.\n"},"pathToRoot":"../../.."};
+		var docObject = {"type":"module","name":"bit-docs-generate-html/build/renderer","parent":"bit-docs-generate-html/modules","src":{"line":8,"codeLine":34,"path":"docs/modules/bit-docs-generate-html/build/renderer.js"},"description":"\nCreates a renderer function used to generate\nthe documentation.\n","title":"renderer","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":".build.renderer(buildTemplatesPromise, options)","description":"\n\nRegisters all `.mustache` files in the _documentjs/site/templates_ folder as\npartials and creates a [documentjs.generators.html.types.renderer renderer] function that\nrenders the `content.mustache` template within the `layout.mustache` template.\n","params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"Handlebars"}]}]}],"name":"buildTemplatesPromise","description":"The result of calling\n[documentjs.generators.html.build.templates]. Building the renderer\nmust happen after the templates have been copied over. Passing this\nargument enforces that.\n"},{"types":[{"type":"Object","options":[]}],"name":"options","description":"\n\nOptions used to configure the behavior of the renderer.\n\n"}],"returns":{"types":[{"type":"Promise","template":[{"types":[{"type":"documentjs.generators.html.types.renderer"}]}]}],"description":"A promise that\nresolves with the renderer function.\n"}}],"_curParam":{"types":[{"type":"Object","options":[]}],"name":"options","description":"\n\nOptions used to configure the behavior of the renderer.\n\n"},"_curReturn":{"types":[{"type":"Promise","template":[{"types":[{"type":"documentjs.generators.html.types.renderer"}]}]}],"description":"A promise that\nresolves with the renderer function.\n"},"pathToRoot":"../../.."};
 	</script>
 
 	

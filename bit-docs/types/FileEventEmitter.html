@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@typedef bit-docs/types/FileEventEmitter
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - fileEventEmitter</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	<div class="content">
+	
+		<nav class="sidebar">
+	
+		
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../../guides.html"
+							title="These guides are here to help you:">
+							Guides
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="page"
+							href="../../plugins.html"
+							title="Here you will find plugins maintained by the bit-docs organization.">
+							Plugin APIs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="../../bit-docs.html"
+							title="Find files, process them, and produce some sort of output.">
+							bit-docs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li>
+						<span>types</span>
+						
+	<ul>
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="typedef"
+							href="FileEventEmitter.html"
+							title="A node event emitter
+that produces events that correlate to files that should be processed.">
+							fileEventEmitter
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="docMap.html"
+							title="An object that contains every docObject keyed by the
+docObject&#x27;s name.">
+							docMap
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="docObject.html"
+							title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">
+							docObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="generator.html"
+							title="A generator module should produce a function that takes the following shape.
+Generator modules are used to produce some form of documentation output.
+bit-docs-generate-html is the default and currently only generator
+packaged with bit-docs.">
+							generator
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="processOptions.html"
+							title="An options object passed to several process methods such as:
+
+code
+codeAndComment
+process-tags">
+							processOptions
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="tagCollection.html"
+							title="">
+							tagCollection
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../lib/generate/generate.html"
+							title="">
+							./lib/generate/
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../lib/process/file.html"
+							title="Processes a file&#x27;s source. Adds created docObjects to
+docMap.">
+							./lib/process/file
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../lib/process/process.html"
+							title="Processes a FileEventEmitter and returns a promise.">
+							./lib/process/
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-dev.html"
+							title="General development tags.">
+							bit-docs-dev
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-docjs-theme.html"
+							title="The old DocumentJS theme.">
+							bit-docs-docjs-theme
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-generate-html.html"
+							title="Generates HTML for a docMap.  Supports plugins.">
+							bit-docs-generate-html
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-generate-readme.html"
+							title="Generates a readme from other docs.">
+							bit-docs-generate-readme
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-glob-finder.html"
+							title="Finds files for passing to the bit-docs processor.">
+							bit-docs-glob-finder
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-html-highlight-line.html"
+							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							bit-docs-html-highlight-line
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-html-toc.html"
+							title="Injects a table of contents for the page into an HTML element.">
+							bit-docs-html-toc
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-js.html"
+							title="Tags, templates, and basic styles for JavaScript.">
+							bit-docs-js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-prettify.html"
+							title="A bit-docs plugin that makes source-code snippets in HTML prettier.">
+							bit-docs-prettify
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-process-mustache.html"
+							title="Process content in mustache files.">
+							bit-docs-process-mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-process-tags.html"
+							title="Processes tags for a docMap.">
+							bit-docs-process-tags
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-demo.html"
+							title="Provides an @demo tag for embedding HTML, CSS, and JS in an iframe.">
+							bit-docs-tag-demo
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-package.html"
+							title="Adds a @package tag for use in bit-docs.">
+							bit-docs-tag-package
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-sourceref.html"
+							title="Adds a @sourceref tag for use in bit-docs.">
+							bit-docs-tag-sourceref
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-type-annotate.html"
+							title="Utilities for parsing closure type annotations.">
+							bit-docs-type-annotate
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+	
+	<article class="main">
+		
+			<section class="title">
+	<h1>fileEventEmitter <code>typedef</code></h1>
+</section>
+
+		
+
+		
+			
+				<section class="description">
+    <p>A <a href="https://nodejs.org/api/events.html#events_class_eventemitter">node event emitter</a>
+that produces events that correlate to files that should be processed.</p>
+
+</section>
+
+			
+		
+
+		
+			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>Object</code>
+  </h2>
+
+  
+
+  
+
+  
+
+  
+  <div class="options">
+  <h3 class="options-title">Options</h3>
+    <ul>
+    
+      <li>
+        <b>on</b> <code>{function(event, listener)}</code>:
+        <p>Registers an event listener.  File event emitters should dispatch:</p>
+<ul>
+<li><code>&quot;match&quot;</code> events that call listener with the matched path.</li>
+<li><code>&quot;end&quot;</code> events that call listener when there are no more matches.</li>
+</ul>
+
+      </li>
+    
+      <li>
+        <b>cwd</b> <code>{String}</code>:
+        <p>The root directory where &quot;match&quot; events are relative to.</p>
+
+      </li>
+    
+    </ul>
+  </div>
+  
+</div>
+
+				
+			
+			
+				<section class="body">
+    
+</section>
+
+			
+		
+	</article>
+</div>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\nA [node event emitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat produces events that correlate to files that should be processed.\n","parent":"bit-docs/types","type":"typedef","title":"fileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="../../static/steal.production.js"></script>
+	
+</body>
+
+</html>

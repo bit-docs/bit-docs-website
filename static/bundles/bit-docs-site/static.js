@@ -1,5 +1,5 @@
 /*[system-bundles-config]*/
-System.bundles = {"bundles/bit-docs-site/static.css!":["bit-docs-prettify@0.1.1#prettify.less!steal-less@1.2.0#less","bit-docs-site@0.0.1#styles/styles.less!steal-less@1.2.0#less"]};
+System.bundles = {"bundles/bit-docs-site/static.css!":["bit-docs-js@0.0.6#site/static/styles/styles.less!steal-less@1.2.0#less","bit-docs-prettify@0.1.1#prettify.less!steal-less@1.2.0#less","bit-docs-site@0.0.1#styles/styles.less!steal-less@1.2.0#less"]};
 /*npm-utils*/
 define('npm-utils', function (require, exports, module) {
     (function (global) {
@@ -985,6 +985,7 @@ define('package.json!npm', [
                 'bit-docs-site': '0.0.1',
                 'steal-less': '1.2.0',
                 'bit-docs-html-toc': '0.6.2',
+                'bit-docs-js': '0.0.6',
                 'bit-docs-prettify': '0.1.1',
                 'bit-docs-html-highlight-line': '0.2.3',
                 'bit-docs-tag-demo': '0.3.0'
@@ -1029,8 +1030,19 @@ define('package.json!npm', [
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
                 'bit-docs-html-toc': '0.6.2',
-                'can-control': '3.0.10',
-                'can-stache': '3.0.27'
+                'can-control': '3.1.0',
+                'can-stache': '3.1.0'
+            }
+        },
+        {
+            'name': 'bit-docs-js',
+            'version': '0.0.6',
+            'fileUrl': './node_modules/bit-docs-js/package.json',
+            'main': 'site.js',
+            'resolutions': {
+                'bit-docs-js': '0.0.6',
+                'steal-less': '1.2.0',
+                'bit-docs-site': '0.0.1'
             }
         },
         {
@@ -1068,29 +1080,29 @@ define('package.json!npm', [
         },
         {
             'name': 'can-control',
-            'version': '3.0.10',
+            'version': '3.1.0',
             'fileUrl': './node_modules/can-control/package.json',
             'main': 'can-control',
             'steal': {},
             'resolutions': {
-                'can-construct': '3.1.1',
+                'can-construct': '3.2.0',
                 'can-namespace': '1.0.0',
-                'can-util': '3.8.4',
-                'can-types': '1.0.4',
-                'can-event': '3.4.0',
-                'can-compute': '3.0.10',
-                'can-observation': '3.1.7'
+                'can-util': '3.9.1',
+                'can-types': '1.1.0',
+                'can-event': '3.5.0',
+                'can-compute': '3.2.0',
+                'can-observation': '3.2.0',
+                'can-reflect': '1.0.3'
             }
         },
         {
             'name': 'can-construct',
-            'version': '3.1.1',
+            'version': '3.2.0',
             'fileUrl': './node_modules/can-construct/package.json',
             'main': 'can-construct',
             'steal': {},
             'resolutions': {
-                'can-util': '3.8.4',
-                'can-types': '1.0.4',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0'
             }
         },
@@ -1104,85 +1116,133 @@ define('package.json!npm', [
         },
         {
             'name': 'can-util',
-            'version': '3.8.4',
+            'version': '3.9.1',
             'fileUrl': './node_modules/can-util/package.json',
             'main': 'can-util',
             'resolutions': {
-                'can-util': '3.8.4',
-                'can-types': '1.0.4',
-                'can-cid': '1.0.3'
+                'can-util': '3.9.1',
+                'can-symbol': '1.0.0',
+                'can-reflect': '1.0.3',
+                'can-cid': '1.0.3',
+                'can-types': '1.1.0'
             }
         },
         {
             'name': 'can-types',
-            'version': '1.0.4',
+            'version': '1.1.0',
             'fileUrl': './node_modules/can-types/package.json',
             'main': 'can-types',
-            'resolutions': { 'can-namespace': '1.0.0' }
+            'resolutions': {
+                'can-namespace': '1.0.0',
+                'can-reflect': '1.0.3',
+                'can-util': '3.9.1',
+                'can-symbol': '1.0.0'
+            }
         },
         {
             'name': 'can-event',
-            'version': '3.4.0',
+            'version': '3.5.0',
             'fileUrl': './node_modules/can-event/package.json',
             'main': 'can-event',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
-                'can-util': '3.8.4',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0',
                 'can-cid': '1.0.3',
-                'can-event': '3.4.0',
-                'can-types': '1.0.4'
+                'can-event': '3.5.0',
+                'can-types': '1.1.0'
             }
         },
         {
             'name': 'can-compute',
-            'version': '3.0.10',
+            'version': '3.2.0',
             'fileUrl': './node_modules/can-compute/package.json',
             'main': 'can-compute',
             'resolutions': {
-                'can-event': '3.4.0',
-                'can-compute': '3.0.10',
+                'can-event': '3.5.0',
+                'can-compute': '3.2.0',
                 'can-namespace': '1.0.0',
+                'can-util': '3.9.1',
+                'can-reflect': '1.0.3',
                 'can-cid': '1.0.3',
-                'can-observation': '3.1.7',
-                'can-util': '3.8.4',
-                'can-types': '1.0.4'
+                'can-symbol': '1.0.0',
+                'can-observation': '3.2.0'
             }
         },
         {
             'name': 'can-observation',
-            'version': '3.1.7',
+            'version': '3.2.0',
             'fileUrl': './node_modules/can-observation/package.json',
             'main': 'can-observation',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
-                'can-observation': '3.1.7',
-                'can-util': '3.8.4',
-                'can-types': '1.0.4',
-                'can-event': '3.4.0',
-                'can-cid': '1.0.3',
-                'can-namespace': '1.0.0'
+                'can-observation': '3.2.0',
+                'can-util': '3.9.1',
+                'can-reflect': '1.0.3',
+                'can-reflect-promise': '1.0.3',
+                'can-symbol': '1.0.0',
+                'can-event': '3.5.0',
+                'can-namespace': '1.0.0',
+                'can-cid': '1.0.3'
+            }
+        },
+        {
+            'name': 'can-reflect',
+            'version': '1.0.3',
+            'fileUrl': './node_modules/can-reflect/package.json',
+            'main': 'can-reflect',
+            'steal': {
+                'npmIgnore': {
+                    'testee': true,
+                    'generator-donejs': true,
+                    'donejs-cli': true,
+                    'steal-tools': true
+                },
+                'main': 'can-reflect'
+            },
+            'browser': {},
+            'resolutions': {
+                'can-reflect': '1.0.3',
+                'can-namespace': '1.0.0',
+                'can-symbol': '1.0.0'
             }
         },
         {
             'name': 'can-stache',
-            'version': '3.0.27',
+            'version': '3.1.0',
             'fileUrl': './node_modules/can-stache/package.json',
             'main': 'can-stache',
             'resolutions': {
-                'can-stache': '3.0.27',
-                'can-util': '3.8.4',
+                'can-stache': '3.1.0',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0',
-                'can-view-parser': '3.3.0',
-                'can-view-callbacks': '3.0.6',
-                'can-view-target': '3.0.7',
-                'can-view-nodelist': '3.0.4',
-                'can-observation': '3.1.7',
-                'can-compute': '3.0.10',
-                'can-types': '1.0.4',
-                'can-view-scope': '3.1.4',
-                'can-view-live': '3.0.7'
+                'can-view-parser': '3.4.0',
+                'can-view-callbacks': '3.1.0',
+                'can-view-target': '3.1.0',
+                'can-view-nodelist': '3.1.0',
+                'can-observation': '3.2.0',
+                'can-compute': '3.2.0',
+                'can-reflect': '1.0.3',
+                'can-symbol': '1.0.0',
+                'can-view-scope': '3.2.0',
+                'can-view-live': '3.1.0'
             }
+        },
+        {
+            'name': 'can-symbol',
+            'version': '1.0.0',
+            'fileUrl': './node_modules/can-symbol/package.json',
+            'main': 'can-symbol',
+            'steal': {
+                'npmIgnore': {
+                    'testee': true,
+                    'generator-donejs': true,
+                    'donejs-cli': true,
+                    'steal-tools': true
+                },
+                'main': 'can-symbol'
+            },
+            'resolutions': { 'can-namespace': '1.0.0' }
         },
         {
             'name': 'can-cid',
@@ -1192,65 +1252,83 @@ define('package.json!npm', [
             'resolutions': { 'can-namespace': '1.0.0' }
         },
         {
+            'name': 'can-reflect-promise',
+            'version': '1.0.3',
+            'fileUrl': './node_modules/can-reflect-promise/package.json',
+            'main': 'can-reflect-promise',
+            'steal': { 'npmAlgorithm': 'flat' },
+            'resolutions': {
+                'can-reflect': '1.0.3',
+                'can-symbol': '1.0.0',
+                'can-util': '3.9.1',
+                'can-observation': '3.2.0',
+                'can-cid': '1.0.3',
+                'can-event': '3.5.0'
+            }
+        },
+        {
             'name': 'can-view-parser',
-            'version': '3.3.0',
+            'version': '3.4.0',
             'fileUrl': './node_modules/can-view-parser/package.json',
             'main': 'can-view-parser',
             'resolutions': {
                 'can-namespace': '1.0.0',
-                'can-util': '3.8.4'
+                'can-util': '3.9.1'
             }
         },
         {
             'name': 'can-view-callbacks',
-            'version': '3.0.6',
+            'version': '3.1.0',
             'fileUrl': './node_modules/can-view-callbacks/package.json',
             'main': 'can-view-callbacks',
             'steal': {},
             'resolutions': {
-                'can-observation': '3.1.7',
-                'can-util': '3.8.4',
+                'can-observation': '3.2.0',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0'
             }
         },
         {
             'name': 'can-view-target',
-            'version': '3.0.7',
+            'version': '3.1.0',
             'fileUrl': './node_modules/can-view-target/package.json',
             'main': 'can-view-target',
             'resolutions': {
-                'can-util': '3.8.4',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0'
             }
         },
         {
             'name': 'can-view-nodelist',
-            'version': '3.0.4',
+            'version': '3.1.0',
             'fileUrl': './node_modules/can-view-nodelist/package.json',
             'main': 'can-view-nodelist',
             'resolutions': {
-                'can-util': '3.8.4',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0'
             }
         },
         {
             'name': 'can-view-scope',
-            'version': '3.1.4',
+            'version': '3.2.0',
             'fileUrl': './node_modules/can-view-scope/package.json',
             'main': 'can-view-scope',
             'resolutions': {
-                'can-observation': '3.1.7',
-                'can-view-scope': '3.1.4',
-                'can-util': '3.8.4',
+                'can-observation': '3.2.0',
+                'can-view-scope': '3.2.0',
+                'can-util': '3.9.1',
                 'can-namespace': '1.0.0',
-                'can-types': '1.0.4',
-                'can-compute': '3.0.10',
-                'can-simple-map': '3.1.4'
+                'can-reflect': '1.0.3',
+                'can-compute': '3.2.0',
+                'can-event': '3.5.0',
+                'can-cid': '1.0.3',
+                'can-symbol': '1.0.0',
+                'can-simple-map': '3.2.0'
             }
         },
         {
             'name': 'can-view-live',
-            'version': '3.0.7',
+            'version': '3.1.0',
             'fileUrl': './node_modules/can-view-live/package.json',
             'main': 'can-view-live',
             'steal': {
@@ -1264,19 +1342,20 @@ define('package.json!npm', [
                 'main': 'can-view-live'
             },
             'resolutions': {
-                'can-view-live': '3.0.7',
-                'can-view-parser': '3.3.0',
-                'can-util': '3.8.4',
-                'can-view-nodelist': '3.0.4',
-                'can-view-callbacks': '3.0.6',
-                'can-types': '1.0.4',
-                'can-compute': '3.0.10',
-                'can-event': '3.4.0'
+                'can-view-live': '3.1.0',
+                'can-view-parser': '3.4.0',
+                'can-util': '3.9.1',
+                'can-view-nodelist': '3.1.0',
+                'can-reflect': '1.0.3',
+                'can-view-callbacks': '3.1.0',
+                'can-types': '1.1.0',
+                'can-compute': '3.2.0',
+                'can-event': '3.5.0'
             }
         },
         {
             'name': 'can-simple-map',
-            'version': '3.1.4',
+            'version': '3.2.0',
             'fileUrl': './node_modules/can-simple-map/package.json',
             'main': 'can-simple-map',
             'steal': {
@@ -1294,8 +1373,8 @@ define('package.json!npm', [
         }
     ], { 'npmParentMap': {} }));
 });
-/*can-util@3.8.4#js/assign/assign*/
-define('can-util@3.8.4#js/assign/assign', function (require, exports, module) {
+/*can-util@3.9.1#js/assign/assign*/
+define('can-util@3.9.1#js/assign/assign', function (require, exports, module) {
     module.exports = function (d, s) {
         for (var prop in s) {
             d[prop] = s[prop];
@@ -1303,15 +1382,15 @@ define('can-util@3.8.4#js/assign/assign', function (require, exports, module) {
         return d;
     };
 });
-/*can-util@3.8.4#js/is-array/is-array*/
-define('can-util@3.8.4#js/is-array/is-array', function (require, exports, module) {
+/*can-util@3.9.1#js/is-array/is-array*/
+define('can-util@3.9.1#js/is-array/is-array', function (require, exports, module) {
     'use strict';
     module.exports = function (arr) {
         return Array.isArray(arr);
     };
 });
-/*can-util@3.8.4#js/is-function/is-function*/
-define('can-util@3.8.4#js/is-function/is-function', function (require, exports, module) {
+/*can-util@3.9.1#js/is-function/is-function*/
+define('can-util@3.9.1#js/is-function/is-function', function (require, exports, module) {
     'use strict';
     var isFunction = function () {
         if (typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function') {
@@ -1325,15 +1404,15 @@ define('can-util@3.8.4#js/is-function/is-function', function (require, exports, 
     }();
     module.exports = isFunction;
 });
-/*can-util@3.8.4#js/is-plain-object/is-plain-object*/
-define('can-util@3.8.4#js/is-plain-object/is-plain-object', function (require, exports, module) {
+/*can-util@3.9.1#js/is-plain-object/is-plain-object*/
+define('can-util@3.9.1#js/is-plain-object/is-plain-object', function (require, exports, module) {
     'use strict';
     var core_hasOwn = Object.prototype.hasOwnProperty;
     function isWindow(obj) {
         return obj !== null && obj == obj.window;
     }
     function isPlainObject(obj) {
-        if (!obj || typeof obj !== 'object' || obj.nodeType || isWindow(obj)) {
+        if (!obj || typeof obj !== 'object' || obj.nodeType || isWindow(obj) || obj.constructor && obj.constructor.shortName) {
             return false;
         }
         try {
@@ -1350,8 +1429,8 @@ define('can-util@3.8.4#js/is-plain-object/is-plain-object', function (require, e
     }
     module.exports = isPlainObject;
 });
-/*can-util@3.8.4#js/deep-assign/deep-assign*/
-define('can-util@3.8.4#js/deep-assign/deep-assign', function (require, exports, module) {
+/*can-util@3.9.1#js/deep-assign/deep-assign*/
+define('can-util@3.9.1#js/deep-assign/deep-assign', function (require, exports, module) {
     'use strict';
     var isArray = require('../is-array/is-array');
     var isFunction = require('../is-function/is-function');
@@ -1391,8 +1470,8 @@ define('can-util@3.8.4#js/deep-assign/deep-assign', function (require, exports, 
     }
     module.exports = deepAssign;
 });
-/*can-util@3.8.4#js/log/log*/
-define('can-util@3.8.4#js/log/log', function (require, exports, module) {
+/*can-util@3.9.1#js/log/log*/
+define('can-util@3.9.1#js/log/log', function (require, exports, module) {
     'use strict';
     exports.warnTimeout = 5000;
     exports.logLevel = 0;
@@ -1439,8 +1518,8 @@ define('can-util@3.8.4#js/log/log', function (require, exports, module) {
         }
     };
 });
-/*can-util@3.8.4#js/dev/dev*/
-define('can-util@3.8.4#js/dev/dev', function (require, exports, module) {
+/*can-util@3.9.1#js/dev/dev*/
+define('can-util@3.9.1#js/dev/dev', function (require, exports, module) {
     'use strict';
     var canLog = require('../log/log');
     module.exports = {
@@ -1461,8 +1540,8 @@ define('can-util@3.8.4#js/dev/dev', function (require, exports, module) {
         _logger: canLog._logger
     };
 });
-/*can-util@3.8.4#js/is-array-like/is-array-like*/
-define('can-util@3.8.4#js/is-array-like/is-array-like', function (require, exports, module) {
+/*can-util@3.9.1#js/is-array-like/is-array-like*/
+define('can-util@3.9.1#js/is-array-like/is-array-like', function (require, exports, module) {
     'use strict';
     function isArrayLike(obj) {
         var type = typeof obj;
@@ -1480,69 +1559,107 @@ define('can-util@3.8.4#js/is-array-like/is-array-like', function (require, expor
 define('can-namespace@1.0.0#can-namespace', function (require, exports, module) {
     module.exports = {};
 });
-/*can-types@1.0.4#can-types*/
-define('can-types@1.0.4#can-types', function (require, exports, module) {
-    var namespace = require('can-namespace');
-    var types = {
-        isMapLike: function () {
-            return false;
-        },
-        isListLike: function () {
-            return false;
-        },
-        isPromise: function (obj) {
-            return obj instanceof Promise || Object.prototype.toString.call(obj) === '[object Promise]';
-        },
-        isConstructor: function (func) {
-            if (typeof func !== 'function') {
-                return false;
-            }
-            for (var prop in func.prototype) {
-                return true;
-            }
-            return false;
-        },
-        isCallableForValue: function (obj) {
-            return typeof obj === 'function' && !types.isConstructor(obj);
-        },
-        isCompute: function (obj) {
-            return obj && obj.isComputed;
-        },
-        iterator: typeof Symbol === 'function' && Symbol.iterator || '@@iterator',
-        DefaultMap: null,
-        DefaultList: null,
-        queueTask: function (task) {
-            var args = task[2] || [];
-            task[0].apply(task[1], args);
-        },
-        wrapElement: function (element) {
-            return element;
-        },
-        unwrapElement: function (element) {
-            return element;
+/*can-symbol@1.0.0#can-symbol*/
+define('can-symbol@1.0.0#can-symbol', function (require, exports, module) {
+    (function (global) {
+        var namespace = require('can-namespace');
+        var CanSymbol;
+        if (typeof Symbol !== 'undefined' && typeof Symbol.for === 'function') {
+            CanSymbol = Symbol;
+        } else {
+            var symbolNum = 0;
+            CanSymbol = function CanSymbolPolyfill(description) {
+                var symbolValue = '@@symbol' + symbolNum++ + description;
+                var symbol = {};
+                Object.defineProperties(symbol, {
+                    toString: {
+                        value: function () {
+                            return symbolValue;
+                        }
+                    }
+                });
+                return symbol;
+            };
+            var descriptionToSymbol = {};
+            var symbolToDescription = {};
+            CanSymbol.for = function (description) {
+                var symbol = descriptionToSymbol[description];
+                if (!symbol) {
+                    symbol = descriptionToSymbol[description] = CanSymbol(description);
+                    symbolToDescription[symbol] = description;
+                }
+                return symbol;
+            };
+            CanSymbol.keyFor = function (symbol) {
+                return symbolToDescription[symbol];
+            };
+            [
+                'hasInstance',
+                'isConcatSpreadable',
+                'iterator',
+                'match',
+                'prototype',
+                'replace',
+                'search',
+                'species',
+                'split',
+                'toPrimitive',
+                'toStringTag',
+                'unscopables'
+            ].forEach(function (name) {
+                CanSymbol[name] = CanSymbol.for(name);
+            });
         }
-    };
-    if (namespace.types) {
-        throw new Error('You can\'t have two versions of can-types, check your dependencies');
-    } else {
-        module.exports = namespace.types = types;
-    }
+        [
+            'isMapLike',
+            'isListLike',
+            'isValueLike',
+            'isFunctionLike',
+            'getOwnKeys',
+            'getOwnKeyDescriptor',
+            'proto',
+            'getOwnEnumerableKeys',
+            'hasOwnKey',
+            'getValue',
+            'setValue',
+            'getKeyValue',
+            'setKeyValue',
+            'apply',
+            'new',
+            'onValue',
+            'offValue',
+            'onKeyValue',
+            'offKeyValue',
+            'getKeyDependencies',
+            'getValueDependencies',
+            'keyHasDependencies',
+            'valueHasDependencies',
+            'onKeys',
+            'onKeysAdded',
+            'onKeysRemoved'
+        ].forEach(function (name) {
+            CanSymbol.for('can.' + name);
+        });
+        module.exports = namespace.Symbol = CanSymbol;
+    }(function () {
+        return this;
+    }()));
 });
-/*can-util@3.8.4#js/is-iterable/is-iterable*/
-define('can-util@3.8.4#js/is-iterable/is-iterable', function (require, exports, module) {
+/*can-util@3.9.1#js/is-iterable/is-iterable*/
+define('can-util@3.9.1#js/is-iterable/is-iterable', function (require, exports, module) {
     'use strict';
-    var types = require('can-types');
+    var canSymbol = require('can-symbol');
     module.exports = function (obj) {
-        return obj && !!obj[types.iterator];
+        return obj && !!obj[canSymbol.iterator || canSymbol.for('iterator')];
     };
 });
-/*can-util@3.8.4#js/each/each*/
-define('can-util@3.8.4#js/each/each', function (require, exports, module) {
+/*can-util@3.9.1#js/each/each*/
+define('can-util@3.9.1#js/each/each', function (require, exports, module) {
     'use strict';
     var isArrayLike = require('../is-array-like/is-array-like');
     var has = Object.prototype.hasOwnProperty;
     var isIterable = require('../is-iterable/is-iterable');
-    var types = require('can-types');
+    var canSymbol = require('can-symbol');
     function each(elements, callback, context) {
         var i = 0, key, len, item;
         if (elements) {
@@ -1554,7 +1671,7 @@ define('can-util@3.8.4#js/each/each', function (require, exports, module) {
                     }
                 }
             } else if (isIterable(elements)) {
-                var iter = elements[types.iterator]();
+                var iter = elements[canSymbol.iterator || canSymbol.for('iterator')]();
                 var res, value;
                 while (!(res = iter.next()).done) {
                     value = res.value;
@@ -1572,8 +1689,8 @@ define('can-util@3.8.4#js/each/each', function (require, exports, module) {
     }
     module.exports = each;
 });
-/*can-util@3.8.4#js/make-array/make-array*/
-define('can-util@3.8.4#js/make-array/make-array', function (require, exports, module) {
+/*can-util@3.9.1#js/make-array/make-array*/
+define('can-util@3.9.1#js/make-array/make-array', function (require, exports, module) {
     'use strict';
     var each = require('../each/each');
     var isArrayLike = require('../is-array-like/is-array-like');
@@ -1590,15 +1707,15 @@ define('can-util@3.8.4#js/make-array/make-array', function (require, exports, mo
     }
     module.exports = makeArray;
 });
-/*can-util@3.8.4#js/is-container/is-container*/
-define('can-util@3.8.4#js/is-container/is-container', function (require, exports, module) {
+/*can-util@3.9.1#js/is-container/is-container*/
+define('can-util@3.9.1#js/is-container/is-container', function (require, exports, module) {
     'use strict';
     module.exports = function (current) {
         return /^f|^o/.test(typeof current);
     };
 });
-/*can-util@3.8.4#js/get/get*/
-define('can-util@3.8.4#js/get/get', function (require, exports, module) {
+/*can-util@3.9.1#js/get/get*/
+define('can-util@3.9.1#js/get/get', function (require, exports, module) {
     'use strict';
     var isContainer = require('../is-container/is-container');
     function get(obj, name) {
@@ -1615,8 +1732,8 @@ define('can-util@3.8.4#js/get/get', function (require, exports, module) {
     }
     module.exports = get;
 });
-/*can-util@3.8.4#js/string/string*/
-define('can-util@3.8.4#js/string/string', function (require, exports, module) {
+/*can-util@3.9.1#js/string/string*/
+define('can-util@3.9.1#js/string/string', function (require, exports, module) {
     'use strict';
     var get = require('../get/get');
     var isContainer = require('../is-container/is-container');
@@ -1692,14 +1809,13 @@ define('can-util@3.8.4#js/string/string', function (require, exports, module) {
     };
     module.exports = string;
 });
-/*can-construct@3.1.1#can-construct*/
-define('can-construct@3.1.1#can-construct', function (require, exports, module) {
+/*can-construct@3.2.0#can-construct*/
+define('can-construct@3.2.0#can-construct', function (require, exports, module) {
     'use strict';
     var assign = require('can-util/js/assign/assign');
     var deepAssign = require('can-util/js/deep-assign/deep-assign');
     var dev = require('can-util/js/dev/dev');
     var makeArray = require('can-util/js/make-array/make-array');
-    var types = require('can-types');
     var namespace = require('can-namespace');
     var initializing = 0;
     var Construct = function () {
@@ -1836,14 +1952,519 @@ define('can-construct@3.1.1#can-construct', function (require, exports, module) 
     };
     Construct.prototype.init = function () {
     };
-    var oldIsConstructor = types.isConstructor;
-    types.isConstructor = function (obj) {
-        return obj.prototype instanceof Construct || oldIsConstructor.call(null, obj);
-    };
     module.exports = namespace.Construct = Construct;
 });
-/*can-util@3.8.4#js/is-empty-object/is-empty-object*/
-define('can-util@3.8.4#js/is-empty-object/is-empty-object', function (require, exports, module) {
+/*can-reflect@1.0.3#reflections/type/type*/
+define('can-reflect@1.0.3#reflections/type/type', function (require, exports, module) {
+    var canSymbol = require('can-symbol');
+    var check = function (symbols, obj) {
+        for (var i = 0, len = symbols.length; i < len; i++) {
+            var value = obj[canSymbol.for(symbols[i])];
+            if (value !== undefined) {
+                return value;
+            }
+        }
+    };
+    var plainFunctionPrototypePropertyNames = Object.getOwnPropertyNames(function () {
+    }.prototype);
+    var plainFunctionPrototypeProto = Object.getPrototypeOf(function () {
+    }.prototype);
+    function isConstructorLike(func) {
+        var value = func[canSymbol.for('can.new')];
+        if (value !== undefined) {
+            return value;
+        }
+        if (typeof func !== 'function') {
+            return false;
+        }
+        var prototype = func.prototype;
+        if (!prototype) {
+            return false;
+        }
+        if (plainFunctionPrototypeProto !== Object.getPrototypeOf(prototype)) {
+            return true;
+        }
+        var propertyNames = Object.getOwnPropertyNames(prototype);
+        if (propertyNames.length === plainFunctionPrototypePropertyNames.length) {
+            for (var i = 0, len = propertyNames.length; i < len; i++) {
+                if (propertyNames[i] !== plainFunctionPrototypePropertyNames[i]) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            return true;
+        }
+    }
+    function isFunctionLike(obj) {
+        var result, symbolValue = obj[canSymbol.for('can.isFunctionLike')];
+        if (symbolValue !== undefined) {
+            return symbolValue;
+        }
+        result = check([
+            'can.new',
+            'can.apply'
+        ], obj);
+        if (result !== undefined) {
+            return !!result;
+        }
+        return typeof obj === 'function';
+    }
+    function isPrimitive(obj) {
+        var type = typeof obj;
+        if (obj == null || type !== 'function' && type !== 'object') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function isValueLike(obj) {
+        var symbolValue;
+        if (isPrimitive(obj)) {
+            return true;
+        }
+        symbolValue = obj[canSymbol.for('can.isValueLike')];
+        if (typeof symbolValue !== 'undefined') {
+            return symbolValue;
+        }
+        var value = obj[canSymbol.for('can.getValue')];
+        if (value !== undefined) {
+            return !!value;
+        }
+    }
+    function isMapLike(obj) {
+        if (isPrimitive(obj)) {
+            return false;
+        }
+        var isMapLike = obj[canSymbol.for('can.isMapLike')];
+        if (typeof isMapLike !== 'undefined') {
+            return !!isMapLike;
+        }
+        var value = obj[canSymbol.for('can.getKeyValue')];
+        if (value !== undefined) {
+            return !!value;
+        }
+        return true;
+    }
+    function isObservableLike(obj) {
+        if (isPrimitive(obj)) {
+            return false;
+        }
+        var result = check([
+            'can.onValue',
+            'can.onKeyValue',
+            'can.onKeys',
+            'can.onKeysAdded'
+        ], obj);
+        if (result !== undefined) {
+            return !!result;
+        }
+    }
+    function isListLike(list) {
+        var symbolValue, type = typeof list;
+        if (type === 'string') {
+            return true;
+        }
+        if (isPrimitive(list)) {
+            return false;
+        }
+        symbolValue = list[canSymbol.for('can.isListLike')];
+        if (typeof symbolValue !== 'undefined') {
+            return symbolValue;
+        }
+        var value = list[canSymbol.iterator];
+        if (value !== undefined) {
+            return !!value;
+        }
+        if (Array.isArray(list)) {
+            return true;
+        }
+        var length = list && type !== 'boolean' && typeof list !== 'number' && 'length' in list && list.length;
+        return typeof list !== 'function' && (length === 0 || typeof length === 'number' && length > 0 && length - 1 in list);
+    }
+    var symbolStart = '@@symbol';
+    function isSymbolLike(symbol) {
+        if (typeof symbol === 'symbol') {
+            return true;
+        } else {
+            return symbol.toString().substr(0, symbolStart.length) === symbolStart;
+        }
+    }
+    module.exports = {
+        isConstructorLike: isConstructorLike,
+        isFunctionLike: isFunctionLike,
+        isListLike: isListLike,
+        isMapLike: isMapLike,
+        isObservableLike: isObservableLike,
+        isPrimitive: isPrimitive,
+        isValueLike: isValueLike,
+        isSymbolLike: isSymbolLike,
+        isMoreListLikeThanMapLike: function (obj) {
+            if (Array.isArray(obj)) {
+                return true;
+            }
+            var value = obj[canSymbol.for('can.isMoreListLikeThanMapLike')];
+            if (value !== undefined) {
+                return value;
+            }
+            var isListLike = this.isListLike(obj), isMapLike = this.isMapLike(obj);
+            if (isListLike && !isMapLike) {
+                return true;
+            } else if (!isListLike && isMapLike) {
+                return false;
+            }
+        },
+        isIteratorLike: function (obj) {
+            return obj && typeof obj === 'object' && typeof obj.next === 'function' && obj.next.length === 0;
+        },
+        isPromise: function (obj) {
+            return obj instanceof Promise || Object.prototype.toString.call(obj) === '[object Promise]';
+        }
+    };
+});
+/*can-reflect@1.0.3#reflections/call/call*/
+define('can-reflect@1.0.3#reflections/call/call', function (require, exports, module) {
+    var canSymbol = require('can-symbol');
+    var typeReflections = require('../type/type');
+    module.exports = {
+        call: function (func, context) {
+            var args = [].slice.call(arguments, 2);
+            var apply = func[canSymbol.for('can.apply')];
+            if (apply) {
+                return apply.call(func, context, args);
+            } else {
+                return func.apply(context, args);
+            }
+        },
+        apply: function (func, context, args) {
+            var apply = func[canSymbol.for('can.apply')];
+            if (apply) {
+                return apply.call(func, context, args);
+            } else {
+                return func.apply(context, args);
+            }
+        },
+        'new': function (func) {
+            var args = [].slice.call(arguments, 1);
+            var makeNew = func[canSymbol.for('can.new')];
+            if (makeNew) {
+                return makeNew.apply(func, args);
+            } else {
+                var context = Object.create(func.prototype);
+                var ret = func.apply(context, args);
+                if (typeReflections.isPrimitive(ret)) {
+                    return context;
+                } else {
+                    return ret;
+                }
+            }
+        }
+    };
+});
+/*can-reflect@1.0.3#reflections/get-set/get-set*/
+define('can-reflect@1.0.3#reflections/get-set/get-set', function (require, exports, module) {
+    var canSymbol = require('can-symbol');
+    var typeReflections = require('../type/type');
+    var setKeyValueSymbol = canSymbol.for('can.setKeyValue'), getKeyValueSymbol = canSymbol.for('can.getKeyValue'), getValueSymbol = canSymbol.for('can.getValue'), setValueSymbol = canSymbol.for('can.setValue');
+    var reflections = {
+        setKeyValue: function (obj, key, value) {
+            if (typeof key === 'symbol') {
+                obj[key] = value;
+                return;
+            }
+            var setKeyValue = obj[setKeyValueSymbol];
+            if (setKeyValue) {
+                return setKeyValue.call(obj, key, value);
+            } else if (typeof key !== 'symbol' && typeReflections.isSymbolLike(key)) {
+                Object.defineProperty(obj, key, {
+                    enumerable: false,
+                    configurable: true,
+                    value: value,
+                    writable: true
+                });
+            } else {
+                obj[key] = value;
+            }
+        },
+        getKeyValue: function (obj, key) {
+            var getKeyValue = obj[getKeyValueSymbol];
+            if (getKeyValue) {
+                return getKeyValue.call(obj, key);
+            }
+            return obj[key];
+        },
+        deleteKeyValue: function (obj, key) {
+            var deleteKeyValue = obj[canSymbol.for('can.deleteKeyValue')];
+            if (deleteKeyValue) {
+                return deleteKeyValue.call(obj, key);
+            }
+            delete obj[key];
+        },
+        getValue: function (value) {
+            if (typeReflections.isPrimitive(value)) {
+                return value;
+            }
+            var getValue = value[getValueSymbol];
+            if (getValue) {
+                return getValue.call(value);
+            }
+            return value;
+        },
+        setValue: function (item, value) {
+            var setValue = item && item[setValueSymbol];
+            if (setValue) {
+                return setValue.call(item, value);
+            } else {
+                throw new Error('can-reflect.setValue - Can not set value.');
+            }
+        }
+    };
+    reflections.get = reflections.getKeyValue;
+    reflections.set = reflections.setKeyValue;
+    reflections['delete'] = reflections.deleteKeyValue;
+    module.exports = reflections;
+});
+/*can-reflect@1.0.3#reflections/observe/observe*/
+define('can-reflect@1.0.3#reflections/observe/observe', function (require, exports, module) {
+    var canSymbol = require('can-symbol');
+    var slice = [].slice;
+    function makeFallback(symbolName, fallbackName) {
+        return function (obj, event, handler) {
+            var method = obj[canSymbol.for(symbolName)];
+            if (method !== undefined) {
+                return method.call(obj, event, handler);
+            }
+            return this[fallbackName].apply(this, arguments);
+        };
+    }
+    function makeErrorIfMissing(symbolName, errorMessage) {
+        return function (obj, arg1, arg2) {
+            var method = obj[canSymbol.for(symbolName)];
+            if (method !== undefined) {
+                return method.call(obj, arg1, arg2);
+            }
+            throw new Error(errorMessage);
+        };
+    }
+    module.exports = {
+        onKeyValue: makeFallback('can.onKeyValue', 'onEvent'),
+        offKeyValue: makeFallback('can.offKeyValue', 'offEvent'),
+        onKeys: makeErrorIfMissing('can.onKeys', 'can-reflect: can not observe an onKeys event'),
+        onKeysAdded: makeErrorIfMissing('can.onKeysAdded', 'can-reflect: can not observe an onKeysAdded event'),
+        onKeysRemoved: makeErrorIfMissing('can.onKeysRemoved', 'can-reflect: can not unobserve an onKeysRemoved event'),
+        getKeyDependencies: makeErrorIfMissing('can.getKeyDependencies', 'can-reflect: can not determine dependencies'),
+        keyHasDependencies: makeErrorIfMissing('can.keyHasDependencies', 'can-reflect: can not determine if this has key dependencies'),
+        onValue: makeErrorIfMissing('can.onValue', 'can-reflect: can not observe value change'),
+        offValue: makeErrorIfMissing('can.offValue', 'can-reflect: can not unobserve value change'),
+        getValueDependencies: makeErrorIfMissing('can.getValueDependencies', 'can-reflect: can not determine dependencies'),
+        valueHasDependencies: makeErrorIfMissing('can.valueHasDependencies', 'can-reflect: can not determine if value has dependencies'),
+        onEvent: function (obj, eventName, callback) {
+            if (obj) {
+                var onEvent = obj[canSymbol.for('can.onEvent')];
+                if (onEvent !== undefined) {
+                    return onEvent.call(obj, eventName, callback);
+                } else if (obj.addEventListener) {
+                    obj.addEventListener(eventName, callback);
+                }
+            }
+        },
+        offEvent: function (obj, eventName, callback) {
+            if (obj) {
+                var offEvent = obj[canSymbol.for('can.offEvent')];
+                if (offEvent !== undefined) {
+                    return offEvent.call(obj, eventName, callback);
+                } else if (obj.removeEventListener) {
+                    obj.removeEventListener(eventName, callback);
+                }
+            }
+        }
+    };
+});
+/*can-reflect@1.0.3#reflections/shape/shape*/
+define('can-reflect@1.0.3#reflections/shape/shape', function (require, exports, module) {
+    var canSymbol = require('can-symbol');
+    var getSetReflections = require('../get-set/get-set');
+    var typeReflections = require('../type/type');
+    var shapeReflections = {
+        each: function (obj, callback, context) {
+            if (typeReflections.isIteratorLike(obj) || typeReflections.isMoreListLikeThanMapLike(obj)) {
+                return this.eachIndex(obj, callback, context);
+            } else {
+                return this.eachKey(obj, callback, context);
+            }
+        },
+        eachIndex: function (list, callback, context) {
+            var iter, iterator = list[canSymbol.iterator];
+            if (Array.isArray(list)) {
+            } else if (typeReflections.isIteratorLike(list)) {
+                iter = list;
+            } else if (iterator) {
+                iter = iterator.call(list);
+            }
+            if (iter) {
+                var res, index = 0;
+                while (!(res = iter.next()).done) {
+                    if (callback.call(context || list, res.value, index++, list) === false) {
+                        break;
+                    }
+                }
+            } else {
+                for (var i = 0, len = list.length; i < len; i++) {
+                    var item = list[i];
+                    if (callback.call(context || item, item, i, list) === false) {
+                        break;
+                    }
+                }
+            }
+            return list;
+        },
+        toArray: function (obj) {
+            var arr = [];
+            this.each(obj, function (value) {
+                arr.push(value);
+            });
+            return arr;
+        },
+        eachKey: function (obj, callback, context) {
+            var enumerableKeys = this.getOwnEnumerableKeys(obj);
+            return this.eachIndex(enumerableKeys, function (key) {
+                var value = getSetReflections.getKeyValue(obj, key);
+                return callback.call(context || obj, value, key, obj);
+            });
+        },
+        'hasOwnKey': function (obj, key) {
+            var hasOwnKey = obj[canSymbol.for('can.hasOwnKey')];
+            if (hasOwnKey) {
+                return hasOwnKey.call(obj, key);
+            }
+            var getOwnKeys = obj[canSymbol.for('can.getOwnKeys')];
+            if (getOwnKeys) {
+                var found = false;
+                this.eachIndex(getOwnKeys.call(obj), function (objKey) {
+                    if (objKey === key) {
+                        found = true;
+                        return false;
+                    }
+                });
+                return found;
+            }
+            return obj.hasOwnProperty(key);
+        },
+        getOwnEnumerableKeys: function (obj) {
+            var getOwnEnumerableKeys = obj[canSymbol.for('can.getOwnEnumerableKeys')];
+            if (getOwnEnumerableKeys) {
+                return getOwnEnumerableKeys.call(obj);
+            }
+            if (obj[canSymbol.for('can.getOwnKeys')] && obj[canSymbol.for('can.getOwnKeyDescriptor')]) {
+                var keys = [];
+                this.eachIndex(this.getOwnKeys(obj), function (key) {
+                    var descriptor = this.getOwnKeyDescriptor(obj, key);
+                    if (descriptor.enumerable) {
+                        keys.push(key);
+                    }
+                }, this);
+                return keys;
+            } else {
+                return Object.keys(obj);
+            }
+        },
+        getOwnKeys: function (obj) {
+            var getOwnKeys = obj[canSymbol.for('can.getOwnKeys')];
+            if (getOwnKeys) {
+                return getOwnKeys.call(obj);
+            } else {
+                return Object.getOwnPropertyNames(obj);
+            }
+        },
+        getOwnKeyDescriptor: function (obj, key) {
+            var getOwnKeyDescriptor = obj[canSymbol.for('can.getOwnKeyDescriptor')];
+            if (getOwnKeyDescriptor) {
+                return getOwnKeyDescriptor.call(obj, key);
+            } else {
+                return Object.getOwnPropertyDescriptor(obj, key);
+            }
+        },
+        'in': function () {
+        },
+        getAllEnumerableKeys: function () {
+        },
+        getAllKeys: function () {
+        }
+    };
+    shapeReflections.keys = shapeReflections.getOwnEnumerableKeys;
+    module.exports = shapeReflections;
+});
+/*can-reflect@1.0.3#can-reflect*/
+define('can-reflect@1.0.3#can-reflect', function (require, exports, module) {
+    var functionReflections = require('./reflections/call/call');
+    var getSet = require('./reflections/get-set/get-set');
+    var observe = require('./reflections/observe/observe');
+    var shape = require('./reflections/shape/shape');
+    var type = require('./reflections/type/type');
+    var namespace = require('can-namespace');
+    var reflect = {};
+    [
+        functionReflections,
+        getSet,
+        observe,
+        shape,
+        type
+    ].forEach(function (reflections) {
+        for (var prop in reflections) {
+            reflect[prop] = reflections[prop];
+        }
+    });
+    module.exports = namespace.Reflect = reflect;
+});
+/*can-types@1.1.0#can-types*/
+define('can-types@1.1.0#can-types', function (require, exports, module) {
+    var namespace = require('can-namespace');
+    var canReflect = require('can-reflect');
+    var canSymbol = require('can-symbol');
+    var dev = require('can-util/js/dev/dev');
+    var types = {
+        isMapLike: function (obj) {
+            return canReflect.isObservableLike(obj) && canReflect.isMapLike(obj);
+        },
+        isListLike: function (obj) {
+            return canReflect.isObservableLike(obj) && canReflect.isListLike(obj);
+        },
+        isPromise: function (obj) {
+            return canReflect.isPromise(obj);
+        },
+        isConstructor: function (func) {
+            return canReflect.isConstructorLike(func);
+        },
+        isCallableForValue: function (obj) {
+            return obj && canReflect.isFunctionLike(obj) && !canReflect.isConstructorLike(obj);
+        },
+        isCompute: function (obj) {
+            return obj && obj.isComputed;
+        },
+        get iterator() {
+            return canSymbol.iterator || canSymbol.for('iterator');
+        },
+        DefaultMap: null,
+        DefaultList: null,
+        queueTask: function (task) {
+            var args = task[2] || [];
+            task[0].apply(task[1], args);
+        },
+        wrapElement: function (element) {
+            return element;
+        },
+        unwrapElement: function (element) {
+            return element;
+        }
+    };
+    if (namespace.types) {
+        throw new Error('You can\'t have two versions of can-types, check your dependencies');
+    } else {
+        module.exports = namespace.types = types;
+    }
+});
+/*can-util@3.9.1#js/is-empty-object/is-empty-object*/
+define('can-util@3.9.1#js/is-empty-object/is-empty-object', function (require, exports, module) {
     'use strict';
     module.exports = function (obj) {
         for (var prop in obj) {
@@ -1852,8 +2473,8 @@ define('can-util@3.8.4#js/is-empty-object/is-empty-object', function (require, e
         return true;
     };
 });
-/*can-util@3.8.4#dom/data/core*/
-define('can-util@3.8.4#dom/data/core', function (require, exports, module) {
+/*can-util@3.9.1#dom/data/core*/
+define('can-util@3.9.1#dom/data/core', function (require, exports, module) {
     'use strict';
     var isEmptyObject = require('../../js/is-empty-object/is-empty-object');
     var data = {};
@@ -1906,8 +2527,8 @@ define('can-util@3.8.4#dom/data/core', function (require, exports, module) {
         delete: deleteNode
     };
 });
-/*can-util@3.8.4#js/global/global*/
-define('can-util@3.8.4#js/global/global', function (require, exports, module) {
+/*can-util@3.9.1#js/global/global*/
+define('can-util@3.9.1#js/global/global', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL;
@@ -1925,8 +2546,8 @@ define('can-util@3.8.4#js/global/global', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/document/document*/
-define('can-util@3.8.4#dom/document/document', function (require, exports, module) {
+/*can-util@3.9.1#dom/document/document*/
+define('can-util@3.9.1#dom/document/document', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../../js/global/global');
@@ -1941,8 +2562,8 @@ define('can-util@3.8.4#dom/document/document', function (require, exports, modul
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/mutation-observer/mutation-observer*/
-define('can-util@3.8.4#dom/mutation-observer/mutation-observer', function (require, exports, module) {
+/*can-util@3.9.1#dom/mutation-observer/mutation-observer*/
+define('can-util@3.9.1#dom/mutation-observer/mutation-observer', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../../js/global/global')();
@@ -1974,8 +2595,8 @@ define('can-cid@1.0.3#can-cid', function (require, exports, module) {
         module.exports = namespace.cid = cid;
     }
 });
-/*can-util@3.8.4#js/cid/get-cid*/
-define('can-util@3.8.4#js/cid/get-cid', function (require, exports, module) {
+/*can-util@3.9.1#js/cid/get-cid*/
+define('can-util@3.9.1#js/cid/get-cid', function (require, exports, module) {
     'use strict';
     var CID = require('can-cid');
     var domDataCore = require('../../dom/data/core');
@@ -1989,8 +2610,8 @@ define('can-util@3.8.4#js/cid/get-cid', function (require, exports, module) {
         }
     };
 });
-/*can-util@3.8.4#js/cid-set/cid-set*/
-define('can-util@3.8.4#js/cid-set/cid-set', function (require, exports, module) {
+/*can-util@3.9.1#js/cid-set/cid-set*/
+define('can-util@3.9.1#js/cid-set/cid-set', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL = require('../global/global');
@@ -2037,8 +2658,8 @@ define('can-util@3.8.4#js/cid-set/cid-set', function (require, exports, module) 
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/mutation-observer/document/document*/
-define('can-util@3.8.4#dom/mutation-observer/document/document', function (require, exports, module) {
+/*can-util@3.9.1#dom/mutation-observer/document/document*/
+define('can-util@3.9.1#dom/mutation-observer/document/document', function (require, exports, module) {
     (function (global) {
         'use strict';
         var getDocument = require('../../document/document');
@@ -2180,8 +2801,8 @@ define('can-util@3.8.4#dom/mutation-observer/document/document', function (requi
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/data/data*/
-define('can-util@3.8.4#dom/data/data', function (require, exports, module) {
+/*can-util@3.9.1#dom/data/data*/
+define('can-util@3.9.1#dom/data/data', function (require, exports, module) {
     'use strict';
     var domDataCore = require('./core');
     var mutationDocument = require('../mutation-observer/document/document');
@@ -2210,8 +2831,8 @@ define('can-util@3.8.4#dom/data/data', function (require, exports, module) {
         delete: deleteNode
     };
 });
-/*can-util@3.8.4#dom/class-name/class-name*/
-define('can-util@3.8.4#dom/class-name/class-name', function (require, exports, module) {
+/*can-util@3.9.1#dom/class-name/class-name*/
+define('can-util@3.9.1#dom/class-name/class-name', function (require, exports, module) {
     'use strict';
     var has = function (className) {
         if (this.classList) {
@@ -2239,8 +2860,8 @@ define('can-util@3.8.4#dom/class-name/class-name', function (require, exports, m
         }
     };
 });
-/*can-util@3.8.4#js/is-browser-window/is-browser-window*/
-define('can-util@3.8.4#js/is-browser-window/is-browser-window', function (require, exports, module) {
+/*can-util@3.9.1#js/is-browser-window/is-browser-window*/
+define('can-util@3.9.1#js/is-browser-window/is-browser-window', function (require, exports, module) {
     (function (global) {
         'use strict';
         module.exports = function () {
@@ -2250,8 +2871,8 @@ define('can-util@3.8.4#js/is-browser-window/is-browser-window', function (requir
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/events/events*/
-define('can-util@3.8.4#dom/events/events', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/events*/
+define('can-util@3.9.1#dom/events/events', function (require, exports, module) {
     'use strict';
     var _document = require('../document/document');
     var isBrowserWindow = require('../../js/is-browser-window/is-browser-window');
@@ -2320,16 +2941,16 @@ define('can-util@3.8.4#dom/events/events', function (require, exports, module) {
         }
     }());
 });
-/*can-util@3.8.4#dom/dispatch/dispatch*/
-define('can-util@3.8.4#dom/dispatch/dispatch', function (require, exports, module) {
+/*can-util@3.9.1#dom/dispatch/dispatch*/
+define('can-util@3.9.1#dom/dispatch/dispatch', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events/events');
     module.exports = function () {
         return domEvents.dispatch.apply(this, arguments);
     };
 });
-/*can-util@3.8.4#dom/matches/matches*/
-define('can-util@3.8.4#dom/matches/matches', function (require, exports, module) {
+/*can-util@3.9.1#dom/matches/matches*/
+define('can-util@3.9.1#dom/matches/matches', function (require, exports, module) {
     'use strict';
     var matchesMethod = function (element) {
         return element.matches || element.webkitMatchesSelector || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector || element.oMatchesSelector;
@@ -2339,8 +2960,8 @@ define('can-util@3.8.4#dom/matches/matches', function (require, exports, module)
         return method ? method.apply(this, arguments) : false;
     };
 });
-/*can-util@3.8.4#dom/events/delegate/delegate*/
-define('can-util@3.8.4#dom/events/delegate/delegate', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/delegate/delegate*/
+define('can-util@3.9.1#dom/events/delegate/delegate', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events');
     var domData = require('../../data/data');
@@ -2432,20 +3053,24 @@ define('can-util@3.8.4#dom/events/delegate/delegate', function (require, exports
         }
     };
 });
-/*can-util@3.8.4#js/single-reference/single-reference*/
-define('can-util@3.8.4#js/single-reference/single-reference', function (require, exports, module) {
+/*can-util@3.9.1#js/single-reference/single-reference*/
+define('can-util@3.9.1#js/single-reference/single-reference', function (require, exports, module) {
     (function (global) {
-        var CID = require('../cid/get-cid');
+        var canReflect = require('can-reflect/reflections/get-set/get-set');
+        var CID = require('can-cid');
         var singleReference;
+        function getKeyName(key, extraKey) {
+            var keyName = extraKey ? CID(key) + ':' + extraKey : CID(key);
+            return keyName || key;
+        }
         singleReference = {
-            set: function (obj, key, value) {
-                var keyName = CID(key);
-                obj[keyName] = value;
+            set: function (obj, key, value, extraKey) {
+                canReflect.set(obj, getKeyName(key, extraKey), value);
             },
-            getAndDelete: function (obj, key) {
-                var cid = CID(key);
-                var value = obj[cid];
-                delete obj[cid];
+            getAndDelete: function (obj, key, extraKey) {
+                var keyName = getKeyName(key, extraKey);
+                var value = canReflect.get(obj, keyName);
+                canReflect.delete(obj, keyName);
                 return value;
             }
         };
@@ -2454,8 +3079,8 @@ define('can-util@3.8.4#js/single-reference/single-reference', function (require,
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/events/delegate/enter-leave*/
-define('can-util@3.8.4#dom/events/delegate/enter-leave', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/delegate/enter-leave*/
+define('can-util@3.9.1#dom/events/delegate/enter-leave', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events'), singleRef = require('../../../js/single-reference/single-reference'), cid = require('../../../js/cid/get-cid');
     var eventMap = {
@@ -2499,8 +3124,8 @@ define('can-util@3.8.4#dom/events/delegate/enter-leave', function (require, expo
         _removeDelegateListener.call(this, eventType, selector, handler);
     };
 });
-/*can-event@3.4.0#can-event*/
-define('can-event@3.4.0#can-event', function (require, exports, module) {
+/*can-event@3.5.0#can-event*/
+define('can-event@3.5.0#can-event', function (require, exports, module) {
     var domEvents = require('can-util/dom/events/events');
     var CID = require('can-cid');
     var isEmptyObject = require('can-util/js/is-empty-object/is-empty-object');
@@ -2670,15 +3295,15 @@ define('can-event@3.4.0#can-event', function (require, exports, module) {
     });
     module.exports = namespace.event = canEvent;
 });
-/*can-util@3.8.4#js/last/last*/
-define('can-util@3.8.4#js/last/last', function (require, exports, module) {
+/*can-util@3.9.1#js/last/last*/
+define('can-util@3.9.1#js/last/last', function (require, exports, module) {
     'use strict';
     module.exports = function (arr) {
         return arr && arr[arr.length - 1];
     };
 });
-/*can-event@3.4.0#batch/batch*/
-define('can-event@3.4.0#batch/batch', function (require, exports, module) {
+/*can-event@3.5.0#batch/batch*/
+define('can-event@3.5.0#batch/batch', function (require, exports, module) {
     'use strict';
     var canEvent = require('../can-event');
     var last = require('can-util/js/last/last');
@@ -2842,299 +3467,451 @@ define('can-event@3.4.0#batch/batch', function (require, exports, module) {
         module.exports = namespace.batch = canBatch;
     }
 });
-/*can-observation@3.1.7#can-observation*/
-define('can-observation@3.1.7#can-observation', function (require, exports, module) {
-    require('can-event');
-    var canEvent = require('can-event');
-    var canBatch = require('can-event/batch/batch');
-    var assign = require('can-util/js/assign/assign');
-    var namespace = require('can-namespace');
-    var canLog = require('can-util/js/log/log');
-    function Observation(func, context, compute) {
-        this.newObserved = {};
-        this.oldObserved = null;
-        this.func = func;
-        this.context = context;
-        this.compute = compute.updater ? compute : { updater: compute };
-        this.onDependencyChange = this.onDependencyChange.bind(this);
-        this.childDepths = {};
-        this.ignore = 0;
-        this.needsUpdate = false;
-    }
-    var observationStack = [];
-    Observation.observationStack = observationStack;
-    var remaining = {
-        updates: 0,
-        notifications: 0
-    };
-    Observation.remaining = remaining;
-    assign(Observation.prototype, {
-        get: function () {
-            if (this.bound) {
-                canEvent.flush();
-                if (remaining.updates) {
-                    Observation.updateChildrenAndSelf(this);
+/*can-util@3.9.1#js/cid-map/cid-map*/
+define('can-util@3.9.1#js/cid-map/cid-map', function (require, exports, module) {
+    (function (global) {
+        'use strict';
+        var GLOBAL = require('../global/global');
+        var each = require('../each/each');
+        var getCID = require('../cid/get-cid');
+        var CIDMap;
+        if (GLOBAL().Map) {
+            CIDMap = GLOBAL().Map;
+        } else {
+            var CIDMap = function () {
+                this.values = {};
+            };
+            CIDMap.prototype.set = function (key, value) {
+                this.values[getCID(key)] = {
+                    key: key,
+                    value: value
+                };
+            };
+            CIDMap.prototype['delete'] = function (key) {
+                var has = getCID(key) in this.values;
+                if (has) {
+                    delete this.values[getCID(key)];
                 }
-                return this.value;
-            } else {
-                return this.func.call(this.context);
-            }
-        },
-        getPrimaryDepth: function () {
-            return this.compute._primaryDepth || 0;
-        },
-        addEdge: function (objEv) {
-            objEv.obj.addEventListener(objEv.event, this.onDependencyChange);
-            if (objEv.obj.observation) {
-                this.depth = null;
-            }
-        },
-        removeEdge: function (objEv) {
-            objEv.obj.removeEventListener(objEv.event, this.onDependencyChange);
-            if (objEv.obj.observation) {
-                this.depth = null;
-            }
-        },
-        dependencyChange: function (ev) {
-            if (this.bound) {
-                if (ev.batchNum !== this.batchNum) {
-                    Observation.registerUpdate(this, ev.batchNum);
-                    this.batchNum = ev.batchNum;
+                return has;
+            };
+            CIDMap.prototype.forEach = function (cb, thisArg) {
+                each(this.values, function (pair) {
+                    return cb.call(thisArg || this, pair.value, pair.key, this);
+                }, this);
+            };
+            CIDMap.prototype.has = function (key) {
+                return getCID(key) in this.values;
+            };
+            CIDMap.prototype.get = function (key) {
+                var obj = this.values[getCID(key)];
+                return obj && obj.value;
+            };
+            CIDMap.prototype.clear = function (key) {
+                return this.values = {};
+            };
+            Object.defineProperty(CIDMap.prototype, 'size', {
+                get: function () {
+                    var size = 0;
+                    each(this.values, function () {
+                        size++;
+                    });
+                    return size;
                 }
-            }
-        },
-        onDependencyChange: function (ev, newVal, oldVal) {
-            this.dependencyChange(ev, newVal, oldVal);
-        },
-        update: function (batchNum) {
-            if (this.needsUpdate) {
-                remaining.updates--;
-            }
-            this.needsUpdate = false;
-            if (this.bound) {
-                var oldValue = this.value;
-                this.oldValue = null;
-                this.start();
-                if (oldValue !== this.value) {
-                    this.compute.updater(this.value, oldValue, batchNum);
-                    return true;
-                }
-            }
-        },
-        getValueAndBind: function () {
-            canLog.warn('can-observation: call start instead of getValueAndBind');
-            return this.start();
-        },
-        start: function () {
-            this.bound = true;
-            this.oldObserved = this.newObserved || {};
+            });
+        }
+        module.exports = CIDMap;
+    }(function () {
+        return this;
+    }()));
+});
+/*can-observation@3.2.0#can-observation*/
+define('can-observation@3.2.0#can-observation', function (require, exports, module) {
+    (function (global) {
+        require('can-event');
+        var canEvent = require('can-event');
+        var canBatch = require('can-event/batch/batch');
+        var assign = require('can-util/js/assign/assign');
+        var isEmptyObject = require('can-util/js/is-empty-object/is-empty-object');
+        var namespace = require('can-namespace');
+        var canLog = require('can-util/js/log/log');
+        var canReflect = require('can-reflect');
+        var canSymbol = require('can-symbol');
+        var CID = require('can-cid');
+        var CIDMap = require('can-util/js/cid-map/cid-map');
+        var CIDSet = require('can-util/js/cid-set/cid-set');
+        function Observation(func, context, compute) {
+            this.newObserved = {};
+            this.oldObserved = null;
+            this.func = func;
+            this.context = context;
+            this.compute = compute && (compute.updater || 'isObservable' in compute) ? compute : { updater: compute };
+            this.isObservable = typeof compute === 'object' ? compute.isObservable : true;
+            var observation = this;
+            this.onDependencyChange = function (value, legacyValue) {
+                observation.dependencyChange(this, value, legacyValue);
+            };
             this.ignore = 0;
-            this.newObserved = {};
-            observationStack.push(this);
-            this.value = this.func.call(this.context);
-            observationStack.pop();
-            this.updateBindings();
-        },
-        updateBindings: function () {
-            var newObserved = this.newObserved, oldObserved = this.oldObserved, name, obEv;
-            for (name in newObserved) {
-                obEv = newObserved[name];
-                if (!oldObserved[name]) {
-                    this.addEdge(obEv);
+            this.needsUpdate = false;
+            this.handlers = null;
+            CID(this);
+        }
+        var observationStack = [];
+        Observation.observationStack = observationStack;
+        var remaining = {
+            updates: 0,
+            notifications: 0
+        };
+        Observation.remaining = remaining;
+        assign(Observation.prototype, {
+            get: function () {
+                if (this.isObservable && Observation.isRecording()) {
+                    Observation.add(this);
+                    if (!this.bound) {
+                        Observation.temporarilyBind(this);
+                    }
+                }
+                if (this.bound) {
+                    canEvent.flush();
+                    if (remaining.updates) {
+                        Observation.updateChildrenAndSelf(this);
+                    }
+                    return this.value;
                 } else {
-                    oldObserved[name] = null;
+                    return this.func.call(this.context);
                 }
-            }
-            for (name in oldObserved) {
-                obEv = oldObserved[name];
-                if (obEv) {
-                    this.removeEdge(obEv);
-                }
-            }
-        },
-        teardown: function () {
-            canLog.warn('can-observation: call stop instead of teardown');
-            return this.stop();
-        },
-        stop: function () {
-            this.bound = false;
-            for (var name in this.newObserved) {
-                var ob = this.newObserved[name];
-                this.removeEdge(ob);
-            }
-            this.newObserved = {};
-        }
-    });
-    var updateOrder = [], curPrimaryDepth = Infinity, maxPrimaryDepth = 0, currentBatchNum, isUpdating = false;
-    var updateUpdateOrder = function (observation) {
-        var primaryDepth = observation.getPrimaryDepth();
-        if (primaryDepth < curPrimaryDepth) {
-            curPrimaryDepth = primaryDepth;
-        }
-        if (primaryDepth > maxPrimaryDepth) {
-            maxPrimaryDepth = primaryDepth;
-        }
-        var primary = updateOrder[primaryDepth] || (updateOrder[primaryDepth] = []);
-        return primary;
-    };
-    Observation.registerUpdate = function (observation, batchNum) {
-        if (observation.needsUpdate) {
-            return;
-        }
-        remaining.updates++;
-        observation.needsUpdate = true;
-        var objs = updateUpdateOrder(observation);
-        objs.push(observation);
-    };
-    var afterCallbacks = [];
-    Observation.updateAndNotify = function (ev, batchNum) {
-        currentBatchNum = batchNum;
-        if (isUpdating) {
-            return;
-        }
-        isUpdating = true;
-        while (true) {
-            if (curPrimaryDepth <= maxPrimaryDepth) {
-                var primary = updateOrder[curPrimaryDepth];
-                var lastUpdate = primary && primary.pop();
-                if (lastUpdate) {
-                    lastUpdate.update(currentBatchNum);
+            },
+            getPrimaryDepth: function () {
+                return this.compute._primaryDepth || 0;
+            },
+            addEdge: function (objEv) {
+                if (objEv.event === 'undefined') {
+                    canReflect.onValue(objEv.obj, this.onDependencyChange);
                 } else {
-                    curPrimaryDepth++;
+                    canReflect.onKeyValue(objEv.obj, objEv.event, this.onDependencyChange);
                 }
-            } else {
-                updateOrder = [];
-                curPrimaryDepth = Infinity;
-                maxPrimaryDepth = 0;
-                isUpdating = false;
-                var afterCB = afterCallbacks;
-                afterCallbacks = [];
-                afterCB.forEach(function (cb) {
-                    cb();
-                });
-                return;
-            }
-        }
-    };
-    canEvent.addEventListener.call(canBatch, 'batchEnd', Observation.updateAndNotify);
-    Observation.afterUpdateAndNotify = function (callback) {
-        canBatch.after(function () {
-            if (isUpdating) {
-                afterCallbacks.push(callback);
-            } else {
-                callback();
+            },
+            removeEdge: function (objEv) {
+                if (objEv.event === 'undefined') {
+                    canReflect.offValue(objEv.obj, this.onDependencyChange);
+                } else {
+                    canReflect.offKeyValue(objEv.obj, objEv.event, this.onDependencyChange);
+                }
+            },
+            dependencyChange: function () {
+                if (this.bound) {
+                    if (canBatch.batchNum !== this.batchNum) {
+                        Observation.registerUpdate(this, canBatch.batchNum);
+                        this.batchNum = canBatch.batchNum;
+                    }
+                }
+            },
+            onDependencyChange: function (value) {
+                this.dependencyChange(value);
+            },
+            update: function (batchNum) {
+                if (this.needsUpdate) {
+                    remaining.updates--;
+                }
+                this.needsUpdate = false;
+                if (this.bound) {
+                    var oldValue = this.value;
+                    this.oldValue = null;
+                    this.start();
+                    if (oldValue !== this.value) {
+                        this.compute.updater(this.value, oldValue, batchNum);
+                        return true;
+                    }
+                }
+            },
+            getValueAndBind: function () {
+                canLog.warn('can-observation: call start instead of getValueAndBind');
+                return this.start();
+            },
+            start: function () {
+                this.bound = true;
+                this.oldObserved = this.newObserved || {};
+                this.ignore = 0;
+                this.newObserved = {};
+                observationStack.push(this);
+                this.value = this.func.call(this.context);
+                observationStack.pop();
+                this.updateBindings();
+            },
+            updateBindings: function () {
+                var newObserved = this.newObserved, oldObserved = this.oldObserved, name, obEv;
+                for (name in newObserved) {
+                    obEv = newObserved[name];
+                    if (!oldObserved[name]) {
+                        this.addEdge(obEv);
+                    } else {
+                        oldObserved[name] = null;
+                    }
+                }
+                for (name in oldObserved) {
+                    obEv = oldObserved[name];
+                    if (obEv) {
+                        this.removeEdge(obEv);
+                    }
+                }
+            },
+            teardown: function () {
+                canLog.warn('can-observation: call stop instead of teardown');
+                return this.stop();
+            },
+            stop: function () {
+                this.bound = false;
+                for (var name in this.newObserved) {
+                    var ob = this.newObserved[name];
+                    this.removeEdge(ob);
+                }
+                this.newObserved = {};
             }
         });
-    };
-    Observation.updateChildrenAndSelf = function (observation) {
-        if (observation.needsUpdate) {
-            return Observation.unregisterAndUpdate(observation);
-        }
-        var childHasChanged;
-        for (var prop in observation.newObserved) {
-            if (observation.newObserved[prop].obj.observation) {
-                if (Observation.updateChildrenAndSelf(observation.newObserved[prop].obj.observation)) {
-                    childHasChanged = true;
+        var updateOrder = [], curPrimaryDepth = Infinity, maxPrimaryDepth = 0, currentBatchNum, isUpdating = false;
+        var updateUpdateOrder = function (observation) {
+            var primaryDepth = observation.getPrimaryDepth();
+            if (primaryDepth < curPrimaryDepth) {
+                curPrimaryDepth = primaryDepth;
+            }
+            if (primaryDepth > maxPrimaryDepth) {
+                maxPrimaryDepth = primaryDepth;
+            }
+            var primary = updateOrder[primaryDepth] || (updateOrder[primaryDepth] = []);
+            return primary;
+        };
+        Observation.registerUpdate = function (observation, batchNum) {
+            if (observation.needsUpdate) {
+                return;
+            }
+            remaining.updates++;
+            observation.needsUpdate = true;
+            var objs = updateUpdateOrder(observation);
+            objs.push(observation);
+        };
+        var afterCallbacks = [];
+        Observation.updateAndNotify = function (ev, batchNum) {
+            currentBatchNum = batchNum;
+            if (isUpdating) {
+                return;
+            }
+            isUpdating = true;
+            while (true) {
+                if (curPrimaryDepth <= maxPrimaryDepth) {
+                    var primary = updateOrder[curPrimaryDepth];
+                    var lastUpdate = primary && primary.pop();
+                    if (lastUpdate) {
+                        lastUpdate.update(currentBatchNum);
+                    } else {
+                        curPrimaryDepth++;
+                    }
+                } else {
+                    updateOrder = [];
+                    curPrimaryDepth = Infinity;
+                    maxPrimaryDepth = 0;
+                    isUpdating = false;
+                    var afterCB = afterCallbacks;
+                    afterCallbacks = [];
+                    afterCB.forEach(function (cb) {
+                        cb();
+                    });
+                    return;
                 }
             }
-        }
-        if (childHasChanged) {
-            return observation.update(currentBatchNum);
-        }
-    };
-    Observation.unregisterAndUpdate = function (observation) {
-        var primaryDepth = observation.getPrimaryDepth();
-        var primary = updateOrder[primaryDepth];
-        if (primary) {
-            var index = primary.indexOf(observation);
-            if (index !== -1) {
-                primary.splice(index, 1);
+        };
+        canEvent.addEventListener.call(canBatch, 'batchEnd', Observation.updateAndNotify);
+        Observation.afterUpdateAndNotify = function (callback) {
+            canBatch.after(function () {
+                if (isUpdating) {
+                    afterCallbacks.push(callback);
+                } else {
+                    callback();
+                }
+            });
+        };
+        Observation.updateChildrenAndSelf = function (observation) {
+            if (observation.needsUpdate) {
+                return Observation.unregisterAndUpdate(observation);
             }
-        }
-        return observation.update(currentBatchNum);
-    };
-    Observation.add = function (obj, event) {
-        var top = observationStack[observationStack.length - 1];
-        if (top && !top.ignore) {
-            var evStr = event + '', name = obj._cid + '|' + evStr;
-            if (top.traps) {
-                top.traps.push({
-                    obj: obj,
-                    event: evStr,
-                    name: name
-                });
-            } else {
-                top.newObserved[name] = {
-                    obj: obj,
-                    event: evStr
-                };
-            }
-        }
-    };
-    Observation.addAll = function (observes) {
-        var top = observationStack[observationStack.length - 1];
-        if (top) {
-            if (top.traps) {
-                top.traps.push.apply(top.traps, observes);
-            } else {
-                for (var i = 0, len = observes.length; i < len; i++) {
-                    var trap = observes[i], name = trap.name;
-                    if (!top.newObserved[name]) {
-                        top.newObserved[name] = trap;
+            var childHasChanged;
+            for (var prop in observation.newObserved) {
+                if (observation.newObserved[prop].obj.observation) {
+                    if (Observation.updateChildrenAndSelf(observation.newObserved[prop].obj.observation)) {
+                        childHasChanged = true;
                     }
                 }
             }
-        }
-    };
-    Observation.ignore = function (fn) {
-        return function () {
-            if (observationStack.length) {
-                var top = observationStack[observationStack.length - 1];
-                top.ignore++;
-                var res = fn.apply(this, arguments);
-                top.ignore--;
-                return res;
-            } else {
-                return fn.apply(this, arguments);
+            if (childHasChanged) {
+                return observation.update(currentBatchNum);
             }
         };
-    };
-    Observation.trap = function () {
-        if (observationStack.length) {
+        Observation.unregisterAndUpdate = function (observation) {
+            var primaryDepth = observation.getPrimaryDepth();
+            var primary = updateOrder[primaryDepth];
+            if (primary) {
+                var index = primary.indexOf(observation);
+                if (index !== -1) {
+                    primary.splice(index, 1);
+                }
+            }
+            return observation.update(currentBatchNum);
+        };
+        Observation.add = function (obj, event) {
             var top = observationStack[observationStack.length - 1];
-            var oldTraps = top.traps;
-            var traps = top.traps = [];
-            return function () {
-                top.traps = oldTraps;
-                return traps;
-            };
-        } else {
-            return function () {
-                return [];
-            };
-        }
-    };
-    Observation.trapsCount = function () {
-        if (observationStack.length) {
+            if (top && !top.ignore) {
+                var evStr = event + '', name = obj._cid + '|' + evStr;
+                if (top.traps) {
+                    top.traps.push({
+                        obj: obj,
+                        event: evStr,
+                        name: name
+                    });
+                } else {
+                    top.newObserved[name] = {
+                        obj: obj,
+                        event: evStr
+                    };
+                }
+            }
+        };
+        Observation.addAll = function (observes) {
             var top = observationStack[observationStack.length - 1];
-            return top.traps.length;
+            if (top) {
+                if (top.traps) {
+                    top.traps.push.apply(top.traps, observes);
+                } else {
+                    for (var i = 0, len = observes.length; i < len; i++) {
+                        var trap = observes[i], name = trap.name;
+                        if (!top.newObserved[name]) {
+                            top.newObserved[name] = trap;
+                        }
+                    }
+                }
+            }
+        };
+        Observation.ignore = function (fn) {
+            return function () {
+                if (observationStack.length) {
+                    var top = observationStack[observationStack.length - 1];
+                    top.ignore++;
+                    var res = fn.apply(this, arguments);
+                    top.ignore--;
+                    return res;
+                } else {
+                    return fn.apply(this, arguments);
+                }
+            };
+        };
+        Observation.trap = function () {
+            if (observationStack.length) {
+                var top = observationStack[observationStack.length - 1];
+                var oldTraps = top.traps;
+                var traps = top.traps = [];
+                return function () {
+                    top.traps = oldTraps;
+                    return traps;
+                };
+            } else {
+                return function () {
+                    return [];
+                };
+            }
+        };
+        Observation.trapsCount = function () {
+            if (observationStack.length) {
+                var top = observationStack[observationStack.length - 1];
+                return top.traps.length;
+            } else {
+                return 0;
+            }
+        };
+        Observation.isRecording = function () {
+            var len = observationStack.length;
+            var last = len && observationStack[len - 1];
+            return last && last.ignore === 0 && last;
+        };
+        var noop = function () {
+        };
+        var observables;
+        var unbindComputes = function () {
+            for (var i = 0, len = observables.length; i < len; i++) {
+                canReflect.offValue(observables[i], noop);
+            }
+            observables = null;
+        };
+        Observation.temporarilyBind = function (compute) {
+            var computeInstance = compute.computeInstance || compute;
+            canReflect.onValue(computeInstance, noop);
+            if (!observables) {
+                observables = [];
+                setTimeout(unbindComputes, 10);
+            }
+            observables.push(computeInstance);
+        };
+        var callHandlers = function (newValue) {
+            this.handlers.forEach(function (handler) {
+                canBatch.queue([
+                    handler,
+                    this.compute,
+                    [newValue]
+                ]);
+            }, this);
+        };
+        canReflect.set(Observation.prototype, canSymbol.for('can.onValue'), function (handler) {
+            if (!this.handlers) {
+                this.handlers = [];
+                this.compute.updater = callHandlers.bind(this);
+                this.start();
+            }
+            this.handlers.push(handler);
+        });
+        canReflect.set(Observation.prototype, canSymbol.for('can.offValue'), function (handler) {
+            if (this.handlers) {
+                var index = this.handlers.indexOf(handler);
+                this.handlers.splice(index, 1);
+                if (this.handlers.length === 0) {
+                    this.stop();
+                }
+            }
+        });
+        canReflect.set(Observation.prototype, canSymbol.for('can.getValue'), Observation.prototype.get);
+        Observation.prototype.hasDependencies = function () {
+            return this.bound ? !isEmptyObject(this.newObserved) : undefined;
+        };
+        canReflect.set(Observation.prototype, canSymbol.for('can.isValueLike'), true);
+        canReflect.set(Observation.prototype, canSymbol.for('can.isMapLike'), false);
+        canReflect.set(Observation.prototype, canSymbol.for('can.isListLike'), false);
+        canReflect.set(Observation.prototype, canSymbol.for('can.valueHasDependencies'), Observation.prototype.hasDependencies);
+        canReflect.set(Observation.prototype, canSymbol.for('can.getValueDependencies'), function () {
+            var rets;
+            if (this.bound) {
+                rets = {};
+                canReflect.eachKey(this.newObserved || {}, function (dep) {
+                    if (canReflect.isValueLike(dep.obj)) {
+                        rets.valueDependencies = rets.valueDependencies || new CIDSet();
+                        rets.valueDependencies.add(dep.obj);
+                    } else {
+                        rets.keyDependencies = rets.keyDependencies || new CIDMap();
+                        if (rets.keyDependencies.get(dep.obj)) {
+                            rets.keyDependencies.get(dep.obj).push(dep.event);
+                        } else {
+                            rets.keyDependencies.set(dep.obj, [dep.event]);
+                        }
+                    }
+                });
+            }
+            return rets;
+        });
+        if (namespace.Observation) {
+            throw new Error('You can\'t have two versions of can-observation, check your dependencies');
         } else {
-            return 0;
+            module.exports = namespace.Observation = Observation;
         }
-    };
-    Observation.isRecording = function () {
-        var len = observationStack.length;
-        var last = len && observationStack[len - 1];
-        return last && last.ignore === 0 && last;
-    };
-    if (namespace.Observation) {
-        throw new Error('You can\'t have two versions of can-observation, check your dependencies');
-    } else {
-        module.exports = namespace.Observation = Observation;
-    }
+    }(function () {
+        return this;
+    }()));
 });
-/*can-event@3.4.0#lifecycle/lifecycle*/
-define('can-event@3.4.0#lifecycle/lifecycle', function (require, exports, module) {
+/*can-event@3.5.0#lifecycle/lifecycle*/
+define('can-event@3.5.0#lifecycle/lifecycle', function (require, exports, module) {
     var canEvent = require('can-event');
     var lifecycle = function (prototype) {
         var baseAddEventListener = prototype.addEventListener;
@@ -3181,23 +3958,165 @@ define('can-event@3.4.0#lifecycle/lifecycle', function (require, exports, module
     lifecycle.removeAndTeardown = baseEvents.removeEventListener;
     module.exports = lifecycle;
 });
-/*can-util@3.8.4#js/is-promise-like/is-promise-like*/
-define('can-util@3.8.4#js/is-promise-like/is-promise-like', function (require, exports, module) {
+/*can-util@3.9.1#js/is-promise-like/is-promise-like*/
+define('can-util@3.9.1#js/is-promise-like/is-promise-like', function (require, exports, module) {
     'use strict';
     module.exports = function (obj) {
         return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
     };
 });
-/*can-observation@3.1.7#reader/reader*/
-define('can-observation@3.1.7#reader/reader', function (require, exports, module) {
-    var Observation = require('can-observation');
-    var assign = require('can-util/js/assign/assign');
-    var CID = require('can-cid');
-    var types = require('can-types');
+/*can-reflect-promise@1.0.3#can-reflect-promise*/
+define('can-reflect-promise@1.0.3#can-reflect-promise', function (require, exports, module) {
+    var canReflect = require('can-reflect');
+    var canSymbol = require('can-symbol');
     var dev = require('can-util/js/dev/dev');
+    var Observation = require('can-observation');
+    var CID = require('can-cid');
+    var assign = require('can-util/js/assign/assign');
     var canEvent = require('can-event');
+    var singleReference = require('can-util/js/single-reference/single-reference');
+    var getValueSymbol = canSymbol.for('can.getValue'), getKeyValueSymbol = canSymbol.for('can.getKeyValue'), onValueSymbol = canSymbol.for('can.onValue'), onKeyValueSymbol = canSymbol.for('can.onKeyValue'), offKeyValueSymbol = canSymbol.for('can.offKeyValue'), observeDataSymbol = canSymbol.for('can.observeData');
+    var promiseDataPrototype = {
+        isPending: true,
+        state: 'pending',
+        isResolved: false,
+        isRejected: false,
+        value: undefined,
+        reason: undefined
+    };
+    assign(promiseDataPrototype, canEvent);
+    canReflect.set(promiseDataPrototype, onKeyValueSymbol, function (key, handler) {
+        var observeData = this;
+        var translated = function () {
+            handler(observeData[key]);
+        };
+        singleReference.set(handler, this, translated, key);
+        canEvent.on.call(this, 'state', translated);
+    });
+    canReflect.set(promiseDataPrototype, offKeyValueSymbol, function (key, handler) {
+        var translated = singleReference.getAndDelete(handler, this, key);
+        canEvent.off.call(this, 'state', translated);
+    });
+    function initPromise(promise) {
+        var observeData = promise[observeDataSymbol];
+        if (!observeData) {
+            Object.defineProperty(promise, observeDataSymbol, {
+                enumerable: false,
+                configurable: false,
+                writable: false,
+                value: Object.create(promiseDataPrototype)
+            });
+            observeData = promise[observeDataSymbol];
+            CID(observeData);
+        }
+        promise.then(function (value) {
+            observeData.isPending = false;
+            observeData.isResolved = true;
+            observeData.value = value;
+            observeData.state = 'resolved';
+            observeData.dispatch('state', [
+                'resolved',
+                'pending'
+            ]);
+        }, function (reason) {
+            observeData.isPending = false;
+            observeData.isRejected = true;
+            observeData.reason = reason;
+            observeData.state = 'rejected';
+            observeData.dispatch('state', [
+                'rejected',
+                'pending'
+            ]);
+        });
+    }
+    function setupPromise(value) {
+        var oldPromiseFn;
+        var proto = 'getPrototypeOf' in Object ? Object.getPrototypeOf(value) : value.__proto__;
+        if (value[getKeyValueSymbol] && value[observeDataSymbol]) {
+            return;
+        }
+        if (proto === null || proto === Object.prototype) {
+            proto = value;
+            if (typeof proto.promise === 'function') {
+                oldPromiseFn = proto.promise;
+                proto.promise = function () {
+                    var result = oldPromiseFn.call(proto);
+                    setupPromise(result);
+                    return result;
+                };
+            }
+        }
+        [
+            getKeyValueSymbol,
+            function (key) {
+                if (!this[observeDataSymbol]) {
+                    initPromise(this);
+                }
+                Observation.add(this[observeDataSymbol], 'state');
+                switch (key) {
+                case 'state':
+                case 'isPending':
+                case 'isResolved':
+                case 'isRejected':
+                case 'value':
+                case 'reason':
+                    return this[observeDataSymbol][key];
+                default:
+                    return this[key];
+                }
+            },
+            getValueSymbol,
+            function () {
+                return this[getKeyValueSymbol]('value');
+            },
+            canSymbol.for('can.isValueLike'),
+            false,
+            onValueSymbol,
+            function (handler) {
+                return this[onKeyValueSymbol]('value', handler);
+            },
+            onKeyValueSymbol,
+            function (key, handler) {
+                if (!this[observeDataSymbol]) {
+                    initPromise(this);
+                }
+                var promise = this;
+                var translated = function () {
+                    handler(promise[getKeyValueSymbol](key));
+                };
+                singleReference.set(handler, this, translated, key);
+                canEvent.on.call(this[observeDataSymbol], 'state', translated);
+            },
+            canSymbol.for('can.offValue'),
+            function (handler) {
+                return this[offKeyValueSymbol]('value', handler);
+            },
+            offKeyValueSymbol,
+            function (key, handler) {
+                var translated = singleReference.getAndDelete(handler, this, key);
+                if (translated) {
+                    canEvent.off.call(this[observeDataSymbol], 'state', translated);
+                }
+            }
+        ].forEach(function (symbol, index, list) {
+            if (index % 2 === 0) {
+                canReflect.set(proto, symbol, list[index + 1]);
+            }
+        });
+    }
+    module.exports = setupPromise;
+});
+/*can-observation@3.2.0#reader/reader*/
+define('can-observation@3.2.0#reader/reader', function (require, exports, module) {
+    var Observation = require('can-observation');
+    var dev = require('can-util/js/dev/dev');
     var each = require('can-util/js/each/each');
+    var canSymbol = require('can-symbol');
+    var canReflect = require('can-reflect');
     var isPromiseLike = require('can-util/js/is-promise-like/is-promise-like');
+    var canReflectPromise = require('can-reflect-promise');
+    var getValueSymbol = canSymbol.for('can.getValue');
+    var isValueLikeSymbol = canSymbol.for('can.isValueLike');
     var observeReader;
     var isAt = function (index, reads) {
         var prevRead = reads[index - 1];
@@ -3284,12 +4203,12 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
             {
                 name: 'function',
                 test: function (value, i, reads, options) {
-                    return types.isCallableForValue(value) && !types.isCompute(value);
+                    return value && canReflect.isFunctionLike(value) && !canReflect.isConstructorLike(value);
                 },
                 read: function (value, i, reads, options, state, prev) {
                     if (isAt(i, reads)) {
                         return i === reads.length ? value.bind(prev) : value;
-                    } else if (options.callMethodsOnObservables && types.isMapLike(prev)) {
+                    } else if (options.callMethodsOnObservables && canReflect.isObservableLike(prev) && canReflect.isMapLike(prev)) {
                         return value.apply(prev, options.args || []);
                     } else if (options.isArgument && i === reads.length) {
                         return options.proxyMethods !== false ? value.bind(prev) : value;
@@ -3298,15 +4217,15 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
                 }
             },
             {
-                name: 'compute',
+                name: 'isValueLike',
                 test: function (value, i, reads, options) {
-                    return types.isCompute(value) && !isAt(i, reads);
+                    return value && value[getValueSymbol] && value[isValueLikeSymbol] !== false && (options.foundAt || !isAt(i, reads));
                 },
                 read: function (value, i, reads, options, state) {
                     if (options.readCompute === false && i === reads.length) {
                         return value;
                     }
-                    return value.get ? value.get() : value();
+                    return canReflect.getValue(value);
                 },
                 write: function (base, newVal) {
                     if (base.set) {
@@ -3321,73 +4240,28 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
         propertyReaders: [
             {
                 name: 'map',
-                test: function () {
-                    return types.isMapLike.apply(this, arguments) || types.isListLike.apply(this, arguments);
+                test: function (value) {
+                    if (isPromiseLike(value) || typeof value === 'object' && typeof value.then === 'function') {
+                        canReflectPromise(value);
+                    }
+                    return canReflect.isObservableLike(value) && canReflect.isMapLike(value);
                 },
                 read: function (value, prop, index, options, state) {
-                    var res = value.get ? value.get(prop.key) : value.attr(prop.key);
+                    var res = canReflect.getKeyValue(value, prop.key);
                     if (res !== undefined) {
                         return res;
                     } else {
                         return value[prop.key];
                     }
                 },
-                write: function (base, prop, newVal) {
-                    if (typeof base.set === 'function') {
-                        base.set(prop, newVal);
-                    } else {
-                        base.attr(prop, newVal);
-                    }
-                }
-            },
-            {
-                name: 'promise',
-                test: function (value) {
-                    return isPromiseLike(value);
-                },
-                read: function (value, prop, index, options, state) {
-                    var observeData = value.__observeData;
-                    if (!value.__observeData) {
-                        observeData = value.__observeData = {
-                            isPending: true,
-                            state: 'pending',
-                            isResolved: false,
-                            isRejected: false,
-                            value: undefined,
-                            reason: undefined
-                        };
-                        CID(observeData);
-                        assign(observeData, canEvent);
-                        value.then(function (value) {
-                            observeData.isPending = false;
-                            observeData.isResolved = true;
-                            observeData.value = value;
-                            observeData.state = 'resolved';
-                            observeData.dispatch('state', [
-                                'resolved',
-                                'pending'
-                            ]);
-                        }, function (reason) {
-                            observeData.isPending = false;
-                            observeData.isRejected = true;
-                            observeData.reason = reason;
-                            observeData.state = 'rejected';
-                            observeData.dispatch('state', [
-                                'rejected',
-                                'pending'
-                            ]);
-                        });
-                    }
-                    Observation.add(observeData, 'state');
-                    return prop.key in observeData ? observeData[prop.key] : value[prop.key];
-                }
+                write: canReflect.setKeyValue
             },
             {
                 name: 'object',
                 test: function () {
                     return true;
                 },
-                read: function (value, prop) {
+                read: function (value, prop, i, options) {
                     if (value == null) {
                         return undefined;
                     } else {
@@ -3395,6 +4269,7 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
                             if (prop.key in value) {
                                 return value[prop.key];
                             } else if (prop.at && specialRead[prop.key] && '@' + prop.key in value) {
+                                options.foundAt = true;
                                 return value['@' + prop.key];
                             }
                         } else {
@@ -3443,6 +4318,7 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
         write: function (parent, key, value, options) {
             var keys = typeof key === 'string' ? observeReader.reads(key) : key;
             var last;
+            options = options || {};
             if (keys.length > 1) {
                 last = keys.pop();
                 parent = observeReader.read(parent, keys, options).value;
@@ -3450,16 +4326,19 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
             } else {
                 last = keys[0];
             }
-            if (observeReader.valueReadersMap.compute.test(parent[last.key], keys.length - 1, keys, options)) {
-                observeReader.valueReadersMap.compute.write(parent[last.key], value, options);
+            if (observeReader.valueReadersMap.isValueLike.test(parent[last.key], keys.length - 1, keys, options)) {
+                observeReader.valueReadersMap.isValueLike.write(parent[last.key], value, options);
             } else {
-                if (observeReader.valueReadersMap.compute.test(parent, keys.length - 1, keys, options)) {
+                if (observeReader.valueReadersMap.isValueLike.test(parent, keys.length - 1, keys, options)) {
                     parent = parent();
                 }
                 if (observeReader.propertyReadersMap.map.test(parent)) {
                     observeReader.propertyReadersMap.map.write(parent, last.key, value, options);
                 } else if (observeReader.propertyReadersMap.object.test(parent)) {
                     observeReader.propertyReadersMap.object.write(parent, last.key, value, options);
+                    if (options.observation) {
+                        options.observation.update();
+                    }
                 }
             }
         }
@@ -3473,32 +4352,21 @@ define('can-observation@3.1.7#reader/reader', function (require, exports, module
     observeReader.set = observeReader.write;
     module.exports = observeReader;
 });
-/*can-util@3.8.4#js/set-immediate/set-immediate*/
-define('can-util@3.8.4#js/set-immediate/set-immediate', function (require, exports, module) {
-    (function (global) {
-        'use strict';
-        var global = require('../global/global')();
-        module.exports = global.setImmediate || function (cb) {
-            return setTimeout(cb, 0);
-        };
-    }(function () {
-        return this;
-    }()));
-});
-/*can-compute@3.0.10#proto-compute*/
-define('can-compute@3.0.10#proto-compute', function (require, exports, module) {
+/*can-compute@3.2.0#proto-compute*/
+define('can-compute@3.2.0#proto-compute', function (require, exports, module) {
     var Observation = require('can-observation');
     var canEvent = require('can-event');
     var eventLifecycle = require('can-event/lifecycle/lifecycle');
     require('can-event/batch/batch');
     var observeReader = require('can-observation/reader/reader');
     var getObject = require('can-util/js/get/get');
-    var setImmediate = require('can-util/js/set-immediate/set-immediate');
     var CID = require('can-cid');
     var assign = require('can-util/js/assign/assign');
-    var types = require('can-types');
-    var isEmptyObject = require('can-util/js/is-empty-object/is-empty-object');
     var canLog = require('can-util/js/log/log');
+    var canReflect = require('can-reflect');
+    var canSymbol = require('can-symbol');
+    var CIDSet = require('can-util/js/cid-set/cid-set');
+    var singleReference = require('can-util/js/single-reference/single-reference');
     var Compute = function (getterSetter, context, eventName, bindOnce) {
         CID(this, 'compute');
         var args = [];
@@ -3510,8 +4378,9 @@ define('can-compute@3.0.10#proto-compute', function (require, exports, module) {
             this._setupGetterSetterFn(args[0], args[1], args[2], args[3]);
         } else if (args[1] !== undefined) {
             if (contextType === 'string' || contextType === 'number') {
-                var isListLike = types.isListLike(args[0]);
-                if (types.isMapLike(args[0]) || isListLike) {
+                var isListLike = canReflect.isObservableLike(args[0]) && canReflect.isListLike(args[0]);
+                var isMapLike = canReflect.isObservableLike(args[0]) && canReflect.isMapLike(args[0]);
+                if (isMapLike || isListLike) {
                     var map = args[0];
                     var propertyName = args[1];
                     var mapGetterSetter = function (newValue) {
@@ -3563,7 +4432,6 @@ define('can-compute@3.0.10#proto-compute', function (require, exports, module) {
             _on: function () {
                 observation.start();
                 compute.value = observation.value;
-                compute.hasDependencies = !isEmptyObject(observation.newObserved);
             },
             _off: function () {
                 observation.stop();
@@ -3593,8 +4461,13 @@ define('can-compute@3.0.10#proto-compute', function (require, exports, module) {
                 return getObject(target, propertyName);
             };
             this._set = function (value) {
-                var properties = propertyName.split('.'), leafPropertyName = properties.pop(), targetProperty = getObject(target, properties.join('.'));
-                targetProperty[leafPropertyName] = value;
+                var properties = propertyName.split('.'), leafPropertyName = properties.pop();
+                if (properties.length) {
+                    var targetProperty = getObject(target, properties.join('.'));
+                    targetProperty[leafPropertyName] = value;
+                } else {
+                    target[propertyName] = value;
+                }
             };
             this._on = function (update) {
                 canEvent.on.call(target, eventName || propertyName, handler);
@@ -3736,26 +4609,26 @@ define('can-compute@3.0.10#proto-compute', function (require, exports, module) {
             return this.get();
         }
     });
+    var hasDependencies = function () {
+        return this.observation && this.observation.hasDependencies();
+    };
+    Object.defineProperty(Compute.prototype, 'hasDependencies', { get: hasDependencies });
+    canReflect.set(Compute.prototype, canSymbol.for('can.valueHasDependencies'), hasDependencies);
     Compute.prototype.on = Compute.prototype.bind = Compute.prototype.addEventListener;
     Compute.prototype.off = Compute.prototype.unbind = Compute.prototype.removeEventListener;
-    var k = function () {
-    };
-    var computes;
-    var unbindComputes = function () {
-        for (var i = 0, len = computes.length; i < len; i++) {
-            computes[i].removeEventListener('change', k);
-        }
-        computes = null;
-    };
-    Compute.temporarilyBind = function (compute) {
-        var computeInstance = compute.computeInstance || compute;
-        computeInstance.addEventListener('change', k);
-        if (!computes) {
-            computes = [];
-            setImmediate(unbindComputes);
-        }
-        computes.push(computeInstance);
-    };
+    canReflect.set(Compute.prototype, canSymbol.for('can.onValue'), function (handler) {
+        var translationHandler = function (ev, newValue) {
+            handler(newValue);
+        };
+        singleReference.set(handler, this, translationHandler);
+        this.addEventListener('change', translationHandler);
+    });
+    canReflect.set(Compute.prototype, canSymbol.for('can.offValue'), function (handler) {
+        this.removeEventListener('change', singleReference.getAndDelete(handler, this));
+    });
+    canReflect.set(Compute.prototype, canSymbol.for('can.getValue'), Compute.prototype.get);
+    canReflect.set(Compute.prototype, canSymbol.for('can.setValue'), Compute.prototype.set);
+    Compute.temporarilyBind = Observation.temporarilyBind;
     Compute.async = function (initialValue, asyncComputer, context) {
         return new Compute(initialValue, {
             fn: asyncComputer,
@@ -3771,34 +4644,61 @@ define('can-compute@3.0.10#proto-compute', function (require, exports, module) {
             return !!res;
         });
     };
+    canReflect.set(Compute.prototype, canSymbol.for('can.setValue'), Compute.prototype.set);
+    canReflect.set(Compute.prototype, canSymbol.for('can.isValueLike'), true);
+    canReflect.set(Compute.prototype, canSymbol.for('can.isMapLike'), false);
+    canReflect.set(Compute.prototype, canSymbol.for('can.isListLike'), false);
+    canReflect.set(Compute.prototype, canSymbol.for('can.valueHasDependencies'), function () {
+        return !!this.observation;
+    });
+    canReflect.set(Compute.prototype, canSymbol.for('can.getValueDependencies'), function () {
+        var ret;
+        if (this.observation) {
+            ret = { valueDependencies: new CIDSet() };
+            ret.valueDependencies.add(this.observation);
+        }
+        return ret;
+    });
     module.exports = exports = Compute;
 });
-/*can-compute@3.0.10#can-compute*/
-define('can-compute@3.0.10#can-compute', function (require, exports, module) {
+/*can-compute@3.2.0#can-compute*/
+define('can-compute@3.2.0#can-compute', function (require, exports, module) {
     require('can-event');
     require('can-event/batch/batch');
     var Compute = require('./proto-compute');
     var CID = require('can-cid');
     var namespace = require('can-namespace');
+    var singleReference = require('can-util/js/single-reference/single-reference');
+    var canReflect = require('can-reflect/reflections/get-set/get-set');
+    var canSymbol = require('can-symbol');
+    var canOnValueSymbol = canSymbol.for('can.onValue'), canOffValueSymbol = canSymbol.for('can.offValue'), canGetValue = canSymbol.for('can.getValue'), canSetValue = canSymbol.for('can.setValue'), isValueLike = canSymbol.for('can.isValueLike'), isMapLike = canSymbol.for('can.isMapLike'), isListLike = canSymbol.for('can.isListLike'), isFunctionLike = canSymbol.for('can.isFunctionLike'), canValueHasDependencies = canSymbol.for('can.valueHasDependencies'), canGetValueDependencies = canSymbol.for('can.getValueDependencies');
     var addEventListener = function (ev, handler) {
         var compute = this;
-        var computeHandler = handler && handler[compute.handlerKey];
-        if (handler && !computeHandler) {
-            computeHandler = handler[compute.handlerKey] = function () {
+        var translationHandler;
+        if (handler) {
+            translationHandler = function () {
                 handler.apply(compute, arguments);
             };
+            singleReference.set(handler, this, translationHandler);
         }
-        return compute.computeInstance.addEventListener(ev, computeHandler);
+        return compute.computeInstance.addEventListener(ev, translationHandler);
     };
     var removeEventListener = function (ev, handler) {
-        var compute = this;
-        var computeHandler = handler && handler[compute.handlerKey];
-        if (computeHandler) {
-            delete handler[compute.handlerKey];
-            return compute.computeInstance.removeEventListener(ev, computeHandler);
-        }
-        return compute.computeInstance.removeEventListener.apply(compute.computeInstance, arguments);
+        return this.computeInstance.removeEventListener(ev, handler && singleReference.getAndDelete(handler, this));
     };
+    var onValue = function (handler) {
+            return this.computeInstance[canOnValueSymbol](handler);
+        }, offValue = function (handler) {
+            return this.computeInstance[canOffValueSymbol](handler);
+        }, getValue = function () {
+            return this.computeInstance.get();
+        }, setValue = function (value) {
+            return this.computeInstance.set(value);
+        }, hasDependencies = function () {
+            return this.computeInstance.hasDependencies;
+        }, getDependencies = function () {
+            return this.computeInstance[canGetValueDependencies]();
+        };
     var COMPUTE = function (getterSetter, context, eventName, bindOnce) {
         function compute(val) {
             if (arguments.length) {
@@ -3818,6 +4718,16 @@ define('can-compute@3.0.10#can-compute', function (require, exports, module) {
             }
             return COMPUTE(getterSetter, context, ctx, bindOnce);
         };
+        canReflect.set(compute, canOnValueSymbol, onValue);
+        canReflect.set(compute, canOffValueSymbol, offValue);
+        canReflect.set(compute, canGetValue, getValue);
+        canReflect.set(compute, canSetValue, setValue);
+        canReflect.set(compute, isValueLike, true);
+        canReflect.set(compute, isMapLike, false);
+        canReflect.set(compute, isListLike, false);
+        canReflect.set(compute, isFunctionLike, false);
+        canReflect.set(compute, canValueHasDependencies, hasDependencies);
+        canReflect.set(compute, canGetValueDependencies, getDependencies);
         return compute;
     };
     COMPUTE.truthy = function (compute) {
@@ -3835,8 +4745,8 @@ define('can-compute@3.0.10#can-compute', function (require, exports, module) {
     COMPUTE.temporarilyBind = Compute.temporarilyBind;
     module.exports = namespace.compute = COMPUTE;
 });
-/*can-control@3.0.10#can-control*/
-define('can-control@3.0.10#can-control', function (require, exports, module) {
+/*can-control@3.1.0#can-control*/
+define('can-control@3.1.0#can-control', function (require, exports, module) {
     var Construct = require('can-construct');
     var namespace = require('can-namespace');
     var string = require('can-util/js/string/string');
@@ -3852,6 +4762,7 @@ define('can-control@3.0.10#can-control', function (require, exports, module) {
     var canEvent = require('can-event');
     var canCompute = require('can-compute');
     var observeReader = require('can-observation/reader/reader');
+    var canReflect = require('can-reflect');
     var processors;
     require('can-util/dom/dispatch/dispatch');
     require('can-util/dom/events/delegate/delegate');
@@ -3914,7 +4825,7 @@ define('can-control@3.0.10#can-control', function (require, exports, module) {
                         if (value === undefined && typeof window !== 'undefined') {
                             value = get(window, key);
                         }
-                        if (!parent || !types.isMapLike(parent) && !value) {
+                        if (!parent || !(canReflect.isObservableLike(parent) && canReflect.isMapLike(parent)) && !value) {
                             return null;
                         }
                         if (typeof value === 'string') {
@@ -3990,7 +4901,7 @@ define('can-control@3.0.10#can-control', function (require, exports, module) {
                 domData.set.call(this.element, 'controls', arr);
             }
             arr.push(this);
-            if (types.isMapLike(options)) {
+            if (canReflect.isObservableLike(options) && canReflect.isMapLike(options)) {
                 for (var prop in cls.defaults) {
                     if (!options.hasOwnProperty(prop)) {
                         observeReader.set(options, prop, cls.defaults[prop]);
@@ -4123,8 +5034,8 @@ define('can-control@3.0.10#can-control', function (require, exports, module) {
     });
     module.exports = namespace.Control = Control;
 });
-/*can-view-parser@3.3.0#can-view-parser*/
-define('can-view-parser@3.3.0#can-view-parser', function (require, exports, module) {
+/*can-view-parser@3.4.0#can-view-parser*/
+define('can-view-parser@3.4.0#can-view-parser', function (require, exports, module) {
     var namespace = require('can-namespace'), dev = require('can-util/js/dev/dev');
     function each(items, callback) {
         for (var i = 0; i < items.length; i++) {
@@ -4475,8 +5386,20 @@ define('can-view-parser@3.3.0#can-view-parser', function (require, exports, modu
     };
     module.exports = namespace.HTMLParser = HTMLParser;
 });
-/*can-util@3.8.4#dom/child-nodes/child-nodes*/
-define('can-util@3.8.4#dom/child-nodes/child-nodes', function (require, exports, module) {
+/*can-util@3.9.1#js/set-immediate/set-immediate*/
+define('can-util@3.9.1#js/set-immediate/set-immediate', function (require, exports, module) {
+    (function (global) {
+        'use strict';
+        var global = require('../global/global')();
+        module.exports = global.setImmediate || function (cb) {
+            return setTimeout(cb, 0);
+        };
+    }(function () {
+        return this;
+    }()));
+});
+/*can-util@3.9.1#dom/child-nodes/child-nodes*/
+define('can-util@3.9.1#dom/child-nodes/child-nodes', function (require, exports, module) {
     'use strict';
     function childNodes(node) {
         var childNodes = node.childNodes;
@@ -4494,15 +5417,15 @@ define('can-util@3.8.4#dom/child-nodes/child-nodes', function (require, exports,
     }
     module.exports = childNodes;
 });
-/*can-util@3.8.4#dom/contains/contains*/
-define('can-util@3.8.4#dom/contains/contains', function (require, exports, module) {
+/*can-util@3.9.1#dom/contains/contains*/
+define('can-util@3.9.1#dom/contains/contains', function (require, exports, module) {
     'use strict';
     module.exports = function (child) {
         return this.contains(child);
     };
 });
-/*can-util@3.8.4#dom/mutate/mutate*/
-define('can-util@3.8.4#dom/mutate/mutate', function (require, exports, module) {
+/*can-util@3.9.1#dom/mutate/mutate*/
+define('can-util@3.9.1#dom/mutate/mutate', function (require, exports, module) {
     'use strict';
     var makeArray = require('../../js/make-array/make-array');
     var setImmediate = require('../../js/set-immediate/set-immediate');
@@ -4640,8 +5563,8 @@ define('can-util@3.8.4#dom/mutate/mutate', function (require, exports, module) {
         }
     };
 });
-/*can-view-callbacks@3.0.6#can-view-callbacks*/
-define('can-view-callbacks@3.0.6#can-view-callbacks', function (require, exports, module) {
+/*can-view-callbacks@3.1.0#can-view-callbacks*/
+define('can-view-callbacks@3.1.0#can-view-callbacks', function (require, exports, module) {
     (function (global) {
         var Observation = require('can-observation');
         var dev = require('can-util/js/dev/dev');
@@ -4729,21 +5652,43 @@ define('can-view-callbacks@3.0.6#can-view-callbacks', function (require, exports
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/is-of-global-document/is-of-global-document*/
-define('can-util@3.8.4#dom/is-of-global-document/is-of-global-document', function (require, exports, module) {
+/*can-util@3.9.1#dom/is-of-global-document/is-of-global-document*/
+define('can-util@3.9.1#dom/is-of-global-document/is-of-global-document', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document');
     module.exports = function (el) {
         return (el.ownerDocument || el) === getDocument();
     };
 });
-/*can-util@3.8.4#js/diff/diff*/
-define('can-util@3.8.4#js/diff/diff', function (require, exports, module) {
+/*can-util@3.9.1#js/diff/diff*/
+define('can-util@3.9.1#js/diff/diff', function (require, exports, module) {
     'use strict';
     var slice = [].slice;
     var defaultIdentity = function (a, b) {
         return a === b;
     };
+    function reverseDiff(oldDiffStopIndex, newDiffStopIndex, oldList, newList, identity) {
+        var oldIndex = oldList.length - 1, newIndex = newList.length - 1;
+        while (oldIndex > oldDiffStopIndex && newIndex > newDiffStopIndex) {
+            var oldItem = oldList[oldIndex], newItem = newList[newIndex];
+            if (identity(oldItem, newItem)) {
+                oldIndex--;
+                newIndex--;
+                continue;
+            } else {
+                return [{
+                        index: newDiffStopIndex,
+                        deleteCount: oldIndex - oldDiffStopIndex + 1,
+                        insert: slice.call(newList, newDiffStopIndex, newIndex + 1)
+                    }];
+            }
+        }
+        return [{
+                index: newDiffStopIndex,
+                deleteCount: oldIndex - oldDiffStopIndex + 1,
+                insert: slice.call(newList, newDiffStopIndex, newIndex + 1)
+            }];
+    }
     module.exports = exports = function (oldList, newList, identity) {
         identity = identity || defaultIdentity;
         var oldIndex = 0, newIndex = 0, oldLength = oldList.length, newLength = newList.length, patches = [];
@@ -4773,11 +5718,7 @@ define('can-util@3.8.4#js/diff/diff', function (require, exports, module) {
                 newIndex++;
                 continue;
             } else {
-                patches.push({
-                    index: newIndex,
-                    deleteCount: oldLength - oldIndex,
-                    insert: slice.call(newList, newIndex)
-                });
+                patches.push.apply(patches, reverseDiff(oldIndex, newIndex, oldList, newList, identity));
                 return patches;
             }
         }
@@ -4792,8 +5733,8 @@ define('can-util@3.8.4#js/diff/diff', function (require, exports, module) {
         return patches;
     };
 });
-/*can-util@3.8.4#dom/events/attributes/attributes*/
-define('can-util@3.8.4#dom/events/attributes/attributes', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/attributes/attributes*/
+define('can-util@3.9.1#dom/events/attributes/attributes', function (require, exports, module) {
     (function (global) {
         'use strict';
         var events = require('../events');
@@ -4807,18 +5748,21 @@ define('can-util@3.8.4#dom/events/attributes/attributes', function (require, exp
             if (eventName === 'attributes') {
                 var MutationObserver = getMutationObserver();
                 if (isOfGlobalDocument(this) && MutationObserver) {
-                    var self = this;
-                    var observer = new MutationObserver(function (mutations) {
-                        mutations.forEach(function (mutation) {
-                            var copy = assign({}, mutation);
-                            domDispatch.call(self, copy, [], false);
+                    var existingObserver = domData.get.call(this, 'canAttributesObserver');
+                    if (!existingObserver) {
+                        var self = this;
+                        var observer = new MutationObserver(function (mutations) {
+                            mutations.forEach(function (mutation) {
+                                var copy = assign({}, mutation);
+                                domDispatch.call(self, copy, [], false);
+                            });
                         });
-                    });
-                    observer.observe(this, {
-                        attributes: true,
-                        attributeOldValue: true
-                    });
-                    domData.set.call(this, 'canAttributesObserver', observer);
+                        observer.observe(this, {
+                            attributes: true,
+                            attributeOldValue: true
+                        });
+                        domData.set.call(this, 'canAttributesObserver', observer);
+                    }
                 } else {
                     domData.set.call(this, 'canHasAttributesBindings', true);
                 }
@@ -4845,65 +5789,8 @@ define('can-util@3.8.4#dom/events/attributes/attributes', function (require, exp
         return this;
     }()));
 });
-/*can-util@3.8.4#js/cid-map/cid-map*/
-define('can-util@3.8.4#js/cid-map/cid-map', function (require, exports, module) {
-    (function (global) {
-        'use strict';
-        var GLOBAL = require('../global/global');
-        var each = require('../each/each');
-        var getCID = require('../cid/get-cid');
-        var CIDMap;
-        if (GLOBAL().Map) {
-            CIDMap = GLOBAL().Map;
-        } else {
-            var CIDMap = function () {
-                this.values = {};
-            };
-            CIDMap.prototype.set = function (key, value) {
-                this.values[getCID(key)] = {
-                    key: key,
-                    value: value
-                };
-            };
-            CIDMap.prototype['delete'] = function (key) {
-                var has = getCID(key) in this.values;
-                if (has) {
-                    delete this.values[getCID(key)];
-                }
-                return has;
-            };
-            CIDMap.prototype.forEach = function (cb, thisArg) {
-                each(this.values, function (pair) {
-                    return cb.call(thisArg || this, pair.value, pair.key, this);
-                }, this);
-            };
-            CIDMap.prototype.has = function (key) {
-                return getCID(key) in this.values;
-            };
-            CIDMap.prototype.get = function (key) {
-                var obj = this.values[getCID(key)];
-                return obj && obj.value;
-            };
-            CIDMap.prototype.clear = function (key) {
-                return this.values = {};
-            };
-            Object.defineProperty(CIDMap.prototype, 'size', {
-                get: function () {
-                    var size = 0;
-                    each(this.values, function () {
-                        size++;
-                    });
-                    return size;
-                }
-            });
-        }
-        module.exports = CIDMap;
-    }(function () {
-        return this;
-    }()));
-});
-/*can-util@3.8.4#dom/events/make-mutation-event/make-mutation-event*/
-define('can-util@3.8.4#dom/events/make-mutation-event/make-mutation-event', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/make-mutation-event/make-mutation-event*/
+define('can-util@3.9.1#dom/events/make-mutation-event/make-mutation-event', function (require, exports, module) {
     (function (global) {
         'use strict';
         var events = require('../events');
@@ -4963,14 +5850,14 @@ define('can-util@3.8.4#dom/events/make-mutation-event/make-mutation-event', func
         return this;
     }()));
 });
-/*can-util@3.8.4#dom/events/inserted/inserted*/
-define('can-util@3.8.4#dom/events/inserted/inserted', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/inserted/inserted*/
+define('can-util@3.9.1#dom/events/inserted/inserted', function (require, exports, module) {
     'use strict';
     var makeMutationEvent = require('../make-mutation-event/make-mutation-event');
     makeMutationEvent('inserted', 'addedNodes');
 });
-/*can-util@3.8.4#dom/attr/attr*/
-define('can-util@3.8.4#dom/attr/attr', function (require, exports, module) {
+/*can-util@3.9.1#dom/attr/attr*/
+define('can-util@3.9.1#dom/attr/attr', function (require, exports, module) {
     (function (global) {
         'use strict';
         var setImmediate = require('../../js/set-immediate/set-immediate');
@@ -5538,8 +6425,8 @@ define('can-util@3.8.4#dom/attr/attr', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-view-target@3.0.7#can-view-target*/
-define('can-view-target@3.0.7#can-view-target', function (require, exports, module) {
+/*can-view-target@3.1.0#can-view-target*/
+define('can-view-target@3.1.0#can-view-target', function (require, exports, module) {
     var childNodes = require('can-util/dom/child-nodes/child-nodes');
     var domAttr = require('can-util/dom/attr/attr');
     var each = require('can-util/js/each/each');
@@ -5737,8 +6624,8 @@ define('can-view-target@3.0.7#can-view-target', function (require, exports, modu
     namespace.view = namespace.view || {};
     module.exports = namespace.view.target = makeTarget;
 });
-/*can-simple-map@3.1.4#can-simple-map*/
-define('can-simple-map@3.1.4#can-simple-map', function (require, exports, module) {
+/*can-simple-map@3.2.0#can-simple-map*/
+define('can-simple-map@3.2.0#can-simple-map', function (require, exports, module) {
     var Construct = require('can-construct');
     var canEvent = require('can-event');
     var canBatch = require('can-event/batch/batch');
@@ -5746,6 +6633,9 @@ define('can-simple-map@3.1.4#can-simple-map', function (require, exports, module
     var each = require('can-util/js/each/each');
     var types = require('can-types');
     var Observation = require('can-observation');
+    var canSymbol = require('can-symbol');
+    var canReflect = require('can-reflect');
+    var singleReference = require('can-util/js/single-reference/single-reference');
     var SimpleMap = Construct.extend({
         setup: function (initialData) {
             this._data = {};
@@ -5775,8 +6665,8 @@ define('can-simple-map@3.1.4#can-simple-map', function (require, exports, module
                 ]);
                 canBatch.stop();
             } else if (typeof prop === 'object') {
-                Object.keys(prop).forEach(function (key) {
-                    self.attr(key, prop[key]);
+                canReflect.eachKey(prop, function (value, key) {
+                    self.attr(key, value);
                 });
             } else {
                 if (prop !== 'constructor') {
@@ -5803,115 +6693,190 @@ define('can-simple-map@3.1.4#can-simple-map', function (require, exports, module
         }
     });
     assign(SimpleMap.prototype, canEvent);
-    var oldIsMapLike = types.isMapLike;
-    types.isMapLike = function (obj) {
-        if (obj instanceof SimpleMap) {
-            return true;
-        }
-        return oldIsMapLike.call(this, obj);
-    };
     if (!types.DefaultMap) {
         types.DefaultMap = SimpleMap;
     }
+    SimpleMap.prototype[canSymbol.for('can.onKeyValue')] = function (key, handler) {
+        var translationHandler = function (ev, newValue, oldValue) {
+            handler.call(this, newValue, oldValue);
+        };
+        singleReference.set(handler, this, translationHandler, key);
+        this.addEventListener(key, translationHandler);
+    };
+    SimpleMap.prototype[canSymbol.for('can.offKeyValue')] = function (key, handler) {
+        this.removeEventListener(key, singleReference.getAndDelete(handler, this, key));
+    };
+    SimpleMap.prototype[canSymbol.for('can.isMapLike')] = true;
+    SimpleMap.prototype[canSymbol.for('can.isListLike')] = false;
+    SimpleMap.prototype[canSymbol.for('can.isValueLike')] = false;
+    SimpleMap.prototype[canSymbol.for('can.getKeyValue')] = SimpleMap.prototype.get;
+    SimpleMap.prototype[canSymbol.for('can.setKeyValue')] = SimpleMap.prototype.set;
+    SimpleMap.prototype[canSymbol.for('can.getValue')] = SimpleMap.prototype.get;
+    SimpleMap.prototype[canSymbol.for('can.setValue')] = SimpleMap.prototype.set;
+    SimpleMap.prototype[canSymbol.for('can.deleteKeyValue')] = function (prop) {
+        return this.attr(prop, undefined);
+    };
+    SimpleMap.prototype[canSymbol.for('can.keyHasDependencies')] = function (key) {
+        return false;
+    };
+    SimpleMap.prototype[canSymbol.for('can.getKeyDependencies')] = function (key) {
+        return undefined;
+    };
     module.exports = SimpleMap;
 });
-/*can-view-scope@3.1.4#reference-map*/
-define('can-view-scope@3.1.4#reference-map', function (require, exports, module) {
-    var types = require('can-types');
+/*can-view-scope@3.2.0#reference-map*/
+define('can-view-scope@3.2.0#reference-map', function (require, exports, module) {
     var SimpleMap = require('can-simple-map');
     var ReferenceMap = SimpleMap.extend({});
-    var oldIsMapLike = types.isMapLike;
-    types.isMapLike = function (obj) {
-        if (obj instanceof ReferenceMap) {
-            return true;
-        }
-        return oldIsMapLike.call(this, obj);
-    };
     module.exports = ReferenceMap;
 });
-/*can-view-scope@3.1.4#compute_data*/
-define('can-view-scope@3.1.4#compute_data', function (require, exports, module) {
+/*can-view-scope@3.2.0#compute_data*/
+define('can-view-scope@3.2.0#compute_data', function (require, exports, module) {
+    'use strict';
     var Observation = require('can-observation');
     var observeReader = require('can-observation/reader/reader');
     var makeCompute = require('can-compute');
-    var types = require('can-types');
+    var assign = require('can-util/js/assign/assign');
     var isFunction = require('can-util/js/is-function/is-function');
-    var isEmptyObject = require('can-util/js/is-empty-object/is-empty-object');
-    var isFastPath = function (computeData) {
+    var canBatch = require('can-event/batch/batch');
+    var CID = require('can-cid');
+    var canReflect = require('can-reflect');
+    var canSymbol = require('can-symbol');
+    var getFastPathRoot = function (computeData) {
         if (computeData.reads && computeData.reads.length === 1) {
             var root = computeData.root;
-            if (types.isCompute(root)) {
-                root = root();
+            if (root && root[canSymbol.for('can.getValue')]) {
+                root = canReflect.getValue(root);
             }
-            return types.isMapLike(root) && !isFunction(root[computeData.reads[0].key]);
+            return root && canReflect.isObservableLike(root) && canReflect.isMapLike(root) && !isFunction(root[computeData.reads[0].key]) && root;
         }
         return;
     };
-    var scopeReader = function (scope, key, options, computeData, newVal) {
-        if (arguments.length > 4) {
-            var root = computeData.root || computeData.setRoot;
-            if (root) {
-                observeReader.write(root, computeData.reads, newVal, options);
-            } else {
-                scope.set(key, newVal, options);
-            }
+    var isEventObject = function (obj) {
+        return obj && typeof obj.batchNum === 'number' && typeof obj.type === 'string';
+    };
+    var ScopeKeyData = function (scope, key, options) {
+        CID(this);
+        this.startingScope = scope;
+        this.key = key;
+        this.observation = new Observation(this.read, this);
+        this.options = assign({ observation: this.observation }, options);
+        this.handlers = [];
+        this.dispatchHandler = this.dispatch.bind(this);
+        this.fastPath = undefined;
+        this.root = undefined;
+        this.initialValue = undefined;
+        this.reads = undefined;
+        this.setRoot = undefined;
+    };
+    ScopeKeyData.prototype.getValue = function () {
+        Observation.add(this);
+        return this.getObservationValue();
+    };
+    ScopeKeyData.prototype.getObservationValue = Observation.ignore(function () {
+        return this.observation.get();
+    });
+    ScopeKeyData.prototype.read = function () {
+        if (this.root) {
+            return observeReader.read(this.root, this.reads, this.options).value;
+        }
+        var data = this.startingScope.read(this.key, this.options);
+        this.scope = data.scope;
+        this.reads = data.reads;
+        this.root = data.rootObserve;
+        this.setRoot = data.setRoot;
+        return this.initialValue = data.value;
+    };
+    ScopeKeyData.prototype.setValue = function (newVal) {
+        var root = this.root || this.setRoot;
+        if (root) {
+            observeReader.write(root, this.reads, newVal, this.options);
         } else {
-            if (computeData.root) {
-                return observeReader.read(computeData.root, computeData.reads, options).value;
-            }
-            var data = scope.read(key, options);
-            computeData.scope = data.scope;
-            computeData.initialValue = data.value;
-            computeData.reads = data.reads;
-            computeData.root = data.rootObserve;
-            computeData.setRoot = data.setRoot;
-            return data.value;
+            this.startingScope.set(this.key, newVal, this.options);
         }
     };
-    module.exports = function (scope, key, options) {
-        options = options || { args: [] };
-        var computeData = {}, scopeRead = function (newVal) {
-                if (arguments.length) {
-                    return scopeReader(scope, key, options, computeData, newVal);
-                } else {
-                    return scopeReader(scope, key, options, computeData);
-                }
-            }, compute = makeCompute(undefined, {
-                on: function () {
-                    observation.start();
-                    if (isFastPath(computeData)) {
-                        observation.dependencyChange = function (ev, newVal) {
-                            if (types.isMapLike(ev.target) && typeof newVal !== 'function') {
-                                this.newVal = newVal;
-                            } else {
-                                observation.dependencyChange = Observation.prototype.dependencyChange;
-                                observation.start = Observation.prototype.start;
-                                compute.fastPath = false;
-                            }
-                            return Observation.prototype.dependencyChange.call(this, ev);
-                        };
-                        observation.start = function () {
-                            this.value = this.newVal;
-                        };
-                        compute.fastPath = true;
+    ScopeKeyData.prototype.hasDependencies = function () {
+        return this.observation.hasDependencies();
+    };
+    var canOnValue = canSymbol.for('can.onValue'), canOffValue = canSymbol.for('can.offValue');
+    canReflect.set(ScopeKeyData.prototype, canOnValue, function (handler) {
+        if (!this.handlers.length) {
+            canReflect.onValue(this.observation, this.dispatchHandler);
+            var fastPathRoot = getFastPathRoot(this);
+            if (fastPathRoot) {
+                var self = this, observation = this.observation;
+                this.fastPath = true;
+                observation.dependencyChange = function (target, newVal, altNewValue) {
+                    if (isEventObject(newVal)) {
+                        newVal = altNewValue;
                     }
-                    compute.computeInstance.value = observation.value;
-                    compute.computeInstance.hasDependencies = !isEmptyObject(observation.newObserved);
+                    if (target === fastPathRoot && typeof newVal !== 'function') {
+                        this.newVal = newVal;
+                    } else {
+                        observation.dependencyChange = Observation.prototype.dependencyChange;
+                        observation.start = Observation.prototype.start;
+                        self.fastPath = false;
+                    }
+                    return Observation.prototype.dependencyChange.call(this, target, newVal, altNewValue);
+                };
+                observation.start = function () {
+                    this.value = this.newVal;
+                };
+            }
+        }
+        this.handlers.push(handler);
+    });
+    ScopeKeyData.prototype.dispatch = function () {
+        var handlers = this.handlers.slice(0);
+        for (var i = 0, len = handlers.length; i < len; i++) {
+            canBatch.batchNum = this.observation.batchNum;
+            handlers[i].apply(this, arguments);
+        }
+    };
+    canReflect.set(ScopeKeyData.prototype, canOffValue, function (handler) {
+        var index = this.handlers.indexOf(handler);
+        this.handlers.splice(index, 1);
+        if (!this.handlers.length) {
+            canReflect.offValue(this.observation, this.dispatchHandler);
+        }
+    });
+    canReflect.set(ScopeKeyData.prototype, canSymbol.for('can.getValue'), ScopeKeyData.prototype.getValue);
+    canReflect.set(ScopeKeyData.prototype, canSymbol.for('can.setValue'), ScopeKeyData.prototype.setValue);
+    canReflect.set(ScopeKeyData.prototype, canSymbol.for('can.valueHasDependencies'), ScopeKeyData.prototype.hasDependencies);
+    Object.defineProperty(ScopeKeyData.prototype, 'compute', {
+        get: function () {
+            var scopeKeyData = this;
+            var compute = makeCompute(undefined, {
+                on: function (updater) {
+                    scopeKeyData[canOnValue](updater);
+                    this.value = scopeKeyData.observation.value;
                 },
-                off: function () {
-                    observation.stop();
+                off: function (updater) {
+                    scopeKeyData[canOffValue](updater);
                 },
-                set: scopeRead,
-                get: scopeRead,
-                __selfUpdater: true
-            }), observation = new Observation(scopeRead, null, compute.computeInstance);
-        compute.computeInstance.observation = observation;
-        computeData.compute = compute;
-        return computeData;
+                get: function () {
+                    return scopeKeyData.observation.get();
+                },
+                set: function (newValue) {
+                    return scopeKeyData.setValue(newValue);
+                }
+            });
+            compute.computeInstance.observation = this.observation;
+            Object.defineProperty(this, 'compute', {
+                value: compute,
+                writable: false,
+                configurable: false
+            });
+            return compute;
+        },
+        configurable: true
+    });
+    module.exports = function (scope, key, options) {
+        return new ScopeKeyData(scope, key, options || { args: [] });
     };
 });
-/*can-view-scope@3.1.4#can-view-scope*/
-define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module) {
+/*can-view-scope@3.2.0#can-view-scope*/
+define('can-view-scope@3.2.0#can-view-scope', function (require, exports, module) {
     var observeReader = require('can-observation/reader/reader');
     var Observation = require('can-observation');
     var ReferenceMap = require('./reference-map');
@@ -5920,6 +6885,8 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
     var each = require('can-util/js/each/each');
     var namespace = require('can-namespace');
     var dev = require('can-util/js/dev/dev');
+    var canReflect = require('can-reflect');
+    var canLog = require('can-util/js/log/log');
     function Scope(context, parent, meta) {
         this._context = context;
         this._parent = parent;
@@ -5931,6 +6898,17 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
         Refs: ReferenceMap,
         refsScope: function () {
             return new Scope(new this.Refs());
+        },
+        keyInfo: function (attr) {
+            var info = {};
+            info.isDotSlash = attr.substr(0, 2) === './';
+            info.isThisDot = attr.substr(0, 5) === 'this.';
+            info.isInCurrentContext = info.isDotSlash || info.isThisDot;
+            info.isInParentContext = attr.substr(0, 3) === '../';
+            info.isCurrentContext = attr === '.' || attr === 'this';
+            info.isParentContext = attr === '..';
+            info.isContextBased = info.isInCurrentContext || info.isInParentContext || info.isCurrentContext || info.isParentContext;
+            return info;
         }
     });
     assign(Scope.prototype, {
@@ -5948,25 +6926,25 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
             if (attr === '%scope') {
                 return { value: this };
             }
-            var isDotSlash = attr.substr(0, 2) === './', isThisDot = attr.substr(0, 5) === 'this.', isInCurrentContext = isDotSlash || isThisDot, isInParentContext = attr.substr(0, 3) === '../', isCurrentContext = attr === '.' || attr === 'this', isParentContext = attr === '..', isContextBased = isInCurrentContext || isInParentContext || isCurrentContext || isParentContext;
-            if (isContextBased && this._meta.notContext) {
+            var keyInfo = Scope.keyInfo(attr);
+            if (keyInfo.isContextBased && this._meta.notContext) {
                 return this._parent.read(attr, options);
             }
             var currentScopeOnly;
-            if (isInCurrentContext) {
+            if (keyInfo.isInCurrentContext) {
                 currentScopeOnly = true;
-                attr = isDotSlash ? attr.substr(2) : attr.substr(5);
-            } else if (isInParentContext || isParentContext) {
+                attr = keyInfo.isDotSlash ? attr.substr(2) : attr.substr(5);
+            } else if (keyInfo.isInParentContext || keyInfo.isParentContext) {
                 var parent = this._parent;
                 while (parent._meta.notContext) {
                     parent = parent._parent;
                 }
-                if (isParentContext) {
-                    return { value: parent._context };
+                if (keyInfo.isParentContext) {
+                    return observeReader.read(parent._context, [], options);
                 }
                 return parent.read(attr.substr(3) || '.', options);
-            } else if (isCurrentContext) {
-                return { value: this._context };
+            } else if (keyInfo.isCurrentContext) {
+                return observeReader.read(this._context, [], options);
             }
             var keyReads = observeReader.reads(attr);
             if (keyReads[0].key.charAt(0) === '*') {
@@ -6061,6 +7039,20 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
             return cur._context;
         },
         set: function (key, value, options) {
+            options = options || {};
+            var keyInfo = Scope.keyInfo(key);
+            if (keyInfo.isCurrentContext) {
+                return canReflect.setValue(this._context, value);
+            } else if (keyInfo.isInParentContext || keyInfo.isParentContext) {
+                var parent = this._parent;
+                while (parent._meta.notContext) {
+                    parent = parent._parent;
+                }
+                if (keyInfo.isParentContext) {
+                    return canReflect.setValue(parent._context, value);
+                }
+                return parent.set(key.substr(3) || '.', value, options);
+            }
             var dotIndex = key.lastIndexOf('.'), slashIndex = key.lastIndexOf('/'), contextPath, propName;
             if (slashIndex > dotIndex) {
                 contextPath = key.substring(0, slashIndex);
@@ -6078,11 +7070,21 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
                 observeReader.write(this.getRefs()._context, key, value, options);
             } else {
                 var context = this.read(contextPath, options).value;
-                observeReader.write(context, propName, value, options);
+                if (!canReflect.isObservableLike(context) && canReflect.isObservableLike(context[propName])) {
+                    if (canReflect.isMapLike(context[propName])) {
+                        dev.warn('can-view-scope: Merging data into "' + propName + '" because its parent is non-observable');
+                        canReflect.eachKey(context[propName], function (value, prop) {
+                            canReflect.deleteKeyValue(context[propName], prop);
+                        });
+                    }
+                    canReflect.setValue(context[propName], value);
+                } else {
+                    observeReader.write(context, propName, value, options);
+                }
             }
         },
         attr: Observation.ignore(function (key, value, options) {
-            console.warn('can-view-scope::attr is deprecated, please use peek, get or set');
+            canLog.warn('can-view-scope::attr is deprecated, please use peek, get or set');
             options = assign({ isArgument: true }, options);
             if (arguments.length === 2) {
                 return this.set(key, value, options);
@@ -6130,13 +7132,13 @@ define('can-view-scope@3.1.4#can-view-scope', function (require, exports, module
     namespace.view = namespace.view || {};
     module.exports = namespace.view.Scope = Scope;
 });
-/*can-stache@3.0.27#src/utils*/
-define('can-stache@3.0.27#src/utils', function (require, exports, module) {
+/*can-stache@3.1.0#src/utils*/
+define('can-stache@3.1.0#src/utils', function (require, exports, module) {
     var Scope = require('can-view-scope');
     var Observation = require('can-observation');
     var observationReader = require('can-observation/reader/reader');
     var compute = require('can-compute');
-    var types = require('can-types');
+    var canReflect = require('can-reflect');
     var isArrayLike = require('can-util/js/is-array-like/is-array-like');
     var Options = Scope.Options;
     module.exports = {
@@ -6177,7 +7179,11 @@ define('can-stache@3.0.27#src/utils', function (require, exports, module) {
             };
             var convertedRenderer = function (newScope, newOptions, parentNodeList) {
                 if (newScope !== undefined && !(newScope instanceof Scope)) {
-                    newScope = parentScope.add(newScope);
+                    if (parentScope) {
+                        newScope = parentScope.add(newScope);
+                    } else {
+                        newScope = Scope.refsScope().add(newScope || {});
+                    }
                 }
                 if (newOptions !== undefined && !(newOptions instanceof Options)) {
                     newOptions = parentOptions.add(newOptions);
@@ -6188,7 +7194,7 @@ define('can-stache@3.0.27#src/utils', function (require, exports, module) {
             return observeObservables ? convertedRenderer : Observation.ignore(convertedRenderer);
         },
         getItemsStringContent: function (items, isObserveList, helperOptions, options) {
-            var txt = '', len = observationReader.get(items, 'length'), isObservable = types.isMapLike(items) || types.isListLike(items);
+            var txt = '', len = observationReader.get(items, 'length'), isObservable = canReflect.isObservableLike(items);
             for (var i = 0; i < len; i++) {
                 var item = isObservable ? compute(items, '' + i) : items[i];
                 txt += helperOptions.fn(item, options);
@@ -6196,7 +7202,7 @@ define('can-stache@3.0.27#src/utils', function (require, exports, module) {
             return txt;
         },
         getItemsFragContent: function (items, helperOptions, scope, asVariable) {
-            var result = [], len = observationReader.get(items, 'length'), isObservable = types.isMapLike(items) || types.isListLike(items);
+            var result = [], len = observationReader.get(items, 'length'), isObservable = canReflect.isObservableLike(items);
             for (var i = 0; i < len; i++) {
                 var aliases = {
                     '%index': i,
@@ -6213,8 +7219,8 @@ define('can-stache@3.0.27#src/utils', function (require, exports, module) {
         Options: Options
     };
 });
-/*can-view-nodelist@3.0.4#can-view-nodelist*/
-define('can-view-nodelist@3.0.4#can-view-nodelist', function (require, exports, module) {
+/*can-view-nodelist@3.1.0#can-view-nodelist*/
+define('can-view-nodelist@3.1.0#can-view-nodelist', function (require, exports, module) {
     var makeArray = require('can-util/js/make-array/make-array');
     var each = require('can-util/js/each/each');
     var namespace = require('can-namespace');
@@ -6231,7 +7237,7 @@ define('can-view-nodelist@3.0.4#can-view-nodelist', function (require, exports, 
                 }
             }
             return count;
-        }, replacementMap = function (replacements, idMap) {
+        }, replacementMap = function (replacements) {
             var map = new CIDMap();
             for (var i = 0, len = replacements.length; i < len; i++) {
                 var node = nodeLists.first(replacements[i]);
@@ -6262,7 +7268,7 @@ define('can-view-nodelist@3.0.4#can-view-nodelist', function (require, exports, 
             return oldNodes;
         },
         nestReplacements: function (list) {
-            var index = 0, idMap = {}, rMap = replacementMap(list.replacements, idMap), rCount = list.replacements.length;
+            var index = 0, rMap = replacementMap(list.replacements), rCount = list.replacements.length;
             while (index < list.length && rCount) {
                 var node = list[index], replacement = rMap.get(node);
                 if (replacement) {
@@ -6407,8 +7413,8 @@ define('can-view-nodelist@3.0.4#can-view-nodelist', function (require, exports, 
     };
     module.exports = namespace.nodeLists = nodeLists;
 });
-/*can-util@3.8.4#dom/fragment/fragment*/
-define('can-util@3.8.4#dom/fragment/fragment', function (require, exports, module) {
+/*can-util@3.9.1#dom/fragment/fragment*/
+define('can-util@3.9.1#dom/fragment/fragment', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document'), childNodes = require('../child-nodes/child-nodes');
     var fragmentRE = /^\s*<(\w+)[^>]*>/, toString = {}.toString, fragment = function (html, name, doc) {
@@ -6461,8 +7467,8 @@ define('can-util@3.8.4#dom/fragment/fragment', function (require, exports, modul
     };
     module.exports = buildFragment;
 });
-/*can-util@3.8.4#dom/frag/frag*/
-define('can-util@3.8.4#dom/frag/frag', function (require, exports, module) {
+/*can-util@3.9.1#dom/frag/frag*/
+define('can-util@3.9.1#dom/frag/frag', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document');
     var fragment = require('../fragment/fragment');
@@ -6502,19 +7508,20 @@ define('can-util@3.8.4#dom/frag/frag', function (require, exports, module) {
     };
     module.exports = makeFrag;
 });
-/*can-util@3.8.4#dom/events/removed/removed*/
-define('can-util@3.8.4#dom/events/removed/removed', function (require, exports, module) {
+/*can-util@3.9.1#dom/events/removed/removed*/
+define('can-util@3.9.1#dom/events/removed/removed', function (require, exports, module) {
     'use strict';
     var makeMutationEvent = require('../make-mutation-event/make-mutation-event');
     makeMutationEvent('removed', 'removedNodes');
 });
-/*can-view-live@3.0.7#lib/core*/
-define('can-view-live@3.0.7#lib/core', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/core*/
+define('can-view-live@3.1.0#lib/core', function (require, exports, module) {
     var parser = require('can-view-parser');
     var domEvents = require('can-util/dom/events/events');
     var nodeLists = require('can-view-nodelist');
     var makeFrag = require('can-util/dom/frag/frag');
     var childNodes = require('can-util/dom/child-nodes/child-nodes');
+    var canReflect = require('can-reflect');
     require('can-util/dom/events/removed/removed');
     var childMutationCallbacks = {};
     var live = {
@@ -6537,9 +7544,9 @@ define('can-view-live@3.0.7#lib/core', function (require, exports, module) {
         },
         listen: function (el, compute, change) {
             return live.setup(el, function () {
-                compute.computeInstance.addEventListener('change', change);
+                canReflect.onValue(compute, change);
             }, function (data) {
-                compute.computeInstance.removeEventListener('change', change);
+                canReflect.offValue(compute, change);
                 if (data.nodeList) {
                     nodeLists.unregister(data.nodeList);
                 }
@@ -6597,26 +7604,28 @@ define('can-view-live@3.0.7#lib/core', function (require, exports, module) {
     };
     module.exports = live;
 });
-/*can-view-live@3.0.7#lib/attr*/
-define('can-view-live@3.0.7#lib/attr', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/attr*/
+define('can-view-live@3.1.0#lib/attr', function (require, exports, module) {
     var attr = require('can-util/dom/attr/attr');
     var live = require('./core');
+    var canReflect = require('can-reflect');
     live.attr = function (el, attributeName, compute) {
-        live.listen(el, compute, function (ev, newVal) {
+        live.listen(el, compute, function (newVal) {
             attr.set(el, attributeName, newVal);
         });
-        attr.set(el, attributeName, compute());
+        attr.set(el, attributeName, canReflect.getValue(compute));
     };
 });
-/*can-view-live@3.0.7#lib/attrs*/
-define('can-view-live@3.0.7#lib/attrs', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/attrs*/
+define('can-view-live@3.1.0#lib/attrs', function (require, exports, module) {
     var live = require('./core');
     var viewCallbacks = require('can-view-callbacks');
     var attr = require('can-util/dom/attr/attr');
     var domEvents = require('can-util/dom/events/events');
     var types = require('can-types');
+    var canReflect = require('can-reflect');
     live.attrs = function (el, compute, scope, options) {
-        if (!types.isCompute(compute)) {
+        if (!canReflect.isObservableLike(compute)) {
             var attrs = live.getAttributeParts(compute);
             for (var name in attrs) {
                 attr.set(el, name, attrs[name]);
@@ -6646,29 +7655,30 @@ define('can-view-live@3.0.7#lib/attrs', function (require, exports, module) {
             }
             oldAttrs = newAttrs;
         };
-        var handler = function (ev, newVal) {
+        var handler = function (newVal) {
             setAttrs(newVal);
         };
-        compute.addEventListener('change', handler);
+        canReflect.onValue(compute, handler);
         var teardownHandler = function () {
-            compute.removeEventListener('change', handler);
+            canReflect.offValue(compute, handler);
             domEvents.removeEventListener.call(el, 'removed', teardownHandler);
         };
         domEvents.addEventListener.call(el, 'removed', teardownHandler);
-        setAttrs(compute());
+        setAttrs(canReflect.getValue(compute));
     };
 });
-/*can-view-live@3.0.7#lib/html*/
-define('can-view-live@3.0.7#lib/html', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/html*/
+define('can-view-live@3.1.0#lib/html', function (require, exports, module) {
     var live = require('./core');
     var nodeLists = require('can-view-nodelist');
     var makeFrag = require('can-util/dom/frag/frag');
     var makeArray = require('can-util/js/make-array/make-array');
     var childNodes = require('can-util/dom/child-nodes/child-nodes');
+    var canReflect = require('can-reflect');
     live.html = function (el, compute, parentNode, nodeList) {
-        var data;
+        var data, makeAndPut, nodes;
         parentNode = live.getParentNode(el, parentNode);
-        data = live.listen(parentNode, compute, function (ev, newVal, oldVal) {
+        data = live.listen(parentNode, compute, function (newVal) {
             var attached = nodeLists.first(nodes).parentNode;
             if (attached) {
                 makeAndPut(newVal);
@@ -6677,26 +7687,27 @@ define('can-view-live@3.0.7#lib/html', function (require, exports, module) {
             data.teardownCheck(pn);
             live.callChildMutationCallback(pn);
         });
-        var nodes = nodeList || [el], makeAndPut = function (val) {
-                var isFunction = typeof val === 'function', aNode = live.isNode(val), frag = makeFrag(isFunction ? '' : val), oldNodes = makeArray(nodes);
-                live.addTextNodeIfNoChildren(frag);
-                oldNodes = nodeLists.update(nodes, childNodes(frag));
-                if (isFunction) {
-                    val(frag.firstChild);
-                }
-                nodeLists.replace(oldNodes, frag);
-            };
+        nodes = nodeList || [el];
+        makeAndPut = function (val) {
+            var isFunction = typeof val === 'function', frag = makeFrag(isFunction ? '' : val), oldNodes = makeArray(nodes);
+            live.addTextNodeIfNoChildren(frag);
+            oldNodes = nodeLists.update(nodes, childNodes(frag));
+            if (isFunction) {
+                val(frag.firstChild);
+            }
+            nodeLists.replace(oldNodes, frag);
+        };
         data.nodeList = nodes;
         if (!nodeList) {
             nodeLists.register(nodes, data.teardownCheck);
         } else {
             nodeList.unregistered = data.teardownCheck;
         }
-        makeAndPut(compute());
+        makeAndPut(canReflect.getValue(compute));
     };
 });
-/*can-view-live@3.0.7#lib/util/runInOrder*/
-define('can-view-live@3.0.7#lib/util/runInOrder', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/util/runInOrder*/
+define('can-view-live@3.1.0#lib/util/runInOrder', function (require, exports, module) {
     module.exports = function makeRunInOrder() {
         var running = 0;
         var tasks = [];
@@ -6723,8 +7734,8 @@ define('can-view-live@3.0.7#lib/util/runInOrder', function (require, exports, mo
         };
     };
 });
-/*can-view-live@3.0.7#lib/list*/
-define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/list*/
+define('can-view-live@3.1.0#lib/list', function (require, exports, module) {
     var live = require('./core');
     var makeRunInOrder = require('./util/runInOrder');
     var runInOrder = makeRunInOrder();
@@ -6739,6 +7750,8 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
     var isFunction = require('can-util/js/is-function/is-function');
     var diff = require('can-util/js/diff/diff');
     var splice = [].splice;
+    var Compute = require('can-compute/proto-compute');
+    var canReflect = require('can-reflect');
     var renderAndAddToNodeLists = function (newNodeLists, parentNodeList, render, context, args) {
             var itemNodeList = [];
             if (parentNodeList) {
@@ -6777,12 +7790,12 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                 }
                 var frag = text.ownerDocument.createDocumentFragment(), newNodeLists = [], newIndicies = [];
                 each(items, function (item, key) {
-                    var itemIndex = makeCompute(key + index), itemCompute = makeCompute(function (newVal) {
+                    var itemIndex = new Compute(key + index), itemCompute = new Compute(function (newVal) {
                             if (arguments.length) {
                                 if ('set' in list) {
-                                    list.set(itemIndex(), newVal);
+                                    list.set(itemIndex.get(), newVal);
                                 } else {
-                                    list.attr(itemIndex(), newVal);
+                                    list.attr(itemIndex.get(), newVal);
                                 }
                             } else {
                                 return item;
@@ -6814,7 +7827,7 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                     0
                 ].concat(newIndicies));
                 for (var i = index + newIndicies.length, len = indexMap.length; i < len; i++) {
-                    indexMap[i](i);
+                    indexMap[i].set(i);
                 }
                 if (ev.callChildMutationCallback !== false) {
                     live.callChildMutationCallback(text.parentNode);
@@ -6835,7 +7848,7 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                 var itemsToRemove = removeFromNodeList(masterNodeList, index, items.length);
                 indexMap.splice(index, items.length);
                 for (var i = index, len = indexMap.length; i < len; i++) {
-                    indexMap[i](i);
+                    indexMap[i].set(i);
                 }
                 if (!fullTeardown) {
                     addFalseyIfEmpty(list, falseyRender, masterNodeList, nodeList);
@@ -6900,7 +7913,7 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                     list.removeEventListener('move', move);
                 }
                 remove({ callChildMutationCallback: !!fullTeardown }, { length: masterNodeList.length - 1 }, 0, true, fullTeardown);
-            }, updateList = function (ev, newList, oldList) {
+            }, oldList, updateList = function (newList) {
                 if (isTornDown) {
                     return;
                 }
@@ -6908,6 +7921,7 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                 if (newList && oldList) {
                     list = newList || [];
                     var patches = diff(oldList, newList);
+                    oldList = newList;
                     if (oldList.removeEventListener) {
                         oldList.removeEventListener('add', add);
                         oldList.removeEventListener('set', set);
@@ -6928,6 +7942,7 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                         teardownList();
                     }
                     list = newList || [];
+                    oldList = list;
                     add({ callChildMutationCallback: false }, list, 0);
                     addFalseyIfEmpty(list, falseyRender, masterNodeList, nodeList);
                 }
@@ -6943,14 +7958,15 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                     afterPreviousEvents = true;
                 });
             };
+        var isValueLike = canReflect.isValueLike(compute), isObservableLike = canReflect.isObservableLike(compute);
         parentNode = live.getParentNode(el, parentNode);
         var data = live.setup(parentNode, function () {
-            if (isFunction(compute)) {
-                compute.addEventListener('change', updateList);
+            if (isValueLike && isObservableLike) {
+                canReflect.onValue(compute, updateList);
             }
         }, function () {
-            if (isFunction(compute)) {
-                compute.removeEventListener('change', updateList);
+            if (isValueLike && isObservableLike) {
+                canReflect.offValue(compute, updateList);
             }
             teardownList(true);
         });
@@ -6964,21 +7980,22 @@ define('can-view-live@3.0.7#lib/list', function (require, exports, module) {
                 isTornDown = true;
             };
         }
-        updateList({}, isFunction(compute) ? compute() : compute);
+        updateList(isValueLike ? canReflect.getValue(compute) : compute);
     };
 });
-/*can-view-live@3.0.7#lib/text*/
-define('can-view-live@3.0.7#lib/text', function (require, exports, module) {
+/*can-view-live@3.1.0#lib/text*/
+define('can-view-live@3.1.0#lib/text', function (require, exports, module) {
     var live = require('./core');
     var nodeLists = require('can-view-nodelist');
+    var canReflect = require('can-reflect');
     live.text = function (el, compute, parentNode, nodeList) {
         var parent = live.getParentNode(el, parentNode);
-        var data = live.listen(parent, compute, function (ev, newVal, oldVal) {
+        var data = live.listen(parent, compute, function (newVal) {
             if (typeof node.nodeValue !== 'unknown') {
                 node.nodeValue = live.makeString(newVal);
             }
         });
-        var node = el.ownerDocument.createTextNode(live.makeString(compute()));
+        var node = el.ownerDocument.createTextNode(live.makeString(canReflect.getValue(compute)));
         if (nodeList) {
             nodeList.unregistered = data.teardownCheck;
             data.nodeList = nodeList;
@@ -6989,8 +8006,8 @@ define('can-view-live@3.0.7#lib/text', function (require, exports, module) {
         }
     };
 });
-/*can-view-live@3.0.7#can-view-live*/
-define('can-view-live@3.0.7#can-view-live', function (require, exports, module) {
+/*can-view-live@3.1.0#can-view-live*/
+define('can-view-live@3.1.0#can-view-live', function (require, exports, module) {
     var live = require('./lib/core');
     require('./lib/attr');
     require('./lib/attrs');
@@ -6999,8 +8016,8 @@ define('can-view-live@3.0.7#can-view-live', function (require, exports, module) 
     require('./lib/text');
     module.exports = live;
 });
-/*can-util@3.8.4#js/base-url/base-url*/
-define('can-util@3.8.4#js/base-url/base-url', function (require, exports, module) {
+/*can-util@3.9.1#js/base-url/base-url*/
+define('can-util@3.9.1#js/base-url/base-url', function (require, exports, module) {
     (function (global) {
         'use strict';
         var getGlobal = require('../global/global');
@@ -7029,8 +8046,8 @@ define('can-util@3.8.4#js/base-url/base-url', function (require, exports, module
         return this;
     }()));
 });
-/*can-util@3.8.4#js/parse-uri/parse-uri*/
-define('can-util@3.8.4#js/parse-uri/parse-uri', function (require, exports, module) {
+/*can-util@3.9.1#js/parse-uri/parse-uri*/
+define('can-util@3.9.1#js/parse-uri/parse-uri', function (require, exports, module) {
     'use strict';
     module.exports = function (url) {
         var m = String(url).replace(/^\s+|\s+$/g, '').match(/^([^:\/?#]+:)?(\/\/(?:[^:@]*(?::[^:@]*)?@)?(([^:\/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?/);
@@ -7047,8 +8064,8 @@ define('can-util@3.8.4#js/parse-uri/parse-uri', function (require, exports, modu
         } : null;
     };
 });
-/*can-util@3.8.4#js/join-uris/join-uris*/
-define('can-util@3.8.4#js/join-uris/join-uris', function (require, exports, module) {
+/*can-util@3.9.1#js/join-uris/join-uris*/
+define('can-util@3.9.1#js/join-uris/join-uris', function (require, exports, module) {
     'use strict';
     var parseURI = require('../parse-uri/parse-uri');
     module.exports = function (base, href) {
@@ -7068,13 +8085,12 @@ define('can-util@3.8.4#js/join-uris/join-uris', function (require, exports, modu
         return !href || !base ? null : (href.protocol || base.protocol) + (href.protocol || href.authority ? href.authority : base.authority) + removeDotSegments(href.protocol || href.authority || href.pathname.charAt(0) === '/' ? href.pathname : href.pathname ? (base.authority && !base.pathname ? '/' : '') + base.pathname.slice(0, base.pathname.lastIndexOf('/') + 1) + href.pathname : base.pathname) + (href.protocol || href.authority || href.pathname ? href.search : href.search || base.search) + href.hash;
     };
 });
-/*can-stache@3.0.27#helpers/core*/
-define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
+/*can-stache@3.1.0#helpers/core*/
+define('can-stache@3.1.0#helpers/core', function (require, exports, module) {
     var live = require('can-view-live');
     var nodeLists = require('can-view-nodelist');
     var compute = require('can-compute');
     var utils = require('../src/utils');
-    var types = require('can-types');
     var isFunction = require('can-util/js/is-function/is-function');
     var getBaseURL = require('can-util/js/base-url/base-url');
     var joinURIs = require('can-util/js/join-uris/join-uris');
@@ -7082,13 +8098,15 @@ define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
     var assign = require('can-util/js/assign/assign');
     var isIterable = require('can-util/js/is-iterable/is-iterable');
     var dev = require('can-util/js/dev/dev');
+    var canSymbol = require('can-symbol');
+    var canReflect = require('can-reflect');
     var domData = require('can-util/dom/data/data');
     var looksLikeOptions = function (options) {
         return options && typeof options.fn === 'function' && typeof options.inverse === 'function';
     };
     var resolve = function (value) {
-        if (value && value.isComputed) {
-            return value();
+        if (value && value[canSymbol.for('can.isValueLike')] && value[canSymbol.for('can.getValue')]) {
+            return canReflect.getValue(value);
         } else {
             return value;
         }
@@ -7096,12 +8114,7 @@ define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
     var resolveHash = function (hash) {
         var params = {};
         for (var prop in hash) {
-            var value = hash[prop];
-            if (value && value.isComputed) {
-                params[prop] = value();
-            } else {
-                params[prop] = value;
-            }
+            params[prop] = resolve(hash[prop]);
         }
         return params;
     };
@@ -7114,7 +8127,7 @@ define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
                     asVariable = argExprs[argsLen - 1].key;
                 }
             }
-            if ((types.isListLike(resolved) || utils.isArrayLike(resolved) && items.isComputed) && !options.stringOnly) {
+            if ((canReflect.isObservableLike(resolved) && canReflect.isListLike(resolved) || utils.isArrayLike(resolved) && items.isComputed) && !options.stringOnly) {
                 return function (el) {
                     var nodeList = [el];
                     nodeList.expression = 'live.list';
@@ -7149,7 +8162,7 @@ define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
                     result.push(options.fn(options.scope.add(aliases, { notContext: true }).add(value)));
                 });
                 return options.stringOnly ? result.join('') : result;
-            } else if (types.isMapLike(expr)) {
+            } else if (canReflect.isObservableLike(expr) && canReflect.isMapLike(expr)) {
                 result = [];
                 (expr.forEach || expr.each).call(expr, function (val, key) {
                     var value = compute(expr, key);
@@ -7336,8 +8349,8 @@ define('can-stache@3.0.27#helpers/core', function (require, exports, module) {
         looksLikeOptions: looksLikeOptions
     };
 });
-/*can-stache@3.0.27#src/expression*/
-define('can-stache@3.0.27#src/expression', function (require, exports, module) {
+/*can-stache@3.1.0#src/expression*/
+define('can-stache@3.1.0#src/expression', function (require, exports, module) {
     var compute = require('can-compute');
     var observeReader = require('can-observation/reader/reader');
     var utils = require('./utils');
@@ -7347,76 +8360,84 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
     var dev = require('can-util/js/dev/dev');
     var assign = require('can-util/js/assign/assign');
     var last = require('can-util/js/last/last');
-    var getKeyComputeData = function (key, scope, readOptions) {
+    var canReflect = require('can-reflect');
+    var canSymbol = require('can-symbol');
+    var getObservableValue_fromKey = function (key, scope, readOptions) {
             var data = scope.computeData(key, readOptions);
-            compute.temporarilyBind(data.compute);
+            compute.temporarilyBind(data);
             return data;
-        }, lookupValue = function (key, scope, helperOptions, readOptions) {
-            var prop = getValueOfComputeOrFunction(key);
-            var computeData = getKeyComputeData(prop, scope, readOptions);
-            if (!computeData.compute.computeInstance.hasDependencies) {
-                return {
-                    value: computeData.initialValue,
-                    computeData: computeData
-                };
-            } else {
-                return {
-                    value: computeData.compute,
-                    computeData: computeData
-                };
-            }
+        }, computeHasDependencies = function (compute) {
+            return compute[canSymbol.for('can.valueHasDependencies')] ? canReflect.valueHasDependencies(compute) : compute.computeInstance.hasDependencies;
         }, lookupValueOrHelper = function (key, scope, helperOptions, readOptions) {
-            var res = lookupValue(key, scope, helperOptions, readOptions);
-            if (res.computeData.initialValue === undefined) {
+            var scopeKeyData = getObservableValue_fromKey(key, scope, readOptions);
+            var result = { value: scopeKeyData };
+            if (scopeKeyData.initialValue === undefined) {
                 if (key.charAt(0) === '@' && key !== '@index') {
                     key = key.substr(1);
                 }
                 var helper = mustacheHelpers.getHelper(key, helperOptions);
-                res.helper = helper && helper.fn;
+                result.helper = helper && helper.fn;
             }
-            return res;
-        }, lookupValueInResult = function (keyOrCompute, lookupOrCall, scope, helperOptions, readOptions) {
-            var result = lookupOrCall.value(scope, {}, {});
+            return result;
+        }, getObservableValue_fromDynamicKey = function (key, scope, helperOptions, readOptions) {
             var c = compute(function (newVal) {
-                var key = getValueOfComputeOrFunction(keyOrCompute);
+                var keyValue = canReflect.getValue(key);
                 if (arguments.length) {
-                    observeReader.write(result, observeReader.reads(key), newVal);
+                    scope.set('' + keyValue, newVal, readOptions);
                 } else {
-                    return observeReader.get(result, ('' + key).replace('.', '\\.'));
+                    return scope.get(('' + keyValue).replace('.', '\\.'), readOptions);
                 }
             });
-            return { value: c };
-        }, getValueOfComputeOrFunction = function (computeOrFunction) {
-            if (typeof computeOrFunction.value === 'function') {
-                return computeOrFunction.value();
-            }
-            if (typeof computeOrFunction === 'function') {
-                return computeOrFunction();
-            }
-            return computeOrFunction;
+            compute.temporarilyBind(c);
+            return c;
+        }, getObservableValue_fromDynamicKey_fromObservable = function (key, root, helperOptions, readOptions) {
+            var computeValue = compute(function (newVal) {
+                var keyValue = canReflect.getValue(key);
+                var rootValue = canReflect.getValue(root);
+                if (arguments.length) {
+                    observeReader.write(rootValue, observeReader.reads('' + keyValue), newVal);
+                } else {
+                    return observeReader.get(rootValue, ('' + keyValue).replace('.', '\\.'));
+                }
+            });
+            compute.temporarilyBind(computeValue);
+            return computeValue;
         }, convertToArgExpression = function (expr) {
             if (!(expr instanceof Arg) && !(expr instanceof Literal)) {
                 return new Arg(expr);
             } else {
                 return expr;
             }
+        }, toComputeOrValue = function (value) {
+            if (canReflect.isObservableLike(value)) {
+                if (canReflect.valueHasDependencies(value) === false) {
+                    return canReflect.getValue(value);
+                }
+                if (value.compute) {
+                    return value.compute;
+                }
+            }
+            return value;
+        }, toCompute = function (value) {
+            if (value) {
+                if (value.isComputed) {
+                    return value;
+                }
+                if (value.compute) {
+                    return value.compute;
+                }
+            }
+            return value;
         };
     var Bracket = function (key, root) {
         this.root = root;
         this.key = key;
     };
-    Bracket.prototype.value = function (scope) {
-        var prop = this.key;
-        var obj = this.root;
-        if (prop instanceof Lookup) {
-            prop = lookupValue(prop.key, scope, {}, {}).value;
-        } else if (prop instanceof Call) {
-            prop = prop.value(scope, {}, {});
-        }
-        if (!obj) {
-            return lookupValue(prop, scope, {}, {}).value;
+    Bracket.prototype.value = function (scope, helpers) {
+        if (!this.root) {
+            return getObservableValue_fromDynamicKey(this.key.value(scope, helpers), scope, {}, {});
         } else {
-            return lookupValueInResult(prop, obj, scope, {}, {}).value;
+            return getObservableValue_fromDynamicKey_fromObservable(this.key.value(scope, helpers), this.root.value(scope, helpers), scope, helpers, {});
         }
     };
     var Literal = function (value) {
@@ -7430,23 +8451,22 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         this.rootExpr = root;
     };
     Lookup.prototype.value = function (scope, helperOptions) {
-        var result = {};
         if (this.rootExpr) {
-            result = lookupValueInResult(this.key, this.rootExpr, scope, {}, {});
+            return getObservableValue_fromDynamicKey_fromObservable(this.key, this.rootExpr.value(scope, helperOptions), scope, {}, {});
         } else {
-            result = lookupValueOrHelper(this.key, scope, helperOptions);
+            var result = lookupValueOrHelper(this.key, scope, helperOptions);
+            this.isHelper = result.helper && !result.helper.callAsMethod;
+            return result.helper || result.value;
         }
-        this.isHelper = result.helper && !result.helper.callAsMethod;
-        return result.helper || result.value;
     };
     var ScopeLookup = function (key, root) {
         Lookup.apply(this, arguments);
     };
     ScopeLookup.prototype.value = function (scope, helperOptions) {
         if (this.rootExpr) {
-            return lookupValueInResult(this.key, this.rootExpr, scope, {}, {}).value;
+            return getObservableValue_fromDynamicKey_fromObservable(this.key, this.rootExpr.value(scope, helperOptions), scope, {}, {});
         }
-        return lookupValue(this.key, scope, helperOptions).value;
+        return getObservableValue_fromKey(this.key, scope, helperOptions);
     };
     var Arg = function (expression, modifiers) {
         this.expr = expression;
@@ -7466,14 +8486,14 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         for (var prop in this.hashExprs) {
             var val = convertToArgExpression(this.hashExprs[prop]), value = val.value.apply(val, arguments);
             hash[prop] = {
-                call: value && value.isComputed && !val.modifiers.compute,
+                call: !val.modifiers || !val.modifiers.compute,
                 value: value
             };
         }
         return compute(function () {
             var finalHash = {};
             for (var prop in hash) {
-                finalHash[prop] = hash[prop].call ? hash[prop].value() : hash[prop].value;
+                finalHash[prop] = hash[prop].call ? canReflect.getValue(hash[prop].value) : toComputeOrValue(hash[prop].value);
             }
             return finalHash;
         });
@@ -7488,14 +8508,14 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
             var arg = this.argExprs[i];
             var value = arg.value.apply(arg, arguments);
             args.push({
-                call: value && value.isComputed && !arg.modifiers.compute,
+                call: !arg.modifiers || !arg.modifiers.compute,
                 value: value
             });
         }
         return function () {
             var finalArgs = [];
             for (var i = 0, len = args.length; i < len; i++) {
-                finalArgs[i] = args[i].call ? args[i].value() : args[i].value;
+                finalArgs[i] = args[i].call ? canReflect.getValue(args[i].value) : toCompute(args[i].value);
             }
             return finalArgs;
         };
@@ -7504,11 +8524,8 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         var method = this.methodExpr.value(scope, helperScope);
         var isHelper = this.isHelper = this.methodExpr.isHelper;
         var getArgs = this.args(scope, helperScope);
-        return compute(function (newVal) {
-            var func = method;
-            if (func && func.isComputed) {
-                func = func();
-            }
+        var computeValue = compute(function (newVal) {
+            var func = canReflect.getValue(method);
             if (typeof func === 'function') {
                 var args = getArgs();
                 if (isHelper && helperOptions) {
@@ -7520,6 +8537,8 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
                 return func.apply(null, args);
             }
         });
+        compute.temporarilyBind(computeValue);
+        return computeValue;
     };
     Call.prototype.closingTag = function () {
         return this.methodExpr.key.slice(1);
@@ -7541,14 +8560,14 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         Lookup.apply(this, arguments);
     };
     HelperScopeLookup.prototype.value = function (scope, helperOptions) {
-        return lookupValue(this.key, scope, helperOptions, {
+        return getObservableValue_fromKey(this.key, scope, {
             callMethodsOnObservables: true,
             isArgument: true,
             args: [
                 scope.peek('.'),
                 scope
             ]
-        }).value;
+        });
     };
     var Helper = function (methodExpression, argExpressions, hashExpressions) {
         this.methodExpr = methodExpression;
@@ -7560,7 +8579,7 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         var args = [];
         for (var i = 0, len = this.argExprs.length; i < len; i++) {
             var arg = this.argExprs[i];
-            args.push(arg.value.apply(arg, arguments));
+            args.push(toComputeOrValue(arg.value.apply(arg, arguments)));
         }
         return args;
     };
@@ -7568,40 +8587,33 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         var hash = {};
         for (var prop in this.hashExprs) {
             var val = this.hashExprs[prop];
-            hash[prop] = val.value.apply(val, arguments);
+            hash[prop] = toComputeOrValue(val.value.apply(val, arguments));
         }
         return hash;
     };
     Helper.prototype.helperAndValue = function (scope, helperOptions) {
-        var looksLikeAHelper = this.argExprs.length || !isEmptyObject(this.hashExprs), helper, value, methodKey = this.methodExpr instanceof Literal ? '' + this.methodExpr._value : this.methodExpr.key, initialValue, args;
+        var looksLikeAHelper = this.argExprs.length || !isEmptyObject(this.hashExprs), helper, computeData, methodKey = this.methodExpr instanceof Literal ? '' + this.methodExpr._value : this.methodExpr.key, initialValue, args;
         if (looksLikeAHelper) {
             helper = mustacheHelpers.getHelper(methodKey, helperOptions);
-            var context = scope.peek('.');
-            if (!helper && typeof context[methodKey] === 'function') {
-                helper = { fn: context[methodKey] };
-            }
         }
         if (!helper) {
-            args = this.args(scope, helperOptions);
-            var computeData = getKeyComputeData(methodKey, scope, {
-                    isArgument: false,
-                    args: args && args.length ? args : [
-                        scope.peek('.'),
-                        scope
-                    ]
-                }), compute = computeData.compute;
-            initialValue = computeData.initialValue;
-            if (computeData.compute.computeInstance.hasDependencies) {
-                value = compute;
-            } else {
-                value = initialValue;
+            computeData = getObservableValue_fromKey(methodKey, scope, { isArgument: true });
+            if (typeof computeData.initialValue === 'function') {
+                args = this.args(scope, helperOptions).map(toComputeOrValue);
+                var functionResult = compute(function () {
+                    return computeData.initialValue.apply(null, args);
+                });
+                compute.temporarilyBind(functionResult);
+                return { value: functionResult };
+            } else if (typeof computeData.initialValue !== 'undefined') {
+                return { value: computeData };
             }
             if (!looksLikeAHelper && initialValue === undefined) {
                 helper = mustacheHelpers.getHelper(methodKey, helperOptions);
             }
         }
         return {
-            value: value,
+            value: computeData,
             args: args,
             helper: helper && helper.fn
         };
@@ -7639,7 +8651,7 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         var fn = this.evaluator(helper, scope, helperOptions, nodeList, truthyRenderer, falseyRenderer, stringOnly);
         var computeValue = compute(fn);
         compute.temporarilyBind(computeValue);
-        if (!computeValue.computeInstance.hasDependencies) {
+        if (!computeHasDependencies(computeValue)) {
             return computeValue();
         } else {
             return computeValue;
@@ -7777,6 +8789,7 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
         }
     };
     var expression = {
+        toComputeOrValue: toComputeOrValue,
         convertKeyToLookup: convertKeyToLookup,
         Literal: Literal,
         Lookup: Lookup,
@@ -8073,17 +9086,18 @@ define('can-stache@3.0.27#src/expression', function (require, exports, module) {
     };
     module.exports = expression;
 });
-/*can-stache@3.0.27#src/mustache_core*/
-define('can-stache@3.0.27#src/mustache_core', function (require, exports, module) {
+/*can-stache@3.1.0#src/mustache_core*/
+define('can-stache@3.1.0#src/mustache_core', function (require, exports, module) {
     var live = require('can-view-live');
     var nodeLists = require('can-view-nodelist');
     var compute = require('can-compute');
     var Observation = require('can-observation');
     var utils = require('./utils');
     var expression = require('./expression');
-    var types = require('can-types');
     var frag = require('can-util/dom/frag/frag');
     var attr = require('can-util/dom/attr/attr');
+    var canSymbol = require('can-symbol');
+    var canReflect = require('can-reflect');
     var mustacheLineBreakRegExp = /(?:(?:^|(\r?)\n)(\s*)(\{\{([^\}]*)\}\}\}?)([^\S\n\r]*)($|\r?\n))|(\{\{([^\}]*)\}\}\}?)/g, k = function () {
         };
     var core = {
@@ -8144,13 +9158,7 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
                 }
             }
             if (!mode) {
-                if (value && value.isComputed) {
-                    return value;
-                } else {
-                    return function () {
-                        return '' + (value != null ? value : '');
-                    };
-                }
+                return value;
             } else if (mode === '#' || mode === '^') {
                 helperOptionArg = {
                     fn: function () {
@@ -8160,16 +9168,11 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
                 };
                 utils.convertToScopes(helperOptionArg, scope, helperOptions, nodeList, truthyRenderer, falseyRenderer, stringOnly);
                 return function () {
-                    var finalValue;
-                    if (types.isCompute(value)) {
-                        finalValue = value();
-                    } else {
-                        finalValue = value;
-                    }
+                    var finalValue = canReflect.getValue(value);
                     if (typeof finalValue === 'function') {
                         return finalValue;
                     } else if (typeof finalValue !== 'string' && utils.isArrayLike(finalValue)) {
-                        var isObserveList = types.isMapLike(finalValue);
+                        var isObserveList = canReflect.isObservableLike(finalValue) && canReflect.isListLike(finalValue);
                         if (isObserveList ? finalValue.attr('length') : finalValue.length) {
                             if (stringOnly) {
                                 return utils.getItemsStringContent(finalValue, isObserveList, helperOptionArg, helperOptions);
@@ -8199,7 +9202,7 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
                 var partialFrag = compute(function () {
                     var localPartialName = partialName;
                     if (exprData && exprData.argExprs.length === 1) {
-                        var newContext = exprData.argExprs[0].value(scope, options)();
+                        var newContext = canReflect.getValue(exprData.argExprs[0].value(scope, options));
                         if (typeof newContext === 'undefined') {
                         } else {
                             scope = scope.add(newContext);
@@ -8246,7 +9249,12 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
                         scope.__cache[fullExpression] = evaluator;
                     }
                 }
-                var res = evaluator();
+                var gotObservableValue = evaluator[canSymbol.for('can.onValue')], res;
+                if (gotObservableValue) {
+                    res = canReflect.getValue(evaluator);
+                } else {
+                    res = evaluator();
+                }
                 return res == null ? '' : '' + res;
             };
             branchRenderer.exprData = exprData;
@@ -8262,26 +9270,33 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
                 nodeList.expression = expressionString;
                 nodeLists.register(nodeList, null, parentSectionNodeList || true, state.directlyNested);
                 var evaluator = makeEvaluator(scope, options, nodeList, mode, exprData, truthyRenderer, falseyRenderer, state.tag);
-                var gotCompute = evaluator.isComputed, computeValue;
-                if (gotCompute) {
-                    computeValue = evaluator;
+                var gotObservableValue = evaluator[canSymbol.for('can.onValue')];
+                var observable;
+                if (gotObservableValue) {
+                    observable = evaluator;
                 } else {
-                    computeValue = compute(evaluator, null, false);
+                    observable = new Observation(evaluator, null, { isObservable: false });
                 }
-                computeValue.computeInstance.setPrimaryDepth(nodeList.nesting);
-                computeValue.computeInstance.bind('change', k);
-                var value = computeValue();
+                if (observable instanceof Observation) {
+                    observable.compute._primaryDepth = nodeList.nesting;
+                } else if (observable.computeInstance) {
+                    observable.computeInstance.setPrimaryDepth(nodeList.nesting);
+                } else if (observable.observation) {
+                    observable.observation.compute._primaryDepth = nodeList.nesting;
+                }
+                canReflect.onValue(observable, k);
+                var value = canReflect.getValue(observable);
                 if (typeof value === 'function') {
                     Observation.ignore(value)(this);
-                } else if (gotCompute || computeValue.computeInstance.hasDependencies) {
+                } else if (canReflect.valueHasDependencies(observable)) {
                     if (state.attr) {
-                        live.attr(this, state.attr, computeValue);
+                        live.attr(this, state.attr, observable);
                     } else if (state.tag) {
-                        live.attrs(this, computeValue);
+                        live.attrs(this, observable);
                     } else if (state.text && typeof value !== 'object') {
-                        live.text(this, computeValue, this.parentNode, nodeList);
+                        live.text(this, observable, this.parentNode, nodeList);
                     } else {
-                        live.html(this, computeValue, this.parentNode, nodeList);
+                        live.html(this, observable, this.parentNode, nodeList);
                     }
                 } else {
                     if (state.attr) {
@@ -8294,7 +9309,7 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
                         nodeLists.replace([this], frag(value, this.ownerDocument));
                     }
                 }
-                computeValue.computeInstance.unbind('change', k);
+                canReflect.offValue(observable, k);
             };
             branchRenderer.exprData = exprData;
             return branchRenderer;
@@ -8337,8 +9352,8 @@ define('can-stache@3.0.27#src/mustache_core', function (require, exports, module
     var makeEvaluator = core.makeEvaluator, splitModeFromExpression = core.splitModeFromExpression;
     module.exports = core;
 });
-/*can-stache@3.0.27#src/html_section*/
-define('can-stache@3.0.27#src/html_section', function (require, exports, module) {
+/*can-stache@3.1.0#src/html_section*/
+define('can-stache@3.1.0#src/html_section', function (require, exports, module) {
     var target = require('can-view-target');
     var Scope = require('can-view-scope');
     var Observation = require('can-observation');
@@ -8405,6 +9420,9 @@ define('can-stache@3.0.27#src/html_section', function (require, exports, module)
         },
         pop: function () {
             return this.last().pop();
+        },
+        removeCurrentNode: function () {
+            this.last().removeCurrentNode();
         }
     });
     var HTMLSection = function (process) {
@@ -8447,6 +9465,10 @@ define('can-stache@3.0.27#src/html_section', function (require, exports, module)
             this.targetStack = this.targetData = null;
             return this.compiled;
         },
+        removeCurrentNode: function () {
+            var children = this.children();
+            return children.pop();
+        },
         children: function () {
             if (this.targetStack.length) {
                 return last(this.targetStack).children;
@@ -8461,13 +9483,15 @@ define('can-stache@3.0.27#src/html_section', function (require, exports, module)
     HTMLSectionBuilder.HTMLSection = HTMLSection;
     module.exports = HTMLSectionBuilder;
 });
-/*can-stache@3.0.27#src/text_section*/
-define('can-stache@3.0.27#src/text_section', function (require, exports, module) {
+/*can-stache@3.1.0#src/text_section*/
+define('can-stache@3.1.0#src/text_section', function (require, exports, module) {
     var compute = require('can-compute');
     var live = require('can-view-live');
     var utils = require('./utils');
     var attr = require('can-util/dom/attr/attr');
     var assign = require('can-util/js/assign/assign');
+    var canReflect = require('can-reflect');
+    var Observation = require('can-observation');
     var noop = function () {
     };
     var TextSectionBuilder = function () {
@@ -8495,20 +9519,20 @@ define('can-stache@3.0.27#src/text_section', function (require, exports, module)
         compile: function (state) {
             var renderer = this.stack[0].compile();
             return function (scope, options) {
-                var computeValue = compute(function () {
+                var observation = new Observation(function () {
                     return renderer(scope, options);
-                }, null, false);
-                computeValue.computeInstance.addEventListener('change', noop);
-                var value = computeValue();
-                if (computeValue.computeInstance.hasDependencies) {
+                }, null, { isObservable: false });
+                canReflect.onValue(observation, noop);
+                var value = canReflect.getValue(observation);
+                if (canReflect.valueHasDependencies(observation)) {
                     if (state.textContentOnly) {
-                        live.text(this, computeValue);
+                        live.text(this, observation);
                     } else if (state.attr) {
-                        live.attr(this, state.attr, computeValue);
+                        live.attr(this, state.attr, observation);
                     } else {
-                        live.attrs(this, computeValue, scope, options);
+                        live.attrs(this, observation, scope, options);
                     }
-                    computeValue.computeInstance.removeEventListener('change', noop);
+                    canReflect.offValue(observation, noop);
                 } else {
                     if (state.textContentOnly) {
                         this.nodeValue = value;
@@ -8556,8 +9580,8 @@ define('can-stache@3.0.27#src/text_section', function (require, exports, module)
     });
     module.exports = TextSectionBuilder;
 });
-/*can-stache@3.0.27#helpers/converter*/
-define('can-stache@3.0.27#helpers/converter', function (require, exports, module) {
+/*can-stache@3.1.0#helpers/converter*/
+define('can-stache@3.1.0#helpers/converter', function (require, exports, module) {
     var helpers = require('./core');
     var expression = require('../src/expression');
     var makeArray = require('can-util/js/make-array/make-array');
@@ -8574,8 +9598,8 @@ define('can-stache@3.0.27#helpers/converter', function (require, exports, module
     };
     module.exports = helpers;
 });
-/*can-stache@3.0.27#src/intermediate_and_imports*/
-define('can-stache@3.0.27#src/intermediate_and_imports', function (require, exports, module) {
+/*can-stache@3.1.0#src/intermediate_and_imports*/
+define('can-stache@3.1.0#src/intermediate_and_imports', function (require, exports, module) {
     var mustacheCore = require('./mustache_core');
     var parser = require('can-view-parser');
     module.exports = function (source) {
@@ -8638,8 +9662,8 @@ define('can-stache@3.0.27#src/intermediate_and_imports', function (require, expo
         };
     };
 });
-/*can-util@3.8.4#js/import/import*/
-define('can-util@3.8.4#js/import/import', function (require, exports, module) {
+/*can-util@3.9.1#js/import/import*/
+define('can-util@3.9.1#js/import/import', function (require, exports, module) {
     (function (global) {
         'use strict';
         var isFunction = require('../is-function/is-function');
@@ -8667,8 +9691,8 @@ define('can-util@3.8.4#js/import/import', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-stache@3.0.27#can-stache*/
-define('can-stache@3.0.27#can-stache', function (require, exports, module) {
+/*can-stache@3.1.0#can-stache*/
+define('can-stache@3.1.0#can-stache', function (require, exports, module) {
     var parser = require('can-view-parser');
     var viewCallbacks = require('can-view-callbacks');
     var HTMLSectionBuilder = require('./src/html_section');
@@ -8677,6 +9701,7 @@ define('can-stache@3.0.27#can-stache', function (require, exports, module) {
     var mustacheHelpers = require('./helpers/core');
     require('./helpers/converter');
     var getIntermediateAndImports = require('./src/intermediate_and_imports');
+    var makeRendererConvertScopes = require('./src/utils').makeRendererConvertScopes;
     var dev = require('can-util/js/dev/dev');
     var namespace = require('can-namespace');
     var DOCUMENT = require('can-util/dom/document/document');
@@ -8777,7 +9802,8 @@ define('can-stache@3.0.27#can-stache', function (require, exports, module) {
                     section.push(state.node);
                     state.sectionElementStack.push({
                         type: isCustomTag ? 'custom' : null,
-                        tag: isCustomTag ? null : tagName
+                        tag: isCustomTag ? null : tagName,
+                        templates: {}
                     });
                     if (isCustomTag) {
                         section.startSubSection();
@@ -8802,15 +9828,23 @@ define('can-stache@3.0.27#can-stache', function (require, exports, module) {
                 }
                 var oldNode = section.pop();
                 if (isCustomTag) {
-                    addAttributesCallback(oldNode, function (scope, options, parentNodeList) {
-                        viewCallbacks.tagHandler(this, tagName, {
-                            scope: scope,
-                            options: options,
-                            subtemplate: renderer,
-                            templateType: 'stache',
-                            parentNodeList: parentNodeList
+                    if (tagName === 'can-template') {
+                        var parent = state.sectionElementStack[state.sectionElementStack.length - 2];
+                        parent.templates[oldNode.attrs.name] = makeRendererConvertScopes(renderer);
+                        section.removeCurrentNode();
+                    } else {
+                        var current = state.sectionElementStack[state.sectionElementStack.length - 1];
+                        addAttributesCallback(oldNode, function (scope, options, parentNodeList) {
+                            viewCallbacks.tagHandler(this, tagName, {
+                                scope: scope,
+                                options: options,
+                                subtemplate: renderer,
+                                templateType: 'stache',
+                                parentNodeList: parentNodeList,
+                                templates: current.templates
+                            });
                         });
-                    });
+                    }
                 }
                 state.sectionElementStack.pop();
             },
@@ -9122,31 +10156,6 @@ define('bit-docs-html-toc@0.6.2#toc', function (require, exports, module) {
         console.log('An element with class \'on-this-page-container\' is required');
     }
 });
-/*bit-docs-prettify@0.1.1#prettify-engine*/
-define('bit-docs-prettify@0.1.1#prettify-engine', [
-    'module',
-    '@loader',
-    'require'
-], function (module, loader, require) {
-    loader.get('@@global-helpers').prepareGlobal({
-        require: require,
-        name: module.id,
-        deps: []
-    });
-    var define = loader.global.define;
-    var require = loader.global.require;
-    var source = '!function(){var q=null;window.PR_SHOULD_USE_CONTINUATION=!0;\n\t(function(){function S(a){function d(e){var b=e.charCodeAt(0);if(b!==92)return b;var a=e.charAt(1);return(b=r[a])?b:"0"<=a&&a<="7"?parseInt(e.substring(1),8):a==="u"||a==="x"?parseInt(e.substring(2),16):e.charCodeAt(1)}function g(e){if(e<32)return(e<16?"\\\\x0":"\\\\x")+e.toString(16);e=String.fromCharCode(e);return e==="\\\\"||e==="-"||e==="]"||e==="^"?"\\\\"+e:e}function b(e){var b=e.substring(1,e.length-1).match(/\\\\u[\\dA-Fa-f]{4}|\\\\x[\\dA-Fa-f]{2}|\\\\[0-3][0-7]{0,2}|\\\\[0-7]{1,2}|\\\\[\\S\\s]|[^\\\\]/g),e=[],a=\n\t\tb[0]==="^",c=["["];a&&c.push("^");for(var a=a?1:0,f=b.length;a<f;++a){var h=b[a];if(/\\\\[bdsw]/i.test(h))c.push(h);else{var h=d(h),l;a+2<f&&"-"===b[a+1]?(l=d(b[a+2]),a+=2):l=h;e.push([h,l]);l<65||h>122||(l<65||h>90||e.push([Math.max(65,h)|32,Math.min(l,90)|32]),l<97||h>122||e.push([Math.max(97,h)&-33,Math.min(l,122)&-33]))}}e.sort(function(e,a){return e[0]-a[0]||a[1]-e[1]});b=[];f=[];for(a=0;a<e.length;++a)h=e[a],h[0]<=f[1]+1?f[1]=Math.max(f[1],h[1]):b.push(f=h);for(a=0;a<b.length;++a)h=b[a],c.push(g(h[0])),\n\t\th[1]>h[0]&&(h[1]+1>h[0]&&c.push("-"),c.push(g(h[1])));c.push("]");return c.join("")}function s(e){for(var a=e.source.match(/\\[(?:[^\\\\\\]]|\\\\[\\S\\s])*]|\\\\u[\\dA-Fa-f]{4}|\\\\x[\\dA-Fa-f]{2}|\\\\\\d+|\\\\[^\\dux]|\\(\\?[!:=]|[()^]|[^()[\\\\^]+/g),c=a.length,d=[],f=0,h=0;f<c;++f){var l=a[f];l==="("?++h:"\\\\"===l.charAt(0)&&(l=+l.substring(1))&&(l<=h?d[l]=-1:a[f]=g(l))}for(f=1;f<d.length;++f)-1===d[f]&&(d[f]=++x);for(h=f=0;f<c;++f)l=a[f],l==="("?(++h,d[h]||(a[f]="(?:")):"\\\\"===l.charAt(0)&&(l=+l.substring(1))&&l<=h&&\n\t\t(a[f]="\\\\"+d[l]);for(f=0;f<c;++f)"^"===a[f]&&"^"!==a[f+1]&&(a[f]="");if(e.ignoreCase&&m)for(f=0;f<c;++f)l=a[f],e=l.charAt(0),l.length>=2&&e==="["?a[f]=b(l):e!=="\\\\"&&(a[f]=l.replace(/[A-Za-z]/g,function(a){a=a.charCodeAt(0);return"["+String.fromCharCode(a&-33,a|32)+"]"}));return a.join("")}for(var x=0,m=!1,j=!1,k=0,c=a.length;k<c;++k){var i=a[k];if(i.ignoreCase)j=!0;else if(/[a-z]/i.test(i.source.replace(/\\\\u[\\da-f]{4}|\\\\x[\\da-f]{2}|\\\\[^UXux]/gi,""))){m=!0;j=!1;break}}for(var r={b:8,t:9,n:10,v:11,\n\t\tf:12,r:13},n=[],k=0,c=a.length;k<c;++k){i=a[k];if(i.global||i.multiline)throw Error(""+i);n.push("(?:"+s(i)+")")}return RegExp(n.join("|"),j?"gi":"g")}function T(a,d){function g(a){var c=a.nodeType;if(c==1){if(!b.test(a.className)){for(c=a.firstChild;c;c=c.nextSibling)g(c);c=a.nodeName.toLowerCase();if("br"===c||"li"===c)s[j]="\\n",m[j<<1]=x++,m[j++<<1|1]=a}}else if(c==3||c==4)c=a.nodeValue,c.length&&(c=d?c.replace(/\\r\\n?/g,"\\n"):c.replace(/[\\t\\n\\r ]+/g," "),s[j]=c,m[j<<1]=x,x+=c.length,m[j++<<1|1]=\n\t\ta)}var b=/(?:^|\\s)nocode(?:\\s|$)/,s=[],x=0,m=[],j=0;g(a);return{a:s.join("").replace(/\\n$/,""),d:m}}function H(a,d,g,b){d&&(a={a:d,e:a},g(a),b.push.apply(b,a.g))}function U(a){for(var d=void 0,g=a.firstChild;g;g=g.nextSibling)var b=g.nodeType,d=b===1?d?a:g:b===3?V.test(g.nodeValue)?a:d:d;return d===a?void 0:d}function C(a,d){function g(a){for(var j=a.e,k=[j,"pln"],c=0,i=a.a.match(s)||[],r={},n=0,e=i.length;n<e;++n){var z=i[n],w=r[z],t=void 0,f;if(typeof w==="string")f=!1;else{var h=b[z.charAt(0)];\n\t\tif(h)t=z.match(h[1]),w=h[0];else{for(f=0;f<x;++f)if(h=d[f],t=z.match(h[1])){w=h[0];break}t||(w="pln")}if((f=w.length>=5&&"lang-"===w.substring(0,5))&&!(t&&typeof t[1]==="string"))f=!1,w="src";f||(r[z]=w)}h=c;c+=z.length;if(f){f=t[1];var l=z.indexOf(f),B=l+f.length;t[2]&&(B=z.length-t[2].length,l=B-f.length);w=w.substring(5);H(j+h,z.substring(0,l),g,k);H(j+h+l,f,I(w,f),k);H(j+h+B,z.substring(B),g,k)}else k.push(j+h,w)}a.g=k}var b={},s;(function(){for(var g=a.concat(d),j=[],k={},c=0,i=g.length;c<i;++c){var r=\n\t\tg[c],n=r[3];if(n)for(var e=n.length;--e>=0;)b[n.charAt(e)]=r;r=r[1];n=""+r;k.hasOwnProperty(n)||(j.push(r),k[n]=q)}j.push(/[\\S\\s]/);s=S(j)})();var x=d.length;return g}function v(a){var d=[],g=[];a.tripleQuotedStrings?d.push(["str",/^(?:\'\'\'(?:[^\'\\\\]|\\\\[\\S\\s]|\'\'?(?=[^\']))*(?:\'\'\'|$)|"""(?:[^"\\\\]|\\\\[\\S\\s]|""?(?=[^"]))*(?:"""|$)|\'(?:[^\'\\\\]|\\\\[\\S\\s])*(?:\'|$)|"(?:[^"\\\\]|\\\\[\\S\\s])*(?:"|$))/,q,"\'\\""]):a.multiLineStrings?d.push(["str",/^(?:\'(?:[^\'\\\\]|\\\\[\\S\\s])*(?:\'|$)|"(?:[^"\\\\]|\\\\[\\S\\s])*(?:"|$)|`(?:[^\\\\`]|\\\\[\\S\\s])*(?:`|$))/,\n\t\tq,"\'\\"`"]):d.push(["str",/^(?:\'(?:[^\\n\\r\'\\\\]|\\\\.)*(?:\'|$)|"(?:[^\\n\\r"\\\\]|\\\\.)*(?:"|$))/,q,"\\"\'"]);a.verbatimStrings&&g.push(["str",/^@"(?:[^"]|"")*(?:"|$)/,q]);var b=a.hashComments;b&&(a.cStyleComments?(b>1?d.push(["com",/^#(?:##(?:[^#]|#(?!##))*(?:###|$)|.*)/,q,"#"]):d.push(["com",/^#(?:(?:define|e(?:l|nd)if|else|error|ifn?def|include|line|pragma|undef|warning)\\b|[^\\n\\r]*)/,q,"#"]),g.push(["str",/^<(?:(?:(?:\\.\\.\\/)*|\\/?)(?:[\\w-]+(?:\\/[\\w-]+)+)?[\\w-]+\\.h(?:h|pp|\\+\\+)?|[a-z]\\w*)>/,q])):d.push(["com",\n\t\t/^#[^\\n\\r]*/,q,"#"]));a.cStyleComments&&(g.push(["com",/^\\/\\/[^\\n\\r]*/,q]),g.push(["com",/^\\/\\*[\\S\\s]*?(?:\\*\\/|$)/,q]));if(b=a.regexLiterals){var s=(b=b>1?"":"\\n\\r")?".":"[\\\\S\\\\s]";g.push(["lang-regex",RegExp("^(?:^^\\\\.?|[+-]|[!=]=?=?|\\\\#|%=?|&&?=?|\\\\(|\\\\*=?|[+\\\\-]=|->|\\\\/=?|::?|<<?=?|>>?>?=?|,|;|\\\\?|@|\\\\[|~|{|\\\\^\\\\^?=?|\\\\|\\\\|?=?|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\\\\s*("+("/(?=[^/*"+b+"])(?:[^/\\\\x5B\\\\x5C"+b+"]|\\\\x5C"+s+"|\\\\x5B(?:[^\\\\x5C\\\\x5D"+b+"]|\\\\x5C"+\n\t\ts+")*(?:\\\\x5D|$))+/")+")")])}(b=a.types)&&g.push(["typ",b]);b=(""+a.keywords).replace(/^ | $/g,"");b.length&&g.push(["kwd",RegExp("^(?:"+b.replace(/[\\s,]+/g,"|")+")\\\\b"),q]);d.push(["pln",/^\\s+/,q," \\r\\n\\t\\u00a0"]);b="^.[^\\\\s\\\\w.$@\'\\"`/\\\\\\\\]*";a.regexLiterals&&(b+="(?!s*/)");g.push(["lit",/^@[$_a-z][\\w$@]*/i,q],["typ",/^(?:[@_]?[A-Z]+[a-z][\\w$@]*|\\w+_t\\b)/,q],["pln",/^[$_a-z][\\w$@]*/i,q],["lit",/^(?:0x[\\da-f]+|(?:\\d(?:_\\d+)*\\d*(?:\\.\\d*)?|\\.\\d\\+)(?:e[+-]?\\d+)?)[a-z]*/i,q,"0123456789"],["pln",/^\\\\[\\S\\s]?/,\n\t\tq],["pun",RegExp(b),q]);return C(d,g)}function J(a,d,g){function b(a){var c=a.nodeType;if(c==1&&!x.test(a.className))if("br"===a.nodeName)s(a),a.parentNode&&a.parentNode.removeChild(a);else for(a=a.firstChild;a;a=a.nextSibling)b(a);else if((c==3||c==4)&&g){var d=a.nodeValue,i=d.match(m);if(i)c=d.substring(0,i.index),a.nodeValue=c,(d=d.substring(i.index+i[0].length))&&a.parentNode.insertBefore(j.createTextNode(d),a.nextSibling),s(a),c||a.parentNode.removeChild(a)}}function s(a){function b(a,c){var d=\n\t\tc?a.cloneNode(!1):a,e=a.parentNode;if(e){var e=b(e,1),g=a.nextSibling;e.appendChild(d);for(var i=g;i;i=g)g=i.nextSibling,e.appendChild(i)}return d}for(;!a.nextSibling;)if(a=a.parentNode,!a)return;for(var a=b(a.nextSibling,0),d;(d=a.parentNode)&&d.nodeType===1;)a=d;c.push(a)}for(var x=/(?:^|\\s)nocode(?:\\s|$)/,m=/\\r\\n?|\\n/,j=a.ownerDocument,k=j.createElement("li");a.firstChild;)k.appendChild(a.firstChild);for(var c=[k],i=0;i<c.length;++i)b(c[i]);d===(d|0)&&c[0].setAttribute("value",d);var r=j.createElement("ol");\n\t\tr.className="linenums";for(var d=Math.max(0,d-1|0)||0,i=0,n=c.length;i<n;++i)k=c[i],k.className="L"+(i+d)%10,k.firstChild||k.appendChild(j.createTextNode("\\u00a0")),r.appendChild(k);a.appendChild(r)}function p(a,d){for(var g=d.length;--g>=0;){var b=d[g];F.hasOwnProperty(b)?D.console&&console.warn("cannot override language handler %s",b):F[b]=a}}function I(a,d){if(!a||!F.hasOwnProperty(a))a=/^\\s*</.test(d)?"default-markup":"default-code";return F[a]}function K(a){var d=a.h;try{var g=T(a.c,a.i),b=g.a;\n\t\ta.a=b;a.d=g.d;a.e=0;I(d,b)(a);var s=/\\bMSIE\\s(\\d+)/.exec(navigator.userAgent),s=s&&+s[1]<=8,d=/\\n/g,x=a.a,m=x.length,g=0,j=a.d,k=j.length,b=0,c=a.g,i=c.length,r=0;c[i]=m;var n,e;for(e=n=0;e<i;)c[e]!==c[e+2]?(c[n++]=c[e++],c[n++]=c[e++]):e+=2;i=n;for(e=n=0;e<i;){for(var p=c[e],w=c[e+1],t=e+2;t+2<=i&&c[t+1]===w;)t+=2;c[n++]=p;c[n++]=w;e=t}c.length=n;var f=a.c,h;if(f)h=f.style.display,f.style.display="none";try{for(;b<k;){var l=j[b+2]||m,B=c[r+2]||m,t=Math.min(l,B),A=j[b+1],G;if(A.nodeType!==1&&(G=x.substring(g,\n\t\t\tt))){s&&(G=G.replace(d,"\\r"));A.nodeValue=G;var L=A.ownerDocument,o=L.createElement("span");o.className=c[r+1];var v=A.parentNode;v.replaceChild(o,A);o.appendChild(A);g<l&&(j[b+1]=A=L.createTextNode(x.substring(t,l)),v.insertBefore(A,o.nextSibling))}g=t;g>=l&&(b+=2);g>=B&&(r+=2)}}finally{if(f)f.style.display=h}}catch(u){D.console&&console.log(u&&u.stack||u)}}var D=window,y=["break,continue,do,else,for,if,return,while"],E=[[y,"auto,case,char,const,default,double,enum,extern,float,goto,inline,int,long,register,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile"],\n\t\t\t"catch,class,delete,false,import,new,operator,private,protected,public,this,throw,true,try,typeof"],M=[E,"alignof,align_union,asm,axiom,bool,concept,concept_map,const_cast,constexpr,decltype,delegate,dynamic_cast,explicit,export,friend,generic,late_check,mutable,namespace,nullptr,property,reinterpret_cast,static_assert,static_cast,template,typeid,typename,using,virtual,where"],N=[E,"abstract,assert,boolean,byte,extends,final,finally,implements,import,instanceof,interface,null,native,package,strictfp,super,synchronized,throws,transient"],\n\t\tO=[N,"as,base,by,checked,decimal,delegate,descending,dynamic,event,fixed,foreach,from,group,implicit,in,internal,into,is,let,lock,object,out,override,orderby,params,partial,readonly,ref,sbyte,sealed,stackalloc,string,select,uint,ulong,unchecked,unsafe,ushort,var,virtual,where"],E=[E,"debugger,eval,export,function,get,null,set,undefined,var,with,Infinity,NaN"],P=[y,"and,as,assert,class,def,del,elif,except,exec,finally,from,global,import,in,is,lambda,nonlocal,not,or,pass,print,raise,try,with,yield,False,True,None"],\n\t\tQ=[y,"alias,and,begin,case,class,def,defined,elsif,end,ensure,false,in,module,next,nil,not,or,redo,rescue,retry,self,super,then,true,undef,unless,until,when,yield,BEGIN,END"],W=[y,"as,assert,const,copy,drop,enum,extern,fail,false,fn,impl,let,log,loop,match,mod,move,mut,priv,pub,pure,ref,self,static,struct,true,trait,type,unsafe,use"],y=[y,"case,done,elif,esac,eval,fi,function,in,local,set,then,until"],R=/^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\\d*)\\b/,\n\t\tV=/\\S/,X=v({keywords:[M,O,E,"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",P,Q,y],hashComments:!0,cStyleComments:!0,multiLineStrings:!0,regexLiterals:!0}),F={};p(X,["default-code"]);p(C([],[["pln",/^[^<?]+/],["dec",/^<!\\w[^>]*(?:>|$)/],["com",/^<\\!--[\\S\\s]*?(?:--\\>|$)/],["lang-",/^<\\?([\\S\\s]+?)(?:\\?>|$)/],["lang-",/^<%([\\S\\s]+?)(?:%>|$)/],["pun",/^(?:<[%?]|[%?]>)/],["lang-",\n\t\t/^<xmp\\b[^>]*>([\\S\\s]+?)<\\/xmp\\b[^>]*>/i],["lang-js",/^<script\\b[^>]*>([\\S\\s]*?)(<\\/script\\b[^>]*>)/i],["lang-css",/^<style\\b[^>]*>([\\S\\s]*?)(<\\/style\\b[^>]*>)/i],["lang-in.tag",/^(<\\/?[a-z][^<>]*>)/i]]),["default-markup","htm","html","mxml","xhtml","xml","xsl"]);p(C([["pln",/^\\s+/,q," \\t\\r\\n"],["atv",/^(?:"[^"]*"?|\'[^\']*\'?)/,q,"\\"\'"]],[["tag",/^^<\\/?[a-z](?:[\\w-.:]*\\w)?|\\/?>$/i],["atn",/^(?!style[\\s=]|on)[a-z](?:[\\w:-]*\\w)?/i],["lang-uq.val",/^=\\s*([^\\s"\'>]*(?:[^\\s"\'/>]|\\/(?=\\s)))/],["pun",/^[/<->]+/],\n\t\t["lang-js",/^on\\w+\\s*=\\s*"([^"]+)"/i],["lang-js",/^on\\w+\\s*=\\s*\'([^\']+)\'/i],["lang-js",/^on\\w+\\s*=\\s*([^\\s"\'>]+)/i],["lang-css",/^style\\s*=\\s*"([^"]+)"/i],["lang-css",/^style\\s*=\\s*\'([^\']+)\'/i],["lang-css",/^style\\s*=\\s*([^\\s"\'>]+)/i]]),["in.tag"]);p(C([],[["atv",/^[\\S\\s]+/]]),["uq.val"]);p(v({keywords:M,hashComments:!0,cStyleComments:!0,types:R}),["c","cc","cpp","cxx","cyc","m"]);p(v({keywords:"null,true,false"}),["json"]);p(v({keywords:O,hashComments:!0,cStyleComments:!0,verbatimStrings:!0,types:R}),\n\t\t["cs"]);p(v({keywords:N,cStyleComments:!0}),["java"]);p(v({keywords:y,hashComments:!0,multiLineStrings:!0}),["bash","bsh","csh","sh"]);p(v({keywords:P,hashComments:!0,multiLineStrings:!0,tripleQuotedStrings:!0}),["cv","py","python"]);p(v({keywords:"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",hashComments:!0,multiLineStrings:!0,regexLiterals:2}),["perl","pl","pm"]);p(v({keywords:Q,\n\t\thashComments:!0,multiLineStrings:!0,regexLiterals:!0}),["rb","ruby"]);p(v({keywords:E,cStyleComments:!0,regexLiterals:!0}),["javascript","js"]);p(v({keywords:"all,and,by,catch,class,else,extends,false,finally,for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then,throw,true,try,unless,until,when,while,yes",hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,regexLiterals:!0}),["coffee"]);p(v({keywords:W,cStyleComments:!0,multilineStrings:!0}),["rc","rs","rust"]);\n\t\tp(C([],[["str",/^[\\S\\s]+/]]),["regex"]);var Y=D.PR={createSimpleLexer:C,registerLangHandler:p,sourceDecorator:v,PR_ATTRIB_NAME:"atn",PR_ATTRIB_VALUE:"atv",PR_COMMENT:"com",PR_DECLARATION:"dec",PR_KEYWORD:"kwd",PR_LITERAL:"lit",PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ",prettyPrintOne:D.prettyPrintOne=function(a,d,g){var b=document.createElement("div");b.innerHTML="<pre>"+a+"</pre>";b=b.firstChild;g&&J(b,g,!0);K({h:d,j:g,c:b,i:1});\n\t\t\treturn b.innerHTML},prettyPrint:D.prettyPrint=function(a,d){function g(){for(var b=D.PR_SHOULD_USE_CONTINUATION?c.now()+250:Infinity;i<p.length&&c.now()<b;i++){for(var d=p[i],j=h,k=d;k=k.previousSibling;){var m=k.nodeType,o=(m===7||m===8)&&k.nodeValue;if(o?!/^\\??prettify\\b/.test(o):m!==3||/\\S/.test(k.nodeValue))break;if(o){j={};o.replace(/\\b(\\w+)=([\\w%+\\-.:]+)/g,function(a,b,c){j[b]=c});break}}k=d.className;if((j!==h||e.test(k))&&!v.test(k)){m=!1;for(o=d.parentNode;o;o=o.parentNode)if(f.test(o.tagName)&&\n\t\t\to.className&&e.test(o.className)){m=!0;break}if(!m){d.className+=" prettyprinted";m=j.lang;if(!m){var m=k.match(n),y;if(!m&&(y=U(d))&&t.test(y.tagName))m=y.className.match(n);m&&(m=m[1])}if(w.test(d.tagName))o=1;else var o=d.currentStyle,u=s.defaultView,o=(o=o?o.whiteSpace:u&&u.getComputedStyle?u.getComputedStyle(d,q).getPropertyValue("white-space"):0)&&"pre"===o.substring(0,3);u=j.linenums;if(!(u=u==="true"||+u))u=(u=k.match(/\\blinenums\\b(?::(\\d+))?/))?u[1]&&u[1].length?+u[1]:!0:!1;u&&J(d,u,o);r=\n\t\t{h:m,c:d,j:u,i:o};K(r)}}}i<p.length?setTimeout(g,250):"function"===typeof a&&a()}for(var b=d||document.body,s=b.ownerDocument||document,b=[b.getElementsByTagName("pre"),b.getElementsByTagName("code"),b.getElementsByTagName("xmp")],p=[],m=0;m<b.length;++m)for(var j=0,k=b[m].length;j<k;++j)p.push(b[m][j]);var b=q,c=Date;c.now||(c={now:function(){return+new Date}});var i=0,r,n=/\\blang(?:uage)?-([\\w.]+)(?!\\S)/,e=/\\bprettyprint\\b/,v=/\\bprettyprinted\\b/,w=/pre|xmp/i,t=/^code$/i,f=/^(?:pre|code|xmp)$/i,\n\t\t\th={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify",[],function(){return Y})})();}()\n';
-    loader.global.define = undefined;
-    loader.global.module = undefined;
-    loader.global.exports = undefined;
-    loader.__exec({
-        'source': source,
-        'address': module.uri
-    });
-    loader.global.require = require;
-    loader.global.define = define;
-    return loader.get('@@global-helpers').retrieveGlobal(module.id, undefined);
-});
 /*steal-css@1.2.4#css*/
 define('steal-css@1.2.4#css', function (require, exports, module) {
     (function (global) {
@@ -9357,6 +10366,35 @@ define('@node-require/steal-less@1.2.0#less-engine-node', [], function(){ return
 define('steal-less@1.2.0#less-engine-node', [], function(){ return {}; });
 /*steal-less@1.2.0#less*/
 define('steal-less@1.2.0#less', [], function(){ return {}; });
+/*bit-docs-js@0.0.6#site*/
+define('bit-docs-js@0.0.6#site', function (require, exports, module) {
+    require('./site/static/styles/styles.less');
+});
+/*bit-docs-prettify@0.1.1#prettify-engine*/
+define('bit-docs-prettify@0.1.1#prettify-engine', [
+    'module',
+    '@loader',
+    'require'
+], function (module, loader, require) {
+    loader.get('@@global-helpers').prepareGlobal({
+        require: require,
+        name: module.id,
+        deps: []
+    });
+    var define = loader.global.define;
+    var require = loader.global.require;
+    var source = '!function(){var q=null;window.PR_SHOULD_USE_CONTINUATION=!0;\n\t(function(){function S(a){function d(e){var b=e.charCodeAt(0);if(b!==92)return b;var a=e.charAt(1);return(b=r[a])?b:"0"<=a&&a<="7"?parseInt(e.substring(1),8):a==="u"||a==="x"?parseInt(e.substring(2),16):e.charCodeAt(1)}function g(e){if(e<32)return(e<16?"\\\\x0":"\\\\x")+e.toString(16);e=String.fromCharCode(e);return e==="\\\\"||e==="-"||e==="]"||e==="^"?"\\\\"+e:e}function b(e){var b=e.substring(1,e.length-1).match(/\\\\u[\\dA-Fa-f]{4}|\\\\x[\\dA-Fa-f]{2}|\\\\[0-3][0-7]{0,2}|\\\\[0-7]{1,2}|\\\\[\\S\\s]|[^\\\\]/g),e=[],a=\n\t\tb[0]==="^",c=["["];a&&c.push("^");for(var a=a?1:0,f=b.length;a<f;++a){var h=b[a];if(/\\\\[bdsw]/i.test(h))c.push(h);else{var h=d(h),l;a+2<f&&"-"===b[a+1]?(l=d(b[a+2]),a+=2):l=h;e.push([h,l]);l<65||h>122||(l<65||h>90||e.push([Math.max(65,h)|32,Math.min(l,90)|32]),l<97||h>122||e.push([Math.max(97,h)&-33,Math.min(l,122)&-33]))}}e.sort(function(e,a){return e[0]-a[0]||a[1]-e[1]});b=[];f=[];for(a=0;a<e.length;++a)h=e[a],h[0]<=f[1]+1?f[1]=Math.max(f[1],h[1]):b.push(f=h);for(a=0;a<b.length;++a)h=b[a],c.push(g(h[0])),\n\t\th[1]>h[0]&&(h[1]+1>h[0]&&c.push("-"),c.push(g(h[1])));c.push("]");return c.join("")}function s(e){for(var a=e.source.match(/\\[(?:[^\\\\\\]]|\\\\[\\S\\s])*]|\\\\u[\\dA-Fa-f]{4}|\\\\x[\\dA-Fa-f]{2}|\\\\\\d+|\\\\[^\\dux]|\\(\\?[!:=]|[()^]|[^()[\\\\^]+/g),c=a.length,d=[],f=0,h=0;f<c;++f){var l=a[f];l==="("?++h:"\\\\"===l.charAt(0)&&(l=+l.substring(1))&&(l<=h?d[l]=-1:a[f]=g(l))}for(f=1;f<d.length;++f)-1===d[f]&&(d[f]=++x);for(h=f=0;f<c;++f)l=a[f],l==="("?(++h,d[h]||(a[f]="(?:")):"\\\\"===l.charAt(0)&&(l=+l.substring(1))&&l<=h&&\n\t\t(a[f]="\\\\"+d[l]);for(f=0;f<c;++f)"^"===a[f]&&"^"!==a[f+1]&&(a[f]="");if(e.ignoreCase&&m)for(f=0;f<c;++f)l=a[f],e=l.charAt(0),l.length>=2&&e==="["?a[f]=b(l):e!=="\\\\"&&(a[f]=l.replace(/[A-Za-z]/g,function(a){a=a.charCodeAt(0);return"["+String.fromCharCode(a&-33,a|32)+"]"}));return a.join("")}for(var x=0,m=!1,j=!1,k=0,c=a.length;k<c;++k){var i=a[k];if(i.ignoreCase)j=!0;else if(/[a-z]/i.test(i.source.replace(/\\\\u[\\da-f]{4}|\\\\x[\\da-f]{2}|\\\\[^UXux]/gi,""))){m=!0;j=!1;break}}for(var r={b:8,t:9,n:10,v:11,\n\t\tf:12,r:13},n=[],k=0,c=a.length;k<c;++k){i=a[k];if(i.global||i.multiline)throw Error(""+i);n.push("(?:"+s(i)+")")}return RegExp(n.join("|"),j?"gi":"g")}function T(a,d){function g(a){var c=a.nodeType;if(c==1){if(!b.test(a.className)){for(c=a.firstChild;c;c=c.nextSibling)g(c);c=a.nodeName.toLowerCase();if("br"===c||"li"===c)s[j]="\\n",m[j<<1]=x++,m[j++<<1|1]=a}}else if(c==3||c==4)c=a.nodeValue,c.length&&(c=d?c.replace(/\\r\\n?/g,"\\n"):c.replace(/[\\t\\n\\r ]+/g," "),s[j]=c,m[j<<1]=x,x+=c.length,m[j++<<1|1]=\n\t\ta)}var b=/(?:^|\\s)nocode(?:\\s|$)/,s=[],x=0,m=[],j=0;g(a);return{a:s.join("").replace(/\\n$/,""),d:m}}function H(a,d,g,b){d&&(a={a:d,e:a},g(a),b.push.apply(b,a.g))}function U(a){for(var d=void 0,g=a.firstChild;g;g=g.nextSibling)var b=g.nodeType,d=b===1?d?a:g:b===3?V.test(g.nodeValue)?a:d:d;return d===a?void 0:d}function C(a,d){function g(a){for(var j=a.e,k=[j,"pln"],c=0,i=a.a.match(s)||[],r={},n=0,e=i.length;n<e;++n){var z=i[n],w=r[z],t=void 0,f;if(typeof w==="string")f=!1;else{var h=b[z.charAt(0)];\n\t\tif(h)t=z.match(h[1]),w=h[0];else{for(f=0;f<x;++f)if(h=d[f],t=z.match(h[1])){w=h[0];break}t||(w="pln")}if((f=w.length>=5&&"lang-"===w.substring(0,5))&&!(t&&typeof t[1]==="string"))f=!1,w="src";f||(r[z]=w)}h=c;c+=z.length;if(f){f=t[1];var l=z.indexOf(f),B=l+f.length;t[2]&&(B=z.length-t[2].length,l=B-f.length);w=w.substring(5);H(j+h,z.substring(0,l),g,k);H(j+h+l,f,I(w,f),k);H(j+h+B,z.substring(B),g,k)}else k.push(j+h,w)}a.g=k}var b={},s;(function(){for(var g=a.concat(d),j=[],k={},c=0,i=g.length;c<i;++c){var r=\n\t\tg[c],n=r[3];if(n)for(var e=n.length;--e>=0;)b[n.charAt(e)]=r;r=r[1];n=""+r;k.hasOwnProperty(n)||(j.push(r),k[n]=q)}j.push(/[\\S\\s]/);s=S(j)})();var x=d.length;return g}function v(a){var d=[],g=[];a.tripleQuotedStrings?d.push(["str",/^(?:\'\'\'(?:[^\'\\\\]|\\\\[\\S\\s]|\'\'?(?=[^\']))*(?:\'\'\'|$)|"""(?:[^"\\\\]|\\\\[\\S\\s]|""?(?=[^"]))*(?:"""|$)|\'(?:[^\'\\\\]|\\\\[\\S\\s])*(?:\'|$)|"(?:[^"\\\\]|\\\\[\\S\\s])*(?:"|$))/,q,"\'\\""]):a.multiLineStrings?d.push(["str",/^(?:\'(?:[^\'\\\\]|\\\\[\\S\\s])*(?:\'|$)|"(?:[^"\\\\]|\\\\[\\S\\s])*(?:"|$)|`(?:[^\\\\`]|\\\\[\\S\\s])*(?:`|$))/,\n\t\tq,"\'\\"`"]):d.push(["str",/^(?:\'(?:[^\\n\\r\'\\\\]|\\\\.)*(?:\'|$)|"(?:[^\\n\\r"\\\\]|\\\\.)*(?:"|$))/,q,"\\"\'"]);a.verbatimStrings&&g.push(["str",/^@"(?:[^"]|"")*(?:"|$)/,q]);var b=a.hashComments;b&&(a.cStyleComments?(b>1?d.push(["com",/^#(?:##(?:[^#]|#(?!##))*(?:###|$)|.*)/,q,"#"]):d.push(["com",/^#(?:(?:define|e(?:l|nd)if|else|error|ifn?def|include|line|pragma|undef|warning)\\b|[^\\n\\r]*)/,q,"#"]),g.push(["str",/^<(?:(?:(?:\\.\\.\\/)*|\\/?)(?:[\\w-]+(?:\\/[\\w-]+)+)?[\\w-]+\\.h(?:h|pp|\\+\\+)?|[a-z]\\w*)>/,q])):d.push(["com",\n\t\t/^#[^\\n\\r]*/,q,"#"]));a.cStyleComments&&(g.push(["com",/^\\/\\/[^\\n\\r]*/,q]),g.push(["com",/^\\/\\*[\\S\\s]*?(?:\\*\\/|$)/,q]));if(b=a.regexLiterals){var s=(b=b>1?"":"\\n\\r")?".":"[\\\\S\\\\s]";g.push(["lang-regex",RegExp("^(?:^^\\\\.?|[+-]|[!=]=?=?|\\\\#|%=?|&&?=?|\\\\(|\\\\*=?|[+\\\\-]=|->|\\\\/=?|::?|<<?=?|>>?>?=?|,|;|\\\\?|@|\\\\[|~|{|\\\\^\\\\^?=?|\\\\|\\\\|?=?|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\\\\s*("+("/(?=[^/*"+b+"])(?:[^/\\\\x5B\\\\x5C"+b+"]|\\\\x5C"+s+"|\\\\x5B(?:[^\\\\x5C\\\\x5D"+b+"]|\\\\x5C"+\n\t\ts+")*(?:\\\\x5D|$))+/")+")")])}(b=a.types)&&g.push(["typ",b]);b=(""+a.keywords).replace(/^ | $/g,"");b.length&&g.push(["kwd",RegExp("^(?:"+b.replace(/[\\s,]+/g,"|")+")\\\\b"),q]);d.push(["pln",/^\\s+/,q," \\r\\n\\t\\u00a0"]);b="^.[^\\\\s\\\\w.$@\'\\"`/\\\\\\\\]*";a.regexLiterals&&(b+="(?!s*/)");g.push(["lit",/^@[$_a-z][\\w$@]*/i,q],["typ",/^(?:[@_]?[A-Z]+[a-z][\\w$@]*|\\w+_t\\b)/,q],["pln",/^[$_a-z][\\w$@]*/i,q],["lit",/^(?:0x[\\da-f]+|(?:\\d(?:_\\d+)*\\d*(?:\\.\\d*)?|\\.\\d\\+)(?:e[+-]?\\d+)?)[a-z]*/i,q,"0123456789"],["pln",/^\\\\[\\S\\s]?/,\n\t\tq],["pun",RegExp(b),q]);return C(d,g)}function J(a,d,g){function b(a){var c=a.nodeType;if(c==1&&!x.test(a.className))if("br"===a.nodeName)s(a),a.parentNode&&a.parentNode.removeChild(a);else for(a=a.firstChild;a;a=a.nextSibling)b(a);else if((c==3||c==4)&&g){var d=a.nodeValue,i=d.match(m);if(i)c=d.substring(0,i.index),a.nodeValue=c,(d=d.substring(i.index+i[0].length))&&a.parentNode.insertBefore(j.createTextNode(d),a.nextSibling),s(a),c||a.parentNode.removeChild(a)}}function s(a){function b(a,c){var d=\n\t\tc?a.cloneNode(!1):a,e=a.parentNode;if(e){var e=b(e,1),g=a.nextSibling;e.appendChild(d);for(var i=g;i;i=g)g=i.nextSibling,e.appendChild(i)}return d}for(;!a.nextSibling;)if(a=a.parentNode,!a)return;for(var a=b(a.nextSibling,0),d;(d=a.parentNode)&&d.nodeType===1;)a=d;c.push(a)}for(var x=/(?:^|\\s)nocode(?:\\s|$)/,m=/\\r\\n?|\\n/,j=a.ownerDocument,k=j.createElement("li");a.firstChild;)k.appendChild(a.firstChild);for(var c=[k],i=0;i<c.length;++i)b(c[i]);d===(d|0)&&c[0].setAttribute("value",d);var r=j.createElement("ol");\n\t\tr.className="linenums";for(var d=Math.max(0,d-1|0)||0,i=0,n=c.length;i<n;++i)k=c[i],k.className="L"+(i+d)%10,k.firstChild||k.appendChild(j.createTextNode("\\u00a0")),r.appendChild(k);a.appendChild(r)}function p(a,d){for(var g=d.length;--g>=0;){var b=d[g];F.hasOwnProperty(b)?D.console&&console.warn("cannot override language handler %s",b):F[b]=a}}function I(a,d){if(!a||!F.hasOwnProperty(a))a=/^\\s*</.test(d)?"default-markup":"default-code";return F[a]}function K(a){var d=a.h;try{var g=T(a.c,a.i),b=g.a;\n\t\ta.a=b;a.d=g.d;a.e=0;I(d,b)(a);var s=/\\bMSIE\\s(\\d+)/.exec(navigator.userAgent),s=s&&+s[1]<=8,d=/\\n/g,x=a.a,m=x.length,g=0,j=a.d,k=j.length,b=0,c=a.g,i=c.length,r=0;c[i]=m;var n,e;for(e=n=0;e<i;)c[e]!==c[e+2]?(c[n++]=c[e++],c[n++]=c[e++]):e+=2;i=n;for(e=n=0;e<i;){for(var p=c[e],w=c[e+1],t=e+2;t+2<=i&&c[t+1]===w;)t+=2;c[n++]=p;c[n++]=w;e=t}c.length=n;var f=a.c,h;if(f)h=f.style.display,f.style.display="none";try{for(;b<k;){var l=j[b+2]||m,B=c[r+2]||m,t=Math.min(l,B),A=j[b+1],G;if(A.nodeType!==1&&(G=x.substring(g,\n\t\t\tt))){s&&(G=G.replace(d,"\\r"));A.nodeValue=G;var L=A.ownerDocument,o=L.createElement("span");o.className=c[r+1];var v=A.parentNode;v.replaceChild(o,A);o.appendChild(A);g<l&&(j[b+1]=A=L.createTextNode(x.substring(t,l)),v.insertBefore(A,o.nextSibling))}g=t;g>=l&&(b+=2);g>=B&&(r+=2)}}finally{if(f)f.style.display=h}}catch(u){D.console&&console.log(u&&u.stack||u)}}var D=window,y=["break,continue,do,else,for,if,return,while"],E=[[y,"auto,case,char,const,default,double,enum,extern,float,goto,inline,int,long,register,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile"],\n\t\t\t"catch,class,delete,false,import,new,operator,private,protected,public,this,throw,true,try,typeof"],M=[E,"alignof,align_union,asm,axiom,bool,concept,concept_map,const_cast,constexpr,decltype,delegate,dynamic_cast,explicit,export,friend,generic,late_check,mutable,namespace,nullptr,property,reinterpret_cast,static_assert,static_cast,template,typeid,typename,using,virtual,where"],N=[E,"abstract,assert,boolean,byte,extends,final,finally,implements,import,instanceof,interface,null,native,package,strictfp,super,synchronized,throws,transient"],\n\t\tO=[N,"as,base,by,checked,decimal,delegate,descending,dynamic,event,fixed,foreach,from,group,implicit,in,internal,into,is,let,lock,object,out,override,orderby,params,partial,readonly,ref,sbyte,sealed,stackalloc,string,select,uint,ulong,unchecked,unsafe,ushort,var,virtual,where"],E=[E,"debugger,eval,export,function,get,null,set,undefined,var,with,Infinity,NaN"],P=[y,"and,as,assert,class,def,del,elif,except,exec,finally,from,global,import,in,is,lambda,nonlocal,not,or,pass,print,raise,try,with,yield,False,True,None"],\n\t\tQ=[y,"alias,and,begin,case,class,def,defined,elsif,end,ensure,false,in,module,next,nil,not,or,redo,rescue,retry,self,super,then,true,undef,unless,until,when,yield,BEGIN,END"],W=[y,"as,assert,const,copy,drop,enum,extern,fail,false,fn,impl,let,log,loop,match,mod,move,mut,priv,pub,pure,ref,self,static,struct,true,trait,type,unsafe,use"],y=[y,"case,done,elif,esac,eval,fi,function,in,local,set,then,until"],R=/^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\\d*)\\b/,\n\t\tV=/\\S/,X=v({keywords:[M,O,E,"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",P,Q,y],hashComments:!0,cStyleComments:!0,multiLineStrings:!0,regexLiterals:!0}),F={};p(X,["default-code"]);p(C([],[["pln",/^[^<?]+/],["dec",/^<!\\w[^>]*(?:>|$)/],["com",/^<\\!--[\\S\\s]*?(?:--\\>|$)/],["lang-",/^<\\?([\\S\\s]+?)(?:\\?>|$)/],["lang-",/^<%([\\S\\s]+?)(?:%>|$)/],["pun",/^(?:<[%?]|[%?]>)/],["lang-",\n\t\t/^<xmp\\b[^>]*>([\\S\\s]+?)<\\/xmp\\b[^>]*>/i],["lang-js",/^<script\\b[^>]*>([\\S\\s]*?)(<\\/script\\b[^>]*>)/i],["lang-css",/^<style\\b[^>]*>([\\S\\s]*?)(<\\/style\\b[^>]*>)/i],["lang-in.tag",/^(<\\/?[a-z][^<>]*>)/i]]),["default-markup","htm","html","mxml","xhtml","xml","xsl"]);p(C([["pln",/^\\s+/,q," \\t\\r\\n"],["atv",/^(?:"[^"]*"?|\'[^\']*\'?)/,q,"\\"\'"]],[["tag",/^^<\\/?[a-z](?:[\\w-.:]*\\w)?|\\/?>$/i],["atn",/^(?!style[\\s=]|on)[a-z](?:[\\w:-]*\\w)?/i],["lang-uq.val",/^=\\s*([^\\s"\'>]*(?:[^\\s"\'/>]|\\/(?=\\s)))/],["pun",/^[/<->]+/],\n\t\t["lang-js",/^on\\w+\\s*=\\s*"([^"]+)"/i],["lang-js",/^on\\w+\\s*=\\s*\'([^\']+)\'/i],["lang-js",/^on\\w+\\s*=\\s*([^\\s"\'>]+)/i],["lang-css",/^style\\s*=\\s*"([^"]+)"/i],["lang-css",/^style\\s*=\\s*\'([^\']+)\'/i],["lang-css",/^style\\s*=\\s*([^\\s"\'>]+)/i]]),["in.tag"]);p(C([],[["atv",/^[\\S\\s]+/]]),["uq.val"]);p(v({keywords:M,hashComments:!0,cStyleComments:!0,types:R}),["c","cc","cpp","cxx","cyc","m"]);p(v({keywords:"null,true,false"}),["json"]);p(v({keywords:O,hashComments:!0,cStyleComments:!0,verbatimStrings:!0,types:R}),\n\t\t["cs"]);p(v({keywords:N,cStyleComments:!0}),["java"]);p(v({keywords:y,hashComments:!0,multiLineStrings:!0}),["bash","bsh","csh","sh"]);p(v({keywords:P,hashComments:!0,multiLineStrings:!0,tripleQuotedStrings:!0}),["cv","py","python"]);p(v({keywords:"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",hashComments:!0,multiLineStrings:!0,regexLiterals:2}),["perl","pl","pm"]);p(v({keywords:Q,\n\t\thashComments:!0,multiLineStrings:!0,regexLiterals:!0}),["rb","ruby"]);p(v({keywords:E,cStyleComments:!0,regexLiterals:!0}),["javascript","js"]);p(v({keywords:"all,and,by,catch,class,else,extends,false,finally,for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then,throw,true,try,unless,until,when,while,yes",hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,regexLiterals:!0}),["coffee"]);p(v({keywords:W,cStyleComments:!0,multilineStrings:!0}),["rc","rs","rust"]);\n\t\tp(C([],[["str",/^[\\S\\s]+/]]),["regex"]);var Y=D.PR={createSimpleLexer:C,registerLangHandler:p,sourceDecorator:v,PR_ATTRIB_NAME:"atn",PR_ATTRIB_VALUE:"atv",PR_COMMENT:"com",PR_DECLARATION:"dec",PR_KEYWORD:"kwd",PR_LITERAL:"lit",PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ",prettyPrintOne:D.prettyPrintOne=function(a,d,g){var b=document.createElement("div");b.innerHTML="<pre>"+a+"</pre>";b=b.firstChild;g&&J(b,g,!0);K({h:d,j:g,c:b,i:1});\n\t\t\treturn b.innerHTML},prettyPrint:D.prettyPrint=function(a,d){function g(){for(var b=D.PR_SHOULD_USE_CONTINUATION?c.now()+250:Infinity;i<p.length&&c.now()<b;i++){for(var d=p[i],j=h,k=d;k=k.previousSibling;){var m=k.nodeType,o=(m===7||m===8)&&k.nodeValue;if(o?!/^\\??prettify\\b/.test(o):m!==3||/\\S/.test(k.nodeValue))break;if(o){j={};o.replace(/\\b(\\w+)=([\\w%+\\-.:]+)/g,function(a,b,c){j[b]=c});break}}k=d.className;if((j!==h||e.test(k))&&!v.test(k)){m=!1;for(o=d.parentNode;o;o=o.parentNode)if(f.test(o.tagName)&&\n\t\t\to.className&&e.test(o.className)){m=!0;break}if(!m){d.className+=" prettyprinted";m=j.lang;if(!m){var m=k.match(n),y;if(!m&&(y=U(d))&&t.test(y.tagName))m=y.className.match(n);m&&(m=m[1])}if(w.test(d.tagName))o=1;else var o=d.currentStyle,u=s.defaultView,o=(o=o?o.whiteSpace:u&&u.getComputedStyle?u.getComputedStyle(d,q).getPropertyValue("white-space"):0)&&"pre"===o.substring(0,3);u=j.linenums;if(!(u=u==="true"||+u))u=(u=k.match(/\\blinenums\\b(?::(\\d+))?/))?u[1]&&u[1].length?+u[1]:!0:!1;u&&J(d,u,o);r=\n\t\t{h:m,c:d,j:u,i:o};K(r)}}}i<p.length?setTimeout(g,250):"function"===typeof a&&a()}for(var b=d||document.body,s=b.ownerDocument||document,b=[b.getElementsByTagName("pre"),b.getElementsByTagName("code"),b.getElementsByTagName("xmp")],p=[],m=0;m<b.length;++m)for(var j=0,k=b[m].length;j<k;++j)p.push(b[m][j]);var b=q,c=Date;c.now||(c={now:function(){return+new Date}});var i=0,r,n=/\\blang(?:uage)?-([\\w.]+)(?!\\S)/,e=/\\bprettyprint\\b/,v=/\\bprettyprinted\\b/,w=/pre|xmp/i,t=/^code$/i,f=/^(?:pre|code|xmp)$/i,\n\t\t\th={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify",[],function(){return Y})})();}()\n';
+    loader.global.define = undefined;
+    loader.global.module = undefined;
+    loader.global.exports = undefined;
+    loader.__exec({
+        'source': source,
+        'address': module.uri
+    });
+    loader.global.require = require;
+    loader.global.define = define;
+    return loader.get('@@global-helpers').retrieveGlobal(module.id, undefined);
+});
 /*bit-docs-prettify@0.1.1#prettify*/
 define('bit-docs-prettify@0.1.1#prettify', function (require, exports, module) {
     require('./prettify-engine');
@@ -15242,6 +16280,7 @@ define('bit-docs-site@0.0.1#packages', function (require, exports, module) {
     }
     module.exports = {
         'bit-docs-html-toc': callIfFunction(require('bit-docs-html-toc')),
+        'bit-docs-js': callIfFunction(require('bit-docs-js')),
         'bit-docs-prettify': callIfFunction(require('bit-docs-prettify')),
         'bit-docs-html-highlight-line': callIfFunction(require('bit-docs-html-highlight-line')),
         'bit-docs-tag-demo': callIfFunction(require('bit-docs-tag-demo'))

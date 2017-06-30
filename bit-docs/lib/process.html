@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@module bit-docs/lib/process
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - process</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	<div class="content">
+	
+		<nav class="sidebar">
+	
+		
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../../guides.html"
+							title="These guides are here to help you:">
+							Guides
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="page"
+							href="../../plugins.html"
+							title="Here you will find plugins maintained by the bit-docs organization.">
+							Plugin APIs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="../../bit-docs.html"
+							title="Find files, process them, and produce some sort of output.">
+							bit-docs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li>
+						<span>types</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/FileEventEmitter.html"
+							title="A node event emitter
+that produces events that correlate to files that should be processed.">
+							fileEventEmitter
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/docMap.html"
+							title="An object that contains every docObject keyed by the
+docObject&#x27;s name.">
+							docMap
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/docObject.html"
+							title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">
+							docObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/generator.html"
+							title="A generator module should produce a function that takes the following shape.
+Generator modules are used to produce some form of documentation output.
+bit-docs-generate-html is the default and currently only generator
+packaged with bit-docs.">
+							generator
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="module"
+							href="process.html"
+							title="Processes a FileEventEmitter and returns a promise.">
+							./lib/process
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../modules/lib/generate.html"
+							title="">
+							./lib/generate
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../modules/lib/process/file.html"
+							title="Processes a file&#x27;s source. Adds created docObjects to
+docMap.">
+							./lib/process/file
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-dev.html"
+							title="General development tags.">
+							bit-docs-dev
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-docjs-theme.html"
+							title="The old DocumentJS theme.">
+							bit-docs-docjs-theme
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-generate-html.html"
+							title="Generates HTML for a docMap.  Supports plugins.">
+							bit-docs-generate-html
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-generate-readme.html"
+							title="Generates a readme from other docs.">
+							bit-docs-generate-readme
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-glob-finder.html"
+							title="Finds files for passing to the bit-docs processor.">
+							bit-docs-glob-finder
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-html-highlight-line.html"
+							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							bit-docs-html-highlight-line
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-html-toc.html"
+							title="Injects a table of contents for the page into an HTML element.">
+							bit-docs-html-toc
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-js.html"
+							title="Tags, templates, and basic styles for JavaScript.">
+							bit-docs-js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-prettify.html"
+							title="A bit-docs plugin that makes source-code snippets in HTML prettier.">
+							bit-docs-prettify
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-process-mustache.html"
+							title="Process content in mustache files.">
+							bit-docs-process-mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-process-tags.html"
+							title="Processes tags for a docMap.">
+							bit-docs-process-tags
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-demo.html"
+							title="Provides an @demo tag for embedding HTML, CSS, and JS in an iframe.">
+							bit-docs-tag-demo
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-package.html"
+							title="Adds a @package tag for use in bit-docs.">
+							bit-docs-tag-package
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-sourceref.html"
+							title="Adds a @sourceref tag for use in bit-docs.">
+							bit-docs-tag-sourceref
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-type-annotate.html"
+							title="Utilities for parsing closure type annotations.">
+							bit-docs-type-annotate
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+	
+	<article class="main">
+		
+			<section class="title">
+	<h1>process <code>module</code></h1>
+</section>
+
+		
+
+		
+			
+				<section class="description">
+    <p>Processes a <a href="../types/FileEventEmitter.html" title="A node event emitter
+that produces events that correlate to files that should be processed.">fileEventEmitter</a> and returns a promise.</p>
+
+</section>
+
+			
+		
+
+		
+			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>process(fileEventEmitter, siteConfig)</code>
+  </h2>
+
+  <p>Processes files &quot;matched&quot; from a file event emitter into a
+<a href="../types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">docMap</a>.</p>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>fileEventEmitter</b> <code>{<a href="../types/FileEventEmitter.html" title="A node event emitter
+that produces events that correlate to files that should be processed.">fileEventEmitter</a>}</code>: <p>An event emitter
+that dispatches events with files to process.</p>
+</li>
+            
+              
+            
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>An siteConfig object used to configure the
+behavior of bit-docs.</p>
+</li>
+            
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>tags 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>If <code>tags</code> is a string, that file will be required.
+It should export a function that takes the default [documentjs.tags] object
+and returns the tags that will be used. Example module:</p>
+<pre><code>module.exports = function(tags) {
+       tags = _.extend({},tags);
+    tags.customTag = {add: function(){}, ...}
+    return tags;
+};
+</code></pre>
+
+                  </div>
+                </li>
+                
+              </ul>
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	<p> <code>{Promise&lt;<a href="../types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">docMap</a>&gt;}</code>: <p>A docMap that contains the
+docObjects created from the matched files.</p>
+</p>
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
+				<section class="body">
+    
+</section>
+
+			
+		
+	</article>
+</div>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"module","name":"bit-docs/lib/process","parent":"bit-docs/modules","src":{"line":7,"codeLine":41,"path":"docs/modules/bit-docs/lib/process/process.js"},"description":"\nProcesses a [bit-docs/types/FileEventEmitter] and returns a promise.\n","title":"process","types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"signatures":[{"code":"process(fileEventEmitter, siteConfig)","description":"\n\nProcesses files \"matched\" from a file event emitter into a\n[bit-docs/types/docMap].\n","params":[{"types":[{"type":"bit-docs/types/FileEventEmitter"}],"name":"fileEventEmitter","description":"An event emitter\nthat dispatches events with files to process.\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"If `tags` is a string, that file will be required.\nIt should export a function that takes the default [documentjs.tags] object\nand returns the tags that will be used. Example module:\n\n```\nmodule.exports = function(tags) {\n\t   tags = _.extend({},tags);\n    tags.customTag = {add: function(){}, ...}\n    return tags;\n};\n```\n","types":[{"type":"String"}],"optional":true}]}],"name":"siteConfig","description":"An siteConfig object used to configure the\nbehavior of bit-docs.\n"}],"returns":{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"description":"A docMap that contains the\ndocObjects created from the matched files.\n"}}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"If `tags` is a string, that file will be required.\nIt should export a function that takes the default [documentjs.tags] object\nand returns the tags that will be used. Example module:\n\n```\nmodule.exports = function(tags) {\n\t   tags = _.extend({},tags);\n    tags.customTag = {add: function(){}, ...}\n    return tags;\n};\n```\n","types":[{"type":"String"}],"optional":true}]}],"name":"siteConfig","description":"An siteConfig object used to configure the\nbehavior of bit-docs.\n"},"_curReturn":{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"description":"A docMap that contains the\ndocObjects created from the matched files.\n"},"comment":" ","pathToRoot":"../../.."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="../../static/steal.production.js"></script>
+	
+</body>
+
+</html>

@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="../../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="../../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -470,7 +470,7 @@ signature and API content.</p>
 <p><code>@description</code> tag content is treated as markdown and set as the
 <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">docObject</a>'s <code>description</code> property.</p>
+the important, near universal properties:">DocObject</a>'s <code>description</code> property.</p>
 
 
   
@@ -487,9 +487,9 @@ the important, near universal properties:">docObject</a>'s <code>description</co
     <h2>Use</h2>
 <p>The description of a <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">docObject</a> is displayed at the top of
+the important, near universal properties:">DocObject</a> is displayed at the top of
 an html page generated with the
-<a href="../../bit-docs-generate-html.html" title="Generates HTML for a docMap.  Supports plugins.">default html generator</a>.</p>
+<a href="../../bit-docs-generate-html.html" title="Generates HTML for a docMap and handles the html hook.">default html generator</a>.</p>
 <p>In the following example, <code>@description</code> stops content from being added to
 <a href="../../bit-docs-js/tags/param.html" title="Specifies parameter information for function or
 signature.">@param</a>, and instead makes content be added to the

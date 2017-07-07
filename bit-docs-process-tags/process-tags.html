@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - processTags</title>
+	<title>BitDocs - bit-docs-process-tags/process-tags</title>
 	
 	<link rel="stylesheet" type="text/css" href="../static/bundles/bit-docs-site/static.css">
 	
@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -442,7 +442,7 @@ docObject will be displayed under the the parent in the navigation.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>processTags <code>module</code></h1>
+	<h1>bit-docs-process-tags/process-tags <code>module</code></h1>
 </section>
 
 		
@@ -472,11 +472,11 @@ docObject will be displayed under the the parent in the navigation.">
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>options</b> <code>{<a href="../bit-docs/types/processOptions.html" title="An options object passed to several process methods such as:
+          <li><b>options</b> <code>{<a href="../bit-docs/types/processOptions.html" title="An options object passed to several process methods, such as:
 
 code
 codeAndComment
-process-tags">processOptions</a>}</code>: <p>An options object that
+process-tags">ProcessOptions</a>}</code>: <p>An options object that
 contains the code and comment to process.</p>
 </li>
             
@@ -508,7 +508,9 @@ the scope <code>docObject</code>. If no docObject is created, <code>newDoc</code
 			
 				<section class="body">
     <h2>Processing rules</h2>
-<p>The processing rules can be found in the [documentjs.Tag Tag interface].</p>
+<p>The processing rules can be found in the <a href="../documentjs.Tag.html" title="The interface that documentjs.tags implement for
+documentjs.process.comment and documentjs.process.code to call. This is
+very likely to change to something better.">Tag interface</a>.</p>
 
 </section>
 
@@ -520,7 +522,7 @@ the scope <code>docObject</code>. If no docObject is created, <code>newDoc</code
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-process-tags/process-tags","parent":"bit-docs-process-tags/modules","src":{"line":7,"codeLine":29,"path":"docs/modules/bit-docs-process-tags/process-tags.js"},"description":"\n","title":"processTags","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processTags(options, callback)","description":"\n\nProcesses a comment and produces a docObject from the tags found.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"},"comment":" ","pathToRoot":"../.."};
+		var docObject = {"type":"module","name":"bit-docs-process-tags/process-tags","parent":"bit-docs-process-tags/modules","src":{"line":7,"codeLine":32,"path":"docs/modules/bit-docs-process-tags/process-tags.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processTags(options, callback)","description":"\n\nProcesses a comment and produces a docObject from the tags found.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"},"comment":" ","todo":["tag interface still in bit-docs?","what about comment interface?"],"pathToRoot":"../.."};
 	</script>
 
 	

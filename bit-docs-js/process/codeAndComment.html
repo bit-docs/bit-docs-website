@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - codeAndComment</title>
+	<title>BitDocs - bit-docs-js/process/codeAndComment</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="../../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="../../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -199,10 +199,10 @@
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../templates/signature.mustache.html"
 							title="The function signature template.">
-							signature.mustache
+							./signature.mustache
 						</a>
 						
 					</li>
@@ -559,7 +559,7 @@ TYPE declarations.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>codeAndComment <code>module</code></h1>
+	<h1>bit-docs-js/process/codeAndComment <code>module</code></h1>
 </section>
 
 		
@@ -589,11 +589,11 @@ TYPE declarations.">
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>options</b> <code>{<a href="../../bit-docs/types/processOptions.html" title="An options object passed to several process methods such as:
+          <li><b>options</b> <code>{<a href="../../bit-docs/types/processOptions.html" title="An options object passed to several process methods, such as:
 
 code
 codeAndComment
-process-tags">processOptions</a>}</code>: <p>An options object that
+process-tags">ProcessOptions</a>}</code>: <p>An options object that
 contains the code and comment to process.</p>
 </li>
             
@@ -630,7 +630,7 @@ the scope <code>docObject</code>. If no docObject is created, <code>newDoc</code
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-js/process/codeAndComment","parent":"bit-docs-js/modules","src":{"line":5,"codeLine":24,"path":"docs/modules/bit-docs-js/process/code_and_comment.js"},"description":"\n","title":"codeAndComment","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processCodeAndComment(options, callback)","description":"\n\nProcesses a code suggestion and then a comment and produces a docObject.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc","description":"the new documentation object"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope","description":"the new scope\n"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc","description":"the new documentation object"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope","description":"the new scope\n"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"},"pathToRoot":"../../.."};
+		var docObject = {"type":"module","name":"bit-docs-js/process/codeAndComment","parent":"bit-docs-js/modules","src":{"line":5,"codeLine":24,"path":"docs/modules/bit-docs-js/process/code_and_comment.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processCodeAndComment(options, callback)","description":"\n\nProcesses a code suggestion and then a comment and produces a docObject.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc","description":"the new documentation object"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope","description":"the new scope\n"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc","description":"the new documentation object"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope","description":"the new scope\n"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"},"pathToRoot":"../../.."};
 	</script>
 
 	

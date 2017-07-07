@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -215,6 +215,39 @@
 						</a>
 						
 							
+	<ul>
+		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-process-mustache/process-mustache.html"
+							title="">
+							./process-mustache
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
 
 						
 					</li>
@@ -355,7 +388,17 @@
 			
 			
 				<section class="body">
-    <p>TBD</p>
+    <p>This plugin registers onto the <code>processor</code> hook.</p>
+<p>Registering the processor hook adds a processor for <code>.mustache</code> and
+<code>.handlebars</code> files.</p>
+<p>Processing a <code>.mustache</code> file, for example, will output a generated page,
+and that <code>.mustache</code> file can do things like:</p>
+<pre><code class="language-html">&lt;h1&gt;My Sweet Homepage&lt;/h1&gt;
+{{#each something}}
+...
+{{/each}}
+</code></pre>
+<p>The mustache processor is <a href="bit-docs-process-mustache/process-mustache.html" title="">bit-docs-process-mustache/process-mustache</a>.</p>
 
 </section>
 
@@ -367,7 +410,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-process-mustache","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":12,"path":"docs/modules/bit-docs-process-mustache/bit-docs.js"},"description":"Process content in mustache files. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-process-mustache","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":28,"path":"docs/modules/bit-docs-process-mustache/bit-docs.js"},"description":"Process content in mustache files. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
 	</script>
 
 	

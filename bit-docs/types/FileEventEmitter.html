@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - fileEventEmitter</title>
+	<title>BitDocs - FileEventEmitter</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -83,7 +83,7 @@
 							href="FileEventEmitter.html"
 							title="A node event emitter
 that produces events that correlate to files that should be processed.">
-							fileEventEmitter
+							FileEventEmitter
 						</a>
 						
 							
@@ -102,7 +102,7 @@ that produces events that correlate to files that should be processed.">
 							href="docMap.html"
 							title="An object that contains every docObject keyed by the
 docObject&#x27;s name.">
-							docMap
+							DocMap
 						</a>
 						
 					</li>
@@ -119,7 +119,7 @@ docObject&#x27;s name.">
 							title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
 the important, near universal properties:">
-							docObject
+							DocObject
 						</a>
 						
 					</li>
@@ -137,7 +137,7 @@ the important, near universal properties:">
 Generator modules are used to produce some form of documentation output.
 bit-docs-generate-html is the default and currently only generator
 packaged with bit-docs.">
-							generator
+							Generator
 						</a>
 						
 					</li>
@@ -151,12 +151,12 @@ packaged with bit-docs.">
            						">
 						<a class="typedef"
 							href="processOptions.html"
-							title="An options object passed to several process methods such as:
+							title="An options object passed to several process methods, such as:
 
 code
 codeAndComment
 process-tags">
-							processOptions
+							ProcessOptions
 						</a>
 						
 					</li>
@@ -171,7 +171,7 @@ process-tags">
 						<a class="typedef"
 							href="tagCollection.html"
 							title="">
-							tagCollection
+							TagCollection
 						</a>
 						
 					</li>
@@ -290,7 +290,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -335,7 +335,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -496,7 +496,7 @@ docMap.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>fileEventEmitter <code>typedef</code></h1>
+	<h1>FileEventEmitter <code>typedef</code></h1>
 </section>
 
 		
@@ -567,7 +567,7 @@ that produces events that correlate to files that should be processed.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\nA [node event emitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat produces events that correlate to files that should be processed.\n","parent":"bit-docs/types","type":"typedef","title":"fileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\nA [node event emitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat produces events that correlate to files that should be processed.\n","parent":"bit-docs/types","type":"typedef","title":"FileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
 	</script>
 
 	

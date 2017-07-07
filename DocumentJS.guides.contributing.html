@@ -70,13 +70,13 @@ have NodeJS installed.  Then:</p>
 into a [documentjs.process.docObject] and puts every docObject in
 the [documentjs.process.docMap].</p></li>
 <li><p>[documentjs.tags tags] - Tags used by [documentjs.process] to add properties to a [documentjs.process.docObject].</p></li>
-<li><p><a href="documentjs.generators.html.html" title="">generators/html</a> - Generates an HTML
+<li><p>[documentjs.generators.html generators/html] - Generates an HTML
 site given a [documentjs.process.docMap]. This process is futher broken down into:</p>
 <ul>
-<li><a href="documentjs.generators.html.build.html" title="">generators/html/build</a> - Compile the templates, static resources, and mustache helpers used to generate the site.</li>
-<li><a href="documentjs.generators.html.write.html" title="">generators/html/write</a> - Uses the compiled templates, static resources, and helpers to write out the site.</li>
+<li>[documentjs.generators.html.build generators/html/build] - Compile the templates, static resources, and mustache helpers used to generate the site.</li>
+<li>[documentjs.generators.html.write generators/html/write] - Uses the compiled templates, static resources, and helpers to write out the site.</li>
 </ul></li>
-<li><p>[documentjs.generate] - Given <code>options</code>, coordinates between [documentjs.find find] and the <a href="documentjs.generators.html.html" title="">html generator</a> to
+<li><p>[documentjs.generate] - Given <code>options</code>, coordinates between [documentjs.find find] and the [documentjs.generators.html html generator] to
 produce a site.</p></li>
 <li><p>configure - Reads <code>documentjs.json</code> and calls out to modules in the previous folders.</p></li>
 </ul>

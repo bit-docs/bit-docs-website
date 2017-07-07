@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -480,7 +480,24 @@ docObject will be displayed under the the parent in the navigation.">
 			
 			
 				<section class="body">
-    <p>TBD</p>
+    <p>This plugin registers onto these hooks:</p>
+<ul>
+<li><code>processor</code></li>
+<li><code>postProcessor</code></li>
+</ul>
+<p>This plugin handles the <code>tags</code> hook, and in doing so also adds some tags:</p>
+<ul>
+<li><a href="bit-docs-process-tags/tags/add.html" title="Sets a docObject as the current scope.">@add</a></li>
+<li><a href="bit-docs-process-tags/tags/body.html" title="Markdown content placed after all signature and API content.">@body</a></li>
+<li><a href="bit-docs-process-tags/tags/description.html" title="Markdown content placed before all signature and API content.">@description</a></li>
+<li><a href="bit-docs-process-tags/tags/hide.html" title="Hides the comment from the navigation.">@hide</a></li>
+<li><a href="bit-docs-process-tags/tags/parent.html" title="Specifies the parent docObject's name. The current
+docObject will be displayed under the the parent in the navigation.">@parent</a></li>
+</ul>
+<p>Registering the <code>processor</code> hook adds a general processor that processes a
+code comments and produces a docObject from the tags found.</p>
+<p>Registering the <code>postProcessor</code> hook adds a special processor that calls the
+<code>done</code> method of any tags that have such a method, passing the docObject.</p>
 
 </section>
 
@@ -492,7 +509,7 @@ docObject will be displayed under the the parent in the navigation.">
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-process-tags","type":"module","parent":"plugins","src":{"line":0,"codeLine":12,"path":"docs/modules/bit-docs-process-tags/bit-docs.js"},"description":"Processes tags for a docMap. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-process-tags","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":31,"path":"docs/modules/bit-docs-process-tags/bit-docs.js"},"description":"Processes tags for a docMap. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
 	</script>
 
 	

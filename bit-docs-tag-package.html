@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -356,7 +356,9 @@
 			
 				<section class="body">
     <p><code>@package</code> will add the package's <code>package.json</code> info to the <code>docObject</code>.</p>
-<p>Use: <code>@pacakge ../../package.json</code></p>
+<p>Use: <code>@package ../../package.json</code></p>
+<p>Once added to the docObject, you can reference the <code>package.json</code> properties
+like <code>name</code>, <code>description</code>, <code>author</code>, etc in <code>.mustache</code> templates.</p>
 
 </section>
 
@@ -368,7 +370,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-tag-package","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":14,"path":"docs/modules/bit-docs-tag-package/bit-docs.js"},"description":"Adds a `@package` tag for use in `bit-docs`. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-tag-package","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":17,"path":"docs/modules/bit-docs-tag-package/bit-docs.js"},"description":"Adds a `@package` tag for use in `bit-docs`. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
 	</script>
 
 	

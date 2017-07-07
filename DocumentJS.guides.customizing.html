@@ -51,7 +51,7 @@
 			
 			
 				<section class="body">
-    <p>The <a href="documentjs.generators.html.html" title="">html generator</a> allows you to completely
+    <p>The [documentjs.generators.html html generator] allows you to completely
 customize the look and behavior of the site. You can also supply your
 own generators to build other forms of documentation.</p>
 <h2>Customizing the default HTML generator</h2>
@@ -62,7 +62,7 @@ is controlled mostly by the <a href="DocumentJS.siteConfig.html" title="The conf
 <code>templates</code> and <code>static</code> options.  However, some tags like [documentjs.tags.hide @hide]
 allow you to alter the behavior slightly.</p>
 <h2>Changing the HTML</h2>
-<p>The <a href="documentjs.generators.html.html" title="">html generator</a> uses
+<p>The [documentjs.generators.html html generator] uses
 <a href="http://handlebarsjs.com/">Handlebars</a> templates and helpers
 to render [documentjs.process.docObject docObjects]. Overwrite the
 default templates with the <a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">siteConfig</a> <code>templates</code>
@@ -99,7 +99,7 @@ to <em>theme/templates</em> and make changes in your copy.</p>
 your templates directory.  For example, you can
 create <em>theme/templates/helpers.js</em>.  Any <code>.js</code> file will be required
 as a module with CommonJS.  The module is expect to export a
-<a href="documentjs.generators.html.types.makeHelpers.html" title="">makeHelpers function</a> like:</p>
+[documentjs.generators.html.types.makeHelpers makeHelpers function] like:</p>
 <pre><code>// theme/templates/helpers.js
 module.exports = function(docMap, options, getCurrent){
   return {
@@ -132,8 +132,7 @@ look like:</p>
 </code></pre>
 <p>After the default and static content have been combined, the <code>static/build.js</code> file
 is required with CommonJS and run. <code>static/build.js</code> is expected to export a
-<a href="documentjs.generators.html.types.builder.html" title="A function that builds the static resources and copies the ones
-needed for the html site to a distributable location.">builder</a> function that builds the final static content
+[documentjs.generators.html.types.builder builder] function that builds the final static content
 and copies it to a distributable location.</p>
 <p>The default builder uses <a href="http://stealjs.com">StealJS</a> to build a <a href="http://canjs.com">CanJS</a> and
 <a href="http://lesscss.org">LESS</a> application.  It copies the minfied <code>css</code> and <code>js</code> bundles as well as

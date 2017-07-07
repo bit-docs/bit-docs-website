@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -200,6 +200,54 @@
 						</a>
 						
 							
+	<ul>
+		
+			
+				
+					<li>
+						<span>static</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-prettify/prettify.js.html"
+							title="Main front end JavaScript file for static portion of this plugin.">
+							./prettify.js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-prettify/prettify.less.html"
+							title="Layout of code wells and syntax highlighting of code languages.">
+							./prettify.less
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
 
 						
 					</li>
@@ -355,7 +403,10 @@
 			
 			
 				<section class="body">
-    <p>TBD</p>
+    <p>This plugin registers onto the <code>html</code> hook.</p>
+<p>Registering the <code>html</code> hook adds a static JavaScript file that will go
+through every <code>&lt;code&gt;</code> element on the page and prettify it using the
+<a href="https://github.com/google/code-prettify">JavaScript code prettifier</a>.</p>
 
 </section>
 
@@ -367,7 +418,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-prettify","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":0,"codeLine":10,"path":"docs/modules/bit-docs-prettify/bit-docs.js"},"description":"A bit-docs plugin that makes source-code snippets in HTML prettier. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-prettify","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":0,"codeLine":15,"path":"docs/modules/bit-docs-prettify/bit-docs.js"},"description":"A bit-docs plugin that makes source-code snippets in HTML prettier. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
 	</script>
 
 	

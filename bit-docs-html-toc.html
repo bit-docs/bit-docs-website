@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,7 +150,7 @@
            						">
 						<a class="module"
 							href="bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -170,6 +170,68 @@
 						</a>
 						
 							
+	<ul>
+		
+			
+				
+					<li>
+						<span>tags</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-html-toc/tags/outline.html"
+							title="Controls the outline behavior.">
+							./outline
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>static</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-html-toc/toc.js.html"
+							title="Main front end JavaScript file for static portion of this plugin.">
+							./toc.js
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
 
 						
 					</li>
@@ -355,7 +417,14 @@
 			
 			
 				<section class="body">
-    <p>TBD</p>
+    <p>This plugin registers onto these hooks:</p>
+<ul>
+<li><code>tags</code></li>
+<li><code>html</code></li>
+</ul>
+<p>Registering the <code>tags</code> hook adds the <a href="bit-docs-html-toc/tags/outline.html" title="Controls the outline behavior.">@outline</a> tag.</p>
+<p>Registering the <code>html</code> hook adds a static JavaScript file used to hydrate
+the table of contents <a href="bit-docs-html-toc/toc.js.html" title="Main front end JavaScript file for static portion of this plugin.">bit-docs-html-toc/toc.js</a>.</p>
 
 </section>
 
@@ -367,7 +436,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-html-toc","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":12,"path":"docs/modules/bit-docs-html-toc/bit-docs.js"},"description":"Injects a table of contents for the page into an HTML element. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-html-toc","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":21,"path":"docs/modules/bit-docs-html-toc/bit-docs.js"},"description":"Injects a table of contents for the page into an HTML element. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
 	</script>
 
 	

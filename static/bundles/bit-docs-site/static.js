@@ -1086,13 +1086,13 @@ define('package.json!npm', [
             'steal': {},
             'resolutions': {
                 'can-construct': '3.2.0',
-                'can-util': '3.9.3',
                 'can-namespace': '1.0.0',
-                'can-types': '1.1.0',
+                'can-util': '3.9.6',
                 'can-event': '3.5.0',
-                'can-compute': '3.3.0',
+                'can-types': '1.1.0',
+                'can-compute': '3.3.1',
                 'can-stache-key': '0.0.2',
-                'can-reflect': '1.1.3'
+                'can-reflect': '1.2.3'
             }
         },
         {
@@ -1102,21 +1102,8 @@ define('package.json!npm', [
             'main': 'can-construct',
             'steal': {},
             'resolutions': {
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0'
-            }
-        },
-        {
-            'name': 'can-util',
-            'version': '3.9.3',
-            'fileUrl': './node_modules/can-util/package.json',
-            'main': 'can-util',
-            'resolutions': {
-                'can-util': '3.9.3',
-                'can-symbol': '1.0.0',
-                'can-reflect': '1.1.3',
-                'can-cid': '1.0.3',
-                'can-types': '1.1.0'
             }
         },
         {
@@ -1128,15 +1115,15 @@ define('package.json!npm', [
             'resolutions': {}
         },
         {
-            'name': 'can-types',
-            'version': '1.1.0',
-            'fileUrl': './node_modules/can-types/package.json',
-            'main': 'can-types',
+            'name': 'can-util',
+            'version': '3.9.6',
+            'fileUrl': './node_modules/can-util/package.json',
+            'main': 'can-util',
             'resolutions': {
-                'can-namespace': '1.0.0',
-                'can-reflect': '1.1.3',
-                'can-util': '3.9.3',
-                'can-symbol': '1.0.0'
+                'can-util': '3.9.6',
+                'can-symbol': '1.0.0',
+                'can-cid': '1.0.3',
+                'can-types': '1.1.0'
             }
         },
         {
@@ -1146,7 +1133,7 @@ define('package.json!npm', [
             'main': 'can-event',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0',
                 'can-cid': '1.0.3',
                 'can-event': '3.5.0',
@@ -1154,19 +1141,31 @@ define('package.json!npm', [
             }
         },
         {
+            'name': 'can-types',
+            'version': '1.1.0',
+            'fileUrl': './node_modules/can-types/package.json',
+            'main': 'can-types',
+            'resolutions': {
+                'can-namespace': '1.0.0',
+                'can-reflect': '1.2.3',
+                'can-util': '3.9.6',
+                'can-symbol': '1.0.0'
+            }
+        },
+        {
             'name': 'can-compute',
-            'version': '3.3.0',
+            'version': '3.3.1',
             'fileUrl': './node_modules/can-compute/package.json',
             'main': 'can-compute',
             'resolutions': {
                 'can-event': '3.5.0',
-                'can-compute': '3.3.0',
+                'can-compute': '3.3.1',
                 'can-namespace': '1.0.0',
-                'can-util': '3.9.3',
-                'can-reflect': '1.1.3',
+                'can-util': '3.9.6',
+                'can-reflect': '1.2.3',
                 'can-cid': '1.0.3',
                 'can-symbol': '1.0.0',
-                'can-observation': '3.3.0',
+                'can-observation': '3.3.1',
                 'can-stache-key': '0.0.2'
             }
         },
@@ -1190,16 +1189,16 @@ define('package.json!npm', [
             },
             'browser': {},
             'resolutions': {
-                'can-util': '3.9.3',
-                'can-reflect': '1.1.3',
-                'can-observation': '3.3.0',
+                'can-util': '3.9.6',
+                'can-reflect': '1.2.3',
+                'can-observation': '3.3.1',
                 'can-reflect-promise': '1.1.0',
                 'can-symbol': '1.0.0'
             }
         },
         {
             'name': 'can-reflect',
-            'version': '1.1.3',
+            'version': '1.2.3',
             'fileUrl': './node_modules/can-reflect/package.json',
             'main': 'can-reflect',
             'steal': {
@@ -1213,7 +1212,7 @@ define('package.json!npm', [
             },
             'browser': {},
             'resolutions': {
-                'can-reflect': '1.1.3',
+                'can-reflect': '1.2.3',
                 'can-namespace': '1.0.0',
                 'can-symbol': '1.0.0'
             }
@@ -1225,15 +1224,15 @@ define('package.json!npm', [
             'main': 'can-stache',
             'resolutions': {
                 'can-stache': '3.2.0',
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0',
                 'can-view-parser': '3.4.0',
                 'can-view-callbacks': '3.2.0',
                 'can-view-target': '3.1.0',
                 'can-view-nodelist': '3.1.0',
-                'can-observation': '3.3.0',
-                'can-compute': '3.3.0',
-                'can-reflect': '1.1.3',
+                'can-observation': '3.3.1',
+                'can-compute': '3.3.1',
+                'can-reflect': '1.2.3',
                 'can-symbol': '1.0.0',
                 'can-stache-key': '0.0.2',
                 'can-view-scope': '3.3.0',
@@ -1265,15 +1264,15 @@ define('package.json!npm', [
         },
         {
             'name': 'can-observation',
-            'version': '3.3.0',
+            'version': '3.3.1',
             'fileUrl': './node_modules/can-observation/package.json',
             'main': 'can-observation',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
                 'can-event': '3.5.0',
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0',
-                'can-reflect': '1.1.3',
+                'can-reflect': '1.2.3',
                 'can-symbol': '1.0.0',
                 'can-cid': '1.0.3'
             }
@@ -1285,10 +1284,10 @@ define('package.json!npm', [
             'main': 'can-reflect-promise',
             'steal': { 'npmAlgorithm': 'flat' },
             'resolutions': {
-                'can-reflect': '1.1.3',
+                'can-reflect': '1.2.3',
                 'can-symbol': '1.0.0',
-                'can-util': '3.9.3',
-                'can-observation': '3.3.0',
+                'can-util': '3.9.6',
+                'can-observation': '3.3.1',
                 'can-cid': '1.0.3',
                 'can-event': '3.5.0'
             }
@@ -1300,7 +1299,7 @@ define('package.json!npm', [
             'main': 'can-view-parser',
             'resolutions': {
                 'can-namespace': '1.0.0',
-                'can-util': '3.9.3'
+                'can-util': '3.9.6'
             }
         },
         {
@@ -1310,8 +1309,8 @@ define('package.json!npm', [
             'main': 'can-view-callbacks',
             'steal': {},
             'resolutions': {
-                'can-observation': '3.3.0',
-                'can-util': '3.9.3',
+                'can-observation': '3.3.1',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0'
             }
         },
@@ -1321,7 +1320,7 @@ define('package.json!npm', [
             'fileUrl': './node_modules/can-view-target/package.json',
             'main': 'can-view-target',
             'resolutions': {
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0'
             }
         },
@@ -1331,7 +1330,7 @@ define('package.json!npm', [
             'fileUrl': './node_modules/can-view-nodelist/package.json',
             'main': 'can-view-nodelist',
             'resolutions': {
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0'
             }
         },
@@ -1342,12 +1341,12 @@ define('package.json!npm', [
             'main': 'can-view-scope',
             'resolutions': {
                 'can-stache-key': '0.0.2',
-                'can-observation': '3.3.0',
+                'can-observation': '3.3.1',
                 'can-view-scope': '3.3.0',
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0',
-                'can-reflect': '1.1.3',
-                'can-compute': '3.3.0',
+                'can-reflect': '1.2.3',
+                'can-compute': '3.3.1',
                 'can-event': '3.5.0',
                 'can-cid': '1.0.3',
                 'can-symbol': '1.0.0',
@@ -1372,12 +1371,12 @@ define('package.json!npm', [
             'resolutions': {
                 'can-view-live': '3.2.0',
                 'can-view-parser': '3.4.0',
-                'can-util': '3.9.3',
+                'can-util': '3.9.6',
                 'can-view-nodelist': '3.1.0',
-                'can-reflect': '1.1.3',
+                'can-reflect': '1.2.3',
                 'can-view-callbacks': '3.2.0',
                 'can-types': '1.1.0',
-                'can-compute': '3.3.0',
+                'can-compute': '3.3.1',
                 'can-event': '3.5.0'
             }
         },
@@ -1401,8 +1400,8 @@ define('package.json!npm', [
         }
     ], { 'npmParentMap': {} }));
 });
-/*can-util@3.9.3#js/assign/assign*/
-define('can-util@3.9.3#js/assign/assign', function (require, exports, module) {
+/*can-util@3.9.6#js/assign/assign*/
+define('can-util@3.9.6#js/assign/assign', function (require, exports, module) {
     module.exports = function (d, s) {
         for (var prop in s) {
             d[prop] = s[prop];
@@ -1410,15 +1409,15 @@ define('can-util@3.9.3#js/assign/assign', function (require, exports, module) {
         return d;
     };
 });
-/*can-util@3.9.3#js/is-array/is-array*/
-define('can-util@3.9.3#js/is-array/is-array', function (require, exports, module) {
+/*can-util@3.9.6#js/is-array/is-array*/
+define('can-util@3.9.6#js/is-array/is-array', function (require, exports, module) {
     'use strict';
     module.exports = function (arr) {
         return Array.isArray(arr);
     };
 });
-/*can-util@3.9.3#js/is-function/is-function*/
-define('can-util@3.9.3#js/is-function/is-function', function (require, exports, module) {
+/*can-util@3.9.6#js/is-function/is-function*/
+define('can-util@3.9.6#js/is-function/is-function', function (require, exports, module) {
     'use strict';
     var isFunction = function () {
         if (typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function') {
@@ -1432,8 +1431,8 @@ define('can-util@3.9.3#js/is-function/is-function', function (require, exports, 
     }();
     module.exports = isFunction;
 });
-/*can-util@3.9.3#js/is-plain-object/is-plain-object*/
-define('can-util@3.9.3#js/is-plain-object/is-plain-object', function (require, exports, module) {
+/*can-util@3.9.6#js/is-plain-object/is-plain-object*/
+define('can-util@3.9.6#js/is-plain-object/is-plain-object', function (require, exports, module) {
     'use strict';
     var core_hasOwn = Object.prototype.hasOwnProperty;
     function isWindow(obj) {
@@ -1457,8 +1456,8 @@ define('can-util@3.9.3#js/is-plain-object/is-plain-object', function (require, e
     }
     module.exports = isPlainObject;
 });
-/*can-util@3.9.3#js/deep-assign/deep-assign*/
-define('can-util@3.9.3#js/deep-assign/deep-assign', function (require, exports, module) {
+/*can-util@3.9.6#js/deep-assign/deep-assign*/
+define('can-util@3.9.6#js/deep-assign/deep-assign', function (require, exports, module) {
     'use strict';
     var isArray = require('../is-array/is-array');
     var isFunction = require('../is-function/is-function');
@@ -1498,8 +1497,8 @@ define('can-util@3.9.3#js/deep-assign/deep-assign', function (require, exports, 
     }
     module.exports = deepAssign;
 });
-/*can-util@3.9.3#js/log/log*/
-define('can-util@3.9.3#js/log/log', function (require, exports, module) {
+/*can-util@3.9.6#js/log/log*/
+define('can-util@3.9.6#js/log/log', function (require, exports, module) {
     'use strict';
     exports.warnTimeout = 5000;
     exports.logLevel = 0;
@@ -1546,8 +1545,8 @@ define('can-util@3.9.3#js/log/log', function (require, exports, module) {
         }
     };
 });
-/*can-util@3.9.3#js/dev/dev*/
-define('can-util@3.9.3#js/dev/dev', function (require, exports, module) {
+/*can-util@3.9.6#js/dev/dev*/
+define('can-util@3.9.6#js/dev/dev', function (require, exports, module) {
     'use strict';
     var canLog = require('../log/log');
     module.exports = {
@@ -1568,8 +1567,8 @@ define('can-util@3.9.3#js/dev/dev', function (require, exports, module) {
         _logger: canLog._logger
     };
 });
-/*can-util@3.9.3#js/is-array-like/is-array-like*/
-define('can-util@3.9.3#js/is-array-like/is-array-like', function (require, exports, module) {
+/*can-util@3.9.6#js/is-array-like/is-array-like*/
+define('can-util@3.9.6#js/is-array-like/is-array-like', function (require, exports, module) {
     'use strict';
     function isArrayLike(obj) {
         var type = typeof obj;
@@ -1673,16 +1672,16 @@ define('can-symbol@1.0.0#can-symbol', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-util@3.9.3#js/is-iterable/is-iterable*/
-define('can-util@3.9.3#js/is-iterable/is-iterable', function (require, exports, module) {
+/*can-util@3.9.6#js/is-iterable/is-iterable*/
+define('can-util@3.9.6#js/is-iterable/is-iterable', function (require, exports, module) {
     'use strict';
     var canSymbol = require('can-symbol');
     module.exports = function (obj) {
         return obj && !!obj[canSymbol.iterator || canSymbol.for('iterator')];
     };
 });
-/*can-util@3.9.3#js/each/each*/
-define('can-util@3.9.3#js/each/each', function (require, exports, module) {
+/*can-util@3.9.6#js/each/each*/
+define('can-util@3.9.6#js/each/each', function (require, exports, module) {
     'use strict';
     var isArrayLike = require('../is-array-like/is-array-like');
     var has = Object.prototype.hasOwnProperty;
@@ -1717,8 +1716,8 @@ define('can-util@3.9.3#js/each/each', function (require, exports, module) {
     }
     module.exports = each;
 });
-/*can-util@3.9.3#js/make-array/make-array*/
-define('can-util@3.9.3#js/make-array/make-array', function (require, exports, module) {
+/*can-util@3.9.6#js/make-array/make-array*/
+define('can-util@3.9.6#js/make-array/make-array', function (require, exports, module) {
     'use strict';
     var each = require('../each/each');
     var isArrayLike = require('../is-array-like/is-array-like');
@@ -1735,15 +1734,15 @@ define('can-util@3.9.3#js/make-array/make-array', function (require, exports, mo
     }
     module.exports = makeArray;
 });
-/*can-util@3.9.3#js/is-container/is-container*/
-define('can-util@3.9.3#js/is-container/is-container', function (require, exports, module) {
+/*can-util@3.9.6#js/is-container/is-container*/
+define('can-util@3.9.6#js/is-container/is-container', function (require, exports, module) {
     'use strict';
     module.exports = function (current) {
         return /^f|^o/.test(typeof current);
     };
 });
-/*can-util@3.9.3#js/get/get*/
-define('can-util@3.9.3#js/get/get', function (require, exports, module) {
+/*can-util@3.9.6#js/get/get*/
+define('can-util@3.9.6#js/get/get', function (require, exports, module) {
     'use strict';
     var isContainer = require('../is-container/is-container');
     function get(obj, name) {
@@ -1760,8 +1759,8 @@ define('can-util@3.9.3#js/get/get', function (require, exports, module) {
     }
     module.exports = get;
 });
-/*can-util@3.9.3#js/string/string*/
-define('can-util@3.9.3#js/string/string', function (require, exports, module) {
+/*can-util@3.9.6#js/string/string*/
+define('can-util@3.9.6#js/string/string', function (require, exports, module) {
     'use strict';
     var get = require('../get/get');
     var isContainer = require('../is-container/is-container');
@@ -1982,17 +1981,30 @@ define('can-construct@3.2.0#can-construct', function (require, exports, module) 
     };
     module.exports = namespace.Construct = Construct;
 });
-/*can-reflect@1.1.3#reflections/type/type*/
-define('can-reflect@1.1.3#reflections/type/type', function (require, exports, module) {
+/*can-reflect@1.2.3#reflections/helpers*/
+define('can-reflect@1.2.3#reflections/helpers', function (require, exports, module) {
     var canSymbol = require('can-symbol');
-    var check = function (symbols, obj) {
-        for (var i = 0, len = symbols.length; i < len; i++) {
-            var value = obj[canSymbol.for(symbols[i])];
-            if (value !== undefined) {
-                return value;
-            }
+    module.exports = {
+        makeGetFirstSymbolValue: function (symbolNames) {
+            var symbols = symbolNames.map(function (name) {
+                return canSymbol.for(name);
+            });
+            var length = symbols.length;
+            return function getFirstSymbol(obj) {
+                var index = -1;
+                while (++index < length) {
+                    if (obj[symbols[index]] !== undefined) {
+                        return obj[symbols[index]];
+                    }
+                }
+            };
         }
     };
+});
+/*can-reflect@1.2.3#reflections/type/type*/
+define('can-reflect@1.2.3#reflections/type/type', function (require, exports, module) {
+    var canSymbol = require('can-symbol');
+    var helpers = require('../helpers');
     var plainFunctionPrototypePropertyNames = Object.getOwnPropertyNames(function () {
     }.prototype);
     var plainFunctionPrototypeProto = Object.getPrototypeOf(function () {
@@ -2024,15 +2036,16 @@ define('can-reflect@1.1.3#reflections/type/type', function (require, exports, mo
             return true;
         }
     }
+    var getNewOrApply = helpers.makeGetFirstSymbolValue([
+        'can.new',
+        'can.apply'
+    ]);
     function isFunctionLike(obj) {
         var result, symbolValue = obj[canSymbol.for('can.isFunctionLike')];
         if (symbolValue !== undefined) {
             return symbolValue;
         }
-        result = check([
-            'can.new',
-            'can.apply'
-        ], obj);
+        result = getNewOrApply(obj);
         if (result !== undefined) {
             return !!result;
         }
@@ -2074,16 +2087,17 @@ define('can-reflect@1.1.3#reflections/type/type', function (require, exports, mo
         }
         return true;
     }
+    var getObservableLikeSymbol = helpers.makeGetFirstSymbolValue([
+        'can.onValue',
+        'can.onKeyValue',
+        'can.onKeys',
+        'can.onKeysAdded'
+    ]);
     function isObservableLike(obj) {
         if (isPrimitive(obj)) {
             return false;
         }
-        var result = check([
-            'can.onValue',
-            'can.onKeyValue',
-            'can.onKeys',
-            'can.onKeysAdded'
-        ], obj);
+        var result = getObservableLikeSymbol(obj);
         if (result !== undefined) {
             return !!result;
         }
@@ -2110,13 +2124,35 @@ define('can-reflect@1.1.3#reflections/type/type', function (require, exports, mo
         var length = list && type !== 'boolean' && typeof list !== 'number' && 'length' in list && list.length;
         return typeof list !== 'function' && (length === 0 || typeof length === 'number' && length > 0 && length - 1 in list);
     }
-    var symbolStart = '@@symbol';
-    function isSymbolLike(symbol) {
-        if (typeof symbol === 'symbol') {
-            return true;
-        } else {
-            return symbol.toString().substr(0, symbolStart.length) === symbolStart;
+    var supportsSymbols = typeof Symbol !== 'undefined' && typeof Symbol.for === 'function';
+    var isSymbolLike;
+    if (supportsSymbols) {
+        isSymbolLike = function (symbol) {
+            return typeof symbol === 'symbol';
+        };
+    } else {
+        var symbolStart = '@@symbol';
+        isSymbolLike = function (symbol) {
+            if (typeof symbol === 'object' && !Array.isArray(symbol)) {
+                return symbol.toString().substr(0, symbolStart.length) === symbolStart;
+            } else {
+                return false;
+            }
+        };
+    }
+    var coreHasOwn = Object.prototype.hasOwnProperty;
+    var funcToString = Function.prototype.toString;
+    var objectCtorString = funcToString.call(Object);
+    function isPlainObject(obj) {
+        if (!obj || typeof obj !== 'object') {
+            return false;
         }
+        var proto = Object.getPrototypeOf(obj);
+        if (proto === Object.prototype || proto === null) {
+            return true;
+        }
+        var Constructor = coreHasOwn.call(proto, 'constructor') && proto.constructor;
+        return typeof Constructor === 'function' && Constructor instanceof Constructor && funcToString.call(Constructor) === objectCtorString;
     }
     module.exports = {
         isConstructorLike: isConstructorLike,
@@ -2147,11 +2183,12 @@ define('can-reflect@1.1.3#reflections/type/type', function (require, exports, mo
         },
         isPromise: function (obj) {
             return obj instanceof Promise || Object.prototype.toString.call(obj) === '[object Promise]';
-        }
+        },
+        isPlainObject: isPlainObject
     };
 });
-/*can-reflect@1.1.3#reflections/call/call*/
-define('can-reflect@1.1.3#reflections/call/call', function (require, exports, module) {
+/*can-reflect@1.2.3#reflections/call/call*/
+define('can-reflect@1.2.3#reflections/call/call', function (require, exports, module) {
     var canSymbol = require('can-symbol');
     var typeReflections = require('../type/type');
     module.exports = {
@@ -2189,27 +2226,29 @@ define('can-reflect@1.1.3#reflections/call/call', function (require, exports, mo
         }
     };
 });
-/*can-reflect@1.1.3#reflections/get-set/get-set*/
-define('can-reflect@1.1.3#reflections/get-set/get-set', function (require, exports, module) {
+/*can-reflect@1.2.3#reflections/get-set/get-set*/
+define('can-reflect@1.2.3#reflections/get-set/get-set', function (require, exports, module) {
     var canSymbol = require('can-symbol');
     var typeReflections = require('../type/type');
     var setKeyValueSymbol = canSymbol.for('can.setKeyValue'), getKeyValueSymbol = canSymbol.for('can.getKeyValue'), getValueSymbol = canSymbol.for('can.getValue'), setValueSymbol = canSymbol.for('can.setValue');
     var reflections = {
         setKeyValue: function (obj, key, value) {
-            if (typeof key === 'symbol') {
-                obj[key] = value;
+            if (typeReflections.isSymbolLike(key)) {
+                if (typeof key === 'symbol') {
+                    obj[key] = value;
+                } else {
+                    Object.defineProperty(obj, key, {
+                        enumerable: false,
+                        configurable: true,
+                        value: value,
+                        writable: true
+                    });
+                }
                 return;
             }
             var setKeyValue = obj[setKeyValueSymbol];
-            if (setKeyValue) {
+            if (setKeyValue !== undefined) {
                 return setKeyValue.call(obj, key, value);
-            } else if (typeof key !== 'symbol' && typeReflections.isSymbolLike(key)) {
-                Object.defineProperty(obj, key, {
-                    enumerable: false,
-                    configurable: true,
-                    value: value,
-                    writable: true
-                });
             } else {
                 obj[key] = value;
             }
@@ -2262,8 +2301,8 @@ define('can-reflect@1.1.3#reflections/get-set/get-set', function (require, expor
     reflections['delete'] = reflections.deleteKeyValue;
     module.exports = reflections;
 });
-/*can-reflect@1.1.3#reflections/observe/observe*/
-define('can-reflect@1.1.3#reflections/observe/observe', function (require, exports, module) {
+/*can-reflect@1.2.3#reflections/observe/observe*/
+define('can-reflect@1.2.3#reflections/observe/observe', function (require, exports, module) {
     var canSymbol = require('can-symbol');
     var slice = [].slice;
     function makeFallback(symbolName, fallbackName) {
@@ -2318,11 +2357,12 @@ define('can-reflect@1.1.3#reflections/observe/observe', function (require, expor
         }
     };
 });
-/*can-reflect@1.1.3#reflections/shape/shape*/
-define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, module) {
+/*can-reflect@1.2.3#reflections/shape/shape*/
+define('can-reflect@1.2.3#reflections/shape/shape', function (require, exports, module) {
     var canSymbol = require('can-symbol');
     var getSetReflections = require('../get-set/get-set');
     var typeReflections = require('../type/type');
+    var helpers = require('../helpers');
     var shiftFirstArgumentToThis = function (func) {
         return function () {
             var args = [this];
@@ -2337,6 +2377,27 @@ define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, 
     var serializeMap = null;
     function shouldSerialize(obj) {
         return typeof obj !== 'function';
+    }
+    var hasUpdateSymbol = helpers.makeGetFirstSymbolValue([
+        'can.updateDeep',
+        'can.assignDeep',
+        'can.setKeyValue'
+    ]);
+    var shouldUpdateOrAssign = function (obj) {
+        return typeReflections.isPlainObject(obj) || Array.isArray(obj) || !!hasUpdateSymbol(obj);
+    };
+    var Object_Keys;
+    try {
+        Object.keys(1);
+        Object_Keys = Object.keys;
+    } catch (e) {
+        Object_Keys = function (obj) {
+            if (typeReflections.isPrimitive(obj)) {
+                return [];
+            } else {
+                return Object.keys(obj);
+            }
+        };
     }
     function makeSerializer(methodName, symbolsToCheck) {
         return function serializer(value, MapType) {
@@ -2429,7 +2490,7 @@ define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, 
                 return false;
             }
             var newVal = sourceArray[index];
-            if (typeReflections.isPrimitive(curVal) || typeReflections.isPrimitive(newVal)) {
+            if (typeReflections.isPrimitive(curVal) || typeReflections.isPrimitive(newVal) || shouldUpdateOrAssign(curVal) === false) {
                 addPatch(patches, {
                     index: index,
                     deleteCount: 1,
@@ -2545,7 +2606,7 @@ define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, 
                 }, this);
                 return keys;
             } else {
-                return Object.keys(obj);
+                return Object_Keys(obj);
             }
         },
         getOwnKeys: function (obj) {
@@ -2603,7 +2664,7 @@ define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, 
                 } else {
                     var curVal = getKeyValue.call(target, key);
                     if (newVal === curVal) {
-                    } else if (typeReflections.isPrimitive(curVal) || typeReflections.isPrimitive(newVal)) {
+                    } else if (typeReflections.isPrimitive(curVal) || typeReflections.isPrimitive(newVal) || shouldUpdateOrAssign(curVal) === false) {
                         setKeyValue.call(target, key, newVal);
                     } else {
                         this.assignDeep(curVal, newVal);
@@ -2672,7 +2733,7 @@ define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, 
                 }
                 sourceKeyMap[key] = false;
                 var newVal = sourceGetKeyValue.call(source, key);
-                if (typeReflections.isPrimitive(curVal) || typeReflections.isPrimitive(newVal)) {
+                if (typeReflections.isPrimitive(curVal) || typeReflections.isPrimitive(newVal) || shouldUpdateOrAssign(curVal) === false) {
                     targetSetKeyValue.call(target, key, newVal);
                 } else {
                     this.updateDeep(curVal, newVal);
@@ -2715,8 +2776,8 @@ define('can-reflect@1.1.3#reflections/shape/shape', function (require, exports, 
     shapeReflections.keys = shapeReflections.getOwnEnumerableKeys;
     module.exports = shapeReflections;
 });
-/*can-reflect@1.1.3#can-reflect*/
-define('can-reflect@1.1.3#can-reflect', function (require, exports, module) {
+/*can-reflect@1.2.3#can-reflect*/
+define('can-reflect@1.2.3#can-reflect', function (require, exports, module) {
     var functionReflections = require('./reflections/call/call');
     var getSet = require('./reflections/get-set/get-set');
     var observe = require('./reflections/observe/observe');
@@ -2784,8 +2845,8 @@ define('can-types@1.1.0#can-types', function (require, exports, module) {
         module.exports = namespace.types = types;
     }
 });
-/*can-util@3.9.3#js/is-empty-object/is-empty-object*/
-define('can-util@3.9.3#js/is-empty-object/is-empty-object', function (require, exports, module) {
+/*can-util@3.9.6#js/is-empty-object/is-empty-object*/
+define('can-util@3.9.6#js/is-empty-object/is-empty-object', function (require, exports, module) {
     'use strict';
     module.exports = function (obj) {
         for (var prop in obj) {
@@ -2794,8 +2855,8 @@ define('can-util@3.9.3#js/is-empty-object/is-empty-object', function (require, e
         return true;
     };
 });
-/*can-util@3.9.3#dom/data/core*/
-define('can-util@3.9.3#dom/data/core', function (require, exports, module) {
+/*can-util@3.9.6#dom/data/core*/
+define('can-util@3.9.6#dom/data/core', function (require, exports, module) {
     'use strict';
     var isEmptyObject = require('../../js/is-empty-object/is-empty-object');
     var data = {};
@@ -2848,8 +2909,8 @@ define('can-util@3.9.3#dom/data/core', function (require, exports, module) {
         delete: deleteNode
     };
 });
-/*can-util@3.9.3#js/global/global*/
-define('can-util@3.9.3#js/global/global', function (require, exports, module) {
+/*can-util@3.9.6#js/global/global*/
+define('can-util@3.9.6#js/global/global', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL;
@@ -2867,8 +2928,8 @@ define('can-util@3.9.3#js/global/global', function (require, exports, module) {
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/document/document*/
-define('can-util@3.9.3#dom/document/document', function (require, exports, module) {
+/*can-util@3.9.6#dom/document/document*/
+define('can-util@3.9.6#dom/document/document', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../../js/global/global');
@@ -2883,8 +2944,8 @@ define('can-util@3.9.3#dom/document/document', function (require, exports, modul
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/mutation-observer/mutation-observer*/
-define('can-util@3.9.3#dom/mutation-observer/mutation-observer', function (require, exports, module) {
+/*can-util@3.9.6#dom/mutation-observer/mutation-observer*/
+define('can-util@3.9.6#dom/mutation-observer/mutation-observer', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../../js/global/global')();
@@ -2916,8 +2977,8 @@ define('can-cid@1.0.3#can-cid', function (require, exports, module) {
         module.exports = namespace.cid = cid;
     }
 });
-/*can-util@3.9.3#js/cid/get-cid*/
-define('can-util@3.9.3#js/cid/get-cid', function (require, exports, module) {
+/*can-util@3.9.6#js/cid/get-cid*/
+define('can-util@3.9.6#js/cid/get-cid', function (require, exports, module) {
     'use strict';
     var CID = require('can-cid');
     var domDataCore = require('../../dom/data/core');
@@ -2931,8 +2992,8 @@ define('can-util@3.9.3#js/cid/get-cid', function (require, exports, module) {
         }
     };
 });
-/*can-util@3.9.3#js/cid-set/cid-set*/
-define('can-util@3.9.3#js/cid-set/cid-set', function (require, exports, module) {
+/*can-util@3.9.6#js/cid-set/cid-set*/
+define('can-util@3.9.6#js/cid-set/cid-set', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL = require('../global/global');
@@ -2979,8 +3040,8 @@ define('can-util@3.9.3#js/cid-set/cid-set', function (require, exports, module) 
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/mutation-observer/document/document*/
-define('can-util@3.9.3#dom/mutation-observer/document/document', function (require, exports, module) {
+/*can-util@3.9.6#dom/mutation-observer/document/document*/
+define('can-util@3.9.6#dom/mutation-observer/document/document', function (require, exports, module) {
     (function (global) {
         'use strict';
         var getDocument = require('../../document/document');
@@ -3122,8 +3183,8 @@ define('can-util@3.9.3#dom/mutation-observer/document/document', function (requi
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/data/data*/
-define('can-util@3.9.3#dom/data/data', function (require, exports, module) {
+/*can-util@3.9.6#dom/data/data*/
+define('can-util@3.9.6#dom/data/data', function (require, exports, module) {
     'use strict';
     var domDataCore = require('./core');
     var mutationDocument = require('../mutation-observer/document/document');
@@ -3152,8 +3213,8 @@ define('can-util@3.9.3#dom/data/data', function (require, exports, module) {
         delete: deleteNode
     };
 });
-/*can-util@3.9.3#dom/class-name/class-name*/
-define('can-util@3.9.3#dom/class-name/class-name', function (require, exports, module) {
+/*can-util@3.9.6#dom/class-name/class-name*/
+define('can-util@3.9.6#dom/class-name/class-name', function (require, exports, module) {
     'use strict';
     var has = function (className) {
         if (this.classList) {
@@ -3181,8 +3242,8 @@ define('can-util@3.9.3#dom/class-name/class-name', function (require, exports, m
         }
     };
 });
-/*can-util@3.9.3#js/is-browser-window/is-browser-window*/
-define('can-util@3.9.3#js/is-browser-window/is-browser-window', function (require, exports, module) {
+/*can-util@3.9.6#js/is-browser-window/is-browser-window*/
+define('can-util@3.9.6#js/is-browser-window/is-browser-window', function (require, exports, module) {
     (function (global) {
         'use strict';
         module.exports = function () {
@@ -3192,8 +3253,8 @@ define('can-util@3.9.3#js/is-browser-window/is-browser-window', function (requir
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/events/events*/
-define('can-util@3.9.3#dom/events/events', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/events*/
+define('can-util@3.9.6#dom/events/events', function (require, exports, module) {
     'use strict';
     var _document = require('../document/document');
     var isBrowserWindow = require('../../js/is-browser-window/is-browser-window');
@@ -3229,7 +3290,7 @@ define('can-util@3.9.3#dom/events/events', function (require, exports, module) {
                     }
                 }
             }
-            if (this.disabled === true) {
+            if (this.disabled === true && ev.type !== 'fix_synthetic_events_on_disabled_test') {
             }
             ev.args = args;
             if (dispatchingOnDisabled) {
@@ -3265,16 +3326,16 @@ define('can-util@3.9.3#dom/events/events', function (require, exports, module) {
         }
     }());
 });
-/*can-util@3.9.3#dom/dispatch/dispatch*/
-define('can-util@3.9.3#dom/dispatch/dispatch', function (require, exports, module) {
+/*can-util@3.9.6#dom/dispatch/dispatch*/
+define('can-util@3.9.6#dom/dispatch/dispatch', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events/events');
     module.exports = function () {
         return domEvents.dispatch.apply(this, arguments);
     };
 });
-/*can-util@3.9.3#dom/matches/matches*/
-define('can-util@3.9.3#dom/matches/matches', function (require, exports, module) {
+/*can-util@3.9.6#dom/matches/matches*/
+define('can-util@3.9.6#dom/matches/matches', function (require, exports, module) {
     'use strict';
     var matchesMethod = function (element) {
         return element.matches || element.webkitMatchesSelector || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector || element.oMatchesSelector;
@@ -3284,8 +3345,8 @@ define('can-util@3.9.3#dom/matches/matches', function (require, exports, module)
         return method ? method.apply(this, arguments) : false;
     };
 });
-/*can-util@3.9.3#dom/events/delegate/delegate*/
-define('can-util@3.9.3#dom/events/delegate/delegate', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/delegate/delegate*/
+define('can-util@3.9.6#dom/events/delegate/delegate', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events');
     var domData = require('../../data/data');
@@ -3377,10 +3438,9 @@ define('can-util@3.9.3#dom/events/delegate/delegate', function (require, exports
         }
     };
 });
-/*can-util@3.9.3#js/single-reference/single-reference*/
-define('can-util@3.9.3#js/single-reference/single-reference', function (require, exports, module) {
+/*can-util@3.9.6#js/single-reference/single-reference*/
+define('can-util@3.9.6#js/single-reference/single-reference', function (require, exports, module) {
     (function (global) {
-        var canReflect = require('can-reflect/reflections/get-set/get-set');
         var CID = require('can-cid');
         var singleReference;
         function getKeyName(key, extraKey) {
@@ -3389,12 +3449,12 @@ define('can-util@3.9.3#js/single-reference/single-reference', function (require,
         }
         singleReference = {
             set: function (obj, key, value, extraKey) {
-                canReflect.set(obj, getKeyName(key, extraKey), value);
+                obj[getKeyName(key, extraKey)] = value;
             },
             getAndDelete: function (obj, key, extraKey) {
                 var keyName = getKeyName(key, extraKey);
-                var value = canReflect.get(obj, keyName);
-                canReflect.delete(obj, keyName);
+                var value = obj[keyName];
+                delete obj[keyName];
                 return value;
             }
         };
@@ -3403,8 +3463,8 @@ define('can-util@3.9.3#js/single-reference/single-reference', function (require,
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/events/delegate/enter-leave*/
-define('can-util@3.9.3#dom/events/delegate/enter-leave', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/delegate/enter-leave*/
+define('can-util@3.9.6#dom/events/delegate/enter-leave', function (require, exports, module) {
     'use strict';
     var domEvents = require('../events'), singleRef = require('../../../js/single-reference/single-reference'), cid = require('../../../js/cid/get-cid');
     var eventMap = {
@@ -3619,8 +3679,8 @@ define('can-event@3.5.0#can-event', function (require, exports, module) {
     });
     module.exports = namespace.event = canEvent;
 });
-/*can-util@3.9.3#js/last/last*/
-define('can-util@3.9.3#js/last/last', function (require, exports, module) {
+/*can-util@3.9.6#js/last/last*/
+define('can-util@3.9.6#js/last/last', function (require, exports, module) {
     'use strict';
     module.exports = function (arr) {
         return arr && arr[arr.length - 1];
@@ -3791,8 +3851,8 @@ define('can-event@3.5.0#batch/batch', function (require, exports, module) {
         module.exports = namespace.batch = canBatch;
     }
 });
-/*can-util@3.9.3#js/cid-map/cid-map*/
-define('can-util@3.9.3#js/cid-map/cid-map', function (require, exports, module) {
+/*can-util@3.9.6#js/cid-map/cid-map*/
+define('can-util@3.9.6#js/cid-map/cid-map', function (require, exports, module) {
     (function (global) {
         'use strict';
         var GLOBAL = require('../global/global');
@@ -3848,8 +3908,8 @@ define('can-util@3.9.3#js/cid-map/cid-map', function (require, exports, module) 
         return this;
     }()));
 });
-/*can-observation@3.3.0#can-observation*/
-define('can-observation@3.3.0#can-observation', function (require, exports, module) {
+/*can-observation@3.3.1#can-observation*/
+define('can-observation@3.3.1#can-observation', function (require, exports, module) {
     (function (global) {
         require('can-event');
         var canEvent = require('can-event');
@@ -3894,9 +3954,9 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
                         Observation.temporarilyBind(this);
                     }
                 }
-                if (this.bound) {
+                if (this.bound === true) {
                     canEvent.flush();
-                    if (remaining.updates) {
+                    if (remaining.updates > 0) {
                         Observation.updateChildrenAndSelf(this);
                     }
                     return this.value;
@@ -3922,7 +3982,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
                 }
             },
             dependencyChange: function () {
-                if (this.bound) {
+                if (this.bound === true) {
                     if (canBatch.batchNum === undefined || canBatch.batchNum !== this.batchNum) {
                         Observation.registerUpdate(this, canBatch.batchNum);
                         this.batchNum = canBatch.batchNum;
@@ -3933,11 +3993,11 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
                 this.dependencyChange(value);
             },
             update: function (batchNum) {
-                if (this.needsUpdate) {
+                if (this.needsUpdate === true) {
                     remaining.updates--;
                 }
                 this.needsUpdate = false;
-                if (this.bound) {
+                if (this.bound === true) {
                     var oldValue = this.value;
                     this.oldValue = null;
                     this.start();
@@ -3968,12 +4028,12 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
                     if (!oldObserved[name]) {
                         this.addEdge(obEv);
                     } else {
-                        oldObserved[name] = null;
+                        oldObserved[name] = undefined;
                     }
                 }
                 for (name in oldObserved) {
                     obEv = oldObserved[name];
-                    if (obEv) {
+                    if (obEv !== undefined) {
                         this.removeEdge(obEv);
                     }
                 }
@@ -4004,7 +4064,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
             return primary;
         };
         Observation.registerUpdate = function (observation, batchNum) {
-            if (observation.needsUpdate) {
+            if (observation.needsUpdate === true) {
                 return;
             }
             remaining.updates++;
@@ -4015,7 +4075,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         var afterCallbacks = [];
         Observation.updateAndNotify = function (ev, batchNum) {
             currentBatchNum = batchNum;
-            if (isUpdating) {
+            if (isUpdating === true) {
                 return;
             }
             isUpdating = true;
@@ -4023,7 +4083,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
                 if (curPrimaryDepth <= maxPrimaryDepth) {
                     var primary = updateOrder[curPrimaryDepth];
                     var lastUpdate = primary && primary.pop();
-                    if (lastUpdate) {
+                    if (lastUpdate !== undefined) {
                         lastUpdate.update(currentBatchNum);
                     } else {
                         curPrimaryDepth++;
@@ -4045,7 +4105,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         canEvent.addEventListener.call(canBatch, 'batchEnd', Observation.updateAndNotify);
         Observation.afterUpdateAndNotify = function (callback) {
             canBatch.after(function () {
-                if (isUpdating) {
+                if (isUpdating === true) {
                     afterCallbacks.push(callback);
                 } else {
                     callback();
@@ -4053,10 +4113,10 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
             });
         };
         Observation.updateChildrenAndSelf = function (observation) {
-            if (observation.needsUpdate) {
+            if (observation.needsUpdate === true) {
                 return Observation.unregisterAndUpdate(observation);
             }
-            var childHasChanged;
+            var childHasChanged = false;
             for (var prop in observation.newObserved) {
                 if (observation.newObserved[prop].obj.observation) {
                     if (Observation.updateChildrenAndSelf(observation.newObserved[prop].obj.observation)) {
@@ -4064,14 +4124,14 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
                     }
                 }
             }
-            if (childHasChanged) {
+            if (childHasChanged === true) {
                 return observation.update(currentBatchNum);
             }
         };
         Observation.unregisterAndUpdate = function (observation) {
             var primaryDepth = observation.getPrimaryDepth();
             var primary = updateOrder[primaryDepth];
-            if (primary) {
+            if (primary !== undefined) {
                 var index = primary.indexOf(observation);
                 if (index !== -1) {
                     primary.splice(index, 1);
@@ -4081,9 +4141,9 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         };
         Observation.add = function (obj, event) {
             var top = observationStack[observationStack.length - 1];
-            if (top && !top.ignore) {
+            if (top !== undefined && !top.ignore) {
                 var evStr = event + '', name = obj._cid + '|' + evStr;
-                if (top.traps) {
+                if (top.traps !== undefined) {
                     top.traps.push({
                         obj: obj,
                         event: evStr,
@@ -4099,13 +4159,13 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         };
         Observation.addAll = function (observes) {
             var top = observationStack[observationStack.length - 1];
-            if (top) {
-                if (top.traps) {
+            if (top !== undefined) {
+                if (top.traps !== undefined) {
                     top.traps.push.apply(top.traps, observes);
                 } else {
                     for (var i = 0, len = observes.length; i < len; i++) {
                         var trap = observes[i], name = trap.name;
-                        if (!top.newObserved[name]) {
+                        if (top.newObserved[name] === undefined) {
                             top.newObserved[name] = trap;
                         }
                     }
@@ -4114,7 +4174,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         };
         Observation.ignore = function (fn) {
             return function () {
-                if (observationStack.length) {
+                if (observationStack.length > 0) {
                     var top = observationStack[observationStack.length - 1];
                     top.ignore++;
                     var res = fn.apply(this, arguments);
@@ -4126,7 +4186,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
             };
         };
         Observation.trap = function () {
-            if (observationStack.length) {
+            if (observationStack.length > 0) {
                 var top = observationStack[observationStack.length - 1];
                 var oldTraps = top.traps;
                 var traps = top.traps = [];
@@ -4141,7 +4201,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
             }
         };
         Observation.trapsCount = function () {
-            if (observationStack.length) {
+            if (observationStack.length > 0) {
                 var top = observationStack[observationStack.length - 1];
                 return top.traps.length;
             } else {
@@ -4150,7 +4210,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         };
         Observation.isRecording = function () {
             var len = observationStack.length;
-            var last = len && observationStack[len - 1];
+            var last = len > 0 && observationStack[len - 1];
             return last && last.ignore === 0 && last;
         };
         var noop = function () {
@@ -4203,7 +4263,7 @@ define('can-observation@3.3.0#can-observation', function (require, exports, modu
         canReflect.set(Observation.prototype, canSymbol.for('can.valueHasDependencies'), Observation.prototype.hasDependencies);
         canReflect.set(Observation.prototype, canSymbol.for('can.getValueDependencies'), function () {
             var rets;
-            if (this.bound) {
+            if (this.bound === true) {
                 rets = {};
                 canReflect.eachKey(this.newObserved || {}, function (dep) {
                     if (canReflect.isValueLike(dep.obj)) {
@@ -4278,8 +4338,8 @@ define('can-event@3.5.0#lifecycle/lifecycle', function (require, exports, module
     lifecycle.removeAndTeardown = baseEvents.removeEventListener;
     module.exports = lifecycle;
 });
-/*can-util@3.9.3#js/is-promise-like/is-promise-like*/
-define('can-util@3.9.3#js/is-promise-like/is-promise-like', function (require, exports, module) {
+/*can-util@3.9.6#js/is-promise-like/is-promise-like*/
+define('can-util@3.9.6#js/is-promise-like/is-promise-like', function (require, exports, module) {
     'use strict';
     module.exports = function (obj) {
         return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
@@ -4675,8 +4735,8 @@ define('can-stache-key@0.0.2#can-stache-key', function (require, exports, module
     observeReader.set = observeReader.write;
     module.exports = observeReader;
 });
-/*can-compute@3.3.0#proto-compute*/
-define('can-compute@3.3.0#proto-compute', function (require, exports, module) {
+/*can-compute@3.3.1#proto-compute*/
+define('can-compute@3.3.1#proto-compute', function (require, exports, module) {
     var Observation = require('can-observation');
     var canEvent = require('can-event');
     var eventLifecycle = require('can-event/lifecycle/lifecycle');
@@ -4984,8 +5044,8 @@ define('can-compute@3.3.0#proto-compute', function (require, exports, module) {
     });
     module.exports = exports = Compute;
 });
-/*can-compute@3.3.0#can-compute*/
-define('can-compute@3.3.0#can-compute', function (require, exports, module) {
+/*can-compute@3.3.1#can-compute*/
+define('can-compute@3.3.1#can-compute', function (require, exports, module) {
     require('can-event');
     require('can-event/batch/batch');
     var Compute = require('./proto-compute');
@@ -5709,8 +5769,8 @@ define('can-view-parser@3.4.0#can-view-parser', function (require, exports, modu
     };
     module.exports = namespace.HTMLParser = HTMLParser;
 });
-/*can-util@3.9.3#js/set-immediate/set-immediate*/
-define('can-util@3.9.3#js/set-immediate/set-immediate', function (require, exports, module) {
+/*can-util@3.9.6#js/set-immediate/set-immediate*/
+define('can-util@3.9.6#js/set-immediate/set-immediate', function (require, exports, module) {
     (function (global) {
         'use strict';
         var global = require('../global/global')();
@@ -5721,8 +5781,8 @@ define('can-util@3.9.3#js/set-immediate/set-immediate', function (require, expor
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/child-nodes/child-nodes*/
-define('can-util@3.9.3#dom/child-nodes/child-nodes', function (require, exports, module) {
+/*can-util@3.9.6#dom/child-nodes/child-nodes*/
+define('can-util@3.9.6#dom/child-nodes/child-nodes', function (require, exports, module) {
     'use strict';
     function childNodes(node) {
         var childNodes = node.childNodes;
@@ -5740,15 +5800,15 @@ define('can-util@3.9.3#dom/child-nodes/child-nodes', function (require, exports,
     }
     module.exports = childNodes;
 });
-/*can-util@3.9.3#dom/contains/contains*/
-define('can-util@3.9.3#dom/contains/contains', function (require, exports, module) {
+/*can-util@3.9.6#dom/contains/contains*/
+define('can-util@3.9.6#dom/contains/contains', function (require, exports, module) {
     'use strict';
     module.exports = function (child) {
         return this.contains(child);
     };
 });
-/*can-util@3.9.3#dom/mutate/mutate*/
-define('can-util@3.9.3#dom/mutate/mutate', function (require, exports, module) {
+/*can-util@3.9.6#dom/mutate/mutate*/
+define('can-util@3.9.6#dom/mutate/mutate', function (require, exports, module) {
     'use strict';
     var makeArray = require('../../js/make-array/make-array');
     var setImmediate = require('../../js/set-immediate/set-immediate');
@@ -5975,16 +6035,16 @@ define('can-view-callbacks@3.2.0#can-view-callbacks', function (require, exports
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/is-of-global-document/is-of-global-document*/
-define('can-util@3.9.3#dom/is-of-global-document/is-of-global-document', function (require, exports, module) {
+/*can-util@3.9.6#dom/is-of-global-document/is-of-global-document*/
+define('can-util@3.9.6#dom/is-of-global-document/is-of-global-document', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document');
     module.exports = function (el) {
         return (el.ownerDocument || el) === getDocument();
     };
 });
-/*can-util@3.9.3#js/diff/diff*/
-define('can-util@3.9.3#js/diff/diff', function (require, exports, module) {
+/*can-util@3.9.6#js/diff/diff*/
+define('can-util@3.9.6#js/diff/diff', function (require, exports, module) {
     'use strict';
     var slice = [].slice;
     var defaultIdentity = function (a, b) {
@@ -6056,8 +6116,8 @@ define('can-util@3.9.3#js/diff/diff', function (require, exports, module) {
         return patches;
     };
 });
-/*can-util@3.9.3#dom/events/attributes/attributes*/
-define('can-util@3.9.3#dom/events/attributes/attributes', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/attributes/attributes*/
+define('can-util@3.9.6#dom/events/attributes/attributes', function (require, exports, module) {
     (function (global) {
         'use strict';
         var events = require('../events');
@@ -6112,8 +6172,8 @@ define('can-util@3.9.3#dom/events/attributes/attributes', function (require, exp
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/events/make-mutation-event/make-mutation-event*/
-define('can-util@3.9.3#dom/events/make-mutation-event/make-mutation-event', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/make-mutation-event/make-mutation-event*/
+define('can-util@3.9.6#dom/events/make-mutation-event/make-mutation-event', function (require, exports, module) {
     (function (global) {
         'use strict';
         var events = require('../events');
@@ -6173,14 +6233,14 @@ define('can-util@3.9.3#dom/events/make-mutation-event/make-mutation-event', func
         return this;
     }()));
 });
-/*can-util@3.9.3#dom/events/inserted/inserted*/
-define('can-util@3.9.3#dom/events/inserted/inserted', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/inserted/inserted*/
+define('can-util@3.9.6#dom/events/inserted/inserted', function (require, exports, module) {
     'use strict';
     var makeMutationEvent = require('../make-mutation-event/make-mutation-event');
     makeMutationEvent('inserted', 'addedNodes');
 });
-/*can-util@3.9.3#dom/attr/attr*/
-define('can-util@3.9.3#dom/attr/attr', function (require, exports, module) {
+/*can-util@3.9.6#dom/attr/attr*/
+define('can-util@3.9.6#dom/attr/attr', function (require, exports, module) {
     (function (global) {
         'use strict';
         var setImmediate = require('../../js/set-immediate/set-immediate');
@@ -7746,8 +7806,8 @@ define('can-view-nodelist@3.1.0#can-view-nodelist', function (require, exports, 
     };
     module.exports = namespace.nodeLists = nodeLists;
 });
-/*can-util@3.9.3#dom/fragment/fragment*/
-define('can-util@3.9.3#dom/fragment/fragment', function (require, exports, module) {
+/*can-util@3.9.6#dom/fragment/fragment*/
+define('can-util@3.9.6#dom/fragment/fragment', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document'), childNodes = require('../child-nodes/child-nodes');
     var fragmentRE = /^\s*<(\w+)[^>]*>/, toString = {}.toString, fragment = function (html, name, doc) {
@@ -7800,8 +7860,8 @@ define('can-util@3.9.3#dom/fragment/fragment', function (require, exports, modul
     };
     module.exports = buildFragment;
 });
-/*can-util@3.9.3#dom/frag/frag*/
-define('can-util@3.9.3#dom/frag/frag', function (require, exports, module) {
+/*can-util@3.9.6#dom/frag/frag*/
+define('can-util@3.9.6#dom/frag/frag', function (require, exports, module) {
     'use strict';
     var getDocument = require('../document/document');
     var fragment = require('../fragment/fragment');
@@ -7841,8 +7901,8 @@ define('can-util@3.9.3#dom/frag/frag', function (require, exports, module) {
     };
     module.exports = makeFrag;
 });
-/*can-util@3.9.3#dom/events/removed/removed*/
-define('can-util@3.9.3#dom/events/removed/removed', function (require, exports, module) {
+/*can-util@3.9.6#dom/events/removed/removed*/
+define('can-util@3.9.6#dom/events/removed/removed', function (require, exports, module) {
     'use strict';
     var makeMutationEvent = require('../make-mutation-event/make-mutation-event');
     makeMutationEvent('removed', 'removedNodes');
@@ -8349,8 +8409,8 @@ define('can-view-live@3.2.0#can-view-live', function (require, exports, module) 
     require('./lib/text');
     module.exports = live;
 });
-/*can-util@3.9.3#js/base-url/base-url*/
-define('can-util@3.9.3#js/base-url/base-url', function (require, exports, module) {
+/*can-util@3.9.6#js/base-url/base-url*/
+define('can-util@3.9.6#js/base-url/base-url', function (require, exports, module) {
     (function (global) {
         'use strict';
         var getGlobal = require('../global/global');
@@ -8379,8 +8439,8 @@ define('can-util@3.9.3#js/base-url/base-url', function (require, exports, module
         return this;
     }()));
 });
-/*can-util@3.9.3#js/parse-uri/parse-uri*/
-define('can-util@3.9.3#js/parse-uri/parse-uri', function (require, exports, module) {
+/*can-util@3.9.6#js/parse-uri/parse-uri*/
+define('can-util@3.9.6#js/parse-uri/parse-uri', function (require, exports, module) {
     'use strict';
     module.exports = function (url) {
         var m = String(url).replace(/^\s+|\s+$/g, '').match(/^([^:\/?#]+:)?(\/\/(?:[^:@]*(?::[^:@]*)?@)?(([^:\/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?/);
@@ -8397,8 +8457,8 @@ define('can-util@3.9.3#js/parse-uri/parse-uri', function (require, exports, modu
         } : null;
     };
 });
-/*can-util@3.9.3#js/join-uris/join-uris*/
-define('can-util@3.9.3#js/join-uris/join-uris', function (require, exports, module) {
+/*can-util@3.9.6#js/join-uris/join-uris*/
+define('can-util@3.9.6#js/join-uris/join-uris', function (require, exports, module) {
     'use strict';
     var parseURI = require('../parse-uri/parse-uri');
     module.exports = function (base, href) {
@@ -9995,8 +10055,8 @@ define('can-stache@3.2.0#src/intermediate_and_imports', function (require, expor
         };
     };
 });
-/*can-util@3.9.3#js/import/import*/
-define('can-util@3.9.3#js/import/import', function (require, exports, module) {
+/*can-util@3.9.6#js/import/import*/
+define('can-util@3.9.6#js/import/import', function (require, exports, module) {
     (function (global) {
         'use strict';
         var isFunction = require('../is-function/is-function');

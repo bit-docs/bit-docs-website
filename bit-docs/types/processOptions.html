@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - processOptions</title>
+	<title>BitDocs - ProcessOptions</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -83,7 +83,7 @@
 							href="FileEventEmitter.html"
 							title="A node event emitter
 that produces events that correlate to files that should be processed.">
-							fileEventEmitter
+							FileEventEmitter
 						</a>
 						
 					</li>
@@ -99,7 +99,7 @@ that produces events that correlate to files that should be processed.">
 							href="docMap.html"
 							title="An object that contains every docObject keyed by the
 docObject&#x27;s name.">
-							docMap
+							DocMap
 						</a>
 						
 					</li>
@@ -116,7 +116,7 @@ docObject&#x27;s name.">
 							title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
 the important, near universal properties:">
-							docObject
+							DocObject
 						</a>
 						
 					</li>
@@ -134,7 +134,7 @@ the important, near universal properties:">
 Generator modules are used to produce some form of documentation output.
 bit-docs-generate-html is the default and currently only generator
 packaged with bit-docs.">
-							generator
+							Generator
 						</a>
 						
 					</li>
@@ -148,12 +148,12 @@ packaged with bit-docs.">
            						expanded">
 						<a class="typedef"
 							href="processOptions.html"
-							title="An options object passed to several process methods such as:
+							title="An options object passed to several process methods, such as:
 
 code
 codeAndComment
 process-tags">
-							processOptions
+							ProcessOptions
 						</a>
 						
 							
@@ -171,7 +171,7 @@ process-tags">
 						<a class="typedef"
 							href="tagCollection.html"
 							title="">
-							tagCollection
+							TagCollection
 						</a>
 						
 					</li>
@@ -290,7 +290,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -335,7 +335,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -496,7 +496,7 @@ docMap.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>processOptions <code>typedef</code></h1>
+	<h1>ProcessOptions <code>typedef</code></h1>
 </section>
 
 		
@@ -504,11 +504,11 @@ docMap.">
 		
 			
 				<section class="description">
-    <p>An options object passed to several process methods such as:</p>
+    <p>An options object passed to several process methods, such as:</p>
 <ul>
 <li><a href="../../bit-docs-js/process/code.html" title="Process a code hint into properties on a docObject.">code</a></li>
-<li><a href="../../bit-docs-js/process/codeAndComment.html" title="">codeAndComment</a></li>
-<li><a href="../../bit-docs-process-tags/process-tags.html" title="">processTags</a></li>
+<li><a href="../../bit-docs-js/process/codeAndComment.html" title="">bit-docs-js/process/codeAndComment</a></li>
+<li><a href="../../bit-docs-process-tags/process-tags.html" title="">bit-docs-process-tags/process-tags</a></li>
 </ul>
 
 </section>
@@ -548,21 +548,26 @@ docMap.">
       </li>
     
       <li>
-        <b>scope</b> <code>{documentjs.process.docObject}</code>:
+        <b>scope</b> <code>{<a href="docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">DocObject</a>}</code>:
         <p>A docObject that can be a parent to the current docObject.</p>
 
       </li>
     
       <li>
-        <b>docMap</b> <code>{documentjs.process.docMap}</code>:
+        <b>docMap</b> <code>{<a href="docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>}</code>:
         <p>The map of all docObjects.</p>
 
       </li>
     
       <li>
-        <b>docObject</b> <code>{documentjs.process.docObject}</code>:
-        <p>If provided, this will
-be used as the docObject.  This is useful for adding properties to an existing object.</p>
+        <b>docObject</b> <code>{<a href="docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">DocObject</a>}</code>:
+        <p>If provided, this will be used
+as the docObject. This is useful for adding properties to an existing object.</p>
 
       </li>
     
@@ -592,7 +597,7 @@ be used as the docObject.  This is useful for adding properties to an existing o
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/processOptions.md"},"description":"\nAn options object passed to several process methods such as:\n- [bit-docs-js/process/code]\n- [bit-docs-js/process/codeAndComment]\n- [bit-docs-process-tags/process-tags]\n","parent":"bit-docs/types","type":"typedef","title":"processOptions","types":[{"type":"Object","options":[{"name":"tags","description":"\n\nThe tag collection to be used to process the comment.\n","types":[{"type":"bit-docs/types/tags"}]},{"name":"comment","description":"\n\nThe comment to be converted\n","types":[{"type":"String"}]},{"name":"scope","description":"\n\nA docObject that can be a parent to the current docObject.\n","types":[{"type":"documentjs.process.docObject"}]},{"name":"docMap","description":"\n\nThe map of all docObjects.\n","types":[{"type":"documentjs.process.docMap"}]},{"name":"docObject","description":"If provided, this will \nbe used as the docObject.  This is useful for adding properties to an existing object.\n","types":[{"type":"documentjs.process.docObject"}],"optional":true},{"name":"code","description":"The code immediately preceeding the comment.\n","types":[{"type":"String"}],"optional":true}]}],"name":"bit-docs/types/processOptions","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/processOptions.md"},"description":"\nAn options object passed to several process methods, such as:\n- [bit-docs-js/process/code]\n- [bit-docs-js/process/codeAndComment]\n- [bit-docs-process-tags/process-tags]\n","parent":"bit-docs/types","type":"typedef","title":"ProcessOptions","types":[{"type":"Object","options":[{"name":"tags","description":"\n\nThe tag collection to be used to process the comment.\n","types":[{"type":"bit-docs/types/tags"}]},{"name":"comment","description":"\n\nThe comment to be converted\n","types":[{"type":"String"}]},{"name":"scope","description":"\n\nA docObject that can be a parent to the current docObject.\n","types":[{"type":"bit-docs/types/docObject"}]},{"name":"docMap","description":"\n\nThe map of all docObjects.\n","types":[{"type":"bit-docs/types/docMap"}]},{"name":"docObject","description":"If provided, this will be used\nas the docObject. This is useful for adding properties to an existing object.\n","types":[{"type":"bit-docs/types/docObject"}],"optional":true},{"name":"code","description":"The code immediately preceeding the comment.\n","types":[{"type":"String"}],"optional":true}]}],"name":"bit-docs/types/processOptions","pathToRoot":"../../.."};
 	</script>
 
 	

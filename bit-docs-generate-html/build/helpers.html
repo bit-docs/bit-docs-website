@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - helpers</title>
+	<title>BitDocs - bit-docs-generate-html/build/helpers</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -105,7 +105,7 @@
            						expanded">
 						<a class="module"
 							href="../../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -118,6 +118,37 @@
 						<span>types</span>
 						
 	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/builder.html"
+							title="A function that builds the static resources and copies the ones needed for
+the html site to a distributable location.">
+							builder
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/makeHelpers.html"
+							title="">
+							makeHelpers
+						</a>
+						
+					</li>
+				
+			
 		
 			
 				
@@ -154,10 +185,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/body.mustache.html"
 							title="The default body template.">
-							body.mustache
+							./site/default/templates/body.mustache
 						</a>
 						
 					</li>
@@ -169,10 +200,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/content.mustache.html"
 							title="The default content template.">
-							content.mustache
+							./site/default/templates/content.mustache
 						</a>
 						
 					</li>
@@ -184,10 +215,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/description.mustache.html"
 							title="The default description template.">
-							description.mustache
+							./site/default/templates/description.mustache
 						</a>
 						
 					</li>
@@ -199,10 +230,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/footer.mustache.html"
 							title="The default footer template.">
-							footer.mustache
+							./site/default/templates/footer.mustache
 						</a>
 						
 					</li>
@@ -214,10 +245,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/header.mustache.html"
 							title="The default header template.">
-							header.mustache
+							./site/default/templates/header.mustache
 						</a>
 						
 					</li>
@@ -229,10 +260,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/layout.mustache.html"
 							title="The default layout template.">
-							layout.mustache
+							./site/default/templates/layout.mustache
 						</a>
 						
 					</li>
@@ -244,10 +275,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/menu.mustache.html"
 							title="The default menu template.">
-							menu.mustache
+							./site/default/templates/menu.mustache
 						</a>
 						
 					</li>
@@ -259,10 +290,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/sidebar.mustache.html"
 							title="The default sidebar template.">
-							sidebar.mustache
+							./site/default/templates/sidebar.mustache
 						</a>
 						
 					</li>
@@ -274,10 +305,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../site/default/templates/title.mustache.html"
 							title="The default title template.">
-							title.mustache
+							./site/default/templates/title.mustache
 						</a>
 						
 					</li>
@@ -359,6 +390,38 @@ render each docObject.">
 		
 			
 				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="build.html"
+							title="A collection of helpers used to build and compile the templates used to
+render each docObject into HTML and build the static JS and
+CSS used by that HTML.">
+							./build/
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="build_hash.html"
+							title="Returns a unique hash for the options that control the build.">
+							./build/build_hash
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
 					<li class="current
            						parent
            						expanded">
@@ -383,8 +446,7 @@ folder, and registers them with Handlebars.">
            						">
 						<a class="module"
 							href="renderer.html"
-							title="Creates a renderer function used to generate
-the documentation.">
+							title="Creates a renderer function used to generate the documentation.">
 							./build/renderer
 						</a>
 						
@@ -402,6 +464,116 @@ the documentation.">
 							title="Builds a static distributable which will eventually be copied to the
 static folder of the generated output.">
 							./build/static_dist
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="templates.html"
+							title="Creates a folder with all the templates used to generate the documentation.">
+							./build/templates
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../generate.html"
+							title="Generates an HTML site for a docMap
+given configuration siteConfig.">
+							./generate
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../html.html"
+							title="A collection of helpers used to build and compile the templates used to
+render each docObject into HTML and build the static JS and
+CSS used by that HTML.">
+							./html
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../write/docMap.html"
+							title="Writes out every docObject within a
+docMap.">
+							./write/docMap
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../write/docObject.html"
+							title="Writes out a docObject.">
+							./write/docObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../write/searchMap.html"
+							title="Writes out a simplified docMap to be used for searching.">
+							./write/searchMap
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../write/static_dist.html"
+							title="Copies the built distributable
+to a static folder in options.dest.">
+							./write/static_dist
 						</a>
 						
 					</li>
@@ -475,7 +647,7 @@ static folder of the generated output.">
            						">
 						<a class="module"
 							href="../../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -636,7 +808,7 @@ static folder of the generated output.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>helpers <code>module</code></h1>
+	<h1>bit-docs-generate-html/build/helpers <code>module</code></h1>
 </section>
 
 		
@@ -669,7 +841,7 @@ folder, and registers them with Handlebars.</p>
       <ol>
         
           <li><b>buildTemplatesPromise</b> <code>{Promise&lt;Handlebars&gt;}</code>: <p>The result of calling
-[bit-docs-generate-html/build/templates]. Building the helpers must happen
+<a href="templates.html" title="Creates a folder with all the templates used to generate the documentation.">bit-docs-generate-html/build/templates</a>. Building the helpers must happen
 after the templates have been copied over. Passing this argument enforces
 that.</p>
 </li>
@@ -677,7 +849,8 @@ that.</p>
               
             
         
-          <li><b>docMap</b> <code>{documentjs.process.docMap}</code>: <p>The docMap which contains all
+          <li><b>docMap</b> <code>{<a href="../../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>}</code>: <p>The docMap which contains all
 docObjects that will be documented.</p>
 </li>
             
@@ -703,7 +876,8 @@ generated.</p>
   
   <div class="returns">
   	<h3 class="returns-title">Returns</h3>
-  	<p> <code>{Promise}</code>: <p>A promise that resolves when helpers have been added to Handlebars.</p>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves when helpers have been added to
+Handlebars.</p>
 </p>
   </div>
   
@@ -726,7 +900,7 @@ generated.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-generate-html/build/helpers","parent":"bit-docs-generate-html/modules","src":{"line":8,"codeLine":40,"path":"docs/modules/bit-docs-generate-html/build/helpers.js"},"description":"\nGets the default helpers, and helpers in the _{buildHash}/site/templates_\nfolder, and registers them with Handlebars.\n","title":"helpers","types":[{"type":"Promise"}],"signatures":[{"code":"build.helpers(buildTemplatesPromise, docMap, options, getCurrent)","description":"\n\nRegisters helpers\n","params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"Handlebars"}]}]}],"name":"buildTemplatesPromise","description":"The result of calling\n[bit-docs-generate-html/build/templates]. Building the helpers must happen\nafter the templates have been copied over. Passing this argument enforces\nthat.\n"},{"types":[{"type":"documentjs.process.docMap"}],"name":"docMap","description":"The docMap which contains all\ndocObjects that will be documented.\n"},{"types":[{"type":"Object","options":[]}],"name":"options","description":"\n\n"},{"types":[{"type":"function","returns":{"types":[{"type":"documentjs.process.docObject"}]},"params":[]}],"name":"getCurrent","description":"\n\nA function that when called, returns the `docObject` currently being\ngenerated.\n"}],"returns":{"types":[{"type":"Promise"}],"description":"A promise that resolves when helpers have been added to Handlebars.\n"}}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"documentjs.process.docObject"}]},"params":[]}],"name":"getCurrent","description":"\n\nA function that when called, returns the `docObject` currently being\ngenerated.\n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A promise that resolves when helpers have been added to Handlebars.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"type":"module","name":"bit-docs-generate-html/build/helpers","parent":"bit-docs-generate-html/modules","src":{"line":8,"codeLine":40,"path":"docs/modules/bit-docs-generate-html/build/helpers.js"},"description":"\nGets the default helpers, and helpers in the _{buildHash}/site/templates_\nfolder, and registers them with Handlebars.\n","title":"","types":[{"type":"Promise"}],"signatures":[{"code":"build.helpers(buildTemplatesPromise, docMap, options, getCurrent)","description":"\n\nRegisters helpers\n","params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"Handlebars"}]}]}],"name":"buildTemplatesPromise","description":"The result of calling\n[bit-docs-generate-html/build/templates]. Building the helpers must happen\nafter the templates have been copied over. Passing this argument enforces\nthat.\n"},{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":"The docMap which contains all\ndocObjects that will be documented.\n"},{"types":[{"type":"Object","options":[]}],"name":"options","description":"\n"},{"types":[{"type":"function","returns":{"types":[{"type":"bit-docs/types/docObject"}]},"params":[]}],"name":"getCurrent","description":"\n\nA function that when called, returns the `docObject` currently being\ngenerated.\n"}],"returns":{"types":[{"type":"Promise"}],"description":"A promise that resolves when helpers have been added to\nHandlebars.\n"}}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"bit-docs/types/docObject"}]},"params":[]}],"name":"getCurrent","description":"\n\nA function that when called, returns the `docObject` currently being\ngenerated.\n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A promise that resolves when helpers have been added to\nHandlebars.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

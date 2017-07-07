@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - styles.less</title>
+	<title>BitDocs - bit-docs-generate-html/site/default/static/styles/styles.less</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../../../../static/bundles/bit-docs-site/static.css">
 	
@@ -105,7 +105,7 @@
            						expanded">
 						<a class="module"
 							href="../../../../../bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -118,6 +118,37 @@
 						<span>types</span>
 						
 	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../../../../types/builder.html"
+							title="A function that builds the static resources and copies the ones needed for
+the html site to a distributable location.">
+							builder
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../../../../types/makeHelpers.html"
+							title="">
+							makeHelpers
+						</a>
+						
+					</li>
+				
+			
 		
 			
 				
@@ -154,10 +185,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/body.mustache.html"
 							title="The default body template.">
-							body.mustache
+							./site/default/templates/body.mustache
 						</a>
 						
 					</li>
@@ -169,10 +200,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/content.mustache.html"
 							title="The default content template.">
-							content.mustache
+							./site/default/templates/content.mustache
 						</a>
 						
 					</li>
@@ -184,10 +215,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/description.mustache.html"
 							title="The default description template.">
-							description.mustache
+							./site/default/templates/description.mustache
 						</a>
 						
 					</li>
@@ -199,10 +230,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/footer.mustache.html"
 							title="The default footer template.">
-							footer.mustache
+							./site/default/templates/footer.mustache
 						</a>
 						
 					</li>
@@ -214,10 +245,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/header.mustache.html"
 							title="The default header template.">
-							header.mustache
+							./site/default/templates/header.mustache
 						</a>
 						
 					</li>
@@ -229,10 +260,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/layout.mustache.html"
 							title="The default layout template.">
-							layout.mustache
+							./site/default/templates/layout.mustache
 						</a>
 						
 					</li>
@@ -244,10 +275,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/menu.mustache.html"
 							title="The default menu template.">
-							menu.mustache
+							./site/default/templates/menu.mustache
 						</a>
 						
 					</li>
@@ -259,10 +290,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/sidebar.mustache.html"
 							title="The default sidebar template.">
-							sidebar.mustache
+							./site/default/templates/sidebar.mustache
 						</a>
 						
 					</li>
@@ -274,10 +305,10 @@ render each docObject.">
 					<li class="
            						
            						">
-						<a class="page"
+						<a class="module"
 							href="../../templates/title.mustache.html"
 							title="The default title template.">
-							title.mustache
+							./site/default/templates/title.mustache
 						</a>
 						
 					</li>
@@ -366,6 +397,38 @@ render each docObject.">
            						
            						">
 						<a class="module"
+							href="../../../../build/build.html"
+							title="A collection of helpers used to build and compile the templates used to
+render each docObject into HTML and build the static JS and
+CSS used by that HTML.">
+							./build/
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../build/build_hash.html"
+							title="Returns a unique hash for the options that control the build.">
+							./build/build_hash
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
 							href="../../../../build/helpers.html"
 							title="Gets the default helpers, and helpers in the {buildHash}/site/templates
 folder, and registers them with Handlebars.">
@@ -383,8 +446,7 @@ folder, and registers them with Handlebars.">
            						">
 						<a class="module"
 							href="../../../../build/renderer.html"
-							title="Creates a renderer function used to generate
-the documentation.">
+							title="Creates a renderer function used to generate the documentation.">
 							./build/renderer
 						</a>
 						
@@ -402,6 +464,116 @@ the documentation.">
 							title="Builds a static distributable which will eventually be copied to the
 static folder of the generated output.">
 							./build/static_dist
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../build/templates.html"
+							title="Creates a folder with all the templates used to generate the documentation.">
+							./build/templates
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../generate.html"
+							title="Generates an HTML site for a docMap
+given configuration siteConfig.">
+							./generate
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../html.html"
+							title="A collection of helpers used to build and compile the templates used to
+render each docObject into HTML and build the static JS and
+CSS used by that HTML.">
+							./html
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../write/docMap.html"
+							title="Writes out every docObject within a
+docMap.">
+							./write/docMap
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../write/docObject.html"
+							title="Writes out a docObject.">
+							./write/docObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../write/searchMap.html"
+							title="Writes out a simplified docMap to be used for searching.">
+							./write/searchMap
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../../write/static_dist.html"
+							title="Copies the built distributable
+to a static folder in options.dest.">
+							./write/static_dist
 						</a>
 						
 					</li>
@@ -475,7 +647,7 @@ static folder of the generated output.">
            						">
 						<a class="module"
 							href="../../../../../bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
@@ -636,7 +808,7 @@ static folder of the generated output.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>styles.less <code>module</code></h1>
+	<h1>bit-docs-generate-html/site/default/static/styles/styles.less <code>module</code></h1>
 </section>
 
 		
@@ -659,8 +831,8 @@ static folder of the generated output.">
 				<section class="body">
     <p>The default <code>styles.less</code> is based on flexbox, and relies on two less files:</p>
 <ul>
-<li><a href="variables.less.html" title="Variables to hold site-wide visual configurations.">variables.less</a></li>
-<li><a href="mixins.less.html" title="Mixins for site-wide visual layout.">mixins.less</a></li>
+<li><a href="variables.less.html" title="Variables to hold site-wide visual configurations.">bit-docs-generate-html/site/default/static/styles/variables.less</a></li>
+<li><a href="mixins.less.html" title="Mixins for site-wide visual layout.">bit-docs-generate-html/site/default/static/styles/mixins.less</a></li>
 </ul>
 <p>The styles are very basic, and primarily focus on mobile and desktop layout.</p>
 
@@ -674,7 +846,7 @@ static folder of the generated output.">
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-generate-html/site/default/static/styles/styles.less","type":"module","parent":"bit-docs-generate-html/static","src":{"line":0,"codeLine":16,"path":"docs/modules/bit-docs-generate-html/site/default/static/styles/styles.less"},"description":"The primary styles for the default theme. \n","title":"styles.less","comment":" ","pathToRoot":"../../../../../.."};
+		var docObject = {"name":"bit-docs-generate-html/site/default/static/styles/styles.less","type":"module","parent":"bit-docs-generate-html/static","src":{"line":0,"codeLine":16,"path":"docs/modules/bit-docs-generate-html/site/default/static/styles/styles.less"},"description":"The primary styles for the default theme. \n","title":"","comment":" ","pathToRoot":"../../../../../.."};
 	</script>
 
 	

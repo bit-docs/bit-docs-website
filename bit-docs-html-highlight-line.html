@@ -105,7 +105,7 @@
            						">
 						<a class="module"
 							href="bit-docs-generate-html.html"
-							title="Generates HTML for a docMap.  Supports plugins.">
+							title="Generates HTML for a docMap and handles the html hook.">
 							bit-docs-generate-html
 						</a>
 						
@@ -150,11 +150,73 @@
            						expanded">
 						<a class="module"
 							href="bit-docs-html-highlight-line.html"
-							title="Adds a @highlight tag.  Needs to be used after bit-docs-prettify.">
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
 							bit-docs-html-highlight-line
 						</a>
 						
 							
+	<ul>
+		
+			
+				
+					<li>
+						<span>tags</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-html-highlight-line/tags/highlight.html"
+							title="Highlight the specified code lines.">
+							./highlight
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>static</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="bit-docs-html-highlight-line/highlight-line.js.html"
+							title="Main front end JavaScript file for static portion of this plugin.">
+							./highlight-line.js
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
 
 						
 					</li>
@@ -322,7 +384,7 @@
 		
 			
 				<section class="description">
-    <p>Adds a <code>@highlight</code> tag.  Needs to be used after <code>bit-docs-prettify</code>.</p>
+    <p>Adds a <code>@highlight</code> tag. Needs to be used after <a href="bit-docs-prettify.html" title="A bit-docs plugin that makes source-code snippets in HTML prettier.">bit-docs-prettify</a>.</p>
 
 </section>
 
@@ -355,7 +417,15 @@
 			
 			
 				<section class="body">
-    <p>TBD</p>
+    <p>This plugin registers onto these hooks:</p>
+<ul>
+<li><code>tags</code></li>
+<li><code>html</code></li>
+</ul>
+<p>Registering the <code>tags</code> hook adds the
+<a href="bit-docs-html-highlight-line/tags/highlight.html" title="Highlight the specified code lines.">@highlight</a> tag.</p>
+<p>Registering the <code>html</code> hook adds a static JavaScript file used to do the
+highlighting <a href="bit-docs-html-highlight-line/highlight-line.js.html" title="Main front end JavaScript file for static portion of this plugin.">bit-docs-html-highlight-line/highlight-line.js</a>.</p>
 
 </section>
 
@@ -367,7 +437,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-html-highlight-line","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":12,"path":"docs/modules/bit-docs-html-highlight-line/bit-docs.js"},"description":"Adds a `@highlight` tag.  Needs to be used after `bit-docs-prettify`. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-html-highlight-line","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":2,"codeLine":22,"path":"docs/modules/bit-docs-html-highlight-line/bit-docs.js"},"description":"Adds a `@highlight` tag. Needs to be used after [bit-docs-prettify]. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"comment":" ","pathToRoot":".."};
 	</script>
 
 	

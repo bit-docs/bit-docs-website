@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: [object Object]
+	@typedef documentjs.Tag
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BitDocs - Tag </title>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	<div class="content">
+	
+		<nav class="sidebar">
+	
+		
+
+	
+</nav>
+
+	
+	<article class="main">
+		
+			<section class="title">
+	<h1>Tag  <code>typedef</code></h1>
+</section>
+
+		
+
+		
+			
+				<section class="description">
+    <p>The interface that [documentjs.tags] implement for
+[documentjs.process.comment] and [documentjs.process.code] to call. This is
+very likely to change to something better.</p>
+
+</section>
+
+			
+		
+
+		
+			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>Object</code>
+  </h2>
+
+  
+
+  
+
+  
+
+  
+  <div class="options">
+  <h3 class="options-title">Options</h3>
+    <ul>
+    
+      <li>
+        <b>codeMatch</b> <code>{function(codeLine)}</code>:
+        <p>Returns <code>true</code>
+if this tag should process this line of code.</p>
+<p>[documentjs.process.code] passes the line of code after a comment block
+to each tag's <code>codeMatch</code> function.  The first tag whose <code>codeMatch</code> returns
+true will have its <code>code</code> method called with the same line.</p>
+
+      </li>
+    
+      <li>
+        <b>code</b> <code>{function(codeLine, scope, docMap)}</code>:
+        <p>Returns
+properties that should be set on the comment's docObject.</p>
+
+      </li>
+    
+      <li>
+        <b>codeScope</b> <code>{Boolean}</code>:
+        <p>If <code>code(codeLine)</code> returns a DocObject,
+set this object as the new scope.</p>
+
+      </li>
+    
+      <li>
+        <b>add</b> <code>{function(line, curData, scope, docMap, currentWrite, <a href="DocumentJS.siteConfig.html" title="The configuration options within a DocumentJS.docConfig's sites objects or sitesDefaults object.">options</a>)}</code>:
+        <p><code>add</code> is called when a comment line starts with <code>@</code> followed by the tag name. This function can:</p>
+<ul>
+<li>add directly to the docObject</li>
+<li>push something onto the stack <code>['push', data]</code></li>
+<li>pop some data off the stack <code>['pop', String]</code></li>
+<li>change the default property lines are written to <code>['default',propName]</code></li>
+<li>add to docMap <code>['add', docObject]</code>.</li>
+<li>change the scope <code>['scope', scopeDocObject]</code> or the scope and the docObject being added to <code>['scope',scopeDocObject, docObject]</code></li>
+</ul>
+<p>The stack is used to handle tags that might be nested, for example
+<code>@codestart</code> and <code>@codeend</code>. It provides something to collect data
+until the closing tag, and have the compiled data &quot;popped&quot; to the parent.</p>
+
+      </li>
+    
+      <li>
+        <b>addMore</b> <code>{function(line, curData, scope, docMap)}</code>:
+        <p><code>addMore</code> is called if <code>add</code> returns an object.</p>
+
+      </li>
+    
+      <li>
+        <b>end</b> <code>{function(line, curData, scope, docMap)}</code>:
+        <p><code>end</code> is called on a tag when the comment switches to another tag.</p>
+
+      </li>
+    
+    </ul>
+  </div>
+  
+</div>
+
+				
+			
+			
+				<section class="body">
+    
+</section>
+
+			
+		
+	</article>
+</div>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/tag.md"},"description":"\nThe interface that [documentjs.tags] implement for\n[documentjs.process.comment] and [documentjs.process.code] to call. This is\nvery likely to change to something better.\n","type":"typedef","title":"Tag ","types":[{"type":"Object","options":[{"name":"codeMatch","description":"Returns `true` \nif this tag should process this line of code.\n\n[documentjs.process.code] passes the line of code after a comment block \nto each tag's `codeMatch` function.  The first tag whose `codeMatch` returns\ntrue will have its `code` method called with the same line.\n\n","types":[{"type":"function","returns":{"types":[{"type":"Boolean"}]},"params":[{"types":[{"type":"String"}],"name":"codeLine"}]}]},{"name":"code","description":"Returns\nproperties that should be set on the comment's docObject.\n","types":[{"type":"function","returns":{"types":[{"type":"documentjs.process.docObject"}]},"params":[{"types":[{"type":"String"}],"name":"codeLine"},{"types":[{"type":"documentjs.process.docObject"}],"name":"scope"},{"types":[{"type":"documentjs.process.docMap"}],"name":"docMap"}]}]},{"name":"codeScope","description":"If `code(codeLine)` returns a DocObject,\nset this object as the new scope.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"add","description":"\n\n`add` is called when a comment line starts with `@` followed by the tag name. This function can:\n\n - add directly to the docObject\n - push something onto the stack `['push', data]`\n - pop some data off the stack `['pop', String]`\n - change the default property lines are written to `['default',propName]`\n - add to docMap `['add', docObject]`. \n - change the scope `['scope', scopeDocObject]` or the scope and the docObject being added to `['scope',scopeDocObject, docObject]`\n\nThe stack is used to handle tags that might be nested, for example \n`@codestart` and `@codeend`. It provides something to collect data\nuntil the closing tag, and have the compiled data \"popped\" to the parent.\n\n\n\n","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"String"}],"name":"line"},{"types":[{"type":"Object","options":[]}],"name":"curData"},{"types":[{"type":"documentjs.process.docObject"}],"name":"scope"},{"types":[{"type":"documentjs.process.docMap"}],"name":"docMap"},{"types":[{"type":"String"}],"name":"currentWrite"},{"types":[{"type":"DocumentJS.siteConfig"}],"name":"options"}],"context":{"types":[{"type":"documentjs.process.docObject"}]}}]},{"name":"addMore","description":"\n\n`addMore` is called if `add` returns an object.\n","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"String"}],"name":"line"},{"types":[{"type":"Object","options":[]}],"name":"curData"},{"types":[{"type":"documentjs.process.docObject"}],"name":"scope"},{"types":[{"type":"documentjs.process.docMap"}],"name":"docMap"}],"context":{"types":[{"type":"documentjs.process.docObject"}]}}]},{"name":"end","description":"\n\n`end` is called on a tag when the comment switches to another tag.\n","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"String"}],"name":"line"},{"types":[{"type":"Object","options":[]}],"name":"curData"},{"types":[{"type":"documentjs.process.docObject"}],"name":"scope"},{"types":[{"type":"documentjs.process.docMap"}],"name":"docMap"}],"context":{"types":[{"type":"documentjs.process.docObject"}]}}]}]}],"name":"documentjs.Tag","parent":"documentjs.tags","pathToRoot":".."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="./static/steal.production.js"></script>
+	
+</body>
+
+</html>

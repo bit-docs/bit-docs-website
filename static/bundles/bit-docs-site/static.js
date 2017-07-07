@@ -1088,11 +1088,33 @@ define('package.json!npm', [
                 'can-construct': '3.2.0',
                 'can-namespace': '1.0.0',
                 'can-util': '3.9.6',
-                'can-event': '3.5.0',
                 'can-types': '1.1.0',
+                'can-event': '3.5.0',
                 'can-compute': '3.3.1',
                 'can-stache-key': '0.0.2',
                 'can-reflect': '1.2.3'
+            }
+        },
+        {
+            'name': 'can-stache',
+            'version': '3.2.0',
+            'fileUrl': './node_modules/can-stache/package.json',
+            'main': 'can-stache',
+            'resolutions': {
+                'can-stache': '3.2.0',
+                'can-util': '3.9.6',
+                'can-namespace': '1.0.0',
+                'can-view-parser': '3.4.0',
+                'can-view-callbacks': '3.2.0',
+                'can-view-target': '3.1.0',
+                'can-view-nodelist': '3.1.0',
+                'can-observation': '3.3.1',
+                'can-compute': '3.3.1',
+                'can-reflect': '1.2.3',
+                'can-symbol': '1.0.0',
+                'can-stache-key': '0.0.2',
+                'can-view-scope': '3.3.0',
+                'can-view-live': '3.2.0'
             }
         },
         {
@@ -1127,6 +1149,18 @@ define('package.json!npm', [
             }
         },
         {
+            'name': 'can-types',
+            'version': '1.1.0',
+            'fileUrl': './node_modules/can-types/package.json',
+            'main': 'can-types',
+            'resolutions': {
+                'can-namespace': '1.0.0',
+                'can-reflect': '1.2.3',
+                'can-util': '3.9.6',
+                'can-symbol': '1.0.0'
+            }
+        },
+        {
             'name': 'can-event',
             'version': '3.5.0',
             'fileUrl': './node_modules/can-event/package.json',
@@ -1138,18 +1172,6 @@ define('package.json!npm', [
                 'can-cid': '1.0.3',
                 'can-event': '3.5.0',
                 'can-types': '1.1.0'
-            }
-        },
-        {
-            'name': 'can-types',
-            'version': '1.1.0',
-            'fileUrl': './node_modules/can-types/package.json',
-            'main': 'can-types',
-            'resolutions': {
-                'can-namespace': '1.0.0',
-                'can-reflect': '1.2.3',
-                'can-util': '3.9.6',
-                'can-symbol': '1.0.0'
             }
         },
         {
@@ -1218,28 +1240,6 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-stache',
-            'version': '3.2.0',
-            'fileUrl': './node_modules/can-stache/package.json',
-            'main': 'can-stache',
-            'resolutions': {
-                'can-stache': '3.2.0',
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0',
-                'can-view-parser': '3.4.0',
-                'can-view-callbacks': '3.2.0',
-                'can-view-target': '3.1.0',
-                'can-view-nodelist': '3.1.0',
-                'can-observation': '3.3.1',
-                'can-compute': '3.3.1',
-                'can-reflect': '1.2.3',
-                'can-symbol': '1.0.0',
-                'can-stache-key': '0.0.2',
-                'can-view-scope': '3.3.0',
-                'can-view-live': '3.2.0'
-            }
-        },
-        {
             'name': 'can-symbol',
             'version': '1.0.0',
             'fileUrl': './node_modules/can-symbol/package.json',
@@ -1254,43 +1254,6 @@ define('package.json!npm', [
                 'main': 'can-symbol'
             },
             'resolutions': { 'can-namespace': '1.0.0' }
-        },
-        {
-            'name': 'can-cid',
-            'version': '1.0.3',
-            'fileUrl': './node_modules/can-cid/package.json',
-            'main': 'can-cid',
-            'resolutions': { 'can-namespace': '1.0.0' }
-        },
-        {
-            'name': 'can-observation',
-            'version': '3.3.1',
-            'fileUrl': './node_modules/can-observation/package.json',
-            'main': 'can-observation',
-            'steal': { 'npmAlgorithm': 'flat' },
-            'resolutions': {
-                'can-event': '3.5.0',
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0',
-                'can-reflect': '1.2.3',
-                'can-symbol': '1.0.0',
-                'can-cid': '1.0.3'
-            }
-        },
-        {
-            'name': 'can-reflect-promise',
-            'version': '1.1.0',
-            'fileUrl': './node_modules/can-reflect-promise/package.json',
-            'main': 'can-reflect-promise',
-            'steal': { 'npmAlgorithm': 'flat' },
-            'resolutions': {
-                'can-reflect': '1.2.3',
-                'can-symbol': '1.0.0',
-                'can-util': '3.9.6',
-                'can-observation': '3.3.1',
-                'can-cid': '1.0.3',
-                'can-event': '3.5.0'
-            }
         },
         {
             'name': 'can-view-parser',
@@ -1332,6 +1295,43 @@ define('package.json!npm', [
             'resolutions': {
                 'can-util': '3.9.6',
                 'can-namespace': '1.0.0'
+            }
+        },
+        {
+            'name': 'can-cid',
+            'version': '1.0.3',
+            'fileUrl': './node_modules/can-cid/package.json',
+            'main': 'can-cid',
+            'resolutions': { 'can-namespace': '1.0.0' }
+        },
+        {
+            'name': 'can-observation',
+            'version': '3.3.1',
+            'fileUrl': './node_modules/can-observation/package.json',
+            'main': 'can-observation',
+            'steal': { 'npmAlgorithm': 'flat' },
+            'resolutions': {
+                'can-event': '3.5.0',
+                'can-util': '3.9.6',
+                'can-namespace': '1.0.0',
+                'can-reflect': '1.2.3',
+                'can-symbol': '1.0.0',
+                'can-cid': '1.0.3'
+            }
+        },
+        {
+            'name': 'can-reflect-promise',
+            'version': '1.1.0',
+            'fileUrl': './node_modules/can-reflect-promise/package.json',
+            'main': 'can-reflect-promise',
+            'steal': { 'npmAlgorithm': 'flat' },
+            'resolutions': {
+                'can-reflect': '1.2.3',
+                'can-symbol': '1.0.0',
+                'can-util': '3.9.6',
+                'can-observation': '3.3.1',
+                'can-cid': '1.0.3',
+                'can-event': '3.5.0'
             }
         },
         {

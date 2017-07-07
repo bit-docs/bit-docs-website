@@ -524,10 +524,10 @@ CSS used by that HTML.">
            						
            						">
 						<a class="module"
-							href="../write/docMap.html"
+							href="../write/doc_map.html"
 							title="Writes out every docObject within a
 docMap.">
-							./write/docMap
+							./write/doc_map
 						</a>
 						
 					</li>
@@ -540,9 +540,9 @@ docMap.">
            						
            						">
 						<a class="module"
-							href="../write/docObject.html"
+							href="../write/doc_object.html"
 							title="Writes out a docObject.">
-							./write/docObject
+							./write/doc_object
 						</a>
 						
 					</li>
@@ -555,9 +555,9 @@ docMap.">
            						
            						">
 						<a class="module"
-							href="../write/searchMap.html"
+							href="../write/search_map.html"
 							title="Writes out a simplified docMap to be used for searching.">
-							./write/searchMap
+							./write/search_map
 						</a>
 						
 					</li>
@@ -574,6 +574,23 @@ docMap.">
 							title="Copies the built distributable
 to a static folder in options.dest.">
 							./write/static_dist
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../write/write.html"
+							title="A collection of helpers used to write out docObject and
+docMaps using the structures produced by
+build.">
+							./write/
 						</a>
 						
 					</li>
@@ -834,15 +851,16 @@ to a static folder in options.dest.">
 
   <p>Builds the static distributable with the following steps:</p>
 <ol>
-<li>Copies everything from <em>site/default/static</em> to <em>site/static/build</em>.</li>
-<li>Copies the path in <code>options.dest</code> to <em>site/static/build</em>.</li>
-<li><code>require</code>s the module at <em>site/static/build/build.js</em>.</li>
+<li>Copies everything from <em>site/default/static</em> to
+<em>site/static/build/{buildHash}</em>.</li>
+<li>Copies the path in <code>options.dest</code> to <em>site/static/build/{buildHash}</em>.</li>
+<li><code>require</code>s the module at <em>site/static/build/{buildHash}/build.js</em>.</li>
 <li>Calls that &quot;build&quot; module function with the options and returns the
 result.</li>
 </ol>
 <p>The &quot;build&quot; module is expected to build a minified distributable and copy
-the necessary contents to <em>site/static/dist</em> and return a promise that
-resolves when complete.</p>
+the necessary contents to <em>site/static/dist{buildHash}</em> and return a promise
+that resolves when complete.</p>
 
 
   
@@ -871,7 +889,7 @@ bundle even if it has already been built.</p>
                     <code>{String}</code>
                   </h5>
                   <div class="description">
-                    <p>The final destination ouput of the static
+                    <p>The final destination output of the static
 distributable.</p>
 
                   </div>
@@ -934,7 +952,7 @@ successfully created.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-generate-html/build/static_dist","parent":"bit-docs-generate-html/modules","src":{"line":13,"codeLine":51,"path":"docs/modules/bit-docs-generate-html/build/static_dist.js"},"description":"\nBuilds a static distributable which will eventually be copied to the\n`static` folder of the generated output.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"staticDist(options)","description":"\n\nBuilds the static distributable with the following steps:\n\n1. Copies everything from _site/default/static_ to _site/static/build_.\n2. Copies the path in `options.dest` to _site/static/build_.\n3. `require`s the module at _site/static/build/build.js_.\n4. Calls that \"build\" module function with the options and returns the\nresult.\n\nThe \"build\" module is expected to build a minified distributable and copy\nthe necessary contents to _site/static/dist_ and return a promise that\nresolves when complete.\n","params":[{"types":[{"type":"Object","options":[{"name":"forceBuild","description":"If set to `true`, rebuilds the static\nbundle even if it has already been built.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"dest","description":"The final destination ouput of the static\ndistributable.\n","types":[{"type":"String"}]},{"name":"static","description":"The location of static content used to overwrite or\nadd to the default static content.\n","types":[{"type":"String"}]},{"name":"minifyBuild","description":"If set to `false` the build will not be\nminified. This behavior should be implemented by the \"build\" module.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"true"}]}],"name":"options","description":"\n"}],"returns":{"types":[{"type":"Promise"}],"description":"A promise that resolves if the static dist was\nsuccessfully created.\n"}}],"_curParam":{"types":[{"type":"Object","options":[{"name":"forceBuild","description":"If set to `true`, rebuilds the static\nbundle even if it has already been built.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"dest","description":"The final destination ouput of the static\ndistributable.\n","types":[{"type":"String"}]},{"name":"static","description":"The location of static content used to overwrite or\nadd to the default static content.\n","types":[{"type":"String"}]},{"name":"minifyBuild","description":"If set to `false` the build will not be\nminified. This behavior should be implemented by the \"build\" module.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"true"}]}],"name":"options","description":"\n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A promise that resolves if the static dist was\nsuccessfully created.\n"},"pathToRoot":"../../.."};
+		var docObject = {"type":"module","name":"bit-docs-generate-html/build/static_dist","parent":"bit-docs-generate-html/modules","src":{"line":13,"codeLine":52,"path":"docs/modules/bit-docs-generate-html/build/static_dist.js"},"description":"\nBuilds a static distributable which will eventually be copied to the\n`static` folder of the generated output.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"staticDist(options)","description":"\n\nBuilds the static distributable with the following steps:\n\n1. Copies everything from _site/default/static_ to\n_site/static/build/{buildHash}_.\n2. Copies the path in `options.dest` to _site/static/build/{buildHash}_.\n3. `require`s the module at _site/static/build/{buildHash}/build.js_.\n4. Calls that \"build\" module function with the options and returns the\nresult.\n\nThe \"build\" module is expected to build a minified distributable and copy\nthe necessary contents to _site/static/dist{buildHash}_ and return a promise\nthat resolves when complete.\n","params":[{"types":[{"type":"Object","options":[{"name":"forceBuild","description":"If set to `true`, rebuilds the static\nbundle even if it has already been built.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"dest","description":"The final destination output of the static\ndistributable.\n","types":[{"type":"String"}]},{"name":"static","description":"The location of static content used to overwrite or\nadd to the default static content.\n","types":[{"type":"String"}]},{"name":"minifyBuild","description":"If set to `false` the build will not be\nminified. This behavior should be implemented by the \"build\" module.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"true"}]}],"name":"options","description":"\n"}],"returns":{"types":[{"type":"Promise"}],"description":"A promise that resolves if the static dist was\nsuccessfully created.\n"}}],"_curParam":{"types":[{"type":"Object","options":[{"name":"forceBuild","description":"If set to `true`, rebuilds the static\nbundle even if it has already been built.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"false"},{"name":"dest","description":"The final destination output of the static\ndistributable.\n","types":[{"type":"String"}]},{"name":"static","description":"The location of static content used to overwrite or\nadd to the default static content.\n","types":[{"type":"String"}]},{"name":"minifyBuild","description":"If set to `false` the build will not be\nminified. This behavior should be implemented by the \"build\" module.\n","types":[{"type":"Boolean"}],"optional":true,"defaultValue":"true"}]}],"name":"options","description":"\n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A promise that resolves if the static dist was\nsuccessfully created.\n"},"pathToRoot":"../../.."};
 	</script>
 
 	

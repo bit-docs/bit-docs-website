@@ -4,12 +4,12 @@
 
 	INSTEAD CHANGE:
 	source: [object Object]
-	@module bit-docs-generate-html/write/docMap
+	@module bit-docs-generate-html/write/doc_object
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - bit-docs-generate-html/write/docMap</title>
+	<title>BitDocs - bit-docs-generate-html/write/doc_object</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -517,14 +517,29 @@ CSS used by that HTML.">
 		
 			
 				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="doc_map.html"
+							title="Writes out every docObject within a
+docMap.">
+							./write/doc_map
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
 					<li class="current
            						parent
            						expanded">
 						<a class="module"
-							href="docMap.html"
-							title="Writes out every docObject within a
-docMap.">
-							./write/docMap
+							href="doc_object.html"
+							title="Writes out a docObject.">
+							./write/doc_object
 						</a>
 						
 							
@@ -540,24 +555,9 @@ docMap.">
            						
            						">
 						<a class="module"
-							href="docObject.html"
-							title="Writes out a docObject.">
-							./write/docObject
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="searchMap.html"
+							href="search_map.html"
 							title="Writes out a simplified docMap to be used for searching.">
-							./write/searchMap
+							./write/search_map
 						</a>
 						
 					</li>
@@ -574,6 +574,23 @@ docMap.">
 							title="Copies the built distributable
 to a static folder in options.dest.">
 							./write/static_dist
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="write.html"
+							title="A collection of helpers used to write out docObject and
+docMaps using the structures produced by
+build.">
+							./write/
 						</a>
 						
 					</li>
@@ -808,7 +825,7 @@ to a static folder in options.dest.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>bit-docs-generate-html/write/docMap <code>module</code></h1>
+	<h1>bit-docs-generate-html/write/doc_object <code>module</code></h1>
 </section>
 
 		
@@ -816,11 +833,9 @@ to a static folder in options.dest.">
 		
 			
 				<section class="description">
-    <p>Writes out every <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+    <p>Writes out a <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">DocObject</a> within a
-<a href="../../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
-docObject's name.">DocMap</a>.</p>
+the important, near universal properties:">DocObject</a>.</p>
 
 </section>
 
@@ -832,7 +847,7 @@ docObject's name.">DocMap</a>.</p>
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>docMap(docMap, renderer, siteConfig, setCurrentDocObjectForHelpers)</code>
+    <code>docObject(docObject, renderer, siteConfig, setCurrentDocObjectForHelpers)</code>
   </h2>
 
   
@@ -842,8 +857,10 @@ docObject's name.">DocMap</a>.</p>
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>docMap</b> <code>{<a href="../../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
-docObject's name.">DocMap</a>}</code>: </li>
+          <li><b>docObject</b> <code>{<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client. The following lists
+the important, near universal properties:">DocObject</a>}</code>: <p>The doc object to be written out.</p>
+</li>
             
               
             
@@ -851,13 +868,31 @@ docObject's name.">DocMap</a>}</code>: </li>
           <li><b>renderer</b> <code>{<a href="../types/renderer.html" title="A renderer built by renderer that is used to
 render each docObject.">renderer</a>(<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">docObject</a>)}</code>: </li>
+the important, near universal properties:">docObject</a>)}</code>: <p>A function that
+renders the output.</p>
+</li>
             
               
             
         
-          <li><b>siteConfig</b> <code>{Object}</code>: </li>
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>Configuration siteConfig.</p>
+</li>
             
+              
+              <ul class="options">
+                
+                <li class="option">
+                  <h5>dest 
+                    <code>{String}</code>
+                  </h5>
+                  <div class="description">
+                    <p>The folder name this file will be written to. The
+filename is determined from the docObject's name.</p>
+
+                  </div>
+                </li>
+                
+              </ul>
               
             
         
@@ -875,7 +910,7 @@ the important, near universal properties:">bit-docs/types/docObject</a>)}</code>
   
   <div class="returns">
   	<h3 class="returns-title">Returns</h3>
-  	<p> <code>{Promise}</code>: <p>Resolves when all docObjects have been written.</p>
+  	<p> <code>{Promise}</code>: <p>A promise that resolves when the file has been written out.</p>
 </p>
   </div>
   
@@ -898,7 +933,7 @@ the important, near universal properties:">bit-docs/types/docObject</a>)}</code>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-generate-html/write/docMap","parent":"bit-docs-generate-html/modules","src":{"line":3,"codeLine":18,"path":"docs/modules/bit-docs-generate-html/write/doc_map.js"},"description":"\nWrites out every [bit-docs/types/docObject] within a\n[bit-docs/types/docMap].\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"docMap(docMap, renderer, siteConfig, setCurrentDocObjectForHelpers)","description":"\n","params":[{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":""},{"types":[{"type":"bit-docs-generate-html/types/renderer"}],"name":"renderer","description":""},{"types":[{"type":"Object","options":[]}],"name":"siteConfig","description":""},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"setCurrentDocObjectForHelpers","description":""}],"returns":{"types":[{"type":"Promise"}],"description":"Resolves when all docObjects have been written.\n"}}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"setCurrentDocObjectForHelpers","description":""},"_curReturn":{"types":[{"type":"Promise"}],"description":"Resolves when all docObjects have been written.\n"},"pathToRoot":"../../.."};
+		var docObject = {"type":"module","name":"bit-docs-generate-html/write/doc_object","parent":"bit-docs-generate-html/modules","src":{"line":8,"codeLine":30,"path":"docs/modules/bit-docs-generate-html/write/doc_object.js"},"description":"\nWrites out a [bit-docs/types/docObject].\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"docObject(docObject, renderer, siteConfig, setCurrentDocObjectForHelpers)","description":"\n","params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"docObject","description":"The doc object to be written out.\n"},{"types":[{"type":"bit-docs-generate-html/types/renderer"}],"name":"renderer","description":"A function that\nrenders the output.\n"},{"types":[{"type":"Object","options":[{"name":"dest","description":"The folder name this file will be written to. The\nfilename is determined from the docObject's name.\n","types":[{"type":"String"}]}]}],"name":"siteConfig","description":"Configuration siteConfig.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"setCurrentDocObjectForHelpers","description":"\n"}],"returns":{"types":[{"type":"Promise"}],"description":"A promise that resolves when the file has been written out.\n"}}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"setCurrentDocObjectForHelpers","description":"\n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A promise that resolves when the file has been written out.\n"},"pathToRoot":"../../.."};
 	</script>
 
 	

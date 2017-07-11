@@ -22,6 +22,15 @@
 		<nav class="sidebar">
 	
 		
+			<ul>
+				<li class="">
+					<a class="home" href="/" title="Home">
+						Home
+					</a>
+				</li>
+			</ul>
+		
+		
 	<ul>
 		
 			
@@ -128,7 +137,7 @@
 							href="../../../../types/builder.html"
 							title="A function that builds the static resources and copies the ones needed for
 the html site to a distributable location.">
-							builder
+							Builder
 						</a>
 						
 					</li>
@@ -143,7 +152,7 @@ the html site to a distributable location.">
 						<a class="typedef"
 							href="../../../../types/makeHelpers.html"
 							title="">
-							makeHelpers
+							MakeHelpers
 						</a>
 						
 					</li>
@@ -159,7 +168,7 @@ the html site to a distributable location.">
 							href="../../../../types/renderer.html"
 							title="A renderer built by renderer that is used to
 render each docObject.">
-							renderer
+							Renderer
 						</a>
 						
 					</li>
@@ -186,129 +195,9 @@ render each docObject.">
            						
            						">
 						<a class="module"
-							href="../../templates/body.mustache.html"
-							title="The default body template.">
-							./site/default/templates/body.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/content.mustache.html"
-							title="The default content template.">
-							./site/default/templates/content.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/description.mustache.html"
-							title="The default description template.">
-							./site/default/templates/description.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/footer.mustache.html"
-							title="The default footer template.">
-							./site/default/templates/footer.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/header.mustache.html"
-							title="The default header template.">
-							./site/default/templates/header.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/layout.mustache.html"
-							title="The default layout template.">
-							./site/default/templates/layout.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/menu.mustache.html"
-							title="The default menu template.">
-							./site/default/templates/menu.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/sidebar.mustache.html"
-							title="The default sidebar template.">
-							./site/default/templates/sidebar.mustache
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../templates/title.mustache.html"
-							title="The default title template.">
-							./site/default/templates/title.mustache
+							href="../../templates.html"
+							title="Directory that contains all the default templates.">
+							./site/default/templates
 						</a>
 						
 					</li>
@@ -332,12 +221,101 @@ render each docObject.">
 			
 				
 					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="../../static.html"
+							title="Directory that contains the default static assets and a build script.">
+							./site/default/static
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../build.html.html"
+							title="An HTML file that includes steal.">
+							./build.html
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../build.js.html"
+							title="The bit-docs-site script for building static assets.">
+							./build.js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../package.json.html"
+							title="The bit-docs-site dummy package.json.">
+							./package.json
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../packages.js.html"
+							title="An empty bit-docs-site placeholder for calling front end plugins.">
+							./packages.js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../static.js.html"
+							title="The bit-docs-site script for including static assets.">
+							./static.js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
            						
            						">
 						<a class="module"
 							href="mixins.less.html"
 							title="Mixins for site-wide visual layout.">
-							./site/default/static/styles/mixins.less
+							./styles/mixins.less
 						</a>
 						
 					</li>
@@ -352,7 +330,7 @@ render each docObject.">
 						<a class="module"
 							href="styles.less.html"
 							title="The primary styles for the default theme.">
-							./site/default/static/styles/styles.less
+							./styles/styles.less
 						</a>
 						
 					</li>
@@ -366,8 +344,13 @@ render each docObject.">
            						expanded">
 						<a class="module"
 							href="variables.less.html"
-							title="Variables to hold site-wide visual configurations.">
-							./site/default/static/styles/variables.less
+							title="Variables to hold site-wide visual configurations.
+
+variables.less.defaultFontFamily
+variables.less.defaultPadding
+variables.less.desktops
+variables.less.smartphones">
+							./styles/variables.less
 						</a>
 						
 							
@@ -428,6 +411,14 @@ render each docObject.">
 							title="Media query breakpoint for smartphones.">
 							@smartphones
 						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
 						
 					</li>
 				
@@ -655,6 +646,65 @@ to a static folder in options.dest.">
 docMaps using the structures produced by
 build.">
 							./write/
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>generated</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../static/build/buildHash.html"
+							title="Generated directory that contains copied/built files for the generated website.">
+							./site/static/build/buildHash
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../static/dist/buildHash.html"
+							title="Generated directory that contains minified distributable files for the generated website.">
+							./site/static/dist/buildHash
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../../templates/buildHash.html"
+							title="Generated directory that contains all combined templates.">
+							./site/templates/buildHash
 						</a>
 						
 					</li>
@@ -898,6 +948,12 @@ build.">
 			
 				<section class="description">
     <p>Variables to hold site-wide visual configurations.</p>
+<ul>
+<li><a href="variables.less.defaultFontFamily.html" title="The default font family.">@defaultFontFamily</a></li>
+<li><a href="variables.less.defaultPadding.html" title="Defualt padding for content containers.">@defaultPadding</a></li>
+<li><a href="variables.less.desktops.html" title="Media query breakpoint for desktops.">@desktops</a></li>
+<li><a href="variables.less.smartphones.html" title="Media query breakpoint for smartphones.">@smartphones</a></li>
+</ul>
 
 </section>
 
@@ -916,7 +972,7 @@ build.">
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"description":"Variables to hold site-wide visual configurations. \n","parent":"bit-docs-generate-html/static","type":"module","title":"","name":"bit-docs-generate-html/site/default/static/styles/variables.less","pathToRoot":"../../../../../.."};
+		var docObject = {"description":"Variables to hold site-wide visual configurations. \n- [bit-docs-generate-html/site/default/static/styles/variables.less.defaultFontFamily]\n- [bit-docs-generate-html/site/default/static/styles/variables.less.defaultPadding]\n- [bit-docs-generate-html/site/default/static/styles/variables.less.desktops]\n- [bit-docs-generate-html/site/default/static/styles/variables.less.smartphones]\n\n","parent":"bit-docs-generate-html/site/default/static","type":"module","title":"","name":"bit-docs-generate-html/site/default/static/styles/variables.less","pathToRoot":"../../../../../.."};
 	</script>
 
 	

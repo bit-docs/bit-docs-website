@@ -22,6 +22,15 @@
 		<nav class="sidebar">
 	
 		
+			<ul>
+				<li class="">
+					<a class="home" href="/" title="Home">
+						Home
+					</a>
+				</li>
+			</ul>
+		
+		
 	<ul>
 		
 			
@@ -211,7 +220,7 @@ process-tags">
            						expanded">
 						<a class="module"
 							href="file.html"
-							title="Processes a file&#x27;s source. Adds created docObjects to
+							title="Processes a file&#x27;s source. Adds created docObjects to the
 docMap.">
 							./lib/process/file
 						</a>
@@ -506,8 +515,9 @@ docMap.">
 				<section class="description">
     <p>Processes a file's source. Adds created <a href="../../types/docObject.html" title="An object that represents something that is documented. Any property added to
 a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">DocObject</a>s to
-docMap.</p>
+the important, near universal properties:">DocObject</a>s to the
+<a href="../../types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>.</p>
 
 </section>
 
@@ -611,7 +621,7 @@ processFile(
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs/lib/process/file","parent":"bit-docs/modules","src":{"line":7,"codeLine":49,"path":"docs/modules/bit-docs/lib/process/file.js"},"description":"\nProcesses a file's source. Adds created [bit-docs/types/docObject]s to\ndocMap.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processFile(filename, source, docMap, siteConfig)","description":"\n\nProcesses a file's source and calls [bit-docs-js/process/codeAndComment]\naccordingly. If the file ends with `.js`, each comment will be processed\nindividually. Otherwise, it treats the entire source as one big comment.\n","params":[{"types":[{"type":"String"}],"name":"filename","description":"The filename. If a filename is not provided, the\nentire file is treated as one big comment block. If a filename is provided\nand is not a .md or .markdown file, it is assumed to be a source file.\n"},{"types":[{"type":"String"}],"name":"source","description":"A files source.\n"},{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":"A map of the name of each docObject to\nthe docObject\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"A collection of tags. If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"Object","options":[]}]}]}],"optional":true,"name":"siteConfig","description":"An siteConfig object. Currently only the `tags`\noption is used.\n"}]}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"A collection of tags. If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"Object","options":[]}]}]}],"optional":true,"name":"siteConfig","description":"An siteConfig object. Currently only the `tags`\noption is used.\n"},"comment":" ","pathToRoot":"../../../.."};
+		var docObject = {"type":"module","name":"bit-docs/lib/process/file","parent":"bit-docs/modules","src":{"line":7,"codeLine":49,"path":"docs/modules/bit-docs/lib/process/file.js"},"description":"\nProcesses a file's source. Adds created [bit-docs/types/docObject]s to the\n[bit-docs/types/docMap].\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processFile(filename, source, docMap, siteConfig)","description":"\n\nProcesses a file's source and calls [bit-docs-js/process/codeAndComment]\naccordingly. If the file ends with `.js`, each comment will be processed\nindividually. Otherwise, it treats the entire source as one big comment.\n","params":[{"types":[{"type":"String"}],"name":"filename","description":"The filename. If a filename is not provided, the\nentire file is treated as one big comment block. If a filename is provided\nand is not a .md or .markdown file, it is assumed to be a source file.\n"},{"types":[{"type":"String"}],"name":"source","description":"A files source.\n"},{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":"A map of the name of each docObject to\nthe docObject\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"A collection of tags. If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"Object","options":[]}]}]}],"optional":true,"name":"siteConfig","description":"An siteConfig object. Currently only the `tags`\noption is used.\n"}]}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"A collection of tags. If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"Object","options":[]}]}]}],"optional":true,"name":"siteConfig","description":"An siteConfig object. Currently only the `tags`\noption is used.\n"},"comment":" ","pathToRoot":"../../../.."};
 	</script>
 
 	

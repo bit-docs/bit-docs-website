@@ -22,6 +22,15 @@
 		<nav class="sidebar">
 	
 		
+			<ul>
+				<li class="">
+					<a class="home" href="/" title="Home">
+						Home
+					</a>
+				</li>
+			</ul>
+		
+		
 	<ul>
 		
 			
@@ -357,8 +366,7 @@ type expressions.">
            						">
 						<a class="typedef"
 							href="valueData.html"
-							title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">
+							title="Data related to a value in a type expression.">
 							valueData
 						</a>
 						
@@ -441,8 +449,7 @@ type expression].">
       </li>
     
       <li>
-        <b>template</b> <code>{Array&lt;<a href="valueData.html" title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">valueData</a>&gt;}</code>:
+        <b>template</b> <code>{Array&lt;<a href="valueData.html" title="Data related to a value in a type expression.">valueData</a>&gt;}</code>:
         <p>An array
 of valueData representing each specified type argument within <code>&lt;&gt;</code>. They are
 specified like:</p>
@@ -452,22 +459,19 @@ specified like:</p>
       </li>
     
       <li>
-        <b>options</b> <code>{Array&lt;<a href="valueData.html" title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">valueData</a>&gt;}</code>:
+        <b>options</b> <code>{Array&lt;<a href="valueData.html" title="Data related to a value in a type expression.">valueData</a>&gt;}</code>:
         <p>An array of
 valueData representing each property name and value type in a record type.
 They are specified like:</p>
 <pre><code>{{PROPERTY_NAME: TYPE, PROPERTY_NAME: TYPE}}
 </code></pre>
 <p>The PROPERTY_NAME value sets the <code>name</code> property on the individual
-<a href="valueData.html" title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">valueDatas</a>.</p>
+<a href="valueData.html" title="Data related to a value in a type expression.">valueDatas</a>.</p>
 
       </li>
     
       <li>
-        <b>context</b> <code>{<a href="valueData.html" title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">valueData</a>}</code>:
+        <b>context</b> <code>{<a href="valueData.html" title="Data related to a value in a type expression.">valueData</a>}</code>:
         <p>Represents the
 valueData a function expression can have as <code>this</code>. It is specified like:</p>
 <pre><code>{function(this:TYPE)}
@@ -476,8 +480,7 @@ valueData a function expression can have as <code>this</code>. It is specified l
       </li>
     
       <li>
-        <b>constructs</b> <code>{<a href="valueData.html" title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">valueData</a>}</code>:
+        <b>constructs</b> <code>{<a href="valueData.html" title="Data related to a value in a type expression.">valueData</a>}</code>:
         <p>Represents the
 return value of a function expression. It is specified like:</p>
 <pre><code>{function():TYPE}
@@ -486,8 +489,7 @@ return value of a function expression. It is specified like:</p>
       </li>
     
       <li>
-        <b>params</b> <code>{Array&lt;<a href="valueData.html" title="Data related to a value in a [bit-docs-type-annotate/types/typeExpression
-type expression].">valueData</a>&gt;}</code>:
+        <b>params</b> <code>{Array&lt;<a href="valueData.html" title="Data related to a value in a type expression.">valueData</a>&gt;}</code>:
         <p>Represents
 the arguments a function can be called with. They are specified like:</p>
 <pre><code>{function(TYPE,TYPE)}

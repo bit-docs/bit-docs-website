@@ -22,6 +22,15 @@
 		<nav class="sidebar">
 	
 		
+			<ul>
+				<li class="">
+					<a class="home" href="/" title="Home">
+						Home
+					</a>
+				</li>
+			</ul>
+		
+		
 	<ul>
 		
 			
@@ -128,7 +137,7 @@
 							href="../../../types/builder.html"
 							title="A function that builds the static resources and copies the ones needed for
 the html site to a distributable location.">
-							builder
+							Builder
 						</a>
 						
 					</li>
@@ -143,7 +152,7 @@ the html site to a distributable location.">
 						<a class="typedef"
 							href="../../../types/makeHelpers.html"
 							title="">
-							makeHelpers
+							MakeHelpers
 						</a>
 						
 					</li>
@@ -159,7 +168,7 @@ the html site to a distributable location.">
 							href="../../../types/renderer.html"
 							title="A renderer built by renderer that is used to
 render each docObject.">
-							renderer
+							Renderer
 						</a>
 						
 					</li>
@@ -183,12 +192,26 @@ render each docObject.">
 			
 				
 					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="../templates.html"
+							title="Directory that contains all the default templates.">
+							./site/default/templates
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
            						
            						">
 						<a class="module"
 							href="body.mustache.html"
 							title="The default body template.">
-							./site/default/templates/body.mustache
+							./body.mustache
 						</a>
 						
 					</li>
@@ -203,7 +226,7 @@ render each docObject.">
 						<a class="module"
 							href="content.mustache.html"
 							title="The default content template.">
-							./site/default/templates/content.mustache
+							./content.mustache
 						</a>
 						
 					</li>
@@ -218,7 +241,7 @@ render each docObject.">
 						<a class="module"
 							href="description.mustache.html"
 							title="The default description template.">
-							./site/default/templates/description.mustache
+							./description.mustache
 						</a>
 						
 					</li>
@@ -233,7 +256,7 @@ render each docObject.">
 						<a class="module"
 							href="footer.mustache.html"
 							title="The default footer template.">
-							./site/default/templates/footer.mustache
+							./footer.mustache
 						</a>
 						
 					</li>
@@ -248,7 +271,7 @@ render each docObject.">
 						<a class="module"
 							href="header.mustache.html"
 							title="The default header template.">
-							./site/default/templates/header.mustache
+							./header.mustache
 						</a>
 						
 					</li>
@@ -263,7 +286,7 @@ render each docObject.">
 						<a class="module"
 							href="layout.mustache.html"
 							title="The default layout template.">
-							./site/default/templates/layout.mustache
+							./layout.mustache
 						</a>
 						
 					</li>
@@ -278,7 +301,7 @@ render each docObject.">
 						<a class="module"
 							href="menu.mustache.html"
 							title="The default menu template.">
-							./site/default/templates/menu.mustache
+							./menu.mustache
 						</a>
 						
 					</li>
@@ -293,7 +316,7 @@ render each docObject.">
 						<a class="module"
 							href="sidebar.mustache.html"
 							title="The default sidebar template.">
-							./site/default/templates/sidebar.mustache
+							./sidebar.mustache
 						</a>
 						
 							
@@ -311,8 +334,16 @@ render each docObject.">
 						<a class="module"
 							href="title.mustache.html"
 							title="The default title template.">
-							./site/default/templates/title.mustache
+							./title.mustache
 						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
 						
 					</li>
 				
@@ -338,39 +369,9 @@ render each docObject.">
            						
            						">
 						<a class="module"
-							href="../static/styles/mixins.less.html"
-							title="Mixins for site-wide visual layout.">
-							./site/default/static/styles/mixins.less
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../static/styles/styles.less.html"
-							title="The primary styles for the default theme.">
-							./site/default/static/styles/styles.less
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../static/styles/variables.less.html"
-							title="Variables to hold site-wide visual configurations.">
-							./site/default/static/styles/variables.less
+							href="../static.html"
+							title="Directory that contains the default static assets and a build script.">
+							./site/default/static
 						</a>
 						
 					</li>
@@ -591,6 +592,65 @@ to a static folder in options.dest.">
 docMaps using the structures produced by
 build.">
 							./write/
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>generated</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../static/build/buildHash.html"
+							title="Generated directory that contains copied/built files for the generated website.">
+							./site/static/build/buildHash
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../static/dist/buildHash.html"
+							title="Generated directory that contains minified distributable files for the generated website.">
+							./site/static/dist/buildHash
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../templates/buildHash.html"
+							title="Generated directory that contains all combined templates.">
+							./site/templates/buildHash
 						</a>
 						
 					</li>
@@ -859,7 +919,7 @@ build.">
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs-generate-html/site/default/templates/sidebar.mustache.md"},"description":"The default sidebar template. \n","parent":"bit-docs-generate-html/templates","type":"module","title":"","name":"bit-docs-generate-html/site/default/templates/sidebar.mustache","comment":" ","pathToRoot":"../../../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs-generate-html/site/default/templates/sidebar.mustache.md"},"description":"The default sidebar template. \n","parent":"bit-docs-generate-html/site/default/templates","type":"module","title":"","name":"bit-docs-generate-html/site/default/templates/sidebar.mustache","comment":" ","pathToRoot":"../../../../.."};
 	</script>
 
 	

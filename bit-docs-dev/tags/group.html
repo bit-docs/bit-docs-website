@@ -152,7 +152,8 @@
            						expanded">
 						<a class="module"
 							href="group.html"
-							title="Declares that other tags belong to a group within the current docObject.">
+							title="Declares that other tags belong to a group within the current
+docObject.">
 							./group
 						</a>
 						
@@ -483,7 +484,10 @@ belong to part of the application structure.">
 		
 			
 				<section class="description">
-    <p>Declares that other tags belong to a group within the current <code>docObject</code>.</p>
+    <p>Declares that other tags belong to a group within the current
+<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a>.</p>
 
 </section>
 
@@ -540,12 +544,12 @@ children.</p>
     <h2>Use</h2>
 <p>For example, in <code>myapp.md</code>, the following will create a &quot;Guides&quot; grouping:</p>
 <pre><code class="language-js">@page MyApp
-@group MyApp.guides 0 Guides
+@group MyApp/guides 0 Guides
 </code></pre>
-<p>And in <code>guides/installing.md</code>, the following will add an Installing page to
-the &quot;Guides&quot; grouping:</p>
-<pre><code class="language-js">@page Installing
-@parent MyApp.guides
+<p>Then, in <code>guides/installing.md</code>, the following will add an Installing page
+to the &quot;Guides&quot; grouping:</p>
+<pre><code class="language-js">@parent MyApp/guides
+@page Installing
 </code></pre>
 
 </section>
@@ -558,7 +562,7 @@ the &quot;Guides&quot; grouping:</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-dev/tags/group","type":"module","parent":"bit-docs-dev/tags","src":{"line":3,"codeLine":35,"path":"docs/modules/bit-docs-dev/tags/group.js"},"description":"\nDeclares that other tags belong to a group within the current `docObject`.\n","title":"@group","types":[{"type":"bit-docs-js/tag"}],"signatures":[{"code":"@group name [ORDER] title","description":"\n","params":[{"types":[{"type":"String"}],"name":"name","description":"The unique name of the group."},{"types":[{"type":"Number"}],"optional":true,"name":"order","description":"The placement of this group in the parent's list of\nchildren."},{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-dev/tags/group","type":"module","parent":"bit-docs-dev/tags","src":{"line":3,"codeLine":36,"path":"docs/modules/bit-docs-dev/tags/group.js"},"description":"\nDeclares that other tags belong to a group within the current\n[bit-docs/types/docObject].\n","title":"@group","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@group name [ORDER] title","description":"\n","params":[{"types":[{"type":"String"}],"name":"name","description":"The unique name of the group."},{"types":[{"type":"Number"}],"optional":true,"name":"order","description":"The placement of this group in the parent's list of\nchildren."},{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

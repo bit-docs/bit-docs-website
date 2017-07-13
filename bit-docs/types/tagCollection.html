@@ -91,7 +91,7 @@
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="A node event emitter
-that produces events that correlate to files that should be processed.">
+that emits an event for every file that should be processed.">
 							FileEventEmitter
 						</a>
 						
@@ -123,8 +123,8 @@ docObject&#x27;s name.">
 						<a class="typedef"
 							href="docObject.html"
 							title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">
 							DocObject
 						</a>
 						
@@ -157,12 +157,25 @@ packaged with bit-docs.">
            						">
 						<a class="typedef"
 							href="processOptions.html"
-							title="An options object passed to several process methods, such as:
-
-code
-codeAndComment
-process-tags">
+							title="An options object passed to several process methods.">
 							ProcessOptions
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="tag.html"
+							title="The interface that tagCollection implements for
+codeAndComment and code to call.
+This is very likely to change to something better.">
+							Tag
 						</a>
 						
 					</li>
@@ -539,7 +552,9 @@ docMap.">
     <ul>
     
       <li>
-        <b></b> <code>{Object&lt;String,tag&gt;}</code>:
+        <b></b> <code>{Object&lt;String,<a href="tag.html" title="The interface that tagCollection implements for
+codeAndComment and code to call.
+This is very likely to change to something better.">Tag</a>&gt;}</code>:
         <p>A collection of tags to be used by <a href="../lib/process/file.html" title="Processes a file's source. Adds created docObjects to the
 docMap.">bit-docs/lib/process/file</a> to process
 comments and code.</p>
@@ -558,11 +573,11 @@ comments and code.</p>
     <h2>Use</h2>
 <p>A tag adds additional information to the comment being processed.</p>
 <p>For example, if you want the current comment to include the author, include
-an <code>@author</code> tag.</p>
+an <a href="../../bit-docs-dev/tags/author.html" title="Describes the author of a docObject.">@author</a> tag.</p>
 <h2>Creating your own tag</h2>
 <p>To create a tag, you need to add to register on the <code>tags</code> hook in your
 plugins <code>bit-docs.js</code> file an object with your tag containing an add and an
-optional addMore method like:</p>
+optional <code>addMore</code> method like:</p>
 <pre><code>var tags = {
     &quot;mytag&quot;: {
         addMore: function (line, last) { ... },
@@ -587,7 +602,7 @@ bitDocs.register(&quot;tags&quot;, tags);
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/tagCollection.md"},"description":"\n","parent":"bit-docs/types","type":"typedef","title":"TagCollection","types":[{"type":"Object","options":[{"description":"\n\nA collection of tags to be used by [bit-docs/lib/process/file] to process\ncomments and code.\n","types":[{"type":"Object","template":[{"types":[{"type":"String"}]},{"types":[{"type":"tag"}]}]}]}]}],"name":"bit-docs/types/tagCollection","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/tagCollection.md"},"description":"\n","parent":"bit-docs/types","type":"typedef","title":"TagCollection","types":[{"type":"Object","options":[{"description":"\n\nA collection of tags to be used by [bit-docs/lib/process/file] to process\ncomments and code.\n","types":[{"type":"Object","template":[{"types":[{"type":"String"}]},{"types":[{"type":"bit-docs/types/tag"}]}]}]}]}],"name":"bit-docs/types/tagCollection","comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

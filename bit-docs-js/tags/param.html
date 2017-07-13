@@ -654,8 +654,8 @@ findById: function( id, success ) {
 </code></pre>
 <p>Then bit-docs will automatically set the type to function for the
 <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">DocObject</a> representing that comment, and create params with
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a> representing that comment, and create params with
 names only (in this case <code>id</code> and <code>success</code>, and no description).</p>
 <p>The comment's <code>@param</code>s tags should use the same names as the function.
 Any param that specifies a name that isn't present is added at the end of
@@ -685,7 +685,7 @@ are overwritten.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/param","type":"module","parent":"bit-docs-js/tags","src":{"line":35,"codeLine":107,"path":"docs/modules/bit-docs-js/tags/param.js"},"description":"\nSpecifies parameter information for [bit-docs-js/tags/function] or\n[bit-docs-js/tags/signature].\n","title":"@param","types":[{"type":"bit-docs-js/tag"}],"signatures":[{"code":"@param {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Finds an order by id.\n * @param {String} [id=0] Order identification number.\n * @param {function(Order)} [success(order)] Callback function.\n */\nfindById: function( id, success ) {\n```","params":[{"types":[{"type":"bit-docs-type-annotate/types/typeExpression"}],"name":"TYPE","description":"A [bit-docs-type-annotate/types/typeExpression type expression].\n\nUse [bit-docs-js/tags/option @option] to describe a function's arguments, or\nan object's properties.\n"},{"types":[{"type":"bit-docs-type-annotate/types/nameExpression"}],"name":"NAME","description":"A [bit-docs-type-annotate/types/nameExpression name expression].\n"}]}],"_curParam":{"types":[{"type":"bit-docs-type-annotate/types/nameExpression"}],"name":"NAME","description":"A [bit-docs-type-annotate/types/nameExpression name expression].\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/param","type":"module","parent":"bit-docs-js/tags","src":{"line":35,"codeLine":107,"path":"docs/modules/bit-docs-js/tags/param.js"},"description":"\nSpecifies parameter information for [bit-docs-js/tags/function] or\n[bit-docs-js/tags/signature].\n","title":"@param","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@param {TYPE} NAME [DESCRIPTION]","description":"\n\n```javascript\n/**\n * Finds an order by id.\n * @param {String} [id=0] Order identification number.\n * @param {function(Order)} [success(order)] Callback function.\n */\nfindById: function( id, success ) {\n```","params":[{"types":[{"type":"bit-docs-type-annotate/types/typeExpression"}],"name":"TYPE","description":"A [bit-docs-type-annotate/types/typeExpression type expression].\n\nUse [bit-docs-js/tags/option @option] to describe a function's arguments, or\nan object's properties.\n"},{"types":[{"type":"bit-docs-type-annotate/types/nameExpression"}],"name":"NAME","description":"A [bit-docs-type-annotate/types/nameExpression name expression].\n"}]}],"_curParam":{"types":[{"type":"bit-docs-type-annotate/types/nameExpression"}],"name":"NAME","description":"A [bit-docs-type-annotate/types/nameExpression name expression].\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

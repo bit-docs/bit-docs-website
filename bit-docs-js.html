@@ -646,7 +646,11 @@ TYPE declarations.">@typedef</a></li>
 </ul>
 <p>Registering the <code>processor</code> hook adds a processor for <code>*.js</code> files that gets
 code comments in JavaScript, and processes tags like <code>@function</code> and
-<code>@param</code> into docObjects that are subsequently added to the docMap.</p>
+<code>@param</code> into <a href="bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a>s that are subsequently added to the
+<a href="bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>.</p>
 <p>The processor is also smart enough process regular comments above functions
 that have not explicitly been documented with closure type annotations, and
 extracts basic signature information such as parameters and/or return type.</p>
@@ -663,7 +667,7 @@ HTML for the tags added by this plugin.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-js","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":45,"path":"docs/modules/bit-docs-js/bit-docs.js"},"description":"Tags, templates, and basic styles for JavaScript. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"}]}],"_curParam":{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"},"comment":" ","pathToRoot":".."};
+		var docObject = {"type":"module","name":"bit-docs-js","params":[{"name":"bitDocs","types":[{"type":"*"}]}],"parent":"plugins","src":{"line":4,"codeLine":46,"path":"docs/modules/bit-docs-js/bit-docs.js"},"description":"Tags, templates, and basic styles for JavaScript. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"}]}],"_curParam":{"types":[{"type":"Object","options":[]}],"optional":true,"name":"bitDocs","description":"The configuration object passed by `bit-docs` at\nruntime. \n"},"comment":" ","pathToRoot":".."};
 	</script>
 
 	

@@ -473,7 +473,10 @@ docObject will be displayed under the the parent in the navigation.">
     <code>processTags(options, callback)</code>
   </h2>
 
-  <p>Processes a comment and produces a docObject from the tags found.</p>
+  <p>Processes a comment and produces a <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a> from the tags
+found.</p>
 
 
   
@@ -481,11 +484,7 @@ docObject will be displayed under the the parent in the navigation.">
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>options</b> <code>{<a href="../bit-docs/types/processOptions.html" title="An options object passed to several process methods, such as:
-
-code
-codeAndComment
-process-tags">ProcessOptions</a>}</code>: <p>An options object that
+          <li><b>options</b> <code>{<a href="../bit-docs/types/processOptions.html" title="An options object passed to several process methods.">ProcessOptions</a>}</code>: <p>An options object that
 contains the code and comment to process.</p>
 </li>
             
@@ -493,11 +492,15 @@ contains the code and comment to process.</p>
             
         
           <li><b>callback</b> <code>{function(<a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">newDoc</a>, <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">newScope</a>)}</code>: <p>A function that is called back with a docObject created from the code and
-the scope <code>docObject</code>. If no docObject is created, <code>newDoc</code> will be null.</p>
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">newDoc</a>, <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">newScope</a>)}</code>: <p>A function that is called back with a <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a> created from the code and
+the scope <code>docObject</code>. If no <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a> is created, <code>newDoc</code> will be null.</p>
 </li>
             
               
@@ -517,9 +520,9 @@ the scope <code>docObject</code>. If no docObject is created, <code>newDoc</code
 			
 				<section class="body">
     <h2>Processing rules</h2>
-<p>The processing rules can be found in the <a href="../documentjs.Tag.html" title="The interface that documentjs.tags implement for
-documentjs.process.comment and documentjs.process.code to call. This is
-very likely to change to something better.">Tag interface</a>.</p>
+<p>The processing rules can be found in the <a href="../bit-docs/types/tag.html" title="The interface that tagCollection implements for
+codeAndComment and code to call.
+This is very likely to change to something better.">Tag interface</a>.</p>
 
 </section>
 
@@ -531,7 +534,7 @@ very likely to change to something better.">Tag interface</a>.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-process-tags/process-tags","parent":"bit-docs-process-tags/modules","src":{"line":7,"codeLine":32,"path":"docs/modules/bit-docs-process-tags/process-tags.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processTags(options, callback)","description":"\n\nProcesses a comment and produces a docObject from the tags found.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a docObject created from the code and\nthe scope `docObject`. If no docObject is created, `newDoc` will be null.\n"},"comment":" ","todo":["tag interface still in bit-docs?","what about comment interface?"],"pathToRoot":"../.."};
+		var docObject = {"type":"module","name":"bit-docs-process-tags/process-tags","parent":"bit-docs-process-tags/modules","src":{"line":7,"codeLine":30,"path":"docs/modules/bit-docs-process-tags/process-tags.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processTags(options, callback)","description":"\n\nProcesses a comment and produces a [bit-docs/types/docObject] from the tags\nfound.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a [bit-docs/types/docObject] created from the code and\nthe scope `docObject`. If no [bit-docs/types/docObject] is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a [bit-docs/types/docObject] created from the code and\nthe scope `docObject`. If no [bit-docs/types/docObject] is created, `newDoc` will be null.\n"},"comment":" ","pathToRoot":"../.."};
 	</script>
 
 	

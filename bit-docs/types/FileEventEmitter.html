@@ -91,7 +91,7 @@
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="A node event emitter
-that produces events that correlate to files that should be processed.">
+that emits an event for every file that should be processed.">
 							FileEventEmitter
 						</a>
 						
@@ -126,8 +126,8 @@ docObject&#x27;s name.">
 						<a class="typedef"
 							href="docObject.html"
 							title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">
 							DocObject
 						</a>
 						
@@ -160,12 +160,25 @@ packaged with bit-docs.">
            						">
 						<a class="typedef"
 							href="processOptions.html"
-							title="An options object passed to several process methods, such as:
-
-code
-codeAndComment
-process-tags">
+							title="An options object passed to several process methods.">
 							ProcessOptions
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="tag.html"
+							title="The interface that tagCollection implements for
+codeAndComment and code to call.
+This is very likely to change to something better.">
+							Tag
 						</a>
 						
 					</li>
@@ -514,7 +527,7 @@ docMap.">
 			
 				<section class="description">
     <p>A <a href="https://nodejs.org/api/events.html#events_class_eventemitter">node event emitter</a>
-that produces events that correlate to files that should be processed.</p>
+that emits an event for every file that should be processed.</p>
 
 </section>
 
@@ -576,7 +589,7 @@ that produces events that correlate to files that should be processed.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\nA [node event emitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat produces events that correlate to files that should be processed.\n","parent":"bit-docs/types","type":"typedef","title":"FileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\nA [node event emitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat emits an event for every file that should be processed.\n","parent":"bit-docs/types","type":"typedef","title":"FileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
 	</script>
 
 	

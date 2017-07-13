@@ -91,7 +91,7 @@
 						<a class="typedef"
 							href="../../types/FileEventEmitter.html"
 							title="A node event emitter
-that produces events that correlate to files that should be processed.">
+that emits an event for every file that should be processed.">
 							FileEventEmitter
 						</a>
 						
@@ -123,8 +123,8 @@ docObject&#x27;s name.">
 						<a class="typedef"
 							href="../../types/docObject.html"
 							title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">
 							DocObject
 						</a>
 						
@@ -157,12 +157,25 @@ packaged with bit-docs.">
            						">
 						<a class="typedef"
 							href="../../types/processOptions.html"
-							title="An options object passed to several process methods, such as:
-
-code
-codeAndComment
-process-tags">
+							title="An options object passed to several process methods.">
 							ProcessOptions
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../../types/tag.html"
+							title="The interface that tagCollection implements for
+codeAndComment and code to call.
+This is very likely to change to something better.">
+							Tag
 						</a>
 						
 					</li>
@@ -514,7 +527,7 @@ docMap.">
 			
 				<section class="description">
     <p>Processes a <a href="../../types/FileEventEmitter.html" title="A node event emitter
-that produces events that correlate to files that should be processed.">FileEventEmitter</a> and returns a promise.</p>
+that emits an event for every file that should be processed.">FileEventEmitter</a> and returns a promise.</p>
 
 </section>
 
@@ -540,7 +553,7 @@ docObject's name.">DocMap</a>.</p>
       <ol>
         
           <li><b>fileEventEmitter</b> <code>{<a href="../../types/FileEventEmitter.html" title="A node event emitter
-that produces events that correlate to files that should be processed.">FileEventEmitter</a>}</code>: <p>An event emitter
+that emits an event for every file that should be processed.">FileEventEmitter</a>}</code>: <p>An event emitter
 that dispatches events with files to process.</p>
 </li>
             
@@ -560,9 +573,10 @@ behavior of bit-docs.</p>
                   </h5>
                   <div class="description">
                     <p>If <code>tags</code> is a string, that file will be required.
-It should export a function that takes the default [documentjs.tags] object
-and returns the tags that will be used. Example module:</p>
-<pre><code>module.exports = function(tags) {
+It should export a function that takes the default
+<a href="../../types/tagCollection.html" title="">TagCollection</a> object and returns the tags that will be
+used. Example module:</p>
+<pre><code class="language-js">module.exports = function(tags) {
        tags = _.extend({},tags);
     tags.customTag = {add: function(){}, ...}
     return tags;
@@ -584,8 +598,11 @@ and returns the tags that will be used. Example module:</p>
   <div class="returns">
   	<h3 class="returns-title">Returns</h3>
   	<p> <code>{Promise&lt;<a href="../../types/docMap.html" title="An object that contains every docObject keyed by the
-docObject's name.">DocMap</a>&gt;}</code>: <p>A docMap that contains the
-docObjects created from the matched files.</p>
+docObject's name.">DocMap</a>&gt;}</code>: <p>A <a href="../../types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a> that
+contains the <a href="../../types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a>s created from the matched files.</p>
 </p>
   </div>
   
@@ -608,7 +625,7 @@ docObjects created from the matched files.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs/lib/process/process","parent":"bit-docs/modules","src":{"line":7,"codeLine":41,"path":"docs/modules/bit-docs/lib/process/process.js"},"description":"\nProcesses a [bit-docs/types/FileEventEmitter] and returns a promise.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"process(fileEventEmitter, siteConfig)","description":"\n\nProcesses files \"matched\" from a file event emitter into a\n[bit-docs/types/docMap].\n","params":[{"types":[{"type":"bit-docs/types/FileEventEmitter"}],"name":"fileEventEmitter","description":"An event emitter\nthat dispatches events with files to process.\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"If `tags` is a string, that file will be required.\nIt should export a function that takes the default [documentjs.tags] object\nand returns the tags that will be used. Example module:\n\n```\nmodule.exports = function(tags) {\n\t   tags = _.extend({},tags);\n    tags.customTag = {add: function(){}, ...}\n    return tags;\n};\n```\n","types":[{"type":"String"}],"optional":true}]}],"name":"siteConfig","description":"An siteConfig object used to configure the\nbehavior of bit-docs.\n"}],"returns":{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"description":"A docMap that contains the\ndocObjects created from the matched files.\n"}}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"If `tags` is a string, that file will be required.\nIt should export a function that takes the default [documentjs.tags] object\nand returns the tags that will be used. Example module:\n\n```\nmodule.exports = function(tags) {\n\t   tags = _.extend({},tags);\n    tags.customTag = {add: function(){}, ...}\n    return tags;\n};\n```\n","types":[{"type":"String"}],"optional":true}]}],"name":"siteConfig","description":"An siteConfig object used to configure the\nbehavior of bit-docs.\n"},"_curReturn":{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"description":"A docMap that contains the\ndocObjects created from the matched files.\n"},"comment":" ","pathToRoot":"../../../.."};
+		var docObject = {"type":"module","name":"bit-docs/lib/process/process","parent":"bit-docs/modules","src":{"line":7,"codeLine":42,"path":"docs/modules/bit-docs/lib/process/process.js"},"description":"\nProcesses a [bit-docs/types/FileEventEmitter] and returns a promise.\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"process(fileEventEmitter, siteConfig)","description":"\n\nProcesses files \"matched\" from a file event emitter into a\n[bit-docs/types/docMap].\n","params":[{"types":[{"type":"bit-docs/types/FileEventEmitter"}],"name":"fileEventEmitter","description":"An event emitter\nthat dispatches events with files to process.\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"If `tags` is a string, that file will be required.\nIt should export a function that takes the default\n[bit-docs/types/tagCollection] object and returns the tags that will be\nused. Example module:\n\n```js\nmodule.exports = function(tags) {\n\t   tags = _.extend({},tags);\n    tags.customTag = {add: function(){}, ...}\n    return tags;\n};\n```\n","types":[{"type":"String"}],"optional":true}]}],"name":"siteConfig","description":"An siteConfig object used to configure the\nbehavior of bit-docs.\n"}],"returns":{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"description":"A [bit-docs/types/docMap] that\ncontains the [bit-docs/types/docObject]s created from the matched files.\n"}}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"If `tags` is a string, that file will be required.\nIt should export a function that takes the default\n[bit-docs/types/tagCollection] object and returns the tags that will be\nused. Example module:\n\n```js\nmodule.exports = function(tags) {\n\t   tags = _.extend({},tags);\n    tags.customTag = {add: function(){}, ...}\n    return tags;\n};\n```\n","types":[{"type":"String"}],"optional":true}]}],"name":"siteConfig","description":"An siteConfig object used to configure the\nbehavior of bit-docs.\n"},"_curReturn":{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"description":"A [bit-docs/types/docMap] that\ncontains the [bit-docs/types/docObject]s created from the matched files.\n"},"comment":" ","pathToRoot":"../../../.."};
 	</script>
 
 	

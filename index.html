@@ -81,7 +81,7 @@
 		
 			
 				<section class="description">
-    <p>An evolving set of tools for the generation of documentation websites.</p>
+    <p>A set of tools for the generation of documentation websites.</p>
 
 </section>
 
@@ -95,14 +95,15 @@
 			
 				<section class="body">
     <p>Welcome to bit-docs.</p>
-<p>Plugins that provide tags:</p>
+<h3>Plugins that provide tags:</h3>
 <ul>
 <li><a href="bit-docs-dev.html" title="General development tags.">bit-docs-dev</a>
 <ul>
 <li><a href="bit-docs-dev/tags/author.html" title="Describes the author of a docObject.">@author</a></li>
 <li><a href="bit-docs-dev/tags/demo.html" title="Placeholder for an application demo.">@demo</a></li>
 <li><a href="bit-docs-dev/tags/deprecated.html" title="Marks a comment as deprecated.">@deprecated</a></li>
-<li><a href="bit-docs-dev/tags/group.html" title="Declares that other tags belong to a group within the current docObject.">@group</a></li>
+<li><a href="bit-docs-dev/tags/group.html" title="Declares that other tags belong to a group within the current
+docObject.">@group</a></li>
 <li><a href="bit-docs-dev/tags/iframe.html" title="Adds an iframe to the page. It can be added to the
 @body or any other tags that accept a
 description.">@iframe</a></li>
@@ -150,9 +151,71 @@ TYPE declarations.">@typedef</a></li>
 <li><a href="bit-docs-process-tags/tags/parent.html" title="Specifies the parent docObject's name. The current
 docObject will be displayed under the the parent in the navigation.">@parent</a></li>
 </ul></li>
-<li><a href="bit-docs-tag-demo.html" title="Provides an @demo tag for embedding HTML, CSS, and JS in an iframe.">bit-docs-tag-demo</a></li>
-<li><a href="bit-docs-tag-package.html" title="Adds a @package tag for use in bit-docs.">bit-docs-tag-package</a></li>
-<li><a href="bit-docs-tag-sourceref.html" title="Adds a @sourceref tag for use in bit-docs.">bit-docs-tag-sourceref</a></li>
+<li><a href="bit-docs-tag-demo.html" title="Provides an @demo tag for embedding HTML, CSS, and JS in an iframe.">bit-docs-tag-demo</a>
+<ul>
+<li><a href="bit-docs-tag-demo/tags/demo.html" title="Creates a tabbed demo widget.">@demo</a></li>
+</ul></li>
+<li><a href="bit-docs-tag-package.html" title="Adds a @package tag for use in bit-docs.">bit-docs-tag-package</a>
+<ul>
+<li><a href="bit-docs-tag-package/tags/package.html" title="Adds the package's package.json info to the docObject.">@package</a></li>
+</ul></li>
+<li><a href="bit-docs-tag-sourceref.html" title="Adds a @sourceref tag for use in bit-docs.">bit-docs-tag-sourceref</a>
+<ul>
+<li><a href="bit-docs-tag-sourceref/tags/sourceref.html" title="Loads a file and wraps it with markdown for code block.">@sourceref</a></li>
+</ul></li>
+</ul>
+<h3>Plugins that provide types:</h3>
+<ul>
+<li><a href="bit-docs.html" title="Find files, process them, and produce some sort of output.">bit-docs</a>
+<ul>
+<li><a href="bit-docs/types/FileEventEmitter.html" title="A node event emitter
+that emits an event for every file that should be processed.">FileEventEmitter</a></li>
+<li><a href="bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a></li>
+<li><a href="bit-docs/types/docObject.html" title="An object that represents something that is documented. Any property added to
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a></li>
+<li><a href="bit-docs/types/generator.html" title="A generator module should produce a function that takes the following shape.
+Generator modules are used to produce some form of documentation output.
+bit-docs-generate-html is the default and currently only generator
+packaged with bit-docs.">Generator</a></li>
+<li><a href="bit-docs/types/processOptions.html" title="An options object passed to several process methods.">ProcessOptions</a></li>
+<li><a href="bit-docs/types/tagCollection.html" title="">TagCollection</a></li>
+</ul></li>
+<li><a href="bit-docs-generate-html.html" title="Generates HTML for a docMap and handles the html hook.">bit-docs-generate-html</a>
+<ul>
+<li><a href="bit-docs-generate-html/types/builder.html" title="A function that builds the static resources and copies the ones needed for
+the html site to a distributable location.">Builder</a></li>
+<li><a href="bit-docs-generate-html/types/makeHelpers.html" title="">MakeHelpers</a></li>
+<li><a href="bit-docs-generate-html/types/renderer.html" title="A renderer built by renderer that is used to
+render each docObject.">Renderer</a></li>
+</ul></li>
+<li><a href="bit-docs-glob-finder.html" title="Finds files for passing to the bit-docs processor.">bit-docs-glob-finder</a>
+<ul>
+<li><a href="bit-docs-glob-finder/types/globObject.html" title="An options object that configures the behavior of
+index. It supports all of the options object of
+node-glob plus a pattern option that
+is used as node-glob's first argument. Only the most commonly used options
+are specified below:">GlobObject</a></li>
+</ul></li>
+<li><a href="bit-docs-type-annotate.html" title="Utilities for parsing closure type annotations.">bit-docs-type-annotate</a>
+<ul>
+<li><a href="bit-docs-type-annotate/types/nameExpression.html" title="Adds the name and other properties to
+valueData in using the
+@param or @option tags.">NAME-EXPRESSION</a></li>
+<li><a href="bit-docs-type-annotate/types/typeData.html" title="Data related to a specific type value. These objects are created by
+type expressions.">typeData</a></li>
+<li><a href="bit-docs-type-annotate/types/typeExpression.html" title="">TYPE-EXPRESSION</a></li>
+<li><a href="bit-docs-type-annotate/types/valueData.html" title="Data related to a value in a type expression.">valueData</a></li>
+</ul></li>
+</ul>
+<h3>Plugins that provide templates or static assets:</h3>
+<ul>
+<li><a href="bit-docs-generate-html.html" title="Generates HTML for a docMap and handles the html hook.">bit-docs-generate-html</a></li>
+<li><a href="bit-docs-html-highlight-line.html" title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">bit-docs-html-highlight-line</a></li>
+<li><a href="bit-docs-html-toc.html" title="Injects a table of contents for the page into an HTML element.">bit-docs-html-toc</a></li>
+<li><a href="bit-docs-js.html" title="Tags, templates, and basic styles for JavaScript.">bit-docs-js</a></li>
+<li><a href="bit-docs-prettify.html" title="A bit-docs plugin that makes source-code snippets in HTML prettier.">bit-docs-prettify</a></li>
 </ul>
 
 </section>
@@ -165,7 +228,7 @@ docObject will be displayed under the the parent in the navigation.">@parent</a>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/bit-docs/BitDocs.md"},"description":"An evolving set of tools for the generation of documentation websites. \n","name":"BitDocs","title":"BitDocs","type":"page","comment":" ","pathToRoot":".."};
+		var docObject = {"src":{"path":"docs/bit-docs/BitDocs.md"},"description":"A set of tools for the generation of documentation websites. \n","name":"BitDocs","title":"BitDocs","type":"page","comment":" ","pathToRoot":".."};
 	</script>
 
 	

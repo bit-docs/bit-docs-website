@@ -91,7 +91,7 @@
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="A node event emitter
-that produces events that correlate to files that should be processed.">
+that emits an event for every file that should be processed.">
 							FileEventEmitter
 						</a>
 						
@@ -126,8 +126,8 @@ docObject&#x27;s name.">
 						<a class="typedef"
 							href="docObject.html"
 							title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">
 							DocObject
 						</a>
 						
@@ -160,12 +160,25 @@ packaged with bit-docs.">
            						">
 						<a class="typedef"
 							href="processOptions.html"
-							title="An options object passed to several process methods, such as:
-
-code
-codeAndComment
-process-tags">
+							title="An options object passed to several process methods.">
 							ProcessOptions
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="tag.html"
+							title="The interface that tagCollection implements for
+codeAndComment and code to call.
+This is very likely to change to something better.">
+							Tag
 						</a>
 						
 					</li>
@@ -514,11 +527,11 @@ docMap.">
 			
 				<section class="description">
     <p>An object that contains every <a href="docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">DocObject</a> keyed by the
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a> keyed by the
 <a href="docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">DocObject</a>'s name.</p>
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a>'s name.</p>
 
 </section>
 
@@ -531,8 +544,8 @@ the important, near universal properties:">DocObject</a>'s name.</p>
 					<div class="signature">
   <h2 class="signature-title">
     <code>Object&lt;String,<a href="docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client. The following lists
-the important, near universal properties:">DocObject</a>&gt;</code>
+a docObject is available to the templates and the client.
+The following lists the important, near universal properties:">DocObject</a>&gt;</code>
   </h2>
 
   
@@ -548,7 +561,127 @@ the important, near universal properties:">DocObject</a>&gt;</code>
 			
 			
 				<section class="body">
-    
+    <p>Example of a docMap:</p>
+<pre><code class="language-js">{
+  &quot;api&quot;: {
+    &quot;src&quot;: {
+      &quot;path&quot;: &quot;docs/api.md&quot;
+    },
+    &quot;body&quot;: &quot;...&quot;,
+    &quot;description&quot;: &quot;...&quot;,
+    &quot;name&quot;: &quot;api&quot;,
+    &quot;title&quot;: &quot;API&quot;,
+    &quot;type&quot;: &quot;page&quot;,
+    &quot;parent&quot;: &quot;homepage&quot;,
+    &quot;order&quot;: 1
+  },
+  &quot;my-module&quot;: {
+    &quot;name&quot;: &quot;my-module&quot;,
+    &quot;type&quot;: &quot;module&quot;,
+    &quot;parent&quot;: &quot;api&quot;,
+    &quot;src&quot;: {
+      &quot;line&quot;: 0,
+      &quot;codeLine&quot;: 10,
+      &quot;path&quot;: &quot;docs/my-module/index.js&quot;
+    },
+    &quot;body&quot;: &quot;...&quot;,
+    &quot;description&quot;: &quot;...&quot;,
+    &quot;title&quot;: &quot;&quot;,
+    &quot;types&quot;: [
+      {
+        &quot;type&quot;: &quot;function&quot;,
+        &quot;returns&quot;: {
+          &quot;types&quot;: [
+            {
+              &quot;type&quot;: &quot;undefined&quot;
+            }
+          ]
+        },
+        &quot;params&quot;: []
+      }
+    ],
+    &quot;comment&quot;: &quot; &quot;
+  },
+  &quot;my-module/components&quot;: {
+    &quot;name&quot;: &quot;my-module/components&quot;,
+    &quot;title&quot;: &quot;components&quot;,
+    &quot;type&quot;: &quot;group&quot;,
+    &quot;parent&quot;: &quot;my-module&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;order&quot;: 0
+  },
+  &quot;my-module/a-component&quot;: {
+    &quot;type&quot;: &quot;module&quot;,
+    &quot;name&quot;: &quot;my-module/a-component&quot;,
+    &quot;parent&quot;: &quot;my-module/components&quot;,
+    &quot;src&quot;: {
+      &quot;line&quot;: 8,
+      &quot;codeLine&quot;: 24,
+      &quot;path&quot;: &quot;docs/my-module/a-component.js&quot;
+    },
+    &quot;body&quot;: &quot;...&quot;,
+    &quot;description&quot;: &quot;...&quot;,
+    &quot;title&quot;: &quot;&quot;,
+    &quot;types&quot;: [
+      {
+        &quot;type&quot;: &quot;function&quot;,
+        &quot;returns&quot;: {
+          &quot;types&quot;: [
+            {
+              &quot;type&quot;: &quot;undefined&quot;
+            }
+          ]
+        },
+        &quot;params&quot;: []
+      }
+    ],
+    &quot;signatures&quot;: [
+      {
+        &quot;code&quot;: &quot;aComponent(aPromise, aConfig)&quot;,
+        &quot;description&quot;: &quot;...&quot;,
+        &quot;params&quot;: [
+          {
+            &quot;types&quot;: [
+              {
+                &quot;type&quot;: &quot;Promise&quot;,
+                &quot;template&quot;: [
+                  {
+                    &quot;types&quot;: [
+                      {
+                        &quot;type&quot;: &quot;String&quot;
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            &quot;name&quot;: &quot;aPromise&quot;,
+            &quot;description&quot;: &quot;...&quot;
+          },
+          {
+            &quot;types&quot;: [
+              {
+                &quot;type&quot;: &quot;Object&quot;,
+                &quot;options&quot;: []
+              }
+            ],
+            &quot;name&quot;: &quot;aConfig&quot;,
+            &quot;description&quot;: &quot;...&quot;
+          }
+        ],
+        &quot;returns&quot;: {
+          &quot;types&quot;: [
+            {
+              &quot;type&quot;: &quot;Promise&quot;
+            }
+          ],
+          &quot;description&quot;: &quot;...&quot;
+        }
+      }
+    ],
+    ...
+</code></pre>
+
 </section>
 
 			

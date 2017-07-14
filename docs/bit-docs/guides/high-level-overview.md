@@ -1,5 +1,5 @@
-@page high-level-overview High Level Overview
 @parent guides 0
+@page guides/high-level-overview High Level Overview
 @outline 2
 
 @description A high-level overview of bit-docs.

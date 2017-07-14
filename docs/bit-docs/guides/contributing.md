@@ -1,5 +1,5 @@
-@page contributing Contributing
 @parent guides
+@page guides/contributing Contributing
 
 For general contributing guidelines, see the [Contributing Guide on DoneJS.com](https://donejs.com/contributing.html).
 

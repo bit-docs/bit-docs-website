@@ -1096,28 +1096,6 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-stache',
-            'version': '3.3.0',
-            'fileUrl': './node_modules/can-stache/package.json',
-            'main': 'can-stache',
-            'resolutions': {
-                'can-stache': '3.3.0',
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0',
-                'can-view-parser': '3.4.0',
-                'can-view-callbacks': '3.2.0',
-                'can-view-target': '3.1.0',
-                'can-view-nodelist': '3.1.0',
-                'can-observation': '3.3.2',
-                'can-compute': '3.3.1',
-                'can-reflect': '1.2.3',
-                'can-symbol': '1.0.0',
-                'can-stache-key': '0.0.2',
-                'can-view-scope': '3.3.1',
-                'can-view-live': '3.2.0'
-            }
-        },
-        {
             'name': 'can-construct',
             'version': '3.2.0',
             'fileUrl': './node_modules/can-construct/package.json',
@@ -1240,45 +1218,25 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-view-parser',
-            'version': '3.4.0',
-            'fileUrl': './node_modules/can-view-parser/package.json',
-            'main': 'can-view-parser',
+            'name': 'can-stache',
+            'version': '3.3.0',
+            'fileUrl': './node_modules/can-stache/package.json',
+            'main': 'can-stache',
             'resolutions': {
+                'can-stache': '3.3.0',
+                'can-util': '3.9.6',
                 'can-namespace': '1.0.0',
-                'can-util': '3.9.6'
-            }
-        },
-        {
-            'name': 'can-view-callbacks',
-            'version': '3.2.0',
-            'fileUrl': './node_modules/can-view-callbacks/package.json',
-            'main': 'can-view-callbacks',
-            'steal': {},
-            'resolutions': {
+                'can-view-parser': '3.4.0',
+                'can-view-callbacks': '3.2.0',
+                'can-view-target': '3.1.0',
+                'can-view-nodelist': '3.1.0',
                 'can-observation': '3.3.2',
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0'
-            }
-        },
-        {
-            'name': 'can-view-target',
-            'version': '3.1.0',
-            'fileUrl': './node_modules/can-view-target/package.json',
-            'main': 'can-view-target',
-            'resolutions': {
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0'
-            }
-        },
-        {
-            'name': 'can-view-nodelist',
-            'version': '3.1.0',
-            'fileUrl': './node_modules/can-view-nodelist/package.json',
-            'main': 'can-view-nodelist',
-            'resolutions': {
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0'
+                'can-compute': '3.3.1',
+                'can-reflect': '1.2.3',
+                'can-symbol': '1.0.0',
+                'can-stache-key': '0.0.2',
+                'can-view-scope': '3.3.1',
+                'can-view-live': '3.2.0'
             }
         },
         {
@@ -1335,6 +1293,48 @@ define('package.json!npm', [
             }
         },
         {
+            'name': 'can-view-parser',
+            'version': '3.4.0',
+            'fileUrl': './node_modules/can-view-parser/package.json',
+            'main': 'can-view-parser',
+            'resolutions': {
+                'can-namespace': '1.0.0',
+                'can-util': '3.9.6'
+            }
+        },
+        {
+            'name': 'can-view-callbacks',
+            'version': '3.2.0',
+            'fileUrl': './node_modules/can-view-callbacks/package.json',
+            'main': 'can-view-callbacks',
+            'steal': {},
+            'resolutions': {
+                'can-observation': '3.3.2',
+                'can-util': '3.9.6',
+                'can-namespace': '1.0.0'
+            }
+        },
+        {
+            'name': 'can-view-target',
+            'version': '3.1.0',
+            'fileUrl': './node_modules/can-view-target/package.json',
+            'main': 'can-view-target',
+            'resolutions': {
+                'can-util': '3.9.6',
+                'can-namespace': '1.0.0'
+            }
+        },
+        {
+            'name': 'can-view-nodelist',
+            'version': '3.1.0',
+            'fileUrl': './node_modules/can-view-nodelist/package.json',
+            'main': 'can-view-nodelist',
+            'resolutions': {
+                'can-util': '3.9.6',
+                'can-namespace': '1.0.0'
+            }
+        },
+        {
             'name': 'can-view-scope',
             'version': '3.3.1',
             'fileUrl': './node_modules/can-view-scope/package.json',
@@ -1370,10 +1370,10 @@ define('package.json!npm', [
             },
             'resolutions': {
                 'can-view-live': '3.2.0',
-                'can-util': '3.9.6',
-                'can-reflect': '1.2.3',
                 'can-view-parser': '3.4.0',
+                'can-util': '3.9.6',
                 'can-view-nodelist': '3.1.0',
+                'can-reflect': '1.2.3',
                 'can-view-callbacks': '3.2.0',
                 'can-types': '1.1.0',
                 'can-compute': '3.3.1',

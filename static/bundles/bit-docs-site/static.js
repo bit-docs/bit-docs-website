@@ -986,8 +986,8 @@ define('package.json!npm', [
                 'steal-less': '1.2.0',
                 'bit-docs-html-toc': '0.6.2',
                 'bit-docs-js': '0.0.6',
-                'bit-docs-html-highlight-line': '0.2.3',
                 'bit-docs-prettify': '0.1.1',
+                'bit-docs-html-highlight-line': '0.2.3',
                 'bit-docs-tag-demo': '0.3.0'
             }
         },
@@ -1046,13 +1046,6 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'bit-docs-html-highlight-line',
-            'version': '0.2.3',
-            'fileUrl': './node_modules/bit-docs-html-highlight-line/package.json',
-            'main': 'highlight-line.js',
-            'resolutions': { 'jquery': '2.2.4' }
-        },
-        {
             'name': 'bit-docs-prettify',
             'version': '0.1.1',
             'fileUrl': './node_modules/bit-docs-prettify/package.json',
@@ -1063,6 +1056,13 @@ define('package.json!npm', [
                 'steal-less': '1.2.0',
                 'bit-docs-site': '0.0.1'
             }
+        },
+        {
+            'name': 'bit-docs-html-highlight-line',
+            'version': '0.2.3',
+            'fileUrl': './node_modules/bit-docs-html-highlight-line/package.json',
+            'main': 'highlight-line.js',
+            'resolutions': { 'jquery': '2.2.4' }
         },
         {
             'name': 'bit-docs-tag-demo',
@@ -1105,16 +1105,16 @@ define('package.json!npm', [
                 'can-util': '3.9.6',
                 'can-namespace': '1.0.0',
                 'can-view-parser': '3.4.0',
-                'can-view-target': '3.1.0',
                 'can-view-callbacks': '3.2.0',
+                'can-view-target': '3.1.0',
                 'can-view-nodelist': '3.1.0',
+                'can-observation': '3.3.2',
                 'can-compute': '3.3.1',
                 'can-reflect': '1.2.3',
-                'can-observation': '3.3.2',
                 'can-symbol': '1.0.0',
                 'can-stache-key': '0.0.2',
-                'can-view-live': '3.2.0',
-                'can-view-scope': '3.3.1'
+                'can-view-scope': '3.3.1',
+                'can-view-live': '3.2.0'
             }
         },
         {
@@ -1250,16 +1250,6 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-view-target',
-            'version': '3.1.0',
-            'fileUrl': './node_modules/can-view-target/package.json',
-            'main': 'can-view-target',
-            'resolutions': {
-                'can-util': '3.9.6',
-                'can-namespace': '1.0.0'
-            }
-        },
-        {
             'name': 'can-view-callbacks',
             'version': '3.2.0',
             'fileUrl': './node_modules/can-view-callbacks/package.json',
@@ -1267,6 +1257,16 @@ define('package.json!npm', [
             'steal': {},
             'resolutions': {
                 'can-observation': '3.3.2',
+                'can-util': '3.9.6',
+                'can-namespace': '1.0.0'
+            }
+        },
+        {
+            'name': 'can-view-target',
+            'version': '3.1.0',
+            'fileUrl': './node_modules/can-view-target/package.json',
+            'main': 'can-view-target',
+            'resolutions': {
                 'can-util': '3.9.6',
                 'can-namespace': '1.0.0'
             }
@@ -1335,33 +1335,6 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'can-view-live',
-            'version': '3.2.0',
-            'fileUrl': './node_modules/can-view-live/package.json',
-            'main': 'can-view-live',
-            'steal': {
-                'npmIgnore': {
-                    'documentjs': true,
-                    'testee': true,
-                    'generator-donejs': true,
-                    'donejs-cli': true,
-                    'steal-tools': true
-                },
-                'main': 'can-view-live'
-            },
-            'resolutions': {
-                'can-view-live': '3.2.0',
-                'can-view-parser': '3.4.0',
-                'can-util': '3.9.6',
-                'can-view-nodelist': '3.1.0',
-                'can-reflect': '1.2.3',
-                'can-view-callbacks': '3.2.0',
-                'can-types': '1.1.0',
-                'can-compute': '3.3.1',
-                'can-event': '3.6.0'
-            }
-        },
-        {
             'name': 'can-view-scope',
             'version': '3.3.1',
             'fileUrl': './node_modules/can-view-scope/package.json',
@@ -1378,6 +1351,33 @@ define('package.json!npm', [
                 'can-cid': '1.0.3',
                 'can-symbol': '1.0.0',
                 'can-simple-map': '3.3.0'
+            }
+        },
+        {
+            'name': 'can-view-live',
+            'version': '3.2.0',
+            'fileUrl': './node_modules/can-view-live/package.json',
+            'main': 'can-view-live',
+            'steal': {
+                'npmIgnore': {
+                    'documentjs': true,
+                    'testee': true,
+                    'generator-donejs': true,
+                    'donejs-cli': true,
+                    'steal-tools': true
+                },
+                'main': 'can-view-live'
+            },
+            'resolutions': {
+                'can-view-live': '3.2.0',
+                'can-util': '3.9.6',
+                'can-reflect': '1.2.3',
+                'can-view-parser': '3.4.0',
+                'can-view-nodelist': '3.1.0',
+                'can-view-callbacks': '3.2.0',
+                'can-types': '1.1.0',
+                'can-compute': '3.3.1',
+                'can-event': '3.6.0'
             }
         },
         {

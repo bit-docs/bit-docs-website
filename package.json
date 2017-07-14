@@ -63,7 +63,8 @@
         "**/test_*.js",
         "**/test-*.md",
         "**/test.js",
-        "**/node_modules/**/*"
+        "**/node_modules/**/*",
+        "**/templates/**/*.mustache"
       ],
       "follow": true
     },

@@ -270,7 +270,7 @@
            						expanded">
 						<a class="module"
 							href="demo.html"
-							title="Creates a tabbed demo widget.">
+							title="Placeholder for an application demo.">
 							./demo
 						</a>
 						
@@ -367,7 +367,7 @@
 		
 			
 				<section class="description">
-    <p>Creates a tabbed demo widget.</p>
+    <p>Placeholder for an application demo.</p>
 
 </section>
 
@@ -379,10 +379,13 @@
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>@demo demos/example.html</code>
+    <code>@demo PATH [HEIGHT]</code>
   </h2>
 
-  <p>Creates a demo widget with tabs <code>Demo</code>, <code>HTML</code>, and <code>JS</code>.</p>
+  <pre><code class="language-javascript">/**
+ * @demo demos/example.html 300
+ */
+</code></pre>
 
 
   
@@ -390,7 +393,14 @@
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>file</b> <code>{String}</code>: <p>The file containing the HTML and JS for the demo.</p>
+          <li><b>PATH</b> <code>{String}</code>: <p>The path to a <code>.html</code> file.</p>
+</li>
+            
+              
+            
+        
+          <li><b>HEIGHT</b> <code>{Number}</code>: <p>The height of the html page. If a height is not
+provided, the height is determined as the content of the body.</p>
 </li>
             
               
@@ -409,7 +419,17 @@
 			
 			
 				<section class="body">
-    <p>An example demo file might look like:</p>
+    <h2>Specifying the HTML and JS source</h2>
+<p>By default, <code>@demo</code> uses the html of the body minus any script tags as the
+HTML source. This can be changed by:</p>
+<ul>
+<li>Adding an element with <code>id=&quot;demo-html&quot;</code> or
+setting <code>window.DEMO_HTML</code> to the source text.</li>
+<li>Adding <code>id=&quot;demo-source&quot;</code> to a script tag or
+setting <code>window.DEMO_SOURCE</code> to the source JS.</li>
+</ul>
+<h3>Example</h3>
+<p>An example demo file might look like:</p>
 <pre><code class="language-html">&lt;div id=&quot;demo-html&quot;&gt;&lt;b&gt;Hello world!&lt;/b&gt;&lt;/div&gt;
 &lt;script id=&quot;demo-source&quot;&gt;
   var div = document.createElement(&quot;div&quot;);
@@ -436,7 +456,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-tag-demo/tags/demo","type":"module","parent":"bit-docs-tag-demo/tags","src":{"line":0,"codeLine":41,"path":"docs/modules/bit-docs-tag-demo/tags.js"},"description":"Creates a tabbed demo widget. \n","title":"@demo","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@demo demos/example.html","description":"\n\nCreates a demo widget with tabs `Demo`, `HTML`, and `JS`.\n","params":[{"types":[{"type":"String"}],"name":"file","description":"The file containing the HTML and JS for the demo. \n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"file","description":"The file containing the HTML and JS for the demo. \n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-tag-demo/tags/demo","type":"module","parent":"bit-docs-tag-demo/tags","src":{"line":0,"codeLine":60,"path":"docs/modules/bit-docs-tag-demo/tags.js"},"description":"Placeholder for an application demo. \n\n","title":"@demo","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@demo PATH [HEIGHT]","description":"\n\n```javascript\n/**\n * @demo demos/example.html 300\n */\n```","params":[{"types":[{"type":"String"}],"name":"PATH","description":"The path to a `.html` file.\n"},{"types":[{"type":"Number"}],"optional":true,"name":"HEIGHT","description":"The height of the html page. If a height is not\nprovided, the height is determined as the content of the body.\n"}]}],"_curParam":{"types":[{"type":"Number"}],"optional":true,"name":"HEIGHT","description":"The height of the html page. If a height is not\nprovided, the height is determined as the content of the body.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

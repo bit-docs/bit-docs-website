@@ -412,10 +412,12 @@
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>processMustache(filename, source)</code>
+    <code>processMustache(filename, source, docMap, siteConfig, addToDocMap)</code>
   </h2>
 
-  <p>Processes a <code>.mustache</code> file and adds it as a template to the docMap.</p>
+  <p>Processes a <code>.mustache</code> file and adds it as a template to the
+<a href="../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>.</p>
 
 
   
@@ -423,13 +425,44 @@
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>filename</b> <code>{String}</code>: <p>The filename with its extension</p>
+          <li><b>filename</b> <code>{String}</code>: <p>The filename with its extension.</p>
 </li>
             
               
             
         
-          <li><b>source</b> <code>{String}</code>: <p>A files source</p>
+          <li><b>source</b> <code>{String}</code>: <p>A files source.</p>
+</li>
+            
+              
+            
+        
+          <li><b>docMap</b> <code>{<a href="../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>}</code>: <p>A map of the name of each
+<a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> to the <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>.</p>
+</li>
+            
+              
+            
+        
+          <li><b>siteConfig</b> <code>{Object}</code>: <p>An siteConfig object.</p>
+</li>
+            
+              
+            
+        
+          <li><b>addToDocMap</b> <code>{function}</code>: <p>A callback function that adds passed
+<a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> to <a href="../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
+docObject's name.">DocMap</a>.</p>
 </li>
             
               
@@ -459,7 +492,7 @@
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-process-mustache/process-mustache","parent":"bit-docs-process-mustache/modules","src":{"line":2,"codeLine":16,"path":"docs/modules/bit-docs-process-mustache/process-mustache.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processMustache(filename, source)","description":"\n\nProcesses a `.mustache` file and adds it as a template to the docMap.\n","params":[{"types":[{"type":"String"}],"name":"filename","description":"The filename with its extension\n"},{"types":[{"type":"String"}],"name":"source","description":"A files source\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"source","description":"A files source\n"},"comment":" ","pathToRoot":"../.."};
+		var docObject = {"type":"module","name":"bit-docs-process-mustache/process-mustache","parent":"bit-docs-process-mustache/modules","src":{"line":2,"codeLine":25,"path":"docs/modules/bit-docs-process-mustache/process-mustache.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processMustache(filename, source, docMap, siteConfig, addToDocMap)","description":"\n\nProcesses a `.mustache` file and adds it as a template to the\n[bit-docs/types/docMap].\n","params":[{"types":[{"type":"String"}],"name":"filename","description":"The filename with its extension.\n"},{"types":[{"type":"String"}],"name":"source","description":"A files source.\n"},{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":"A map of the name of each\n[bit-docs/types/docObject] to the [bit-docs/types/docObject].\n"},{"types":[{"type":"Object","options":[]}],"optional":true,"name":"siteConfig","description":"An siteConfig object.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"name":"addToDocMap","description":"A callback function that adds passed\n[bit-docs/types/docObject] to [bit-docs/types/docMap].\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"name":"addToDocMap","description":"A callback function that adds passed\n[bit-docs/types/docObject] to [bit-docs/types/docMap].\n"},"comment":" ","pathToRoot":"../.."};
 	</script>
 
 	

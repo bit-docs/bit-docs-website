@@ -122,8 +122,9 @@ docObject&#x27;s name.">
            						expanded">
 						<a class="typedef"
 							href="docObject.html"
-							title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client.
+							title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
 The following lists the important, near universal properties:">
 							DocObject
 						</a>
@@ -175,9 +176,9 @@ packaged with bit-docs.">
            						">
 						<a class="typedef"
 							href="tag.html"
-							title="The interface that tagCollection implements for
-codeAndComment and code to call.
-This is very likely to change to something better.">
+							title="The interface that tagCollection implements.
+Used for codeAndComment and code.
+Note: This is very likely to change to something better.">
 							Tag
 						</a>
 						
@@ -526,11 +527,13 @@ docMap.">
 		
 			
 				<section class="description">
-    <p>An object that represents something that is documented. Any property added to
-a <a href="docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client.
-The following lists the important, near universal properties:">DocObject</a> is available to the templates and the client.
-The following lists the important, near universal properties:</p>
+    <p>An object that represents something that is documented.</p>
+<p>Any property added to a <a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> is available to the
+templates and the client.</p>
+<p>The following lists the important, near universal properties:</p>
 
 </section>
 
@@ -580,8 +583,9 @@ type of the object being documented:</p>
     
       <li>
         <b>parent</b> <code>{String}</code>:
-        <p>The name of the parent <a href="docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client.
+        <p>The name of the parent <a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
 The following lists the important, near universal properties:">DocObject</a>.</p>
 
       </li>
@@ -625,10 +629,134 @@ deprecated warnings created by <a href="../../bit-docs-dev/tags/deprecated.html"
 			
 				<section class="body">
     <h2>Use</h2>
-<p>You can see a page's <a href="docObject.html" title="An object that represents something that is documented. Any property added to
-a docObject is available to the templates and the client.
+<p>You can see a page's <a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
 The following lists the important, near universal properties:">DocObject</a> by typing <code>docObject</code> in the
 console.</p>
+<p>Here is an example of the <code>docObject</code> for this page:</p>
+<pre><code class="language-js">{
+  &quot;src&quot;:{
+    &quot;path&quot;:&quot;docs/modules/bit-docs/docs/api/types/docObject.md&quot;
+  },
+  &quot;description&quot;:&quot;\nAn object that represents something that is documented...\n&quot;,
+  &quot;parent&quot;:&quot;bit-docs/types&quot;,
+  &quot;type&quot;:&quot;typedef&quot;,
+  &quot;title&quot;:&quot;DocObject&quot;,
+  &quot;types&quot;:[
+    {
+      &quot;type&quot;:&quot;Object&quot;,
+      &quot;options&quot;:[
+        {
+          &quot;name&quot;:&quot;name&quot;,
+          &quot;description&quot;:&quot;The unique name of the object being documented.\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;String&quot;
+            }
+          ]
+        },
+        {
+          &quot;name&quot;:&quot;type&quot;,
+          &quot;description&quot;:&quot;The type of the DocType...\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;String&quot;
+            }
+          ]
+        },
+        {
+          &quot;name&quot;:&quot;parent&quot;,
+          &quot;description&quot;:&quot;The name of the parent <a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>.\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;String&quot;
+            }
+          ]
+        },
+        {
+          &quot;name&quot;:&quot;description&quot;,
+          &quot;description&quot;:&quot;The description html content specified by\n<a href="../../bit-docs-process-tags/tags/description.html" title="Markdown content placed before all signature and API content.">@description</a>...\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;String&quot;
+            }
+          ]
+        },
+        {
+          &quot;name&quot;:&quot;body&quot;,
+          &quot;description&quot;:&quot;The body html content specified by\n<a href="../../bit-docs-process-tags/tags/body.html" title="Markdown content placed after all signature and API content.">@body</a>.\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;String&quot;
+            }
+          ]
+        },
+        {
+          &quot;name&quot;:&quot;children&quot;,
+          &quot;description&quot;:&quot;An array of children names...\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;Array&quot;,
+              &quot;template&quot;:[
+                {
+                  &quot;types&quot;:[
+                    {
+                      &quot;type&quot;:&quot;String&quot;
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;name&quot;:&quot;deprecated&quot;,
+          &quot;description&quot;:&quot;An array of\ndeprecated warnings created by <a href="../../bit-docs-dev/tags/deprecated.html" title="Marks a comment as deprecated.">@deprecated</a>.\n&quot;,
+          &quot;types&quot;:[
+            {
+              &quot;type&quot;:&quot;Array&quot;,
+              &quot;template&quot;:[
+                {
+                  &quot;types&quot;:[
+                    {
+                      &quot;type&quot;:&quot;Object&quot;,
+                      &quot;options&quot;:[
+                        {
+                          &quot;name&quot;:&quot;version&quot;,
+                          &quot;types&quot;:[
+                            {
+                              &quot;type&quot;:&quot;String&quot;
+                            }
+                          ]
+                        },
+                        {
+                          &quot;name&quot;:&quot;description&quot;,
+                          &quot;types&quot;:[
+                            {
+                              &quot;type&quot;:&quot;String&quot;
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  &quot;name&quot;:&quot;bit-docs/types/docObject&quot;,
+  &quot;comment&quot;:&quot; &quot;,
+  &quot;pathToRoot&quot;:&quot;../../..&quot;
+}
+</code></pre>
 
 </section>
 
@@ -640,7 +768,7 @@ console.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/docObject.md"},"description":"\nAn object that represents something that is documented. Any property added to\na [bit-docs/types/docObject] is available to the templates and the client.\nThe following lists the important, near universal properties:\n","parent":"bit-docs/types","type":"typedef","title":"DocObject","types":[{"type":"Object","options":[{"name":"name","description":"The unique name of the object being documented.\n","types":[{"type":"String"}]},{"name":"type","description":"The type of the DocType. This typically represents the\ntype of the object being documented:\n\n - `constructor`\n - `prototype`\n - `static`\n - `function`\n - `property`\n - `typedef`\n - `module`\n","types":[{"type":"String"}]},{"name":"parent","description":"The name of the parent [bit-docs/types/docObject].\n","types":[{"type":"String"}]},{"name":"description","description":"The description html content specified by\n[bit-docs-process-tags/tags/description]. This should typically be one or two\nsentences.\n","types":[{"type":"String"}]},{"name":"body","description":"The body html content specified by\n[bit-docs-process-tags/tags/body].\n","types":[{"type":"String"}]},{"name":"children","description":"An array of children names. This typically\ngets added by the system based on the `parent` property.\n","types":[{"type":"Array","template":[{"types":[{"type":"String"}]}]}]},{"name":"deprecated","description":"An array of\ndeprecated warnings created by [bit-docs-dev/tags/deprecated].\n","types":[{"type":"Array","template":[{"types":[{"type":"Object","options":[{"name":"version","types":[{"type":"String"}]},{"name":"description","types":[{"type":"String"}]}]}]}]}]}]}],"name":"bit-docs/types/docObject","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/docObject.md"},"description":" \nAn object that represents something that is documented.\n\nAny property added to a [bit-docs/types/docObject] is available to the\ntemplates and the client.\n\nThe following lists the important, near universal properties:\n\n","parent":"bit-docs/types","type":"typedef","title":"DocObject","types":[{"type":"Object","options":[{"name":"name","description":"The unique name of the object being documented.\n","types":[{"type":"String"}]},{"name":"type","description":"The type of the DocType. This typically represents the\ntype of the object being documented:\n\n - `constructor`\n - `prototype`\n - `static`\n - `function`\n - `property`\n - `typedef`\n - `module`\n","types":[{"type":"String"}]},{"name":"parent","description":"The name of the parent [bit-docs/types/docObject].\n","types":[{"type":"String"}]},{"name":"description","description":"The description html content specified by\n[bit-docs-process-tags/tags/description]. This should typically be one or two\nsentences.\n","types":[{"type":"String"}]},{"name":"body","description":"The body html content specified by\n[bit-docs-process-tags/tags/body].\n","types":[{"type":"String"}]},{"name":"children","description":"An array of children names. This typically\ngets added by the system based on the `parent` property.\n","types":[{"type":"Array","template":[{"types":[{"type":"String"}]}]}]},{"name":"deprecated","description":"An array of\ndeprecated warnings created by [bit-docs-dev/tags/deprecated].\n","types":[{"type":"Array","template":[{"types":[{"type":"Object","options":[{"name":"version","types":[{"type":"String"}]},{"name":"description","types":[{"type":"String"}]}]}]}]}]}]}],"name":"bit-docs/types/docObject","comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

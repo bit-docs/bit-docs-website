@@ -408,10 +408,25 @@
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>@highlight</code>
+    <code>@highlight LINES[,ONLY]</code>
   </h2>
 
-  <pre><code class="language-javascript">/**
+  
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>LINES</b> <code>{String}</code>: <p>The lines to highlight like <code>2-4</code>.</p>
+</li>
+            
+              
+            
+        
+          <li><b>ONLY</b> <code>{String}</code>: <p>Collapse non-highlighted lines greater than three
+lines away (useful for long code snippets).</p>
+<pre><code class="language-javascript">/**
  * ```js
  * {
  *   &quot;name&quot;: &quot;bit-docs&quot;,
@@ -428,8 +443,13 @@
  * @highlight 2-4,only
  */
 </code></pre>
-
-
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
   
 
   
@@ -455,7 +475,7 @@ will be picked up and used by the static front-end script
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-html-highlight-line/tags/highlight","type":"module","parent":"bit-docs-html-highlight-line/tags","src":{"line":0,"codeLine":31,"path":"docs/modules/bit-docs-html-highlight-line/tags.js"},"description":"\nHighlight the specified code lines.\n","title":"@highlight","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@highlight","description":"\n\n```javascript\n/**\n * ```js\n * {\n *   \"name\": \"bit-docs\",\n *   \"description\": \"Documentation generator\",\n *   \"author\": \"Bitovi\",\n *   \"license\": \"MIT\",\n *   \"date\": \"2017\",\n *   \"location\": \"Chicago\",\n *   \"season\": \"Summer\",\n *   \"awesome\": \"yes\"\n * }\n * ``` \n *\n * @highlight 2-4,only\n */\n```","params":[]}],"pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-html-highlight-line/tags/highlight","type":"module","parent":"bit-docs-html-highlight-line/tags","src":{"line":0,"codeLine":36,"path":"docs/modules/bit-docs-html-highlight-line/tags.js"},"description":"\nHighlight the specified code lines.\n","title":"@highlight","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@highlight LINES[,ONLY]","description":"\n","params":[{"types":[{"type":"String"}],"name":"LINES","description":"The lines to highlight like `2-4`.\n"},{"types":[{"type":"String"}],"optional":true,"name":"ONLY","description":"Collapse non-highlighted lines greater than three\nlines away (useful for long code snippets).\n\n```javascript\n/**\n * ```js\n * {\n *   \"name\": \"bit-docs\",\n *   \"description\": \"Documentation generator\",\n *   \"author\": \"Bitovi\",\n *   \"license\": \"MIT\",\n *   \"date\": \"2017\",\n *   \"location\": \"Chicago\",\n *   \"season\": \"Summer\",\n *   \"awesome\": \"yes\"\n * }\n * ``` \n *\n * @highlight 2-4,only\n */\n```"}]}],"_curParam":{"types":[{"type":"String"}],"optional":true,"name":"ONLY","description":"Collapse non-highlighted lines greater than three\nlines away (useful for long code snippets).\n\n```javascript\n/**\n * ```js\n * {\n *   \"name\": \"bit-docs\",\n *   \"description\": \"Documentation generator\",\n *   \"author\": \"Bitovi\",\n *   \"license\": \"MIT\",\n *   \"date\": \"2017\",\n *   \"location\": \"Chicago\",\n *   \"season\": \"Summer\",\n *   \"awesome\": \"yes\"\n * }\n * ``` \n *\n * @highlight 2-4,only\n */\n```"},"pathToRoot":"../../.."};
 	</script>
 
 	

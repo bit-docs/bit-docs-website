@@ -3,12 +3,13 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
+	source: docs/modules/bit-docs-dev/tags/group.js
 	@module bit-docs-dev/tags/group
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BitDocs - @group</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
@@ -69,7 +70,8 @@
            						">
 						<a class="module"
 							href="../../bit-docs.html"
-							title="Find files, process them, and produce some sort of output.">
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
 							bit-docs
 						</a>
 						
@@ -137,8 +139,11 @@
            						expanded">
 						<a class="module"
 							href="group.html"
-							title="Declares that other tags belong to a group within the current
-docObject.">
+							title="Creates a docObject without a generated page that can be
+linked to and with parent inherently set to the current
+docObject.
+Set the parent of other docObjects to the group NAME
+for better hierarchical organization in places like navigation menus.">
 							./group
 						</a>
 						
@@ -330,7 +335,7 @@ belong to part of the application structure.">
            						">
 						<a class="module"
 							href="../../bit-docs-js.html"
-							title="Tags, templates, and basic styles for JavaScript.">
+							title="Plugin to process .js files and help document JavaScript code.">
 							bit-docs-js
 						</a>
 						
@@ -469,11 +474,20 @@ belong to part of the application structure.">
 		
 			
 				<section class="description">
-    <p>Declares that other tags belong to a group within the current
+    <p>Creates a <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> without a generated page that can be
+linked to and with <code>parent</code> inherently set to the current
 <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
 The following lists the important, near universal properties:">DocObject</a>.</p>
+<p>Set the <code>parent</code> of other <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>s to the group <code>NAME</code>
+for better hierarchical organization in places like navigation menus.</p>
 
 </section>
 
@@ -485,7 +499,7 @@ The following lists the important, near universal properties:">DocObject</a>.</p
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>@group name [ORDER] title</code>
+    <code>@group NAME [ORDER] TITLE</code>
   </h2>
 
   
@@ -495,20 +509,29 @@ The following lists the important, near universal properties:">DocObject</a>.</p
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>name</b> <code>{String}</code>: <p>The unique name of the group.</p>
+          <li><b>NAME</b> <code>{String}</code>: <p>Unique name of this group <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>.</p>
 </li>
             
               
             
         
-          <li><b>order</b> <code>{Number}</code>: <p>The placement of this group in the parent's list of
-children.</p>
+          <li><b>ORDER</b> <code>{Number}</code>: <p>Used to order this <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> in
+relation to other <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>s sharing the same <code>parent</code>.</p>
 </li>
             
               
             
         
-          <li><b>title</b> <code>{String}</code>: <p>The title that should be shown in the sidebar.</p>
+          <li><b>TITLE</b> <code>{String}</code>: <p>Used for display purposes, such as links and headers.</p>
 </li>
             
               
@@ -528,14 +551,43 @@ children.</p>
 			
 				<section class="body">
     <h2>Use</h2>
-<p>For example, in <code>myapp.md</code>, the following will create a &quot;Guides&quot; grouping:</p>
-<pre><code class="language-js">@page MyApp
-@group MyApp/guides 0 Guides
+<p>The <code>@group</code> tag below would create a new <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> with
+<code>parent</code> inherently set to the <code>my-module</code> <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>:</p>
+<pre><code class="language-js">@parent api
+@module {{}} my-module
+@group my-module/components components
 </code></pre>
-<p>Then, in <code>guides/installing.md</code>, the following will add an Installing page
-to the &quot;Guides&quot; grouping:</p>
-<pre><code class="language-js">@parent MyApp/guides
-@page Installing
+<p>The group <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> would have <code>&quot;type&quot;: &quot;group&quot;</code> and
+<code>&quot;parent&quot;: &quot;my-module&quot;</code>:</p>
+<pre><code class="language-js">&quot;my-module/components&quot;: {
+  &quot;name&quot;: &quot;my-module/components&quot;,
+  &quot;title&quot;: &quot;components&quot;,
+  &quot;type&quot;: &quot;group&quot;,
+  &quot;parent&quot;: &quot;my-module&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;order&quot;: 0
+}
+</code></pre>
+<p>Other <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a>s can set their <code>parent</code> to the group
+<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> using <a href="../../bit-docs-process-tags/tags/parent.html" title="Specifies the parent docObject's name. The current
+docObject will be displayed under the the parent in the navigation.">@parent</a>:</p>
+<pre><code class="language-js">@parent my-module/components
+@module {function} my-component
 </code></pre>
 
 </section>
@@ -548,7 +600,7 @@ to the &quot;Guides&quot; grouping:</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-dev/tags/group","type":"module","parent":"bit-docs-dev/tags","src":{"line":3,"codeLine":36,"path":"docs/modules/bit-docs-dev/tags/group.js"},"description":"\nDeclares that other tags belong to a group within the current\n[bit-docs/types/docObject].\n","title":"@group","types":[{"type":"bit-docs/types/tag"}],"signatures":[{"code":"@group name [ORDER] title","description":"\n","params":[{"types":[{"type":"String"}],"name":"name","description":"The unique name of the group."},{"types":[{"type":"Number"}],"optional":true,"name":"order","description":"The placement of this group in the parent's list of\nchildren."},{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"title","description":"The title that should be shown in the sidebar.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-dev/tags/group","type":"module","parent":"bit-docs-dev/tags","src":{"line":3,"codeLine":60,"path":"docs/modules/bit-docs-dev/tags/group.js"},"description":" \nCreates a [bit-docs/types/docObject] without a generated page that can be\nlinked to and with `parent` inherently set to the current\n[bit-docs/types/docObject].\n\nSet the `parent` of other [bit-docs/types/docObject]s to the group `NAME`\nfor better hierarchical organization in places like navigation menus.\n\n","title":"@group","types":[{"type":"bit-docs-process-tags/types/tag"}],"signatures":[{"code":"@group NAME [ORDER] TITLE","description":"\n","params":[{"types":[{"type":"String"}],"name":"NAME","description":"Unique name of this group [bit-docs/types/docObject].\n"},{"types":[{"type":"Number"}],"optional":true,"name":"ORDER","description":"Used to order this [bit-docs/types/docObject] in\nrelation to other [bit-docs/types/docObject]s sharing the same `parent`.\n"},{"types":[{"type":"String"}],"name":"TITLE","description":"Used for display purposes, such as links and headers.\n"}]}],"_curParam":{"types":[{"type":"String"}],"name":"TITLE","description":"Used for display purposes, such as links and headers.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

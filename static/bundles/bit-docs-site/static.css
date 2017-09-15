@@ -1,4 +1,4 @@
-/*bit-docs-js@0.0.6#site/static/styles/styles.less!steal-less@1.2.0#less*/
+/*bit-docs-js@0.0.6#static/styles/signature.less!steal-less@1.2.0#less*/
 /**
  * @parent bit-docs-generate-html/static
  * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
@@ -70,7 +70,12 @@
  * ```
  */
 /**
- * TODO: page annotations.
+ * @parent bit-docs-js/static
+ * @module bit-docs-js/static/styles/signature.less
+ *
+ * @description Base styles for signature tag.
+ *
+ * @body
  *
  * Keep spacing consistent for signature options and/or parameters when the
  * description text ends in a paragraph that has a bottom margin, or ends in
@@ -248,11 +253,9 @@ code * {
   font-family: "courier new", courier, mono;
 }
 pre {
-  margin: 0;
   overflow: auto;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-bottom: 20px;
   vertical-align: top;
   border: 1px solid #cccccc;
   background-color: #ffffff;
@@ -361,6 +364,110 @@ pre ol li {
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/*bit-docs-html-highlight-line@0.2.3#static/styles/highlight-line.less!steal-less@1.2.0#less*/
+/**
+ * @parent bit-docs-generate-html/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
+ *
+ * @description Variables to hold site-wide visual configurations.
+ */
+/**
+ * @property {Variable} defaultFontFamily @defaultFontFamily
+ *
+ * The default font family.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   font-family: @defaultFontFamily;
+ * }
+ * ```
+ */
+/**
+ * @property {Variable} defaultPadding @defaultPadding
+ *
+ * Defualt padding for content containers.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * body {
+ *   padding: @defaultPadding;
+ * }
+ * ```
+ */
+/**
+ * @property {Variable} smartphones @smartphones
+ *
+ * Media query breakpoint for smartphones.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * @@media @smartphones {
+ *   body {
+ *     font-size: 18px;
+ *   }
+ * }
+ * ```
+ */
+/**
+ * @property {Variable} desktops @desktops
+ *
+ * Media query breakpoint for desktops.
+ *
+ * @body
+ *
+ * ### Use
+ *
+ * ```less
+ * @@media @desktops {
+ *   body {
+ *     font-size: 12px;
+ *   }
+ * }
+ * ```
+ */
+/**
+ * @parent bit-docs-html-highlight-line/static
+ * @module bit-docs-html-highlight-line/static/styles/highlight-line.less
+ *
+ * @description Base styles for highlight tag.
+ *
+ * @body
+ *
+ * Adds styling for the `.expand` element.
+ *
+ * The `.expand` element gets added onload when the `only` option is used with
+ * the highlight tag, and the code block has lines before/after the highlight.
+ */
+article code .expand {
+  color: black;
+  padding: 4px 0px;
+  text-align: center;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+article code .expand:before {
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  display: block;
+  content: '⇅ EXPAND ⇅';
+}
+article code .expand:hover {
+  opacity: .6;
+  cursor: pointer;
 }
 
 /*bit-docs-site@0.0.1#styles/styles.less!steal-less@1.2.0#less*/
@@ -741,6 +848,21 @@ footer,
 }
 .content .main {
   overflow-x: hidden;
+}
+.content .main .parameters,
+.content .main .returns,
+.content .main div.options {
+  margin-bottom: 1em;
+}
+.content .main .parameters p:first-of-type,
+.content .main .returns p:first-of-type,
+.content .main div.options p:first-of-type {
+  display: inline;
+}
+.content .main .parameters p:first-of-type + *,
+.content .main .returns p:first-of-type + *,
+.content .main div.options p:first-of-type + * {
+  margin-top: 1em;
 }
 /*
 Desktop:

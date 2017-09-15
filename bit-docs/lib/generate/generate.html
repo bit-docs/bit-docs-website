@@ -3,12 +3,13 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
+	source: docs/modules/bit-docs/lib/generate/generate.js
 	@module bit-docs/lib/generate/generate
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BitDocs - bit-docs/lib/generate/generate</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../../static/bundles/bit-docs-site/static.css">
@@ -69,7 +70,8 @@
            						expanded">
 						<a class="module"
 							href="../../../bit-docs.html"
-							title="Find files, process them, and produce some sort of output.">
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
 							bit-docs
 						</a>
 						
@@ -90,8 +92,8 @@
            						">
 						<a class="typedef"
 							href="../../types/FileEventEmitter.html"
-							title="A node event emitter
-that emits an event for every file that should be processed.">
+							title="Node.js EventEmitter
+that emits an event for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -106,8 +108,7 @@ that emits an event for every file that should be processed.">
            						">
 						<a class="typedef"
 							href="../../types/docMap.html"
-							title="An object that contains every docObject keyed by the
-docObject&#x27;s name.">
+							title="An object that contains every docObject keyed by the docObject&#x27;s name.">
 							DocMap
 						</a>
 						
@@ -139,6 +140,21 @@ The following lists the important, near universal properties:">
            						
            						">
 						<a class="typedef"
+							href="../../types/fileSource.html"
+							title="A file&#x27;s serialized source as a string with characters escaped like \n.">
+							FileSource
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
 							href="../../types/generator.html"
 							title="A generator module should produce a function that takes the following shape.
 Generator modules are used to produce some form of documentation output.
@@ -157,41 +173,9 @@ packaged with bit-docs.">
            						
            						">
 						<a class="typedef"
-							href="../../types/processOptions.html"
-							title="An options object passed to several process methods.">
-							ProcessOptions
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="typedef"
-							href="../../types/tag.html"
-							title="The interface that tagCollection implements.
-Used for codeAndComment and code.
-Note: This is very likely to change to something better.">
-							Tag
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="typedef"
-							href="../../types/tagCollection.html"
-							title="">
-							TagCollection
+							href="../../types/processorCallback.html"
+							title="Callback passed to processors that can be used to add a new docObject to the docMap.">
+							ProcessorCallback
 						</a>
 						
 					</li>
@@ -237,8 +221,7 @@ Note: This is very likely to change to something better.">
            						">
 						<a class="module"
 							href="../process/file.html"
-							title="Processes a file&#x27;s source. Adds created docObjects to the
-docMap.">
+							title="Processes a file&#x27;s source using any registered processors.">
 							./lib/process/file
 						</a>
 						
@@ -388,7 +371,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../../bit-docs-js.html"
-							title="Tags, templates, and basic styles for JavaScript.">
+							title="Plugin to process .js files and help document JavaScript code.">
 							bit-docs-js
 						</a>
 						
@@ -566,8 +549,7 @@ generated.</p>
 an output for documentation. The default generator is &quot;html&quot; which is
 handled by <a href="../../../bit-docs-generate-html.html" title="Generates HTML for a docMap and handles the html hook.">bit-docs-generate-html</a>.</p>
 <p>You can specify other modules which will be passed a promise containing the
-<a href="../../types/docMap.html" title="An object that contains every docObject keyed by the
-docObject's name.">DocMap</a> and the <code>siteConfig</code> and be expected to return a
+<a href="../../types/docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a> and the <code>siteConfig</code> and be expected to return a
 promise that resolves when they are complete.</p>
 
                   </div>
@@ -595,9 +577,9 @@ file matched by <code>siteConfig.glob</code> is changed.</p>
   
   <div class="returns">
   	<h3 class="returns-title">Returns</h3>
-  	<p> <code>{Promise}</code>: <p>A promise that resolves when the documentation has been
+  	 <code>{Promise}</code>: <p>A promise that resolves when the documentation has been
 successfully created.</p>
-</p>
+
   </div>
   
 

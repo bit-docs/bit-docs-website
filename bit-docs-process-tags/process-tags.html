@@ -3,12 +3,13 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
+	source: docs/modules/bit-docs-process-tags/process-tags.js
 	@module bit-docs-process-tags/process-tags
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BitDocs - bit-docs-process-tags/process-tags</title>
 	
 	<link rel="stylesheet" type="text/css" href="../static/bundles/bit-docs-site/static.css">
@@ -69,7 +70,8 @@
            						">
 						<a class="module"
 							href="../bit-docs.html"
-							title="Find files, process them, and produce some sort of output.">
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
 							bit-docs
 						</a>
 						
@@ -189,7 +191,7 @@
            						">
 						<a class="module"
 							href="../bit-docs-js.html"
-							title="Tags, templates, and basic styles for JavaScript.">
+							title="Plugin to process .js files and help document JavaScript code.">
 							bit-docs-js
 						</a>
 						
@@ -240,6 +242,114 @@
 						
 							
 	<ul>
+		
+			
+				
+					<li>
+						<span>types</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="types/processTagsCommand.html"
+							title="Return type from tag.add that is a process-tags command.">
+							ProcessTagsCommand
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="types/processTagsOptions.html"
+							title="Parameter type expected by process-tags.">
+							ProcessTagsOptions
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="types/processTagsStack.html"
+							title="Stack of data in process-tags that
+tags manipulate using
+processTagsCommand.">
+							ProcessTagsStack
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="types/tag.html"
+							title="tags add information to the new
+docObject created by process-tags
+when processing a tagBlock.">
+							Tag
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="types/tagBlock.html"
+							title="Array of lines that represent individual tags.">
+							TagBlock
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="types/tagCollection.html"
+							title="A collection of tags.">
+							TagCollection
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
 		
 			
 				
@@ -473,11 +583,15 @@ docObject will be displayed under the the parent in the navigation.">
     <code>processTags(options, callback)</code>
   </h2>
 
-  <p>Processes a comment and produces a <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+  <p>Use this module to process a <a href="types/tagBlock.html" title="Array of lines that represent individual tags.">TagBlock</a> and use
+any matching <a href="types/tag.html" title="tags add information to the new
+docObject created by process-tags
+when processing a tagBlock.">Tag</a> in the
+<a href="types/tagCollection.html" title="A collection of tags.">TagCollection</a> to further process the line and
+return a new <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">DocObject</a> from the tags
-found.</p>
+The following lists the important, near universal properties:">DocObject</a>.</p>
 
 
   
@@ -485,27 +599,32 @@ found.</p>
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>options</b> <code>{<a href="../bit-docs/types/processOptions.html" title="An options object passed to several process methods.">ProcessOptions</a>}</code>: <p>An options object that
-contains the code and comment to process.</p>
+          <li><b>options</b> <code>{<a href="types/processTagsOptions.html" title="Parameter type expected by process-tags.">ProcessTagsOptions</a>}</code>: <p>The block to process and the <a href="types/tagCollection.html" title="A collection of tags.">TagCollection</a>.</p>
+<p>Notable options:</p>
+<ul>
+<li><code>tags</code>: <a href="types/tagCollection.html" title="A collection of tags.">TagCollection</a> to draw from.</li>
+<li><code>comment</code>: <a href="types/tagBlock.html" title="Array of lines that represent individual tags.">TagBlock</a> being processed.</li>
+</ul>
 </li>
             
               
             
         
-          <li><b>callback</b> <code>{function(<a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+          <li><b>callback</b> <code>{<a href="../bit-docs/types/processorCallback.html" title="Callback passed to processors that can be used to add a new docObject to the docMap.">ProcessorCallback</a>(<a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
 The following lists the important, near universal properties:">newDoc</a>, <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">newScope</a>)}</code>: <p>A function that is called back with a <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
+The following lists the important, near universal properties:">newScope</a>)}</code>: <p>Callback to call when done processing.</p>
+<p>The new <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">DocObject</a> created from the code and
-the scope <code>docObject</code>. If no <a href="../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> is created, <code>newDoc</code> will be null.</p>
+The following lists the important, near universal properties:">DocObject</a> might be null if no <a href="types/tag.html" title="tags add information to the new
+docObject created by process-tags
+when processing a tagBlock.">Tag</a>s
+in the <a href="types/tagCollection.html" title="A collection of tags.">TagCollection</a> matched a line in the
+<a href="types/tagBlock.html" title="Array of lines that represent individual tags.">TagBlock</a>.</p>
 </li>
             
               
@@ -524,10 +643,16 @@ The following lists the important, near universal properties:">DocObject</a> is 
 			
 			
 				<section class="body">
-    <h2>Processing rules</h2>
-<p>The processing rules can be found in the <a href="../bit-docs/types/tag.html" title="The interface that tagCollection implements.
-Used for codeAndComment and code.
-Note: This is very likely to change to something better.">Tag interface</a>.</p>
+    <h2>Use</h2>
+<p>This module manages a <a href="types/processTagsStack.html" title="Stack of data in process-tags that
+tags manipulate using
+processTagsCommand.">ProcessTagsStack</a> using
+<a href="types/processTagsCommand.html" title="Return type from tag.add that is a process-tags command.">ProcessTagsCommand</a> commands.</p>
+<p>Plugins add to the <a href="types/tagCollection.html" title="A collection of tags.">TagCollection</a> using the
+<code>tags</code> hook so the <a href="types/tag.html" title="tags add information to the new
+docObject created by process-tags
+when processing a tagBlock.">Tag</a> processing rules are applied when
+processing blocks.</p>
 
 </section>
 
@@ -539,7 +664,7 @@ Note: This is very likely to change to something better.">Tag interface</a>.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs-process-tags/process-tags","parent":"bit-docs-process-tags/modules","src":{"line":7,"codeLine":30,"path":"docs/modules/bit-docs-process-tags/process-tags.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processTags(options, callback)","description":"\n\nProcesses a comment and produces a [bit-docs/types/docObject] from the tags\nfound.\n","params":[{"types":[{"type":"bit-docs/types/processOptions"}],"name":"options","description":"An options object that\ncontains the code and comment to process.\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a [bit-docs/types/docObject] created from the code and\nthe scope `docObject`. If no [bit-docs/types/docObject] is created, `newDoc` will be null.\n"}]}],"_curParam":{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"types":[{"type":"bit-docs/types/docObject"}],"name":"newDoc"},{"types":[{"type":"bit-docs/types/docObject"}],"name":"newScope"}]}],"name":"callback","description":"\n\nA function that is called back with a [bit-docs/types/docObject] created from the code and\nthe scope `docObject`. If no [bit-docs/types/docObject] is created, `newDoc` will be null.\n"},"comment":" ","pathToRoot":"../.."};
+		var docObject = {"type":"module","name":"bit-docs-process-tags/process-tags","parent":"bit-docs-process-tags/modules","src":{"line":7,"codeLine":46,"path":"docs/modules/bit-docs-process-tags/process-tags.js"},"description":"\n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processTags(options, callback)","description":"\n\nUse this module to process a [bit-docs-process-tags/types/tagBlock] and use\nany matching [bit-docs-process-tags/types/tag] in the\n[bit-docs-process-tags/types/tagCollection] to further process the line and\nreturn a new [bit-docs/types/docObject].\n","params":[{"types":[{"type":"bit-docs-process-tags/types/processTagsOptions"}],"name":"options","description":"\n\nThe block to process and the [bit-docs-process-tags/types/tagCollection].\n\nNotable options:\n\n- `tags`: [bit-docs-process-tags/types/tagCollection] to draw from.\n- `comment`: [bit-docs-process-tags/types/tagBlock] being processed.\n"},{"types":[{"type":"bit-docs/types/processorCallback"}],"name":"callback","description":"\n\nCallback to call when done processing.\n\nThe new [bit-docs/types/docObject] might be null if no [bit-docs-process-tags/types/tag]s\nin the [bit-docs-process-tags/types/tagCollection] matched a line in the\n[bit-docs-process-tags/types/tagBlock].\n"}]}],"_curParam":{"types":[{"type":"bit-docs/types/processorCallback"}],"name":"callback","description":"\n\nCallback to call when done processing.\n\nThe new [bit-docs/types/docObject] might be null if no [bit-docs-process-tags/types/tag]s\nin the [bit-docs-process-tags/types/tagCollection] matched a line in the\n[bit-docs-process-tags/types/tagBlock].\n"},"comment":" ","pathToRoot":"../.."};
 	</script>
 
 	

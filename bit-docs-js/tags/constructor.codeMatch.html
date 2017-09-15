@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: docs/modules/bit-docs-js/tags/constructor.js
+	@function bit-docs-js/tags/constructor.codeMatch
+######################################################################## -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BitDocs - bit-docs-js/tags/constructor.codeMatch</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
+	
+</head>
+
+<body>
+	<header></header>
+	<div class="content">
+	
+		<nav class="sidebar">
+	
+		
+			<ul>
+				<li class="">
+					<a class="home" href="../../index.html" title="Home">
+						Home
+					</a>
+				</li>
+			</ul>
+		
+		
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="page"
+							href="../../guides.html"
+							title="These guides are here to help you:">
+							Guides
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="page"
+							href="../../plugins.html"
+							title="Here you will find plugins maintained by the bit-docs organization.">
+							Plugin APIs
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs.html"
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
+							bit-docs
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-dev.html"
+							title="General development tags.">
+							bit-docs-dev
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-docjs-theme.html"
+							title="The old DocumentJS theme.">
+							bit-docs-docjs-theme
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-generate-html.html"
+							title="Generates HTML for a docMap and handles the html hook.">
+							bit-docs-generate-html
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-generate-readme.html"
+							title="Generates a readme from other docs.">
+							bit-docs-generate-readme
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-glob-finder.html"
+							title="Finds files for passing to the bit-docs processor.">
+							bit-docs-glob-finder
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-html-highlight-line.html"
+							title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">
+							bit-docs-html-highlight-line
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-html-toc.html"
+							title="Injects a table of contents for the page into an HTML element.">
+							bit-docs-html-toc
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="../../bit-docs-js.html"
+							title="Plugin to process .js files and help document JavaScript code.">
+							bit-docs-js
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li>
+						<span>types</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/codeLine.html"
+							title="String of characters until newline.">
+							CodeLine
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/codeTag.html"
+							title="tag with codeMatch, code and codeScope
+tacked on.">
+							CodeTag
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/codeTagBlock.html"
+							title="For .js files, bit-docs-js will find all block comments (/** until
+*/), remove leading *s and whitespace, and pass
+codeTagBlock to codeAndComment.">
+							CodeTagBlock
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../types/processCodeOptions.html"
+							title="processTagsOptions with codeLine tacked on.">
+							ProcessCodeOptions
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>templates</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../templates/signature.mustache.html"
+							title="The function signature template.">
+							./signature.mustache
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>tags</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="constructor"
+							href="../tag/class.html"
+							title="Deprecated tag. Use constructor instead.">
+							@class
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="constructor"
+							href="../tag/codeend.html"
+							title="Stops a code block.">
+							@codeend
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="constructor"
+							href="../tag/codestart.html"
+							title="Starts a code block.">
+							@codestart
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="constructor"
+							href="../tag/constructor.html"
+							title="Document a constructor function.">
+							@constructor
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="constructor"
+							href="../tag/function.html"
+							title="Specifies the comment block is for a function. To specify function parameters, use param.">
+							@function
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="constructor"
+							href="../tag/module.html"
+							title="Declares the export value for a module.">
+							@module
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="option.html"
+							title="Describes a property of the object, or an argument of the function, that was
+specified in an param tag.">
+							./option
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="param.html"
+							title="Specifies parameter information for function or
+signature.">
+							./param
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="property.html"
+							title="Documents a property of a parent object.">
+							./property
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="prototype.html"
+							title="Declares that property and function
+tags belong to the preceeding function&#x27;s prototype
+object.">
+							./prototype
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="return.html"
+							title="Describes a function&#x27;s return value.">
+							./return
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="signature.html"
+							title="Specifies a signature for a @function but can
+work with any other tag.">
+							./signature
+						</a>
+						
+					</li>
+				
+			
+		
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="typedef.html"
+							title="Declares an alias for a more complex type. That alias can be used in
+TYPE declarations.">
+							./typedef
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>static</span>
+						
+
+					</li>
+				
+			
+		
+			
+				
+					<li>
+						<span>modules</span>
+						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../bit-docs.html"
+							title="Register hooks to add tags, templates, and basic styles useful for documenting JavaScript.">
+							./bit-docs
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../process/code.html"
+							title="Process a line of code to add properties on a docObject.">
+							./process/code
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../process/codeAndComment.html"
+							title="">
+							./process/codeAndComment
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="class.html"
+							title="Deprecated. Use constructor instead.">
+							./tags/class
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="codeend.html"
+							title="Use this module to add the codeend tag.">
+							./tags/codeend
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="codestart.html"
+							title="Use this module to add the codestart tag.">
+							./tags/codestart
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						parent
+           						expanded">
+						<a class="module"
+							href="constructor.html"
+							title="Use this module to add the constructor tag.">
+							./tags/constructor
+						</a>
+						
+							
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="function"
+							href="constructor.add.html"
+							title="bit-docs-js/tags/constructor.add">
+							bit-docs-js/tags/constructor.add
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="function"
+							href="constructor.code.html"
+							title="bit-docs-js/tags/constructor.code">
+							bit-docs-js/tags/constructor.code
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="function"
+							href="constructor.codeMatch.html"
+							title="bit-docs-js/tags/constructor.codeMatch">
+							bit-docs-js/tags/constructor.codeMatch
+						</a>
+						
+							
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="property"
+							href="constructor.codeScope.html"
+							title="codeTag.codeScope set true for constructor.">
+							bit-docs-js/tags/constructor.codeScope
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="function.html"
+							title="Module that implements the function tag.">
+							./tags/function
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="module.html"
+							title="Module that implements the module tag.">
+							./tags/module
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../my-project/lib/index.html"
+							title="Main lib module.">
+							my-project/lib/index
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-prettify.html"
+							title="A bit-docs plugin that makes source-code snippets in HTML prettier.">
+							bit-docs-prettify
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-process-mustache.html"
+							title="Process content in mustache files.">
+							bit-docs-process-mustache
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-process-tags.html"
+							title="Processes tags for a docMap.">
+							bit-docs-process-tags
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-demo.html"
+							title="Provides an @demo tag for embedding HTML, CSS, and JS in an iframe.">
+							bit-docs-tag-demo
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-package.html"
+							title="Adds a @package tag for use in bit-docs.">
+							bit-docs-tag-package
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-tag-sourceref.html"
+							title="Adds a @sourceref tag for use in bit-docs.">
+							bit-docs-tag-sourceref
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../../bit-docs-type-annotate.html"
+							title="Utilities for parsing closure type annotations.">
+							bit-docs-type-annotate
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+						
+					</li>
+				
+			
+		
+	</ul>
+
+
+	
+</nav>
+
+	
+	<article class="main">
+		
+			<section class="title">
+	<h1>codeMatch <code>function</code></h1>
+</section>
+
+		
+
+		
+			
+		
+
+		
+			
+				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>codeMatch(codeLine)</code>
+  </h2>
+
+  <p><a href="../types/codeTag.codeMatch.html" title="Checks if codeTag.code of the same codeTag instance can/should handle a passed
+codeLine.">CodeTag.codeMatch</a> for <a href="../tag/constructor.html" title="Document a constructor function.">@constructor</a>.</p>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>codeLine</b> <code>{String}</code>: <p>String of characters until newline.</p>
+<p>For example:</p>
+<pre><code class="language-js">jQuery.extend( &quot;myObj&quot;, {
+</code></pre>
+<p>Will be matched against this regex:</p>
+<pre><code class="language-js">/([\w\.\$]+?).extend\(\s*[&quot;']([^&quot;']*)[&quot;']/ // code match
+</code></pre>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	 <code>{Boolean}</code>: <p><code>true</code> if string matched regex, <code>false</code> if not.</p>
+
+  </div>
+  
+
+  
+</div>
+
+				
+			
+			
+		
+	</article>
+</div>
+
+	<footer></footer>
+
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"bit-docs-js/tags/constructor.codeMatch","parent":"bit-docs-js/tags/constructor","src":{"line":25,"codeLine":46,"path":"docs/modules/bit-docs-js/tags/constructor.js"},"description":"","signatures":[{"code":"codeMatch(codeLine)","description":"\n\n[bit-docs-js/types/codeTag.codeMatch] for [bit-docs-js/tag/constructor].\n","params":[{"types":[{"type":"String"}],"name":"codeLine","description":"String of characters until newline.\n\nFor example:\n\n```js\njQuery.extend( \"myObj\", {\n```\n\nWill be matched against this regex:\n\n```js\n/([\\w\\.\\$]+?).extend\\(\\s*[\"']([^\"']*)[\"']/ // code match\n```\n"}],"returns":{"types":[{"type":"Boolean"}],"description":"`true` if string matched regex, `false` if not.\n "}}],"_curParam":{"types":[{"type":"String"}],"name":"codeLine","description":"String of characters until newline.\n\nFor example:\n\n```js\njQuery.extend( \"myObj\", {\n```\n\nWill be matched against this regex:\n\n```js\n/([\\w\\.\\$]+?).extend\\(\\s*[\"']([^\"']*)[\"']/ // code match\n```\n"},"_curReturn":{"types":[{"type":"Boolean"}],"description":"`true` if string matched regex, `false` if not.\n "},"pathToRoot":"../../.."};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/bit-docs-site/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="bit-docs-site/static"
+				src="../../static/steal.production.js"></script>
+	
+</body>
+
+</html>

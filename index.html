@@ -3,12 +3,13 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
+	source: docs/bit-docs/BitDocs.md
 	@page BitDocs
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BitDocs - BitDocs</title>
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
@@ -101,8 +102,11 @@
 <ul>
 <li><a href="bit-docs-dev/tags/author.html" title="Describes the author of a docObject.">@author</a></li>
 <li><a href="bit-docs-dev/tags/deprecated.html" title="Marks a comment as deprecated.">@deprecated</a></li>
-<li><a href="bit-docs-dev/tags/group.html" title="Declares that other tags belong to a group within the current
-docObject.">@group</a></li>
+<li><a href="bit-docs-dev/tags/group.html" title="Creates a docObject without a generated page that can be
+linked to and with parent inherently set to the current
+docObject.
+Set the parent of other docObjects to the group NAME
+for better hierarchical organization in places like navigation menus.">@group</a></li>
 <li><a href="bit-docs-dev/tags/iframe.html" title="Adds an iframe to the page. It can be added to the
 @body or any other tags that accept a
 description.">@iframe</a></li>
@@ -123,10 +127,10 @@ belong to part of the application structure.">@page</a></li>
 <ul>
 <li><a href="bit-docs-html-toc/tags/outline.html" title="Controls the outline behavior.">@outline</a></li>
 </ul></li>
-<li><a href="bit-docs-js.html" title="Tags, templates, and basic styles for JavaScript.">bit-docs-js</a>
+<li><a href="bit-docs-js.html" title="Plugin to process .js files and help document JavaScript code.">bit-docs-js</a>
 <ul>
-<li><a href="bit-docs-js/tags/function.html" title="Specifies the comment block is for a function. Use  param to specify the parameters of a function.">@function</a></li>
-<li><a href="bit-docs-js/tags/module.html" title="Declares the export value for a module.">@module</a></li>
+<li><a href="bit-docs-js/tags/function.html" title="Module that implements the function tag.">bit-docs-js/tags/function</a></li>
+<li><a href="bit-docs-js/tags/module.html" title="Module that implements the module tag.">bit-docs-js/tags/module</a></li>
 <li><a href="bit-docs-js/tags/option.html" title="Describes a property of the object, or an argument of the function, that was
 specified in an param tag.">@option</a></li>
 <li><a href="bit-docs-js/tags/param.html" title="Specifies parameter information for function or
@@ -165,12 +169,12 @@ docObject will be displayed under the the parent in the navigation.">@parent</a>
 </ul>
 <h3>Plugins that provide types:</h3>
 <ul>
-<li><a href="bit-docs.html" title="Find files, process them, and produce some sort of output.">bit-docs</a>
+<li><a href="bit-docs.html" title="This package provides the command-line interface and and plugin framework for
+bit-docs.">bit-docs</a>
 <ul>
-<li><a href="bit-docs/types/FileEventEmitter.html" title="A node event emitter
-that emits an event for every file that should be processed.">FileEventEmitter</a></li>
-<li><a href="bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the
-docObject's name.">DocMap</a></li>
+<li><a href="bit-docs/types/FileEventEmitter.html" title="Node.js EventEmitter
+that emits an event for every file found.">FileEventEmitter</a></li>
+<li><a href="bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a></li>
 <li><a href="bit-docs/types/docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
@@ -179,8 +183,8 @@ The following lists the important, near universal properties:">DocObject</a></li
 Generator modules are used to produce some form of documentation output.
 bit-docs-generate-html is the default and currently only generator
 packaged with bit-docs.">Generator</a></li>
-<li><a href="bit-docs/types/processOptions.html" title="An options object passed to several process methods.">ProcessOptions</a></li>
-<li><a href="bit-docs/types/tagCollection.html" title="">TagCollection</a></li>
+<li>[bit-docs/types/processOptions]</li>
+<li>[bit-docs/types/tagCollection]</li>
 </ul></li>
 <li><a href="bit-docs-generate-html.html" title="Generates HTML for a docMap and handles the html hook.">bit-docs-generate-html</a>
 <ul>
@@ -214,7 +218,7 @@ type expressions.">typeData</a></li>
 <li><a href="bit-docs-generate-html.html" title="Generates HTML for a docMap and handles the html hook.">bit-docs-generate-html</a></li>
 <li><a href="bit-docs-html-highlight-line.html" title="Adds a @highlight tag. Needs to be used after bit-docs-prettify.">bit-docs-html-highlight-line</a></li>
 <li><a href="bit-docs-html-toc.html" title="Injects a table of contents for the page into an HTML element.">bit-docs-html-toc</a></li>
-<li><a href="bit-docs-js.html" title="Tags, templates, and basic styles for JavaScript.">bit-docs-js</a></li>
+<li><a href="bit-docs-js.html" title="Plugin to process .js files and help document JavaScript code.">bit-docs-js</a></li>
 <li><a href="bit-docs-prettify.html" title="A bit-docs plugin that makes source-code snippets in HTML prettier.">bit-docs-prettify</a></li>
 </ul>
 

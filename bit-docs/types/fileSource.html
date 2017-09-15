@@ -3,13 +3,14 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
-	@typedef bit-docs/types/tagCollection
+	source: docs/modules/bit-docs/docs/api/types/fileSource.md
+	@typedef bit-docs/types/fileSource
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - TagCollection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BitDocs - FileSource</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -69,7 +70,8 @@
            						expanded">
 						<a class="module"
 							href="../../bit-docs.html"
-							title="Find files, process them, and produce some sort of output.">
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
 							bit-docs
 						</a>
 						
@@ -90,8 +92,8 @@
            						">
 						<a class="typedef"
 							href="FileEventEmitter.html"
-							title="A node event emitter
-that emits an event for every file that should be processed.">
+							title="Node.js EventEmitter
+that emits an event for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -106,8 +108,7 @@ that emits an event for every file that should be processed.">
            						">
 						<a class="typedef"
 							href="docMap.html"
-							title="An object that contains every docObject keyed by the
-docObject&#x27;s name.">
+							title="An object that contains every docObject keyed by the docObject&#x27;s name.">
 							DocMap
 						</a>
 						
@@ -128,6 +129,24 @@ templates and the client.
 The following lists the important, near universal properties:">
 							DocObject
 						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="current
+           						parent
+           						expanded">
+						<a class="typedef"
+							href="fileSource.html"
+							title="A file&#x27;s serialized source as a string with characters escaped like \n.">
+							FileSource
+						</a>
+						
+							
+
 						
 					</li>
 				
@@ -157,45 +176,10 @@ packaged with bit-docs.">
            						
            						">
 						<a class="typedef"
-							href="processOptions.html"
-							title="An options object passed to several process methods.">
-							ProcessOptions
+							href="processorCallback.html"
+							title="Callback passed to processors that can be used to add a new docObject to the docMap.">
+							ProcessorCallback
 						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="typedef"
-							href="tag.html"
-							title="The interface that tagCollection implements.
-Used for codeAndComment and code.
-Note: This is very likely to change to something better.">
-							Tag
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="current
-           						parent
-           						expanded">
-						<a class="typedef"
-							href="tagCollection.html"
-							title="">
-							TagCollection
-						</a>
-						
-							
-
 						
 					</li>
 				
@@ -237,8 +221,7 @@ Note: This is very likely to change to something better.">
            						">
 						<a class="module"
 							href="../lib/process/file.html"
-							title="Processes a file&#x27;s source. Adds created docObjects to the
-docMap.">
+							title="Processes a file&#x27;s source using any registered processors.">
 							./lib/process/file
 						</a>
 						
@@ -388,7 +371,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../bit-docs-js.html"
-							title="Tags, templates, and basic styles for JavaScript.">
+							title="Plugin to process .js files and help document JavaScript code.">
 							bit-docs-js
 						</a>
 						
@@ -519,7 +502,7 @@ docMap.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>TagCollection <code>typedef</code></h1>
+	<h1>FileSource <code>typedef</code></h1>
 </section>
 
 		
@@ -527,7 +510,8 @@ docMap.">
 		
 			
 				<section class="description">
-    
+    <p>A file's serialized source as a string with characters escaped like <code>\n</code>.</p>
+
 </section>
 
 			
@@ -538,7 +522,7 @@ docMap.">
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>Object</code>
+    <code>String</code>
   </h2>
 
   
@@ -548,23 +532,6 @@ docMap.">
   
 
   
-  <div class="options">
-  <h3 class="options-title">Options</h3>
-    <ul>
-    
-      <li>
-        <b></b> <code>{Object&lt;String,<a href="tag.html" title="The interface that tagCollection implements.
-Used for codeAndComment and code.
-Note: This is very likely to change to something better.">Tag</a>&gt;}</code>:
-        <p>A collection of tags to be used by <a href="../lib/process/file.html" title="Processes a file's source. Adds created docObjects to the
-docMap.">bit-docs/lib/process/file</a> to process
-comments and code.</p>
-
-      </li>
-    
-    </ul>
-  </div>
-  
 </div>
 
 				
@@ -572,26 +539,17 @@ comments and code.</p>
 			
 				<section class="body">
     <h2>Use</h2>
-<p>A tag adds additional information to the comment being processed.</p>
-<p>For example, if you want the current comment to include the author, include
-an <a href="../../bit-docs-dev/tags/author.html" title="Describes the author of a docObject.">@author</a> tag.</p>
-<h2>Creating your own tag</h2>
-<p>To create a tag, you need to add to register on the <code>tags</code> hook in your
-plugins <code>bit-docs.js</code> file an object with your tag containing an add and an
-optional <code>addMore</code> method like:</p>
-<pre><code>var tags = {
-    &quot;mytag&quot;: {
-        addMore: function (line, last) { ... },
-        add: function (line) { ... }
-    }
-};
-
-for(var name in tags) {
-    tags[name].name = name;
-}
-
-bitDocs.register(&quot;tags&quot;, tags);
-</code></pre>
+<p><a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a> is received by <a href="../lib/process/process.html" title="Processes a FileEventEmitter and returns a promise.">bit-docs/lib/process/process</a>
+from <a href="FileEventEmitter.html" title="Node.js EventEmitter
+that emits an event for every file found.">FileEventEmitter</a> and passed to
+<a href="../lib/process/file.html" title="Processes a file's source using any registered processors.">bit-docs/lib/process/file</a> which passes <a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a> to the
+processors in plugins like <a href="../../bit-docs-process-tags.html" title="Processes tags for a docMap.">bit-docs-process-tags</a> and <a href="../../bit-docs-js.html" title="Plugin to process .js files and help document JavaScript code.">bit-docs-js</a> that do
+the work of splitting on newlines as they see fit to convert
+<a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a> into <a href="../../bit-docs-process-tags/types/tagBlock.html" title="Array of lines that represent individual tags.">TagBlock</a> or
+<a href="../../bit-docs-js/types/codeTagBlock.html" title="For .js files, bit-docs-js will find all block comments (/** until
+*/), remove leading *s and whitespace, and pass
+codeTagBlock to codeAndComment.">CodeTagBlock</a>s. Processors you make might choose to do
+something completely different with <a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a>.</p>
 
 </section>
 
@@ -603,7 +561,7 @@ bitDocs.register(&quot;tags&quot;, tags);
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/tagCollection.md"},"description":"\n","parent":"bit-docs/types","type":"typedef","title":"TagCollection","types":[{"type":"Object","options":[{"description":"\n\nA collection of tags to be used by [bit-docs/lib/process/file] to process\ncomments and code.\n","types":[{"type":"Object","template":[{"types":[{"type":"String"}]},{"types":[{"type":"bit-docs/types/tag"}]}]}]}]}],"name":"bit-docs/types/tagCollection","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileSource.md"},"description":"A file's serialized source as a string with characters escaped like `\\n`.\n\n","parent":"bit-docs/types","type":"typedef","title":"FileSource","types":[{"type":"String"}],"name":"bit-docs/types/fileSource","comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

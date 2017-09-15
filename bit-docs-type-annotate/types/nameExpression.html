@@ -3,12 +3,13 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
+	source: docs/modules/bit-docs-type-annotate/lib/namer.js
 	@typedef bit-docs-type-annotate/types/nameExpression
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BitDocs - NAME-EXPRESSION</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
@@ -69,7 +70,8 @@
            						">
 						<a class="module"
 							href="../../bit-docs.html"
-							title="Find files, process them, and produce some sort of output.">
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
 							bit-docs
 						</a>
 						
@@ -189,7 +191,7 @@
            						">
 						<a class="module"
 							href="../../bit-docs-js.html"
-							title="Tags, templates, and basic styles for JavaScript.">
+							title="Plugin to process .js files and help document JavaScript code.">
 							bit-docs-js
 						</a>
 						
@@ -456,22 +458,22 @@ signature.">@option</a> tags.</p>
               
             
         
-          <li><b>(args...)</b> <code>{String}</code>: <p>If <code>name</code> is a function,
-<code>()</code> provides the names of each argument.</p>
+          <li><b>(args...)</b> <code>{String}</code>: <p>If <code>name</code> is a function, <code>()</code> provides the
+names of each argument.</p>
 </li>
             
               
             
         
-          <li><b>'...'</b> <code>{String}</code>: <p>An argument is variable. The argument can
-be given 0 or more times.</p>
+          <li><b>'...'</b> <code>{String}</code>: <p>An argument is variable. The argument can be given 0
+or more times.</p>
 </li>
             
               
             
         
-          <li><b>=default</b> <code>{String}</code>: <p><code>=default</code> provides
-the default value for the type. For example:</p>
+          <li><b>=default</b> <code>{String}</code>: <p><code>=default</code> provides the default value for the
+type. For example:</p>
 <pre><code class="language-javascript">/**
  * @param {Number} [age=0]
  */
@@ -498,8 +500,10 @@ the default value for the type. For example:</p>
 <ul>
 <li><code>eventType</code> The param is named &quot;eventType&quot;.</li>
 <li><code>[eventType]</code> The param is optional.</li>
-<li><code>[eventType=&quot;change&quot;]</code> The param is optional and has a default value of &quot;change&quot;.</li>
-<li><code>handler(foo,bar)</code> The param is named &quot;handler&quot; and takes a foo and bar argument.</li>
+<li><code>[eventType=&quot;change&quot;]</code> The param is optional and has a default value of
+&quot;change&quot;.</li>
+<li><code>handler(foo,bar)</code> The param is named &quot;handler&quot; and takes a foo and bar
+argument.</li>
 </ul>
 
 </section>
@@ -512,7 +516,7 @@ the default value for the type. For example:</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"typedef","name":"bit-docs-type-annotate/types/nameExpression","parent":"bit-docs-type-annotate/types","src":{"line":4,"codeLine":54,"path":"docs/modules/bit-docs-type-annotate/lib/namer.js"},"description":"\nAdds the `name` and other properties to\n[bit-docs-type-annotate/types/valueData valueData] in using the\n[bit-docs-js/tags/param @param] or [bit-docs-js/tags/param @option] tags.\n","title":"NAME-EXPRESSION","types":[{"type":"STRING"}],"signatures":[{"code":"[name(args...)=default]","description":"\n\nExample:\n\n    [success(item)=updater]\n","params":[{"types":[{"type":"String"}],"name":"name","description":"\n\nProvides the name of the type.\n"},{"types":[{"type":"String"}],"name":"[]","description":"\n\nIndicates that the option or param is optional.\n"},{"types":[{"type":"String"}],"name":"(args...)","description":"\nIf `name` is a function,\n`()` provides the names of each argument.\n\n"},{"types":[{"type":"String"}],"name":"'...'","description":"An argument is variable. The argument can\nbe given 0 or more times.\n"},{"types":[{"type":"String"}],"name":"=default","description":"`=default` provides\nthe default value for the type. For example:\n\n```javascript\n/**\n * @param {Number} [age=0]\n */\n```"}]}],"_curParam":{"types":[{"type":"String"}],"name":"=default","description":"`=default` provides\nthe default value for the type. For example:\n\n```javascript\n/**\n * @param {Number} [age=0]\n */\n```"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"type":"typedef","name":"bit-docs-type-annotate/types/nameExpression","parent":"bit-docs-type-annotate/types","src":{"line":4,"codeLine":54,"path":"docs/modules/bit-docs-type-annotate/lib/namer.js"},"description":"\nAdds the `name` and other properties to\n[bit-docs-type-annotate/types/valueData valueData] in using the\n[bit-docs-js/tags/param @param] or [bit-docs-js/tags/param @option] tags.\n","title":"NAME-EXPRESSION","types":[{"type":"STRING"}],"signatures":[{"code":"[name(args...)=default]","description":"\n\nExample:\n\n    [success(item)=updater]\n","params":[{"types":[{"type":"String"}],"name":"name","description":"\n\nProvides the name of the type.\n"},{"types":[{"type":"String"}],"name":"[]","description":"\n\nIndicates that the option or param is optional.\n"},{"types":[{"type":"String"}],"name":"(args...)","description":"If `name` is a function, `()` provides the\nnames of each argument.\n"},{"types":[{"type":"String"}],"name":"'...'","description":"An argument is variable. The argument can be given 0\nor more times.\n"},{"types":[{"type":"String"}],"name":"=default","description":"`=default` provides the default value for the\ntype. For example:\n\n```javascript\n/**\n * @param {Number} [age=0]\n */\n```"}]}],"_curParam":{"types":[{"type":"String"}],"name":"=default","description":"`=default` provides the default value for the\ntype. For example:\n\n```javascript\n/**\n * @param {Number} [age=0]\n */\n```"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

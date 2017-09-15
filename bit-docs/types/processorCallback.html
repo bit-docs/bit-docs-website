@@ -3,13 +3,14 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: [object Object]
-	@typedef bit-docs/types/processOptions
+	source: docs/modules/bit-docs/docs/api/types/processorCallback.md
+	@typedef bit-docs/types/processorCallback
 ######################################################################## -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>BitDocs - ProcessOptions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BitDocs - ProcessorCallback</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../static/bundles/bit-docs-site/static.css">
 	
@@ -69,7 +70,8 @@
            						expanded">
 						<a class="module"
 							href="../../bit-docs.html"
-							title="Find files, process them, and produce some sort of output.">
+							title="This package provides the command-line interface and and plugin framework for
+bit-docs.">
 							bit-docs
 						</a>
 						
@@ -90,8 +92,8 @@
            						">
 						<a class="typedef"
 							href="FileEventEmitter.html"
-							title="A node event emitter
-that emits an event for every file that should be processed.">
+							title="Node.js EventEmitter
+that emits an event for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -106,8 +108,7 @@ that emits an event for every file that should be processed.">
            						">
 						<a class="typedef"
 							href="docMap.html"
-							title="An object that contains every docObject keyed by the
-docObject&#x27;s name.">
+							title="An object that contains every docObject keyed by the docObject&#x27;s name.">
 							DocMap
 						</a>
 						
@@ -139,6 +140,21 @@ The following lists the important, near universal properties:">
            						
            						">
 						<a class="typedef"
+							href="fileSource.html"
+							title="A file&#x27;s serialized source as a string with characters escaped like \n.">
+							FileSource
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
 							href="generator.html"
 							title="A generator module should produce a function that takes the following shape.
 Generator modules are used to produce some form of documentation output.
@@ -157,45 +173,13 @@ packaged with bit-docs.">
            						parent
            						expanded">
 						<a class="typedef"
-							href="processOptions.html"
-							title="An options object passed to several process methods.">
-							ProcessOptions
+							href="processorCallback.html"
+							title="Callback passed to processors that can be used to add a new docObject to the docMap.">
+							ProcessorCallback
 						</a>
 						
 							
 
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="typedef"
-							href="tag.html"
-							title="The interface that tagCollection implements.
-Used for codeAndComment and code.
-Note: This is very likely to change to something better.">
-							Tag
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="typedef"
-							href="tagCollection.html"
-							title="">
-							TagCollection
-						</a>
 						
 					</li>
 				
@@ -237,8 +221,7 @@ Note: This is very likely to change to something better.">
            						">
 						<a class="module"
 							href="../lib/process/file.html"
-							title="Processes a file&#x27;s source. Adds created docObjects to the
-docMap.">
+							title="Processes a file&#x27;s source using any registered processors.">
 							./lib/process/file
 						</a>
 						
@@ -388,7 +371,7 @@ docMap.">
            						">
 						<a class="module"
 							href="../../bit-docs-js.html"
-							title="Tags, templates, and basic styles for JavaScript.">
+							title="Plugin to process .js files and help document JavaScript code.">
 							bit-docs-js
 						</a>
 						
@@ -519,7 +502,7 @@ docMap.">
 	<article class="main">
 		
 			<section class="title">
-	<h1>ProcessOptions <code>typedef</code></h1>
+	<h1>ProcessorCallback <code>typedef</code></h1>
 </section>
 
 		
@@ -527,7 +510,10 @@ docMap.">
 		
 			
 				<section class="description">
-    <p>An options object passed to several process methods.</p>
+    <p>Callback passed to processors that can be used to add a new <a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">DocObject</a> to the <a href="docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>.</p>
 
 </section>
 
@@ -539,96 +525,62 @@ docMap.">
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>Object</code>
+    <code>function(<a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">newDoc</a>, <a href="docObject.html" title="An object that represents something that is documented.
+Any property added to a docObject is available to the
+templates and the client.
+The following lists the important, near universal properties:">newScope</a>)</code>
   </h2>
 
   
 
   
-
-  
-
-  
-  <div class="options">
-  <h3 class="options-title">Options</h3>
-    <ul>
-    
-      <li>
-        <b>tags</b> <code>{<a href="tagCollection.html" title="">TagCollection</a>}</code>:
-        <p>The tag collection to be used to process the comment.</p>
-
-      </li>
-    
-      <li>
-        <b>comment</b> <code>{String}</code>:
-        <p>The comment to be converted.</p>
-
-      </li>
-    
-      <li>
-        <b>scope</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>newDoc</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">DocObject</a>}</code>:
-        <p>A <a href="docObject.html" title="An object that represents something that is documented.
+The following lists the important, near universal properties:">DocObject</a>}</code>: <p><a href="docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">DocObject</a> that can be a parent to the current
-<a href="docObject.html" title="An object that represents something that is documented.
+The following lists the important, near universal properties:">DocObject</a> created from processing the block.</p>
+</li>
+            
+              
+            
+        
+          <li><b>newScope</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">DocObject</a>.</p>
-
-      </li>
-    
-      <li>
-        <b>docMap</b> <code>{<a href="docMap.html" title="An object that contains every docObject keyed by the
-docObject's name.">DocMap</a>}</code>:
-        <p>The map of all <a href="docObject.html" title="An object that represents something that is documented.
+The following lists the important, near universal properties:">DocObject</a>}</code>: <p><a href="docObject.html" title="An object that represents something that is documented.
 Any property added to a docObject is available to the
 templates and the client.
-The following lists the important, near universal properties:">DocObject</a>s.</p>
-
-      </li>
-    
-      <li>
-        <b>docObject</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>}</code>:
-        <p>If provided, this will be used
-as the <a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>. This is useful for adding properties to an
-existing object.</p>
-
-      </li>
-    
-      <li>
-        <b>code</b> <code>{String}</code>:
-        <p>The code immediately preceeding the comment.</p>
-
-      </li>
-    
-    </ul>
+The following lists the important, near universal properties:">DocObject</a> that will be used for scoping the next block.</p>
+</li>
+            
+              
+            
+        
+      </ol>
   </div>
+  
+
+  
+  <div class="returns">
+  	<h3 class="returns-title">Returns</h3>
+  	 <code>{undefined}</code>: 
+  </div>
+  
+
   
 </div>
 
 				
 			
-			
-				<section class="body">
-    <p>Some process methods that <a href="processOptions.html" title="An options object passed to several process methods.">ProcessOptions</a> is passed to:</p>
-<ul>
-<li><a href="../../bit-docs-js/process/code.html" title="Process a code hint into properties on a docObject.">bit-docs-js/process/code</a></li>
-<li><a href="../../bit-docs-js/process/codeAndComment.html" title="">bit-docs-js/process/codeAndComment</a></li>
-<li><a href="../../bit-docs-process-tags/process-tags.html" title="">bit-docs-process-tags/process-tags</a></li>
-</ul>
-
-</section>
-
 			
 		
 	</article>
@@ -637,7 +589,7 @@ existing object.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/processOptions.md"},"description":"\nAn options object passed to several process methods.\n","parent":"bit-docs/types","type":"typedef","title":"ProcessOptions","types":[{"type":"Object","options":[{"name":"tags","description":"\n\nThe tag collection to be used to process the comment.\n","types":[{"type":"bit-docs/types/tagCollection"}]},{"name":"comment","description":"\n\nThe comment to be converted.\n","types":[{"type":"String"}]},{"name":"scope","description":"\n\nA [bit-docs/types/docObject] that can be a parent to the current\n[bit-docs/types/docObject].\n","types":[{"type":"bit-docs/types/docObject"}]},{"name":"docMap","description":"\n\nThe map of all [bit-docs/types/docObject]s.\n","types":[{"type":"bit-docs/types/docMap"}]},{"name":"docObject","description":"If provided, this will be used\nas the [bit-docs/types/docObject]. This is useful for adding properties to an\nexisting object.\n","types":[{"type":"bit-docs/types/docObject"}],"optional":true},{"name":"code","description":"The code immediately preceeding the comment.\n","types":[{"type":"String"}],"optional":true}]}],"name":"bit-docs/types/processOptions","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/processorCallback.md"},"description":"Callback passed to processors that can be used to add a new [bit-docs/types/docObject] to the [bit-docs/types/docMap].\n\n","parent":"bit-docs/types","type":"typedef","title":"ProcessorCallback","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"newDoc","description":"\n  \n[bit-docs/types/docObject] created from processing the block.\n","types":[{"type":"bit-docs/types/docObject"}]},{"name":"newScope","description":"\n\n[bit-docs/types/docObject] that will be used for scoping the next block.\n","types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"bit-docs/types/processorCallback","pathToRoot":"../../.."};
 	</script>
 
 	

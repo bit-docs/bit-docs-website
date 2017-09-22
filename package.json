@@ -19,7 +19,8 @@
     "url": "git+https://github.com/bit-docs/website.git"
   },
   "scripts": {
-    "cache-bust": "rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static ./gh-pages",
+    "cache-bust": "npm run clean-dest && rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static",
+    "clean-dest": "rm -rf ${npm_package_bit_docs_dest:-./doc}",
     "bit-docs": "bit-docs",
     "gen": "bit-docs -d",
     "genf": "bit-docs -df",
@@ -38,7 +39,10 @@
   },
   "bit-docs": {
     "js": {
-      "extensions": ["js", "less"]
+      "extensions": [
+        "js",
+        "less"
+      ]
     },
     "dependencies": {
       "bit-docs-dev": "bit-docs/bit-docs-dev",

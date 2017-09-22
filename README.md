@@ -41,7 +41,9 @@ Now visit <https://bit-docs.github.io/bit-docs-website>
 ```shell
 available via `npm run-script`:
   cache-bust # Shortcut to clearing out bit-docs-generate-html cache without using (slow) forceBuild.
-    rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static ./gh-pages
+    npm run clean-dest && rm -rf ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/templates ./node_modules/bit-docs/lib/configure/node_modules/bit-docs-generate-html/site/static
+  clean-dest # Deletes the destination folder.
+    rm -rf ${npm_package_bit_docs_dest:-./doc}
   bit-docs   # Generates the website.
     bit-docs
   gen        # Generates the website with debug output.

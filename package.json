@@ -57,7 +57,7 @@
       "bit-docs-tag-sourceref": "*"
     },
     "glob": {
-      "pattern": "docs/**/bit-docs*/*.{js,md,mustache,less}",
+      "pattern": "docs/**/bit-docs*/**/*.{js,md,mustache,less}",
       "ignore": [
         "**/README.md",
         "**/LICENSE.md",

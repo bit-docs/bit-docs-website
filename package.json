@@ -35,7 +35,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "bit-docs": "*",
+    "bit-docs": "pre",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
@@ -46,16 +46,16 @@
       ]
     },
     "dependencies": {
-      "bit-docs-dev": "*",
-      "bit-docs-generate-html": "*",
-      "bit-docs-glob-finder": "*",
-      "bit-docs-html-toc": "*",
-      "bit-docs-js": "*",
-      "bit-docs-prettify": "*",
-      "bit-docs-html-highlight-line": "*",
-      "bit-docs-process-mustache": "*",
-      "bit-docs-tag-demo": "*",
-      "bit-docs-tag-sourceref": "*"
+      "bit-docs-dev": "pre",
+      "bit-docs-js": "pre",
+      "bit-docs-generate-html": "pre",
+      "bit-docs-glob-finder": "pre",
+      "bit-docs-html-toc": "pre",
+      "bit-docs-prettify": "pre",
+      "bit-docs-html-highlight-line": "pre",
+      "bit-docs-process-mustache": "latest",
+      "bit-docs-tag-demo": "pre",
+      "bit-docs-tag-sourceref": "pre"
     },
     "glob": {
       "pattern": "docs/**/bit-docs*/**/*.{js,md,mustache,less}",
@@ -69,6 +69,8 @@
         "**/test-*.md",
         "**/test.js",
         "docs/modules/node_modules/**/node_modules/**/*",
+        "docs/modules/node_modules/bit-docs-generate-html/site/{static,templates}/**/*",
+        "docs/modules/node_modules/bit-docs-prettify/temp/**/*",
         "**/templates/**/*.mustache"
       ],
       "follow": true

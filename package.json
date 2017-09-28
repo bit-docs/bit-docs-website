@@ -53,7 +53,7 @@
       "bit-docs-html-toc": "pre",
       "bit-docs-prettify": "pre",
       "bit-docs-html-highlight-line": "pre",
-      "bit-docs-process-mustache": "latest",
+      "bit-docs-process-mustache": "pre",
       "bit-docs-tag-demo": "pre",
       "bit-docs-tag-sourceref": "pre"
     },

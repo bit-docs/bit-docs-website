@@ -19,7 +19,7 @@
     "bit-docs-html-toc": "pre",
     "bit-docs-js": "pre",
     "bit-docs-prettify": "pre",
-    "bit-docs-process-mustache": "latest",
+    "bit-docs-process-mustache": "pre",
     "bit-docs-process-tags": "pre",
     "bit-docs-tag-demo": "pre",
     "bit-docs-tag-package": "pre",

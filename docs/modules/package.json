@@ -1,0 +1,29 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "Modules containing documentation files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bit-docs": "pre",
+    "bit-docs-dev": "pre",
+    "bit-docs-docjs-theme": "latest",
+    "bit-docs-generate-html": "pre",
+    "bit-docs-generate-readme": "pre",
+    "bit-docs-glob-finder": "pre",
+    "bit-docs-html-highlight-line": "pre",
+    "bit-docs-html-toc": "pre",
+    "bit-docs-js": "pre",
+    "bit-docs-prettify": "pre",
+    "bit-docs-process-mustache": "pre",
+    "bit-docs-process-tags": "pre",
+    "bit-docs-tag-demo": "pre",
+    "bit-docs-tag-package": "pre",
+    "bit-docs-tag-sourceref": "pre",
+    "bit-docs-type-annotate": "pre"
+  }
+}

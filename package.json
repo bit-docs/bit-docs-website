@@ -25,16 +25,14 @@
     "gen": "bit-docs -d",
     "genf": "bit-docs -df",
     "gh-pages": "gh-pages -d gh-pages",
-    "gsd": "git diff --submodule",
-    "gsl": "git log --graph --oneline -U0 --submodule | grep -E '^[*| /\\]+([0-9a-f]{7} |Submodule |> |$)'",
-    "gsu": "git submodule update --remote --merge",
-    "preinstall": "[ -f docs/modules/bit-docs/package.json ] || git submodule update --init",
+    "postinstall": "[ -d docs/modules/node_modules ] || npm run install-modules",
+    "install-modules": "npm install --prefix docs/modules",
     "pub": "npm run gh-pages && echo '↳ <https://bit-docs.github.io/bit-docs-website>'",
     "see": "http-server -a localhost -p 8080 -c-1 gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "bit-docs": "bit-docs/bit-docs",
+    "bit-docs": "pre",
     "gh-pages": "^0.12.0"
   },
   "bit-docs": {
@@ -45,19 +43,19 @@
       ]
     },
     "dependencies": {
-      "bit-docs-dev": "bit-docs/bit-docs-dev",
-      "bit-docs-generate-html": "bit-docs/bit-docs-generate-html",
-      "bit-docs-glob-finder": "bit-docs/bit-docs-glob-finder",
-      "bit-docs-html-toc": "bit-docs/bit-docs-html-toc",
-      "bit-docs-js": "bit-docs/bit-docs-js",
-      "bit-docs-prettify": "bit-docs/bit-docs-prettify",
-      "bit-docs-html-highlight-line": "bit-docs/bit-docs-html-highlight-line",
-      "bit-docs-process-mustache": "bit-docs/bit-docs-process-mustache",
-      "bit-docs-tag-demo": "bit-docs/bit-docs-tag-demo",
-      "bit-docs-tag-sourceref": "bit-docs/bit-docs-tag-sourceref"
+      "bit-docs-dev": "pre",
+      "bit-docs-generate-html": "pre",
+      "bit-docs-glob-finder": "pre",
+      "bit-docs-html-toc": "pre",
+      "bit-docs-js": "pre",
+      "bit-docs-prettify": "pre",
+      "bit-docs-html-highlight-line": "pre",
+      "bit-docs-process-mustache": "pre",
+      "bit-docs-tag-demo": "pre",
+      "bit-docs-tag-sourceref": "pre"
     },
     "glob": {
-      "pattern": "docs/**/*.{js,md,mustache,less}",
+      "pattern": "docs/**/bit-docs*/**/*.{js,md,mustache,less}",
       "ignore": [
         "**/README.md",
         "**/LICENSE.md",
@@ -67,7 +65,9 @@
         "**/test_*.js",
         "**/test-*.md",
         "**/test.js",
-        "**/node_modules/**/*",
+        "docs/modules/node_modules/**/node_modules/**/*",
+        "docs/modules/node_modules/bit-docs-generate-html/site/{static,templates}/**/*",
+        "docs/modules/node_modules/bit-docs-prettify/temp/**/*",
         "**/templates/**/*.mustache"
       ],
       "follow": true

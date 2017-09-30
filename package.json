@@ -47,10 +47,10 @@
     },
     "dependencies": {
       "bit-docs-dev": "pre",
-      "bit-docs-js": "pre",
       "bit-docs-generate-html": "pre",
       "bit-docs-glob-finder": "pre",
       "bit-docs-html-toc": "pre",
+      "bit-docs-js": "pre",
       "bit-docs-prettify": "pre",
       "bit-docs-html-highlight-line": "pre",
       "bit-docs-process-mustache": "pre",

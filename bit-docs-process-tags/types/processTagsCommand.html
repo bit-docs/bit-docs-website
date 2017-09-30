@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs-process-tags/types/processTagsCommand.md
+	source: docs/modules/node_modules/bit-docs-process-tags/types/processTagsCommand.md
 	@typedef bit-docs-process-tags/types/processTagsCommand
 ######################################################################## -->
 <html lang="en">
@@ -581,10 +581,7 @@ docObject will be displayed under the the parent in the navigation.">
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>*&lt;Array&lt;String,String|Object|<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>&gt;&gt;</code>
+    <code>*&lt;Array&lt;String,String|Object|<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>&gt;&gt;</code>
   </h2>
 
   
@@ -600,14 +597,20 @@ The following lists the important, near universal properties:">DocObject</a>&gt;
     
       <li>
         <b>push</b> <code>{Array&lt;"push",Object&gt;}</code>:
-        <p>Command to push custom data onto the stack.</p>
+        <p>Push custom data onto
+<a href="processTagsStack.html" title="Stack of data in process-tags that
+tags manipulate using
+processTagsCommand.">ProcessTagsStack</a>.</p>
 <p>Example of <strong>push</strong>: <code>['push', customDataObject]</code>.</p>
 
       </li>
     
       <li>
         <b>pop</b> <code>{Array&lt;"pop",String&gt;}</code>:
-        <p>Pop off stack and give <code>text</code> to previous
+        <p>Pop off
+<a href="processTagsStack.html" title="Stack of data in process-tags that
+tags manipulate using
+processTagsCommand.">ProcessTagsStack</a> and give <code>text</code> to previous
 <a href="tag.html" title="tags add information to the new
 docObject created by process-tags
 when processing a tagBlock.">Tag</a>.</p>
@@ -629,8 +632,12 @@ docObject created by process-tags
 when processing a tagBlock.">Tag</a> to pop itself and an
 opening <a href="tag.html" title="tags add information to the new
 docObject created by process-tags
-when processing a tagBlock.">Tag</a> off the stack.</p>
-<p>For example, <a href="../../bit-docs-js/tags/codeend.add.html" title="">bit-docs-js/tags/codeend.add</a> will return a command array like:</p>
+when processing a tagBlock.">Tag</a> off the
+<a href="processTagsStack.html" title="Stack of data in process-tags that
+tags manipulate using
+processTagsCommand.">ProcessTagsStack</a>.</p>
+<p>For example, <a href="../../bit-docs-js/tags/codeend.add.html" title="">bit-docs-js/tags/codeend.add</a> will return a
+<a href="processTagsCommand.html" title="Return type from tag.add that is a process-tags command.">ProcessTagsCommand</a> like:</p>
 <pre><code class="language-js">['poppop', '```javascript\nvar myString = &quot;hello world&quot;;\n```']
 </code></pre>
 
@@ -638,63 +645,57 @@ when processing a tagBlock.">Tag</a> off the stack.</p>
     
       <li>
         <b>default</b> <code>{Array&lt;"default",String&gt;}</code>:
-        <p>Set the <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>
+        <p>Set the <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>
 property for appending processed output from normal lines.</p>
 <p>Any normal line processed after the <code>@</code> declaration in a
-<a href="tag.html" title="tags add information to the new
-docObject created by process-tags
-when processing a tagBlock.">Tag</a> block will be appended to this property.</p>
+<a href="tagBlock.html" title="Array of lines that represent individual tags.">TagBlock</a> will be appended to this property.</p>
 <p>Example of <strong>default</strong>: <code>['default', propName]</code>.</p>
 <p>Both <a href="../tags/body.html" title="Markdown content placed after all signature and API content.">@body</a> and
 <a href="../tags/description.html" title="Markdown content placed before all signature and API content.">@description</a> expect multiple lines.</p>
-<p>For example, [bit-docs-process-tags/tags/body.add] returns a command array like:</p>
+<p>For example, [bit-docs-process-tags/tags/body.add] returns a
+<a href="processTagsCommand.html" title="Return type from tag.add that is a process-tags command.">ProcessTagsCommand</a> like:</p>
 <pre><code class="language-js">['default', 'body']
 </code></pre>
-<p>While [bit-docs-process-tags/tags/description.add] returns a command array like:</p>
+<p>While [bit-docs-process-tags/tags/description.add] returns a
+<a href="processTagsCommand.html" title="Return type from tag.add that is a process-tags command.">ProcessTagsCommand</a> like:</p>
 <pre><code class="language-js">['default', 'description']
 </code></pre>
 <p><a href="tag.html" title="tags add information to the new
 docObject created by process-tags
 when processing a tagBlock.">Tag</a>s specify different
-<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> properties (like <code>body</code> and <code>description</code>) to
+<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a> properties (like <code>body</code> and <code>description</code>) to
 store the HTML output from multiple lines.</p>
 
       </li>
     
       <li>
-        <b>add</b> <code>{Array&lt;"add",<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>&gt;}</code>:
+        <b>add</b> <code>{Array&lt;"add",<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>&gt;}</code>:
         <p>Add to <a href="../../bit-docs/types/docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>.</p>
 <p>Example of <strong>add</strong>: <code>['add', docObject]</code>.</p>
+<p>Used by:</p>
+<ul>
+<li>[bit-docs-js/tags/prototype.add]</li>
+<li>[bit-docs-js/tags/static.add]</li>
+</ul>
 
       </li>
     
       <li>
-        <b>scope</b> <code>{Array&lt;"scope",<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>&gt;|Array&lt;"scope",<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>,<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>&gt;}</code>:
+        <b>scope</b> <code>{Array&lt;"scope",<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>&gt;|Array&lt;"scope",<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>,<a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>&gt;}</code>:
         <p>Change the scope.</p>
 <p>Example of <strong>scope</strong>: <code>['scope', scopeDocObject]</code>.</p>
-<p>Example of changing the scope and the <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> being added to:</p>
+<p>Used by:</p>
+<ul>
+<li>[bit-docs-js/tags/group.add]</li>
+<li><a href="../../bit-docs-js/tags/module.add.html" title="bit-docs-js/tags/module.add">bit-docs-js/tags/module.add</a></li>
+<li><a href="../../bit-docs-js/tags/constructor.add.html" title="bit-docs-js/tags/constructor.add">bit-docs-js/tags/constructor.add</a></li>
+</ul>
+<p>Example of changing the scope and the <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a> being added to:</p>
 <p><code>['scope', scopeDocObject, docObject]</code>.</p>
+<p>Used by:</p>
+<ul>
+<li>[bit-docs-js/tags/add.add]</li>
+</ul>
 
       </li>
     
@@ -708,10 +709,11 @@ The following lists the important, near universal properties:">DocObject</a> bei
 			
 				<section class="body">
     <h1>Use</h1>
-<p>Use these commands to manipulate the <a href="tag.html" title="tags add information to the new
-docObject created by process-tags
-when processing a tagBlock.">Tag</a> stack
-as needed from your respective <a href="tag.add.html" title="Called for lines starting with @.">Tag.add</a>.</p>
+<p>Use these commands to manipulate the
+<a href="processTagsStack.html" title="Stack of data in process-tags that
+tags manipulate using
+processTagsCommand.">ProcessTagsStack</a> as needed from your respective
+<a href="tag.add.html" title="Called for lines starting with @.">Tag.add</a>.</p>
 
 </section>
 
@@ -723,7 +725,7 @@ as needed from your respective <a href="tag.add.html" title="Called for lines st
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs-process-tags/types/processTagsCommand.md"},"description":"Return type from [bit-docs-process-tags/types/tag.add] that is a [bit-docs-process-tags/process-tags] command.\n\n","parent":"bit-docs-process-tags/types","type":"typedef","title":"ProcessTagsCommand","types":[{"type":"*","template":[{"types":[{"type":"Array","template":[{"types":[{"type":"String"}]},{"types":[{"type":"String"},{"type":"Object","options":[]},{"type":"bit-docs/types/docObject"}]}]}]}],"options":[{"name":"push","description":"Command to push custom data onto the stack.\n\nExample of __push__: `['push', customDataObject]`.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"push\""}]},{"types":[{"type":"Object","options":[]}]}]}]},{"name":"pop","description":"Pop off stack and give `text` to previous\n[bit-docs-process-tags/types/tag].\n\nExample of __pop__: `['pop', text]`.\n\nThis command calls [bit-docs-process-tags/types/tag.addMore] of the previous\ntag with `text`.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"pop\""}]},{"types":[{"type":"String"}]}]}]},{"name":"poppop","description":"Pops twice, giving `text` to the tag\nbefore the previous [bit-docs-process-tags/types/tag].\n\nExample of __poppop__: `['poppop', text]`.\n\nUseful for a closing [bit-docs-process-tags/types/tag] to pop itself and an\nopening [bit-docs-process-tags/types/tag] off the stack.\n\nFor example, [bit-docs-js/tags/codeend.add] will return a command array like:\n\n```js\n['poppop', '```javascript\\nvar myString = \"hello world\";\\n```']\n```\n","types":[{"type":"Array","template":[{"types":[{"type":"\"poppop\""}]},{"types":[{"type":"String"}]}]}]},{"name":"default","description":"Set the [bit-docs/types/docObject]\nproperty for appending processed output from normal lines.\n\nAny normal line processed after the `@` declaration in a\n[bit-docs-process-tags/types/tag] block will be appended to this property.\n\nExample of __default__: `['default', propName]`.\n\nBoth [bit-docs-process-tags/tags/body] and\n[bit-docs-process-tags/tags/description] expect multiple lines.\n\nFor example, [bit-docs-process-tags/tags/body.add] returns a command array like:\n\n```js\n['default', 'body']\n```\n\nWhile [bit-docs-process-tags/tags/description.add] returns a command array like:\n\n```js\n['default', 'description']\n```\n\n[bit-docs-process-tags/types/tag]s specify different\n[bit-docs/types/docObject] properties (like `body` and `description`) to\nstore the HTML output from multiple lines.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"default\""}]},{"types":[{"type":"String"}]}]}]},{"name":"add","description":"Add to [bit-docs/types/docMap].\n\nExample of __add__: `['add', docObject]`. \n","types":[{"type":"Array","template":[{"types":[{"type":"\"add\""}]},{"types":[{"type":"bit-docs/types/docObject"}]}]}]},{"name":"scope","description":"\n\nChange the scope.\n\nExample of __scope__: `['scope', scopeDocObject]`.\n\nExample of changing the scope and the [bit-docs/types/docObject] being added to:\n\n`['scope', scopeDocObject, docObject]`.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"scope\""}]},{"types":[{"type":"bit-docs/types/docObject"}]}]},{"type":"Array","template":[{"types":[{"type":"\"scope\""}]},{"types":[{"type":"bit-docs/types/docObject"}]},{"types":[{"type":"bit-docs/types/docObject"}]}]}]}]}],"name":"bit-docs-process-tags/types/processTagsCommand","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/node_modules/bit-docs-process-tags/types/processTagsCommand.md"},"description":"Return type from [bit-docs-process-tags/types/tag.add] that is a [bit-docs-process-tags/process-tags] command.\n\n","parent":"bit-docs-process-tags/types","type":"typedef","title":"ProcessTagsCommand","types":[{"type":"*","template":[{"types":[{"type":"Array","template":[{"types":[{"type":"String"}]},{"types":[{"type":"String"},{"type":"Object","options":[]},{"type":"bit-docs/types/docObject"}]}]}]}],"options":[{"name":"push","description":"Push custom data onto\n[bit-docs-process-tags/types/processTagsStack].\n\nExample of __push__: `['push', customDataObject]`.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"push\""}]},{"types":[{"type":"Object","options":[]}]}]}]},{"name":"pop","description":"Pop off\n[bit-docs-process-tags/types/processTagsStack] and give `text` to previous\n[bit-docs-process-tags/types/tag].\n\nExample of __pop__: `['pop', text]`.\n\nThis command calls [bit-docs-process-tags/types/tag.addMore] of the previous\ntag with `text`.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"pop\""}]},{"types":[{"type":"String"}]}]}]},{"name":"poppop","description":"Pops twice, giving `text` to the tag\nbefore the previous [bit-docs-process-tags/types/tag].\n\nExample of __poppop__: `['poppop', text]`.\n\nUseful for a closing [bit-docs-process-tags/types/tag] to pop itself and an\nopening [bit-docs-process-tags/types/tag] off the\n[bit-docs-process-tags/types/processTagsStack].\n\nFor example, [bit-docs-js/tags/codeend.add] will return a\n[bit-docs-process-tags/types/processTagsCommand] like:\n\n```js\n['poppop', '```javascript\\nvar myString = \"hello world\";\\n```']\n```\n","types":[{"type":"Array","template":[{"types":[{"type":"\"poppop\""}]},{"types":[{"type":"String"}]}]}]},{"name":"default","description":"Set the [bit-docs/types/docObject]\nproperty for appending processed output from normal lines.\n\nAny normal line processed after the `@` declaration in a\n[bit-docs-process-tags/types/tagBlock] will be appended to this property.\n\nExample of __default__: `['default', propName]`.\n\nBoth [bit-docs-process-tags/tags/body] and\n[bit-docs-process-tags/tags/description] expect multiple lines.\n\nFor example, [bit-docs-process-tags/tags/body.add] returns a\n[bit-docs-process-tags/types/processTagsCommand] like:\n\n```js\n['default', 'body']\n```\n\nWhile [bit-docs-process-tags/tags/description.add] returns a\n[bit-docs-process-tags/types/processTagsCommand] like:\n\n```js\n['default', 'description']\n```\n\n[bit-docs-process-tags/types/tag]s specify different\n[bit-docs/types/docObject] properties (like `body` and `description`) to\nstore the HTML output from multiple lines.\n","types":[{"type":"Array","template":[{"types":[{"type":"\"default\""}]},{"types":[{"type":"String"}]}]}]},{"name":"add","description":"Add to [bit-docs/types/docMap].\n\nExample of __add__: `['add', docObject]`.\n\nUsed by:\n  - [bit-docs-js/tags/prototype.add]\n  - [bit-docs-js/tags/static.add]\n","types":[{"type":"Array","template":[{"types":[{"type":"\"add\""}]},{"types":[{"type":"bit-docs/types/docObject"}]}]}]},{"name":"scope","description":"\n\nChange the scope.\n\nExample of __scope__: `['scope', scopeDocObject]`.\n\nUsed by:\n  - [bit-docs-js/tags/group.add]\n  - [bit-docs-js/tags/module.add]\n  - [bit-docs-js/tags/constructor.add]\n\nExample of changing the scope and the [bit-docs/types/docObject] being added to:\n\n`['scope', scopeDocObject, docObject]`.\n\nUsed by:\n  - [bit-docs-js/tags/add.add]\n","types":[{"type":"Array","template":[{"types":[{"type":"\"scope\""}]},{"types":[{"type":"bit-docs/types/docObject"}]}]},{"type":"Array","template":[{"types":[{"type":"\"scope\""}]},{"types":[{"type":"bit-docs/types/docObject"}]},{"types":[{"type":"bit-docs/types/docObject"}]}]}]}]}],"name":"bit-docs-process-tags/types/processTagsCommand","comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

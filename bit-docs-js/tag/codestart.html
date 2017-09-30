@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs-js/tags/codestart.md
+	source: docs/modules/node_modules/bit-docs-js/tags/codestart.md
 	@constructor bit-docs-js/tag/codestart
 ######################################################################## -->
 <html lang="en">
@@ -529,6 +529,40 @@ TYPE declarations.">
 					<li>
 						<span>static</span>
 						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../index.js.html"
+							title="Main front end JavaScript file for static portion of this plugin.">
+							./index.js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../static/styles/signature.less.html"
+							title="Base styles for signature tag.">
+							./styles/signature.less
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
 
 					</li>
 				
@@ -670,21 +704,6 @@ TYPE declarations.">
 							href="../tags/module.html"
 							title="Module that implements the module tag.">
 							./tags/module
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../my-project/lib/index.html"
-							title="Main lib module.">
-							my-project/lib/index
 						</a>
 						
 					</li>
@@ -847,46 +866,62 @@ TYPE declarations.">
 		
 			
 				
+					<div class="signature">
+  <h2 class="signature-title">
+    <code>@codestart [LANGUAGE]</code>
+  </h2>
+
+  <pre><code>/**
+ * @codestart
+ * /* @signature `Person(name)`
+ *  * @param {String} name A person's name.
+ *  *|
+ * Person = function(name){
+ *   this.name = name
+ *   Person.count++;
+ * }
+ *
+ * /* @prototype *|
+ * Person.prototype = {
+ *   /* Returns a formal name 
+ *    * @return {String} The name with &quot;Mrs.&quot; added.
+ *    *|
+ *   fancyName: function(){
+ *     return &quot;Mrs. &quot; + this.name;
+ *   }
+ * }
+ * @codeend
+ */
+</code></pre>
+
+
+  
+  <div class="parameters">
+    <h3 class="parameters-title">Parameters</h3>
+      <ol>
+        
+          <li><b>LANGUAGE</b> <code>{String}</code>: <p>Language of the code block.</p>
+<p>See <a href="../../bit-docs-prettify.html" title="A bit-docs plugin that makes source-code snippets in HTML prettier.">bit-docs-prettify</a> for supported languages.</p>
+</li>
+            
+              
+            
+        
+      </ol>
+  </div>
+  
+
+  
+
+  
+</div>
+
+				
 			
 			
 				<section class="body">
     <h2>Use</h2>
-<p>Looks for <code>@codestart codeType</code>.</p>
-<p>Matches multiple lines.</p>
-<p>Must end with <a href="codeend.html" title="Stops a code block.">@codeend</a>.</p>
-<h3>Example:</h3>
-<pre><code class="language-js">
- /* 
-  * @codestart
-  *  /* @class
-  *   * Person represents a human with a name.  Read about the 
-  *   * animal class [Animal | here].
-  *   * @constructor
-  *   * You must pass in a name.
-  *   * @param {String} name A person's name
-  *   */
-  *   Person = function(name){
-  *      this.name = name
-  *      Person.count ++;
-  *   }
-  *  /* @Static */
-  *  steal.Object.extend(Person, {
-  *      /* Number of People */
-  *      count: 0
-  *  })
-  *  /* @Prototype */
-  *  Person.prototype = {
-  *     /* Returns a formal name 
-  *      * @return {String} the name with &quot;Mrs.&quot; added
-  *      */
-  *      fancyName : function(){
-  *         return &quot;Mrs. &quot;+this.name;
-  *      }
-  *  }
-  * @codeend
-  */
-
-</code></pre>
+<p>Matches multiple lines. Must end with <a href="codeend.html" title="Stops a code block.">@codeend</a>.</p>
 
 </section>
 
@@ -898,7 +933,7 @@ TYPE declarations.">
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs-js/tags/codestart.md"},"description":"Starts a code block.   \n","parent":"bit-docs-js/tags","type":"constructor","name":"bit-docs-js/tag/codestart","title":"@codestart","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/node_modules/bit-docs-js/tags/codestart.md"},"description":"Starts a code block.   \n","parent":"bit-docs-js/tags","type":"constructor","name":"bit-docs-js/tag/codestart","title":"@codestart","signatures":[{"code":"@codestart [LANGUAGE]","description":"\n\n```\n/**\n * @codestart\n * /* @signature `Person(name)`\n *  * @param {String} name A person's name.\n *  *|\n * Person = function(name){\n *   this.name = name\n *   Person.count++;\n * }\n *\n * /* @prototype *|\n * Person.prototype = {\n *   /* Returns a formal name \n *    * @return {String} The name with \"Mrs.\" added.\n *    *|\n *   fancyName: function(){\n *     return \"Mrs. \" + this.name;\n *   }\n * }\n * @codeend\n */\n```\n","params":[{"types":[{"type":"String"}],"optional":true,"name":"LANGUAGE","description":"Language of the code block.\n\nSee [bit-docs-prettify] for supported languages.\n"}]}],"_curParam":{"types":[{"type":"String"}],"optional":true,"name":"LANGUAGE","description":"Language of the code block.\n\nSee [bit-docs-prettify] for supported languages.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

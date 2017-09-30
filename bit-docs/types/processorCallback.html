@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs/docs/api/types/processorCallback.md
+	source: docs/modules/node_modules/bit-docs/docs/api/types/processorCallback.md
 	@typedef bit-docs/types/processorCallback
 ######################################################################## -->
 <html lang="en">
@@ -93,7 +93,7 @@ bit-docs.">
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="Node.js EventEmitter
-that emits an event for every file found.">
+that emits an event with fileSource for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -123,11 +123,23 @@ that emits an event for every file found.">
            						">
 						<a class="typedef"
 							href="docObject.html"
-							title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">
+							title="An object that represents something that is documented.">
 							DocObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="docType.html"
+							title="A string denoting the &quot;type&quot; of a docObject.">
+							DocType
 						</a>
 						
 					</li>
@@ -510,10 +522,7 @@ packaged with bit-docs.">
 		
 			
 				<section class="description">
-    <p>Callback passed to processors that can be used to add a new <a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> to the <a href="docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>.</p>
+    <p>Callback passed to processors that can be used to add a new <a href="docObject.html" title="An object that represents something that is documented.">DocObject</a> to the <a href="docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>.</p>
 
 </section>
 
@@ -525,13 +534,7 @@ The following lists the important, near universal properties:">DocObject</a> to 
 				
 					<div class="signature">
   <h2 class="signature-title">
-    <code>function(<a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">newDoc</a>, <a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">newScope</a>)</code>
+    <code>function(<a href="docObject.html" title="An object that represents something that is documented.">newDoc</a>, <a href="docObject.html" title="An object that represents something that is documented.">newScope</a>)</code>
   </h2>
 
   
@@ -541,25 +544,13 @@ The following lists the important, near universal properties:">newScope</a>)</co
     <h3 class="parameters-title">Parameters</h3>
       <ol>
         
-          <li><b>newDoc</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>}</code>: <p><a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> created from processing the block.</p>
+          <li><b>newDoc</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.">DocObject</a>}</code>: <p><a href="docObject.html" title="An object that represents something that is documented.">DocObject</a> created from processing the block.</p>
 </li>
             
               
             
         
-          <li><b>newScope</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>}</code>: <p><a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> that will be used for scoping the next block.</p>
+          <li><b>newScope</b> <code>{<a href="docObject.html" title="An object that represents something that is documented.">DocObject</a>}</code>: <p><a href="docObject.html" title="An object that represents something that is documented.">DocObject</a> that will be used for scoping the next block.</p>
 </li>
             
               
@@ -589,7 +580,7 @@ The following lists the important, near universal properties:">DocObject</a> tha
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/processorCallback.md"},"description":"Callback passed to processors that can be used to add a new [bit-docs/types/docObject] to the [bit-docs/types/docMap].\n\n","parent":"bit-docs/types","type":"typedef","title":"ProcessorCallback","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"newDoc","description":"\n  \n[bit-docs/types/docObject] created from processing the block.\n","types":[{"type":"bit-docs/types/docObject"}]},{"name":"newScope","description":"\n\n[bit-docs/types/docObject] that will be used for scoping the next block.\n","types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"bit-docs/types/processorCallback","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/node_modules/bit-docs/docs/api/types/processorCallback.md"},"description":"Callback passed to processors that can be used to add a new [bit-docs/types/docObject] to the [bit-docs/types/docMap].\n\n","parent":"bit-docs/types","type":"typedef","title":"ProcessorCallback","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"newDoc","description":"\n  \n[bit-docs/types/docObject] created from processing the block.\n","types":[{"type":"bit-docs/types/docObject"}]},{"name":"newScope","description":"\n\n[bit-docs/types/docObject] that will be used for scoping the next block.\n","types":[{"type":"bit-docs/types/docObject"}]}]}],"name":"bit-docs/types/processorCallback","pathToRoot":"../../.."};
 	</script>
 
 	

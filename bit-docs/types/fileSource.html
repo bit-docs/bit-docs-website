@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs/docs/api/types/fileSource.md
+	source: docs/modules/node_modules/bit-docs/docs/api/types/fileSource.md
 	@typedef bit-docs/types/fileSource
 ######################################################################## -->
 <html lang="en">
@@ -93,7 +93,7 @@ bit-docs.">
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="Node.js EventEmitter
-that emits an event for every file found.">
+that emits an event with fileSource for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -123,11 +123,23 @@ that emits an event for every file found.">
            						">
 						<a class="typedef"
 							href="docObject.html"
-							title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">
+							title="An object that represents something that is documented.">
 							DocObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="docType.html"
+							title="A string denoting the &quot;type&quot; of a docObject.">
+							DocType
 						</a>
 						
 					</li>
@@ -541,7 +553,7 @@ packaged with bit-docs.">
     <h2>Use</h2>
 <p><a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a> is received by <a href="../lib/process/process.html" title="Processes a FileEventEmitter and returns a promise.">bit-docs/lib/process/process</a>
 from <a href="FileEventEmitter.html" title="Node.js EventEmitter
-that emits an event for every file found.">FileEventEmitter</a> and passed to
+that emits an event with fileSource for every file found.">FileEventEmitter</a> and passed to
 <a href="../lib/process/file.html" title="Processes a file's source using any registered processors.">bit-docs/lib/process/file</a> which passes <a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a> to the
 processors in plugins like <a href="../../bit-docs-process-tags.html" title="Processes tags for a docMap.">bit-docs-process-tags</a> and <a href="../../bit-docs-js.html" title="Plugin to process .js files and help document JavaScript code.">bit-docs-js</a> that do
 the work of splitting on newlines as they see fit to convert
@@ -561,7 +573,7 @@ something completely different with <a href="fileSource.html" title="A file's se
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileSource.md"},"description":"A file's serialized source as a string with characters escaped like `\\n`.\n\n","parent":"bit-docs/types","type":"typedef","title":"FileSource","types":[{"type":"String"}],"name":"bit-docs/types/fileSource","comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/node_modules/bit-docs/docs/api/types/fileSource.md"},"description":"A file's serialized source as a string with characters escaped like `\\n`.\n\n","parent":"bit-docs/types","type":"typedef","title":"FileSource","types":[{"type":"String"}],"name":"bit-docs/types/fileSource","comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

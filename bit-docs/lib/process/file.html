@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs/lib/process/file.js
+	source: docs/modules/node_modules/bit-docs/lib/process/file.js
 	@module bit-docs/lib/process/file
 ######################################################################## -->
 <html lang="en">
@@ -93,7 +93,7 @@ bit-docs.">
 						<a class="typedef"
 							href="../../types/FileEventEmitter.html"
 							title="Node.js EventEmitter
-that emits an event for every file found.">
+that emits an event with fileSource for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -123,11 +123,23 @@ that emits an event for every file found.">
            						">
 						<a class="typedef"
 							href="../../types/docObject.html"
-							title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">
+							title="An object that represents something that is documented.">
 							DocObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="../../types/docType.html"
+							title="A string denoting the &quot;type&quot; of a docObject.">
+							DocType
 						</a>
 						
 					</li>
@@ -531,10 +543,7 @@ packaged with bit-docs.">
 <li><a href="../../../bit-docs-process-mustache/process-mustache.html" title="">bit-docs-process-mustache/process-mustache</a></li>
 </ul>
 <p>Also passes a <a href="../../types/processorCallback.html" title="Callback passed to processors that can be used to add a new docObject to the docMap.">ProcessorCallback</a> that processors can use
-to add <a href="../../types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>s to the <a href="../../types/docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>.</p>
+to add <a href="../../types/docObject.html" title="An object that represents something that is documented.">DocObject</a>s to the <a href="../../types/docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>.</p>
 
 
   
@@ -548,7 +557,7 @@ The following lists the important, near universal properties:">DocObject</a>s to
               
             
         
-          <li><b>source</b> <code>{String}</code>: <p>The file source.</p>
+          <li><b>source</b> <code>{<a href="../../types/fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a>}</code>: <p>The file's source.</p>
 </li>
             
               
@@ -622,7 +631,7 @@ big block.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"type":"module","name":"bit-docs/lib/process/file","parent":"bit-docs/modules","src":{"line":7,"codeLine":56,"path":"docs/modules/bit-docs/lib/process/file.js"},"description":"Processes a file's source using any registered processors. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processFile(filename, source, docMap, siteConfig)","description":"\n\nPasses the file source (and other data) to any registered processors like:\n- [bit-docs-js/process/codeAndComment]\n- [bit-docs-process-mustache/process-mustache]\n\nAlso passes a [bit-docs/types/processorCallback] that processors can use\nto add [bit-docs/types/docObject]s to the [bit-docs/types/docMap].\n","params":[{"types":[{"type":"String"}],"name":"filename","description":"The filename.\n"},{"types":[{"type":"String"}],"name":"source","description":"The file source.\n"},{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":"[bit-docs/types/docMap] being added to.\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"bit-docs-process-tags/types/tagCollection"}]}]}],"optional":true,"name":"siteConfig","description":"Global site config.\n"}]}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"bit-docs-process-tags/types/tagCollection"}]}]}],"optional":true,"name":"siteConfig","description":"Global site config.\n"},"comment":" ","pathToRoot":"../../../.."};
+		var docObject = {"type":"module","name":"bit-docs/lib/process/file","parent":"bit-docs/modules","src":{"line":7,"codeLine":56,"path":"docs/modules/node_modules/bit-docs/lib/process/file.js"},"description":"Processes a file's source using any registered processors. \n","title":"","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"signatures":[{"code":"processFile(filename, source, docMap, siteConfig)","description":"\n\nPasses the file source (and other data) to any registered processors like:\n- [bit-docs-js/process/codeAndComment]\n- [bit-docs-process-mustache/process-mustache]\n\nAlso passes a [bit-docs/types/processorCallback] that processors can use\nto add [bit-docs/types/docObject]s to the [bit-docs/types/docMap].\n","params":[{"types":[{"type":"String"}],"name":"filename","description":"The filename.\n"},{"types":[{"type":"bit-docs/types/fileSource"}],"name":"source","description":"The file's source.\n"},{"types":[{"type":"bit-docs/types/docMap"}],"name":"docMap","description":"[bit-docs/types/docMap] being added to.\n"},{"types":[{"type":"Object","options":[{"name":"tags","description":"If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"bit-docs-process-tags/types/tagCollection"}]}]}],"optional":true,"name":"siteConfig","description":"Global site config.\n"}]}],"_curParam":{"types":[{"type":"Object","options":[{"name":"tags","description":"If `siteConfig` or\n`siteConfig.tags` is not provided, the default tags will be used.\n","types":[{"type":"bit-docs-process-tags/types/tagCollection"}]}]}],"optional":true,"name":"siteConfig","description":"Global site config.\n"},"comment":" ","pathToRoot":"../../../.."};
 	</script>
 
 	

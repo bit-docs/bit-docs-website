@@ -1,9 +1,14 @@
-/*bit-docs-js@0.0.6#static/styles/signature.less!steal-less@1.2.0#less*/
+/*bit-docs-js@0.0.7-0#static/styles/signature.less!steal-less@1.2.0#less*/
 /**
- * @parent bit-docs-generate-html/static
- * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
+ * @parent bit-docs-generate-html/site/default/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less
  *
  * @description Variables to hold site-wide visual configurations.
+ * 
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultFontFamily]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultPadding]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.desktops]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.smartphones]
  */
 /**
  * @property {Variable} defaultFontFamily @defaultFontFamily
@@ -90,7 +95,7 @@
   margin-bottom: 1em;
 }
 
-/*bit-docs-prettify@0.1.1#prettify.less!steal-less@1.2.0#less*/
+/*bit-docs-prettify@0.1.2-0#prettify.less!steal-less@1.2.0#less*/
 /**
  * @stylesheet prettify-variables.less Prettify Variables
  * @parent bit-docs/theme
@@ -109,10 +114,15 @@
  * @iframe demos/color-palette.html 630
  */
 /**
- * @parent bit-docs-generate-html/static
- * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
+ * @parent bit-docs-generate-html/site/default/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less
  *
  * @description Variables to hold site-wide visual configurations.
+ * 
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultFontFamily]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultPadding]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.desktops]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.smartphones]
  */
 /**
  * @property {Variable} defaultFontFamily @defaultFontFamily
@@ -179,17 +189,16 @@
  * ```
  */
 /**
- * @stylesheet prettify.less Prettify
- * @parent bit-docs/theme
+ * @parent bit-docs-prettify/static
+ * @module bit-docs-prettify/prettify.less
  *
- * @description
- * Layout of code wells and syntax highlighting of code languages. 
+ * @description Layout of code wells and syntax highlighting of code languages.
  *
  * @body
  *
  * Syntax highlighting and colors provided by 
- * <a href="https://github.com/google/code-prettify">prettify.js</a> and
- * <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Theme</a>.
+ * [JavaScript code prettifier](https://github.com/google/code-prettify) and
+ * [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme).
  *
  * Code "wells" are styled based on the use of the `<pre>` and `<code>` tags
  * around your desired code example.
@@ -366,12 +375,17 @@ ol.linenums {
   margin-bottom: 0;
 }
 
-/*bit-docs-html-highlight-line@0.2.3#static/styles/highlight-line.less!steal-less@1.2.0#less*/
+/*bit-docs-html-highlight-line@0.2.4-0#static/styles/highlight-line.less!steal-less@1.2.0#less*/
 /**
- * @parent bit-docs-generate-html/static
- * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
+ * @parent bit-docs-generate-html/site/default/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less
  *
  * @description Variables to hold site-wide visual configurations.
+ * 
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultFontFamily]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultPadding]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.desktops]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.smartphones]
  */
 /**
  * @property {Variable} defaultFontFamily @defaultFontFamily
@@ -472,8 +486,8 @@ article code .expand:hover {
 
 /*bit-docs-site@0.0.1#styles/styles.less!steal-less@1.2.0#less*/
 /**
- * @parent bit-docs-generate-html/static
- * @module bit-docs-generate-html/site/default/static/styles/styles.less styles.less
+ * @parent bit-docs-generate-html/site/default/static
+ * @module bit-docs-generate-html/site/default/static/styles/styles.less
  *
  * @description The primary styles for the default theme.
  *
@@ -487,10 +501,15 @@ article code .expand:hover {
  * The styles are very basic, and primarily focus on mobile and desktop layout.
  */
 /**
- * @parent bit-docs-generate-html/static
- * @module bit-docs-generate-html/site/default/static/styles/variables.less variables.less
+ * @parent bit-docs-generate-html/site/default/static
+ * @module bit-docs-generate-html/site/default/static/styles/variables.less
  *
  * @description Variables to hold site-wide visual configurations.
+ * 
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultFontFamily]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.defaultPadding]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.desktops]
+ * - [bit-docs-generate-html/site/default/static/styles/variables.less.smartphones]
  */
 /**
  * @property {Variable} defaultFontFamily @defaultFontFamily
@@ -557,16 +576,25 @@ article code .expand:hover {
  * ```
  */
 /**
- * @parent bit-docs-generate-html/static
- * @module bit-docs-generate-html/site/default/styles/mixins.less mixins.less
+ * @parent bit-docs-generate-html/site/default/static
+ * @module bit-docs-generate-html/site/default/static/styles/mixins.less
  *
  * @description Mixins for site-wide visual layout.
  *
  * @body
  *
- * Mixins are useful as reusable rules that can be added into any declaration.
+ * Mixins are useful as reusable rules that can be added into any declaration:
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.display-flex]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.flex-auto]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.flex-column]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.flex-initial]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.flex-none]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.flex-row]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.helper-flex]
+ * - [bit-docs-generate-html/site/default/static/styles/mixins.less.helper-padding]
  *
- * Read more about mixins [here](http://lesscss.org/features/#mixins-feature).
+ * Read more about mixins at
+ * [lesscss.org](http://lesscss.org/features/#mixins-feature).
  */
 #helper {
   /**

@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs-js/tags/option.js
+	source: docs/modules/node_modules/bit-docs-js/tags/option.js
 	@module bit-docs-js/tags/option
 ######################################################################## -->
 <html lang="en">
@@ -529,6 +529,40 @@ TYPE declarations.">
 					<li>
 						<span>static</span>
 						
+	<ul>
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../index.js.html"
+							title="Main front end JavaScript file for static portion of this plugin.">
+							./index.js
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="module"
+							href="../static/styles/signature.less.html"
+							title="Base styles for signature tag.">
+							./styles/signature.less
+						</a>
+						
+					</li>
+				
+			
+		
+	</ul>
+
 
 					</li>
 				
@@ -670,21 +704,6 @@ TYPE declarations.">
 							href="module.html"
 							title="Module that implements the module tag.">
 							./tags/module
-						</a>
-						
-					</li>
-				
-			
-		
-			
-				
-					<li class="
-           						
-           						">
-						<a class="module"
-							href="../../my-project/lib/index.html"
-							title="Main lib module.">
-							my-project/lib/index
 						</a>
 						
 					</li>
@@ -947,10 +966,7 @@ module.exports = {
   bar: function(params) { /*...*/ }
 };
 </code></pre>
-<p>Resulting <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>:</p>
+<p>Resulting <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a>:</p>
 <pre><code class="language-javascript">{
   &quot;description&quot;: &quot;A function named bar.\n&quot;,
   &quot;name&quot;: &quot;foo.bar&quot;,
@@ -991,10 +1007,7 @@ The following lists the important, near universal properties:">DocObject</a>:</p
 }
 </code></pre>
 <p><span line-highlight='7-32,only'></span>
-That <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> an be used in a template like this:</p>
+That <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a> an be used in a template like this:</p>
 <pre><code class="language-html">{{#if params}}
   {{#params}}
     {{#types}}
@@ -1012,10 +1025,7 @@ The following lists the important, near universal properties:">DocObject</a> an 
 {{/if}}
 </code></pre>
 <p>See <a href="../templates/signature.mustache.html" title="The function signature template.">bit-docs-js/templates/signature.mustache</a> for a more complex template
-that uses the <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> resulting from <code>@option</code>.</p>
+that uses the <a href="../../bit-docs/types/docObject.html" title="An object that represents something that is documented.">DocObject</a> resulting from <code>@option</code>.</p>
 
 </section>
 
@@ -1027,7 +1037,7 @@ The following lists the important, near universal properties:">DocObject</a> res
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"name":"bit-docs-js/tags/option","type":"module","parent":"bit-docs-js/tags","src":{"line":54,"codeLine":201,"path":"docs/modules/bit-docs-js/tags/option.js"},"description":"\nDescribes a property of the object, or an argument of the function, that was\nspecified in an [bit-docs-js/tags/param] tag.\n","title":"@option","types":[{"type":"bit-docs-process-tags/types/tag"}],"signatures":[{"code":"@option {TYPE} NAME [DESCRIPTION]","description":"\n\nHere's an example of some ways you can use the `@option` tag:\n\n```javascript\n/**\n * @module {{}} ledger Ledger\n */\nmodule.exports = {\n  /**\n   * Retrieves a list of orders.\n   *\n   * @param {{}} params A parameter object with the following options:\n   *   @option {String} type Specifies the type of order.\n   *   @option {Number} [createdAt] Retrieves orders after this timestamp.\n   *\n   * @param {function(Orders.List)} [success(orders)] Callback function.\n   *   @option orders A list of [Orders] that match `params`.\n   */\n  find: function(params, success) { /*...*/ }\n};\n```","params":[{"types":[{"type":"bit-docs-type-annotate/types/typeExpression"}],"optional":true,"name":"TYPE","description":"A [bit-docs-type-annotate/types/typeExpression type expression]. Examples:\n\n`{String}` - type is a `String`.\n`{function(name)}` - type is a `function` that takes one `name` argument.\n\n`TYPE` does not need to be specified for types that are already described\nin the `@option`'s corresponding function or object.\n\nFor example, notice how there is no need to specify `{String}`:\n\n```js\n/**\n * @param {{type: String}} params An object with the following options:\n *   @option kind Specifies the kind of order.\n *   @option label Retrieves only orders with this label.\n */\n```"},{"types":[{"type":"bit-docs-type-annotate/types/nameExpression"}],"name":"NAME","description":"A [bit-docs-type-annotate/types/nameExpression name expression]. Examples:\n\n- `age`: age is item.\n- `[age]`: age is item, age is optional.\n- `[age=0]`: age defaults to 0.\n"},{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"}]}],"_curParam":{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"name":"bit-docs-js/tags/option","type":"module","parent":"bit-docs-js/tags","src":{"line":54,"codeLine":201,"path":"docs/modules/node_modules/bit-docs-js/tags/option.js"},"description":"\nDescribes a property of the object, or an argument of the function, that was\nspecified in an [bit-docs-js/tags/param] tag.\n","title":"@option","types":[{"type":"bit-docs-process-tags/types/tag"}],"signatures":[{"code":"@option {TYPE} NAME [DESCRIPTION]","description":"\n\nHere's an example of some ways you can use the `@option` tag:\n\n```javascript\n/**\n * @module {{}} ledger Ledger\n */\nmodule.exports = {\n  /**\n   * Retrieves a list of orders.\n   *\n   * @param {{}} params A parameter object with the following options:\n   *   @option {String} type Specifies the type of order.\n   *   @option {Number} [createdAt] Retrieves orders after this timestamp.\n   *\n   * @param {function(Orders.List)} [success(orders)] Callback function.\n   *   @option orders A list of [Orders] that match `params`.\n   */\n  find: function(params, success) { /*...*/ }\n};\n```","params":[{"types":[{"type":"bit-docs-type-annotate/types/typeExpression"}],"optional":true,"name":"TYPE","description":"A [bit-docs-type-annotate/types/typeExpression type expression]. Examples:\n\n`{String}` - type is a `String`.\n`{function(name)}` - type is a `function` that takes one `name` argument.\n\n`TYPE` does not need to be specified for types that are already described\nin the `@option`'s corresponding function or object.\n\nFor example, notice how there is no need to specify `{String}`:\n\n```js\n/**\n * @param {{type: String}} params An object with the following options:\n *   @option kind Specifies the kind of order.\n *   @option label Retrieves only orders with this label.\n */\n```"},{"types":[{"type":"bit-docs-type-annotate/types/nameExpression"}],"name":"NAME","description":"A [bit-docs-type-annotate/types/nameExpression name expression]. Examples:\n\n- `age`: age is item.\n- `[age]`: age is item, age is optional.\n- `[age=0]`: age defaults to 0.\n"},{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"}]}],"_curParam":{"types":[{"type":"Markdown"}],"optional":true,"name":"DESCRIPTION","description":"Markdown content that continues for multiple lines.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	

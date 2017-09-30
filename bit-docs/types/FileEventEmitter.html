@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs/docs/api/types/fileEventEmitter.md
+	source: docs/modules/node_modules/bit-docs/docs/api/types/fileEventEmitter.md
 	@typedef bit-docs/types/FileEventEmitter
 ######################################################################## -->
 <html lang="en">
@@ -93,7 +93,7 @@ bit-docs.">
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="Node.js EventEmitter
-that emits an event for every file found.">
+that emits an event with fileSource for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -126,11 +126,23 @@ that emits an event for every file found.">
            						">
 						<a class="typedef"
 							href="docObject.html"
-							title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">
+							title="An object that represents something that is documented.">
 							DocObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="docType.html"
+							title="A string denoting the &quot;type&quot; of a docObject.">
+							DocType
 						</a>
 						
 					</li>
@@ -511,7 +523,7 @@ packaged with bit-docs.">
 			
 				<section class="description">
     <p><a href="https://nodejs.org/api/events.html#events_class_eventemitter">Node.js EventEmitter</a>
-that emits an event for every file found.</p>
+that emits an event with <a href="fileSource.html" title="A file's serialized source as a string with characters escaped like \n.">FileSource</a> for every file found.</p>
 
 </section>
 
@@ -573,7 +585,7 @@ that emits an event for every file found.</p>
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\n[Node.js EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat emits an event for every file found.\n","parent":"bit-docs/types","type":"typedef","title":"FileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/node_modules/bit-docs/docs/api/types/fileEventEmitter.md"},"description":"\n[Node.js EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)\nthat emits an event with [bit-docs/types/fileSource] for every file found.\n","parent":"bit-docs/types","type":"typedef","title":"FileEventEmitter","types":[{"type":"Object","options":[{"name":"on","types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[{"name":"event"},{"name":"listener"}]}],"description":"\n\nRegisters an event listener.  File event emitters should dispatch:\n\n - `\"match\"` events that call listener with the matched path.\n - `\"end\"` events that call listener when there are no more matches.\n"},{"name":"cwd","types":[{"type":"String"}],"description":"The root directory where \"match\" events are relative to.\n"}]}],"name":"bit-docs/types/FileEventEmitter","pathToRoot":"../../.."};
 	</script>
 
 	

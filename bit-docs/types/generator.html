@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: docs/modules/bit-docs/docs/api/types/generator.md
+	source: docs/modules/node_modules/bit-docs/docs/api/types/generator.md
 	@typedef bit-docs/types/generator
 ######################################################################## -->
 <html lang="en">
@@ -93,7 +93,7 @@ bit-docs.">
 						<a class="typedef"
 							href="FileEventEmitter.html"
 							title="Node.js EventEmitter
-that emits an event for every file found.">
+that emits an event with fileSource for every file found.">
 							FileEventEmitter
 						</a>
 						
@@ -123,11 +123,23 @@ that emits an event for every file found.">
            						">
 						<a class="typedef"
 							href="docObject.html"
-							title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">
+							title="An object that represents something that is documented.">
 							DocObject
+						</a>
+						
+					</li>
+				
+			
+		
+			
+				
+					<li class="
+           						
+           						">
+						<a class="typedef"
+							href="docType.html"
+							title="A string denoting the &quot;type&quot; of a docObject.">
+							DocType
 						</a>
 						
 					</li>
@@ -536,10 +548,7 @@ packaged with bit-docs.</p>
       <ol>
         
           <li><b>docMapPromise</b> <code>{Promise&lt;<a href="docMap.html" title="An object that contains every docObject keyed by the docObject's name.">DocMap</a>&gt;}</code>: <p>A promise that will
-resolve with a map of all <a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a> keyed by their name.</p>
+resolve with a map of all <a href="docObject.html" title="An object that represents something that is documented.">DocObject</a> keyed by their name.</p>
 </li>
             
               
@@ -573,10 +582,7 @@ The following lists the important, near universal properties:">DocObject</a> key
 				<section class="body">
     <h2>Use</h2>
 <p>The following exports a generator function that builds a JSON output of the
-<a href="docObject.html" title="An object that represents something that is documented.
-Any property added to a docObject is available to the
-templates and the client.
-The following lists the important, near universal properties:">DocObject</a>:</p>
+<a href="docObject.html" title="An object that represents something that is documented.">DocObject</a>:</p>
 <pre><code>var Q = require('q'),
     fs = require('fs'),
     writeFile = Q.denodify(fs.writeFile),
@@ -601,7 +607,7 @@ module.exports = function(docMapPromise, options){
 	<footer></footer>
 
 	<script type="text/javascript">
-		var docObject = {"src":{"path":"docs/modules/bit-docs/docs/api/types/generator.md"},"description":"\nA generator module should produce a function that takes the following shape.\nGenerator modules are used to produce some form of documentation output.\n[bit-docs-generate-html] is the default and currently only generator\npackaged with bit-docs.\n","parent":"bit-docs/types","type":"typedef","title":"Generator","types":[{"type":"function","returns":{"types":[{"type":"Promise"}],"description":"A module that resolves when the output has been built.\n"},"params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"name":"docMapPromise","description":"A promise that will\nresolve with a map of all [bit-docs/types/docObject] keyed by their name.\n"},{"types":[{"type":"options"}],"name":"options","description":"The options object passed to\n[bit-docs/lib/generate/generate]. \n"}]}],"name":"bit-docs/types/generator","_curParam":{"types":[{"type":"options"}],"name":"options","description":"The options object passed to\n[bit-docs/lib/generate/generate]. \n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A module that resolves when the output has been built.\n"},"comment":" ","pathToRoot":"../../.."};
+		var docObject = {"src":{"path":"docs/modules/node_modules/bit-docs/docs/api/types/generator.md"},"description":"\nA generator module should produce a function that takes the following shape.\nGenerator modules are used to produce some form of documentation output.\n[bit-docs-generate-html] is the default and currently only generator\npackaged with bit-docs.\n","parent":"bit-docs/types","type":"typedef","title":"Generator","types":[{"type":"function","returns":{"types":[{"type":"Promise"}],"description":"A module that resolves when the output has been built.\n"},"params":[{"types":[{"type":"Promise","template":[{"types":[{"type":"bit-docs/types/docMap"}]}]}],"name":"docMapPromise","description":"A promise that will\nresolve with a map of all [bit-docs/types/docObject] keyed by their name.\n"},{"types":[{"type":"options"}],"name":"options","description":"The options object passed to\n[bit-docs/lib/generate/generate]. \n"}]}],"name":"bit-docs/types/generator","_curParam":{"types":[{"type":"options"}],"name":"options","description":"The options object passed to\n[bit-docs/lib/generate/generate]. \n"},"_curReturn":{"types":[{"type":"Promise"}],"description":"A module that resolves when the output has been built.\n"},"comment":" ","pathToRoot":"../../.."};
 	</script>
 
 	
